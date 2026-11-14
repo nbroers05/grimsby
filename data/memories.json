@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-14T23:27:11+01:00",
+ "at": "2026-11-14T23:36:11+01:00",
  "beliefs": [],
  "long": [
   {
@@ -63,16 +63,31 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
    "text": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "Pino: Pino sits in the meadow like a man who has forgotten the concept of action. Lazy is a choice, but it’s not one I’d make.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:33:11+01:00"
+  },
+  {
+   "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:31:41+01:00"
+  }
+ ]
 }

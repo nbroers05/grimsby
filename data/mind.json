@@ -1,37 +1,40 @@
 {
  "v": 1,
- "at": "2026-11-14T23:27:11+01:00",
- "thought": "It’s counting again, and the teaspoon still waits",
+ "at": "2026-11-14T23:36:11+01:00",
+ "thought": "The page says crown corks are a type of bottle cap, but Derek would argue they’re not wheels, and I’m not sure if that matters.",
  "loudest": [
   {
    "kind": "need",
    "subject": "social"
   },
   {
-   "kind": "need",
-   "subject": "expression"
-  },
-  {
-   "kind": "need",
-   "subject": "curiosity"
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts"
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
   "question": 0,
-  "want": 0,
+  "want": 1,
   "worry": 0,
   "promise": 0
  },
- "busy": "writing in his diary on a park bench",
+ "busy": "looking up how many bottle caps in the world at the library",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
   "Never trust a thing for its wheels, nor dismiss it for them.",
   "Every small thing deserves one careful look."
  ],
- "items": [],
+ "items": [
+  {
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts",
+   "since": "2026-11-14T23:33:11+01:00",
+   "why": "To confirm accuracy. To ensure no wheels are being counted."
+  }
+ ],
  "interests": [
   {
    "topic": "rubber chemistry",
@@ -39,7 +42,7 @@
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.7
+   "strength": 7.7
   },
   {
    "topic": "why humans invented bicycles",

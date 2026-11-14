@@ -312,5 +312,21 @@
       "entry": "The first pneumatic tire was a bladder made of rubber and air, mounted on a wooden cart in 1847. It leaked constantly, but it was a triumph of human laziness. The modern version, with layers of rubber and steel, arrived in 1888, and it was invented by a man who believed in the superiority of the bicycle. I do not trust anything with wheels, but I trust this one more than a teaspoon."
     },
     "mood": 0.0
+  },
+  {
+    "time": "2026-11-14T23:33:11+01:00",
+    "action": "search",
+    "reason": "Someone wants to know how many bottle caps exist, and I have a list.",
+    "ok": true,
+    "withheld": false,
+    "line": "21 teeth. Not a number. A specification. A fact. A thing that must be noted.",
+    "detail": {
+      "query": "how many bottle caps in the world",
+      "title": "Bottle cap - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bottle_cap",
+      "summary": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps. It also mentions the history of crown corks and their design evolution.",
+      "new_interest": "Crown cork specifications"
+    },
+    "mood": 0.12
   }
 ]

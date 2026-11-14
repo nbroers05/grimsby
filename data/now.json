@@ -1,31 +1,31 @@
 {
  "v": 1,
- "at": "2026-11-14T23:27:11+01:00",
+ "at": "2026-11-14T23:36:11+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "writing in his diary on a park bench",
- "thought": "It’s counting again, and the teaspoon still waits",
+ "doing": "looking up how many bottle caps in the world at the library",
+ "thought": "The page says crown corks are a type of bottle cap, but Derek would argue they’re not wheels, and I’m not sure if that matters.",
  "feeling": {
-  "mood": 0.0,
-  "energy": 1.0,
+  "mood": 0.11,
+  "energy": 0.87,
   "words": "Watchful. Something is not as it seems."
  },
  "needs": {
-  "rest": 0.01,
-  "curiosity": 0.51,
-  "social": 0.67,
-  "expression": 0.59,
-  "quiet": 0.28
+  "rest": 0.06,
+  "curiosity": 0.06,
+  "social": 0.39,
+  "expression": 0.18,
+  "quiet": 0.08
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 2,
-  "time": "14:45"
+  "time": "15:57"
  },
- "action": "diary",
+ "action": "search",
  "place": {
-  "category": "bench",
-  "poi": "n7956105766",
-  "name": ""
+  "category": "library",
+  "poi": "n12473802428",
+  "name": "Bibliotheek Berkel en Rodenrijs"
  }
 }
