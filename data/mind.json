@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T00:21:02+01:00",
+ "at": "2026-11-15T00:32:25+01:00",
  "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
  "loudest": [
   {
@@ -16,7 +16,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "drawing pigeons, as adversaries by the fountain next to the station",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -34,35 +34,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.5
+   "strength": 9.2
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.7
+   "strength": 7.4
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 5.7
+   "strength": 5.4
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 4.7
+   "strength": 4.4
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 3.7
+   "strength": 3.4
   },
   {
    "topic": "weather",
-   "strength": 3.7
+   "strength": 3.4
   },
   {
    "topic": "the art of making lists",
-   "strength": 3.7
+   "strength": 3.4
   },
   {
    "topic": "molecular networks",
-   "strength": 3.5
+   "strength": 3.2
   }
  ],
  "budget": {

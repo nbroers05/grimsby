@@ -357,5 +357,25 @@
       "time": "2026-11-15T00:18:02+01:00"
     },
     "mood": 0.31
+  },
+  {
+    "time": "2026-11-15T00:25:32+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of Pino sitting in the meadow, but he was actually Derek, and the fountain was made of rubber bands. Pneumatic tires began as bladders, but I was stretching one in my beak. Derek said a bottle cap was not a wheel, but I had one in my爪, and it remembered the stretch. The list was missing a number.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of Pino sitting in the meadow, but he was actually Derek, and the fountain was made of rubber bands. Pneumatic tires began as bladders, but I was stretching one in my beak. Derek said a bottle cap was not a wheel, but I had one in my爪, and it remembered the stretch. The list was missing a number.",
+      "from": [
+        "Pino: Pino sits in the meadow like a man who has forgotten the concept of action. Lazy is a choice, but it’s not one I’d make.",
+        "I got a rubber band. Found one, but it remembers the stretch.",
+        "Derek was at the centre-fountain, and he was smug about it.",
+        "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
+        "Derek said a bottle cap was not a wheel. I said it was."
+      ]
+    },
+    "mood": 0.29
   }
 ]

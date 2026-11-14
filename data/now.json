@@ -1,35 +1,35 @@
 {
  "v": 1,
- "at": "2026-11-15T00:21:02+01:00",
+ "at": "2026-11-15T00:32:25+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "drawing pigeons, as adversaries by the fountain next to the station",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Berkel Westpolder",
  "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
  "feeling": {
-  "mood": 0.29,
-  "energy": 0.69,
+  "mood": 0.27,
+  "energy": 0.72,
   "words": "The moon is a thin slice of cheese, hanging low over the station. A single light flickers in the distance, like a bad memory. I am content. Just a little."
  },
  "needs": {
-  "rest": 0.1,
-  "curiosity": 0.15,
-  "social": 0.11,
+  "rest": 0.0,
+  "curiosity": 0.2,
+  "social": 0.15,
   "expression": 0.01,
-  "quiet": 0.21,
-  "hunger": 0.04
+  "quiet": 0.16,
+  "hunger": 0.07
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 2,
-  "time": "21:56"
+  "time": "23:27"
  },
- "action": "draw",
+ "action": "sleep",
  "place": {
-  "id": "station-fountain",
-  "name": "the fountain by the station",
-  "words": "by the fountain next to the station",
-  "poi": "n3772233411",
-  "category": "fountain"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Berkel Westpolder",
+  "poi": "n3149917960",
+  "category": "station"
  },
  "flying": null
 }
