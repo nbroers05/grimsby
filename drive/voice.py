@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, safety
+from . import beliefs, clock, safety, world
 from .text import similarity, words
 
 OLLAMA = "http://127.0.0.1:11434"
@@ -212,7 +212,7 @@ def opening_rule(state: dict) -> str:
 def thought_why(state: dict, real, action: str, place: str, doing: str, reason: str, content: str = "",
                 recalled=None) -> dict:
     """The thought and the reason for an action code already chose. `reason` is code's real reason."""
-    extra = (f"\nYou have just started: {doing}" + (f" {beliefs.WHERE.get(place, '')}" if place else "") + ".\n"
+    extra = (f"\nYou have just started: {doing}" + (f" {world.words(place)}" if place and world.words(place) not in doing else "") + ".\n"
              f"The real reason (put it in your own words, do not quote it): {reason}.\n"
              + (f"What it is about: {content}\n" if content else ""))
     return generate(state, [

@@ -17,7 +17,7 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
-from . import beliefs, clock, engine, life, memory, who
+from . import beliefs, clock, engine, life, memory, who, world
 from .actions import ACTIONS
 
 OUT = Path(__file__).with_name("sim_out.json")
@@ -43,7 +43,7 @@ DETAIL = {
 
 def sim_describe(done: dict, real: datetime, rng: random.Random) -> str:
     w = clock.world(real)
-    what = ACTIONS[done["action"]].doing
+    what = f"{ACTIONS[done['action']].doing} {world.words(done['place'])}"
     return f"Day {w['day']}: {what}: {rng.choice(DETAIL[done['action']])}" + ("" if done["ok"] else ", it went wrong") + "."
 
 
@@ -60,6 +60,7 @@ def main() -> None:
     real = datetime.fromisoformat(a.start) if a.start else datetime.now().astimezone()
     if a.state:
         s = json.loads(Path(a.state).read_text(encoding="utf-8"))
+        world.migrate_state(s)
     else:
         s = engine.new_state()
         s["needs"].update(START["needs"])
@@ -84,7 +85,9 @@ def main() -> None:
             done.append(ev["finished"])
             note.append(f"done {ev['finished']['action']}{'' if ev['finished']['ok'] else ' (FAILED)'}")
         if ev["started"]:
-            note.append(f"-> {ev['started']}@{s['doing']['place']}  ["
+            d = s["doing"]
+            fly = f" (fly {d['travel']})" if d and d.get("travel") else ""
+            note.append(f"-> {ev['started']}@{d['place'] if d else s.get('at')}{fly}  ["
                         + ", ".join(f"{x} {y:.2f}" for x, y in ev["top"][:3]) + "]")
         if not a.quiet:
             print(f"{t:>4} d{w['day']} {w['time']}  {n['rest']:.2f} {n['curiosity']:.2f} {n['social']:.2f} "
@@ -101,7 +104,7 @@ def main() -> None:
     fails = Counter(f["action"] for f in done if not f["ok"])
     print("\nfinished actions:", ", ".join(f"{k} {v}" + (f" ({fails[k]} failed)" if fails[k] else "")
                                          for k, v in c.most_common()))
-    places = Counter(f"{f['action']}@{f['place']}" for f in done if f["action"] in ("draw", "wander", "pigeons"))
+    places = Counter(f"{f['action']}@{f['place']}" for f in done if f["action"] not in ("idle", "sleep"))
     print("places:", ", ".join(f"{k} {v}" for k, v in places.most_common()))
     print(f"memories: short {len(s['memories']['short'])}/{memory.SHORT_MAX}, long {len(s['memories']['long'])}/{memory.LONG_MAX}")
     print("beliefs:", *[f"  {b['text']} (evidence {b['evidence']})" for b in s["beliefs"]] or ["  none"], sep="\n")

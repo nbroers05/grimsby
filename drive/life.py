@@ -10,7 +10,7 @@ import random
 from datetime import datetime, timedelta
 from typing import Callable
 
-from . import beliefs, clock, engine, memory, needs, sleep
+from . import beliefs, clock, engine, memory, needs, sleep, world
 from .actions import ACTIONS, RISE_ASLEEP_SHARE
 
 OFF_GAP = timedelta(minutes=15)          # longer than this between ticks = the laptop was off = he slept
@@ -22,9 +22,7 @@ QUIET_ACTIONS = ("sit",)                 # mostly not worth a memory
 def plain_describe(done: dict, real: datetime, rng: random.Random) -> str:
     w = clock.world(real)
     what = ACTIONS[done["action"]].doing
-    where = beliefs.WHERE.get(done["place"], "")
-    if where and where.split()[-1] not in what:
-        what += " " + where
+    what += " " + world.words(done["place"])
     return f"Day {w['day']}, {w['time']}: {what}" + ("" if done["ok"] else ", and it went wrong") + "."
 
 
@@ -51,6 +49,7 @@ def catch_up(state: dict, real: datetime, voice=None) -> dict | None:
         if n != "rest":
             state["needs"][n] = needs.clamp(state["needs"][n] + gap_ticks * needs.RISE[n] * RISE_ASLEEP_SHARE, 0, 0.8)
     state["doing"] = None
+    state["at"] = world.HOME                       # he slept on his roof
     return report
 
 
@@ -62,9 +61,9 @@ def tick(state: dict, real: datetime, rng: random.Random, outcome: Callable[[str
     if ev["finished"]:
         beliefs.observe(state.setdefault("belief_stats", {}), ev["finished"])
         ev["memory"] = remember(state, ev["finished"], real, rng, describe)
-    if ev["started"] == "sleep":
+    if ev["arrived"] == "sleep":                   # home on the roof: sleep is consolidation
         ev["night"] = sleep.consolidate(state, real, voice)
-    elif ev["started"]:
+    elif ev["arrived"]:
         d = state["doing"]
         recalled = memory.recall(state["memories"], f"{d['action']} {d['place']} {ACTIONS[d['action']].doing}")
         state["mood"] = needs.clamp(state["mood"] + memory.mood_from(recalled), -1, 1)

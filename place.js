@@ -41,6 +41,14 @@ export function placeForNow(now, asleep, pois) {
   return { poi: options[hash(now.at || "") % options.length], home: false };
 }
 
+// Brain v2 (step 12): his own words for where he is, from data/now.json (place.words, flying {from, to})
+export function whereNow(now, place, asleep) {
+  if (now && now.flying && !asleep) return "Flying from " + now.flying.from + " to " + now.flying.to + ".";
+  const w = now && now.place && now.place.words;
+  if (w) return (asleep ? "Asleep " : "") + (asleep ? w : w.charAt(0).toUpperCase() + w.slice(1)) + ".";
+  return whereText(place, asleep);
+}
+
 export function whereText(place, asleep) {
   const p = place.poi;
   if (!p) return "";

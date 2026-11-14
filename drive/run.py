@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import clock, life, mind, output, voice
+from . import clock, life, mind, output, voice, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -65,6 +65,8 @@ def load() -> dict:
         say("started from the migrated state (drive/state_v2.json)")
     s = json.loads(STATE.read_text(encoding="utf-8"))
     mind.migrate_wants(s)
+    if world.migrate_state(s):
+        say("moved his beliefs and memories from place categories to world/places.json")
     s.setdefault("feeling", {"words": s.pop("feeling_words", None), "mood": s["mood"], "energy": s["energy"],
                              "tick": 0})
     s.setdefault("ticks", 0)
@@ -124,8 +126,13 @@ def after_tick(s: dict, ev: dict, real: datetime) -> None:
                 mind.feed(s, "mind", f"Something about me: {text}.", real, change="opened", about="self")
             say(f"night (day {night['day']}, {night['why']}): {night['short']} short -> {len(night['promoted'])} kept")
     p = s.get("pending") or {}
-    if ev["started"] and p.get("action") == ev["started"]:
-        if ev["started"] != "idle":
+    if ev["started"] and s["doing"] and s["doing"].get("travel", 0) > 0:
+        d = s["doing"]
+        mind.feed(s, "did", f"flying from {world.name(d['from'])} to {world.name(d['place'])}", real, why=None,
+                  ok=True, action="fly")
+        say(f"flying {d['from']} -> {d['place']} for {ev['started']} ({d['travel']} ticks)")
+    if ev["arrived"] and p.get("action") == ev["arrived"]:
+        if ev["arrived"] != "idle":
             mind.feed(s, "did", p["doing"], real, why=p.get("why"), ok=p["ok"], action=p["action"])
         for n in p.get("noticed", []):
             mind.feed(s, "noticed", n, real)
@@ -136,8 +143,8 @@ def after_tick(s: dict, ev: dict, real: datetime) -> None:
             ex = Executor(s, real, random.Random(), ARCHIVE, say)
             ex.archive(p["action"], p["ok"], a.get("line") or p.get("memory") or p["doing"], a.get("detail", {}),
                        p.get("why") or "", withheld=a.get("withheld", False))
-        if ev["started"] != "idle":
-            say(f"{ev["started"]}@{s['doing']['place'] if s['doing'] else '-'} ok={p['ok']} | why: {p.get('why')} | "
+        if ev["arrived"] != "idle":
+            say(f"{ev["arrived"]}@{s['doing']['place'] if s['doing'] else '-'} ok={p['ok']} | why: {p.get('why')} | "
                 f"thought: {p.get('thought')}")
     mind.tend(s, real)
     f = s["feeling"]

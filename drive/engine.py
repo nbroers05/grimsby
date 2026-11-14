@@ -4,11 +4,13 @@ Per tick: needs rise, mood drifts, the current action progresses; when nothing i
 next action by utility:
 
     score = sum(need * relief for each need the action meets)
-          + belief bonus ("drawing on the windmill cheers me up")
+          + the best place for it: belief bonus ("drawing on the windmill cheers me up") - cost of getting there
           + a little noise
           - a small penalty for doing the same thing again, or a lot lately
 
-`outcome(action_name, place)` decides whether an action worked. The simulation rolls dice; live, it is the real result.
+He is always at a place (s["at"], see world.py). An action somewhere else starts with travel ticks (energy
+per km); only on arrival does `outcome(action_name, place)` run: whether it worked. The simulation rolls dice;
+live, it is the real result.
 """
 
 from __future__ import annotations
@@ -18,8 +20,8 @@ import random
 from datetime import datetime, timedelta
 from typing import Callable
 
-from . import beliefs, clock, needs
-from .actions import ACTIONS, PLACE_FEEL, IDLE_SCORE, SLEEP_EXHAUSTED, SLEEP_NIGHT_PULL, SLEEP_MIN_REST, SLEEP_MIN_REST_NIGHT, Action
+from . import beliefs, clock, needs, world
+from .actions import ACTIONS, IDLE_SCORE, SLEEP_EXHAUSTED, SLEEP_NIGHT_PULL, SLEEP_MIN_REST, SLEEP_MIN_REST_NIGHT, Action
 
 NOISE = 0.06
 REPEAT_PENALTY = 0.08          # same as the last action
@@ -34,7 +36,7 @@ SLEEP_MAX_TICKS = 60           # 60 ticks = 12 world hours = 1.5 real hours
 
 def new_state() -> dict:
     s = needs.fresh()
-    s.update({"doing": None, "history": [], "done_at": {}})
+    s.update({"doing": None, "history": [], "done_at": {}, "at": world.HOME, "world_version": 1})
     return s
 
 
@@ -53,18 +55,24 @@ def allowed(a: Action, s: dict, real: datetime) -> bool:
     return True
 
 
-def belief_bonus(a: Action, s: dict) -> float:
-    return beliefs.bonus(s, a.name)
+PLACE_PULL = 25.0              # how strongly beliefs and distance steer the choice of place
 
 
-PLACE_PULL = 25.0              # how strongly beliefs steer the choice of place
+def place_values(a: Action, s: dict) -> dict[str, float]:
+    """For every place this action can happen: what he believes about it minus the cost of getting there."""
+    here = s.get("at", world.HOME)
+    return {p: beliefs.bonus(s, a.name, p) - world.travel_cost(here, p, s["energy"])
+            for p in world.places_for(a.name, here)}
 
 
 def pick_place(a: Action, s: dict, rng: random.Random) -> str:
-    if len(a.places) == 1:
-        return a.places[0]
-    weights = [math.exp(PLACE_PULL * beliefs.bonus(s, a.name, p)) for p in a.places]
-    return rng.choices(a.places, weights=weights)[0]
+    vals = place_values(a, s)
+    places = list(vals)
+    if len(places) == 1:
+        return places[0]
+    best = max(vals.values())
+    weights = [math.exp(PLACE_PULL * (vals[p] - best)) for p in places]
+    return rng.choices(places, weights=weights)[0]
 
 
 def score(a: Action, s: dict, real: datetime, rng: random.Random) -> float:
@@ -79,11 +87,14 @@ def score(a: Action, s: dict, real: datetime, rng: random.Random) -> float:
     penalty = LATELY_PENALTY * recent.count(a.name)
     if recent and recent[-1] == a.name:
         penalty += REPEAT_PENALTY
-    return base + belief_bonus(a, s) + rng.uniform(0, NOISE) - penalty
+    vals = place_values(a, s)
+    return base + (max(vals.values()) if vals else 0.0) + rng.uniform(0, NOISE) - penalty
 
 
 def choose(s: dict, real: datetime, rng: random.Random) -> tuple[Action, list]:
-    options = [(score(a, s, real, rng), a) for a in ACTIONS.values() if allowed(a, s, real)]
+    here = s.get("at", world.HOME)
+    options = [(score(a, s, real, rng), a) for a in ACTIONS.values()
+               if allowed(a, s, real) and world.places_for(a.name, here)]
     options.sort(key=lambda x: -x[0])
     return options[0][1], [(a.name, round(sc, 3)) for sc, a in options[:4]]
 
@@ -96,14 +107,31 @@ def wake_up(s: dict, real: datetime) -> bool:
     return rested and not clock.is_night(real)
 
 
-def start(a: Action, s: dict, real: datetime, rng: random.Random, outcome: Callable[[str, str], bool]) -> None:
+def start(a: Action, s: dict, real: datetime, rng: random.Random) -> None:
     place = pick_place(a, s, rng)
-    s["doing"] = {"action": a.name, "place": place, "ticks": 0, "ok": outcome(a.name, place), "met": 0.0,
-                  "since": real.isoformat(timespec="seconds")}
+    here = s.get("at", world.HOME)
+    s["doing"] = {"action": a.name, "place": place, "from": here, "travel": world.travel_ticks(here, place),
+                  "ticks": 0, "ok": None, "met": 0.0, "since": real.isoformat(timespec="seconds")}
     s["history"].append(a.name)
     s["history"] = s["history"][-50:]
     s["done_at"].setdefault(a.name, []).append(real.isoformat(timespec="seconds"))
     s["done_at"][a.name] = s["done_at"][a.name][-10:]
+
+
+def arrive(s: dict, outcome: Callable[[str, str], bool]) -> None:
+    """At the place: now the action really happens, and the world says whether it works."""
+    d = s["doing"]
+    s["at"] = d["place"]
+    d["ok"] = outcome(d["action"], d["place"])
+
+
+def fly(s: dict) -> bool:
+    """One tick of travel. Returns True on arrival."""
+    d = s["doing"]
+    km = world.km(d["from"], d["place"]) / max(1, world.travel_ticks(d["from"], d["place"]))
+    s["energy"] = needs.clamp(s["energy"] - world.ENERGY_PER_KM * km, -1, 1)
+    d["travel"] -= 1
+    return d["travel"] <= 0
 
 
 def progress(s: dict, real: datetime, rng: random.Random) -> dict | None:
@@ -131,7 +159,7 @@ def progress(s: dict, real: datetime, rng: random.Random) -> dict | None:
     else:
         s["mood"] = needs.clamp(s["mood"] + FAIL_MOOD, -1, 1)
     if a.name not in ("sleep", "idle"):          # how the place itself felt; this is what beliefs pick up
-        feel = PLACE_FEEL.get((a.name, d["place"]), 0.0) + PLACE_FEEL.get(d["place"], 0.0)
+        feel = world.feel(a.name, d["place"])
         s["mood"] = needs.clamp(s["mood"] + feel + rng.uniform(-PLACE_NOISE, PLACE_NOISE), -1, 1)
     done = {"action": a.name, "place": d["place"], "ok": d["ok"], "ticks": d["ticks"], "met": round(d["met"], 3),
             "dmood": round(s["mood"] - before, 4)}
@@ -145,11 +173,20 @@ def tick(s: dict, real: datetime, rng: random.Random, outcome: Callable[[str, st
     asleep = bool(s["doing"] and s["doing"]["action"] == "sleep")
     needs.rise(s, night, asleep)
     needs.drift_mood(s)
-    event = {"finished": None, "started": None, "top": None}
-    if s["doing"]:
+    event = {"finished": None, "started": None, "arrived": None, "top": None}
+    d = s["doing"]
+    if d and d.get("travel", 0) > 0:
+        if fly(s):
+            arrive(s, outcome)
+            event["arrived"] = d["action"]
+        return event
+    if d:
         event["finished"] = progress(s, real, rng)
     if not s["doing"]:
         a, top = choose(s, real, rng)
-        start(a, s, real, rng, outcome)
+        start(a, s, real, rng)
         event["started"], event["top"] = a.name, top
+        if s["doing"]["travel"] == 0:               # already there
+            arrive(s, outcome)
+            event["arrived"] = a.name
     return event

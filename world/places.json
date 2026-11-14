@@ -1,0 +1,199 @@
+{
+ "note": "Grimsby's world as his brain knows it: places, where they are (metres, same frame as poi.json) and what can happen there. The brain never sees the 3D; `poi` and `category` are only for the site. `feel` is how a place affects his mood (hidden from him; his beliefs have to find it out).",
+ "places": [
+  {
+   "id": "home",
+   "name": "the station roof",
+   "words": "on the roof of station Berkel Westpolder",
+   "x": -1344.2,
+   "z": 135.1,
+   "actions": [
+    "sit",
+    "sleep",
+    "tidy",
+    "read_back",
+    "neighbour",
+    "idle"
+   ],
+   "feel": 0.0,
+   "feel_for": {},
+   "poi": "n3149917960",
+   "category": "station"
+  },
+  {
+   "id": "station-fountain",
+   "name": "the fountain by the station",
+   "words": "by the fountain next to the station",
+   "x": -1284.4,
+   "z": 116.6,
+   "actions": [
+    "pigeons",
+    "draw"
+   ],
+   "feel": -0.01,
+   "feel_for": {
+    "pigeons": -0.02
+   },
+   "poi": "n3772233411",
+   "category": "fountain"
+  },
+  {
+   "id": "ondermolen",
+   "name": "the mill memorial",
+   "words": "at the memorial for the old Ondermolen",
+   "x": -1212.7,
+   "z": 70.4,
+   "actions": [
+    "draw",
+    "sit",
+    "read_back"
+   ],
+   "feel": 0.01,
+   "feel_for": {},
+   "poi": "n5228884161",
+   "category": "artwork"
+  },
+  {
+   "id": "station-bench",
+   "name": "a bench by the station",
+   "words": "on a bench by the station",
+   "x": -1292.9,
+   "z": 200.5,
+   "actions": [
+    "diary",
+    "sit"
+   ],
+   "feel": 0.0,
+   "feel_for": {},
+   "poi": "n3065409934",
+   "category": "bench"
+  },
+  {
+   "id": "plantsoen-bench",
+   "name": "a bench in the Gouden Griffelplantsoen",
+   "words": "on a bench in the Gouden Griffelplantsoen",
+   "x": -746.0,
+   "z": 532.1,
+   "actions": [
+    "diary",
+    "read_back",
+    "sit"
+   ],
+   "feel": 0.01,
+   "feel_for": {
+    "diary": 0.01
+   },
+   "poi": "n4949888156",
+   "category": "bench"
+  },
+  {
+   "id": "de-bron",
+   "name": "de Bron",
+   "words": "on the roof of de Bron church",
+   "x": -135.6,
+   "z": 299.7,
+   "actions": [
+    "draw",
+    "sit"
+   ],
+   "feel": 0.0,
+   "feel_for": {},
+   "poi": "w253339272",
+   "category": "church"
+  },
+  {
+   "id": "library",
+   "name": "the library",
+   "words": "at the library",
+   "x": -14.7,
+   "z": -356.4,
+   "actions": [
+    "search",
+    "read_back",
+    "diary"
+   ],
+   "feel": 0.0,
+   "feel_for": {},
+   "poi": "n12473802428",
+   "category": "library"
+  },
+  {
+   "id": "vis",
+   "name": "the fish statue",
+   "words": "next to Vis, the fish statue",
+   "x": 102.9,
+   "z": -321.6,
+   "actions": [
+    "draw",
+    "pigeons"
+   ],
+   "feel": 0.0,
+   "feel_for": {},
+   "poi": "n2758164446",
+   "category": "artwork"
+  },
+  {
+   "id": "centre-fountain",
+   "name": "the fountain in the centre",
+   "words": "by the fountain in the village centre",
+   "x": 193.1,
+   "z": -264.0,
+   "actions": [
+    "pigeons"
+   ],
+   "feel": -0.005,
+   "feel_for": {},
+   "poi": "n6735227811",
+   "category": "fountain"
+  },
+  {
+   "id": "dorpskerk",
+   "name": "the Dorpskerk",
+   "words": "on the roof of the Dorpskerk",
+   "x": 331.2,
+   "z": -191.9,
+   "actions": [
+    "draw",
+    "sit"
+   ],
+   "feel": 0.005,
+   "feel_for": {
+    "wander": 0.015
+   },
+   "poi": "w253316484",
+   "category": "church"
+  },
+  {
+   "id": "hichte-mill",
+   "name": "the windmill at De Hichte",
+   "words": "on the windmill at De Hichte",
+   "x": 113.0,
+   "z": -1587.9,
+   "actions": [
+    "draw",
+    "sit"
+   ],
+   "feel": 0.02,
+   "feel_for": {
+    "draw": 0.02
+   },
+   "poi": "n11895763509",
+   "category": "windmill"
+  },
+  {
+   "id": "de-valk",
+   "name": "De Valk",
+   "words": "on De Valk, the windmill at the edge of town",
+   "x": -3116.6,
+   "z": 1259.8,
+   "actions": [
+    "draw",
+    "sit"
+   ],
+   "feel": 0.03,
+   "feel_for": {},
+   "poi": "w253339756",
+   "category": "windmill"
+  }
+ ]
+}

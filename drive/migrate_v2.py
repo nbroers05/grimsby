@@ -14,7 +14,7 @@ from . import engine, memory, who
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(__file__).with_name("state_v2.json")
 
-PLACE = {"search": "library", "diary": "bench", "draw": "artwork"}
+PLACE = {"search": "library", "diary": "plantsoen-bench", "draw": "vis"}   # ids in world/places.json
 KIND = {"search": "fact", "diary": "moment", "draw": "work"}   # old diary lines were passing thoughts
 
 

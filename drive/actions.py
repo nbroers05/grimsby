@@ -6,7 +6,7 @@ energy : energy change per tick while doing it
 ticks  : how long it takes (sleep is open-ended, see engine.wake_up)
 fail   : chance it goes wrong in the simulation (live, the real outcome decides: a search without results,
          an SVG that will not parse, Derek not being there, Pino not answering)
-places : POI categories from world/poi.json (must be in SPOT_CATEGORIES of world/build_world.py), or "home"
+Where an action can happen is in world/places.json (each place lists its actions; see world.py).
 """
 
 from __future__ import annotations
@@ -18,7 +18,6 @@ from dataclasses import dataclass, field
 class Action:
     name: str
     doing: str
-    places: tuple[str, ...]
     ticks: int
     relief: dict
     side: dict = field(default_factory=dict)
@@ -31,27 +30,27 @@ class Action:
 
 
 ACTIONS: dict[str, Action] = {a.name: a for a in [
-    Action("search", "looking something up at the library", ("library",), 3,
+    Action("search", "looking something up", 3,
            {"curiosity": 0.55, "quiet": 0.05}, energy=-0.025, fail=0.15, min_energy=-0.5),
-    Action("read_back", "re-reading old diary pages", ("home",), 2,
+    Action("read_back", "re-reading old diary pages", 2,
            {"curiosity": 0.20, "quiet": 0.25, "expression": 0.10}, energy=-0.005),
-    Action("diary", "writing in his diary on a park bench", ("bench",), 3,
+    Action("diary", "writing in his diary", 3,
            {"expression": 0.50, "quiet": 0.25}, energy=-0.015, fail=0.03),
-    Action("draw", "drawing something", ("church", "windmill", "artwork", "fountain"), 4,
+    Action("draw", "drawing something", 4,
            {"expression": 0.55}, energy=-0.03, fail=0.12, min_energy=-0.4, mood_ok=0.03),
-    Action("wander", "flying about town", ("bench", "church", "windmill", "artwork", "fountain", "library"), 3,
-           {"curiosity": 0.25, "social": 0.20}, side={"quiet": 0.08}, energy=-0.03, min_energy=-0.6),
-    Action("pigeons", "keeping an eye on the pigeons by the fountain", ("fountain", "artwork"), 3,
+    Action("wander", "having a look around", 2,          # the flight there is part of it (see engine)
+           {"curiosity": 0.25, "social": 0.20}, side={"quiet": 0.08}, energy=-0.02, min_energy=-0.6),
+    Action("pigeons", "keeping an eye on the pigeons", 3,
            {"social": 0.45}, side={"quiet": 0.15}, energy=-0.02, fail=0.25, min_energy=-0.6),
-    Action("neighbour", "checking on Pino next door", ("home",), 1,
+    Action("neighbour", "checking on Pino next door", 1,
            {"social": 0.35, "curiosity": 0.20}, energy=-0.005, fail=0.10, per_real_day=3, min_gap_hours=4),
-    Action("sit", "sitting still on the station roof", ("home",), 2,
+    Action("sit", "sitting still", 2,
            {"rest": 0.08, "quiet": 0.40}, energy=+0.05),
-    Action("tidy", "tidying his hoard", ("home",), 3,
+    Action("tidy", "tidying his hoard", 3,
            {"quiet": 0.20, "expression": 0.15}, energy=-0.01, mood_ok=0.03),
-    Action("sleep", "asleep on the station roof", ("home",), 0,
+    Action("sleep", "asleep", 0,
            {"rest": 0.07, "quiet": 0.04}, energy=+0.05),   # sleep relief/energy are per tick
-    Action("idle", "watching the trains go by", ("home",), 1,
+    Action("idle", "watching the world go by", 1,
            {"quiet": 0.02, "rest": 0.02}, energy=+0.02),
 ]}
 
@@ -62,14 +61,4 @@ SLEEP_NIGHT_PULL = 0.30        # night makes sleep more attractive
 RISE_ASLEEP_SHARE = 0.25       # asleep, needs other than rest rise at this share of their speed
 IDLE_SCORE = 0.08              # an action has to beat doing nothing
 
-# How places feel, hidden in the world. He does not know these numbers; his beliefs have to find them out
-# (and may get them wrong: noise makes superstitions possible). Keys: a place category, or (action, place).
-PLACE_FEEL = {
-    "windmill": 0.02,                 # wind, a view, nobody about
-    "fountain": -0.01,                # pigeons, children, wet
-    ("draw", "windmill"): 0.02,
-    ("diary", "bench"): 0.01,
-    ("pigeons", "fountain"): -0.02,   # Derek's territory
-    ("wander", "church"): 0.015,
-}
-
+# How places feel lives in world/places.json now (feel, feel_for), hidden from him like before.

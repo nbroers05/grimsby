@@ -26,11 +26,9 @@ DOING = {
     "draw": "Drawing", "wander": "Flying about town", "pigeons": "Keeping an eye on the pigeons",
     "neighbour": "Checking on Pino", "sit": "Sitting still", "tidy": "Tidying the hoard",
 }
-WHERE = {
-    "library": "at the library", "bench": "on a park bench", "church": "on the church roof",
-    "windmill": "on the windmill", "artwork": "next to a statue", "fountain": "by the fountain",
-    "home": "on the station roof",
-}
+def where(place: str) -> str:
+    from . import world
+    return world.words(place)
 
 
 def observe(stats: dict, done: dict) -> None:
@@ -41,9 +39,9 @@ def observe(stats: dict, done: dict) -> None:
 
 
 def text_for(action: str, place: str, sign: int) -> str:
-    where = "" if place == "*" else " " + WHERE.get(place, "")
+    where_ = "" if place == "*" else " " + where(place)
     verb = "cheers me up" if sign > 0 else "never goes well"
-    return f"{DOING[action]}{where} {verb}."
+    return f"{DOING[action]}{where_} {verb}."
 
 
 def update(state: dict) -> dict:

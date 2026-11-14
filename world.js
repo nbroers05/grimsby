@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { INK, MOODS, makeLook, moodNow } from "./look.js";
-import { placeFor, placeForNow, pose as poseFor, whereText, perch as perchOf } from "./place.js";
+import { placeFor, placeForNow, pose as poseFor, whereNow, perch as perchOf } from "./place.js";
 
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const params = new URLSearchParams(location.search);
@@ -185,13 +185,13 @@ function onData(d) {
   if (!ready) { pending = d; return; }
   const now = d.now || {};
   const place = placeForNow(now, d.asleep, pois);
-  const key = (place.poi ? place.poi.id : "") + "|" + d.asleep + "|" + now.action;
+  const key = (place.poi ? place.poi.id : "") + "|" + d.asleep + "|" + now.action + "|" + !!now.flying;
   if (key === state.key) return;
   const first = !state.key;
   state.key = key; state.asleep = !!d.asleep; state.action = d.asleep ? null : poseFor(now.action);
   if (!place.poi) return;
   const target = perch(place.poi);
-  if (whereEl) whereEl.textContent = whereText(place, d.asleep);
+  if (whereEl) whereEl.textContent = whereNow(now, place, d.asleep);
   if (first) {
     const home = perch(placeFor(null, true, pois).poi);
     state.pos.copy(home);                      // every visit starts at home; he flies out if he's busy elsewhere

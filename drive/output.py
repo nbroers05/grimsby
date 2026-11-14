@@ -10,7 +10,7 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-from . import beliefs, clock, memory, mind
+from . import beliefs, clock, memory, mind, world
 from .actions import ACTIONS
 
 V = 1
@@ -31,13 +31,15 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
     head = {"v": V, "at": at}
     d = s.get("doing")
     p = s.get("pending") or {}
-    asleep = bool(d and d["action"] == "sleep")
+    flying = bool(d and d.get("travel", 0) > 0)
+    asleep = bool(d and d["action"] == "sleep" and not flying)
     doing = None
-    if d and d["action"] != "idle":
-        doing = p.get("doing") if p.get("action") == d["action"] else ACTIONS[d["action"]].doing
+    if flying:
+        doing = f"flying to {world.name(d['place'])}" + (" to sleep" if d["action"] == "sleep" else "")
     elif d:
-        doing = ACTIONS["idle"].doing
-    poi = p.get("poi") if d and p.get("action") == d["action"] else None
+        same = p.get("action") == d["action"] and p.get("place") == d["place"]
+        doing = p.get("doing") if same else f"{ACTIONS[d['action']].doing} {world.words(d['place'])}"
+    pl = world.place(d["place"] if d else s.get("at", world.HOME))
     w = clock.world(real)
     f = s.get("feeling", {})
     now = {**head, "name": s["who"]["name"], "asleep": asleep, "doing": doing, "thought": s.get("thought"),
@@ -46,8 +48,10 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
            "world": {"name": "Berkel en Rodenrijs", "day": w["day"], "time": w["time"]},
            # additions to Pino's shape, for the 3D world and the dashboard panel
            "action": d["action"] if d else None,
-           "place": {"category": d["place"] if d else "home", "poi": (poi or {}).get("id"),
-                     "name": (poi or {}).get("name")} if d else None}
+           # where he is, or where he is flying to; poi/category only for the 3D world (world/places.json)
+           "place": {"id": pl["id"], "name": pl["name"], "words": pl["words"], "poi": pl["poi"],
+                     "category": pl["category"]},
+           "flying": {"from": world.name(d["from"]), "to": world.name(d["place"])} if flying else None}
 
     feed = {**head, "entries": [{k: v for k, v in e.items()} for e in s.get("feed", [])[:FEED_PUBLIC]]}
 

@@ -15,25 +15,12 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, memory, mind, safety, voice
+from . import beliefs, clock, memory, mind, safety, voice, world
 from .actions import ACTIONS
 from .voice import VoiceDown, Withheld
 
 ROOT = Path(__file__).resolve().parent.parent
-POIS = ROOT / "world" / "poi.json"
 PINO = "https://pinos.world/api/v1"
-HOME = "n3149917960"           # OSM: station Berkel Westpolder, his roof (same as place.js / build_world.py)
-_POIS: list | None = None
-
-
-def pois() -> list[dict]:
-    global _POIS
-    if _POIS is None:
-        try:
-            _POIS = json.loads(POIS.read_text(encoding="utf-8"))["pois"]
-        except (OSError, ValueError, KeyError):
-            _POIS = []
-    return _POIS
 MAX_TOPICS = 8
 MAX_WANTS = 3
 WANT_CHANCE = 0.25           # the model may suggest a want; code decides whether he takes it up
@@ -64,15 +51,6 @@ class Executor:
             bits.append(f"you believe: {b['text']}")
         return "; ".join(bits)
 
-    def pick_poi(self, place: str) -> dict:
-        """The exact spot in his world (an OSM point from world/poi.json), so the site can put him there."""
-        if place == "home":
-            home = next((p for p in pois() if p["id"] == HOME), None)
-            return {"id": HOME, "category": "station", "name": (home or {}).get("name", "Berkel Westpolder")}
-        options = [p for p in pois() if p["category"] == place]
-        named = [p for p in options if p.get("name")]
-        p = self.rng.choice(named if named and self.rng.random() < 0.7 else options) if options else None
-        return {"id": p["id"], "category": place, "name": p.get("name", "")} if p else {"id": HOME, "category": place, "name": ""}
 
     def recall(self, about: str) -> list[dict]:
         return memory.recall(self.state["memories"], about, bump=False)
@@ -109,7 +87,8 @@ class Executor:
     # ------------------------------------------------------------ the callback
     def __call__(self, action: str, place: str) -> bool:
         st = self.state
-        p = {"action": action, "place": place, "poi": self.pick_poi(place), "doing": ACTIONS[action].doing, "memory": None, "noticed": [],
+        doing = ACTIONS[action].doing if action == "neighbour" else f"{ACTIONS[action].doing} {world.words(place)}"
+        p = {"action": action, "place": place, "doing": doing, "memory": None, "noticed": [],
              "content": "", "archive": None, "thought": None, "why": None, "ok": True, "public": []}
         try:
             getattr(self, "do_" + action, self.do_plain)(p)
@@ -121,6 +100,10 @@ class Executor:
             self.say(f"{action} withheld: {e}")
             p.update(ok=True, memory="Wrote something, read it back, and quietly ate the page.", noticed=[],
                      archive={"withheld": True, "detail": {"withheld": True}}, public=[])
+        except Exception as e:  # noqa: BLE001 - anything else: the action simply didn't work this time
+            self.say(f"{action} went wrong: {e!r}")
+            p["ok"] = False
+            p["memory"] = f"Tried {p['doing']}. Something got in the way."
         if action != "idle":
             self.words_for(p)
         st["pending"] = p
@@ -145,9 +128,9 @@ class Executor:
     # ------------------------------------------------------------ actions
     def do_plain(self, p: dict) -> None:
         if p["action"] == "sit":
-            p["memory"] = "Sat still on the station roof and watched the rails. Nothing rolled my way."
+            p["memory"] = f"Sat still {world.words(p['place'])}. Nothing rolled my way."
         elif p["action"] == "sleep":
-            p["doing"] = "falling asleep on the station roof"
+            p["doing"] = f"falling asleep {world.words(p['place'])}"
 
     do_idle = do_plain
     do_sleep = do_plain
@@ -156,7 +139,7 @@ class Executor:
     def do_search(self, p: dict) -> None:
         topic = self.pick_topic()
         query = voice.search_query(self.state, self.real, topic)
-        p["doing"] = f"looking up {query.lower()} at the library"
+        p["doing"] = f"looking up {query.lower()} {world.words(p['place'])}"
         results = safety.web_search(query)
         if not results:
             p.update(ok=False, memory=f"Searched for {query} and found nothing at all.",
@@ -202,11 +185,10 @@ class Executor:
 
     def do_draw(self, p: dict) -> None:
         wants = mind.open_items(self.state, "want")
-        options = [{"windmill": "the windmill", "church": "the church tower", "fountain": "the fountain",
-                    "artwork": "the statue next to me"}.get(p["place"], "the view"), self.pick_topic(),
-                   self.rng.choice(HOARD)] + ([wants[0]["subject"]] if wants else [])
+        options = [world.name(p["place"]), self.pick_topic(), self.rng.choice(HOARD)] + \
+            ([wants[0]["subject"]] if wants else [])
         subject = self.rng.choice(options)
-        p["doing"] = f"drawing {subject} {beliefs.WHERE.get(p['place'], '')}".strip()
+        p["doing"] = f"drawing {subject} {world.words(p['place'])}"
         for _ in range(2):
             out = voice.drawing(self.state, self.real, subject)
             try:
@@ -271,7 +253,7 @@ class Executor:
         p["public"] = [p["memory"], what]
 
     def do_wander(self, p: dict) -> None:
-        name = p["poi"]["name"] or beliefs.WHERE.get(p["place"], p["place"])
+        name = world.name(p["place"])
         p["doing"] = f"flying about town, as far as {name}"
         p["content"] = name
         p["memory"] = voice.memory_line(self.state, self.real, f"You flew about town and ended up at {name}.",

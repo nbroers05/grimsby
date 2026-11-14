@@ -48,7 +48,7 @@ def character_candidate(state: dict) -> tuple[str, str] | None:
             habit = beliefs.HABIT[action]
             if habit in taken:               # one habit per action, however many places
                 continue
-            where = "" if place == "*" else " " + beliefs.WHERE[place]
+            where = "" if place == "*" else " " + beliefs.where(place)
             return "quirks", f"{habit}{where} when a day needs mending"
     return None
 
