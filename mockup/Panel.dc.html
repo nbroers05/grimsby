@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Vogel op het dashboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Shippori+Mincho+B1:wght@700;800&amp;family=VT323&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1b2a8c}a:hover{color:#d7261e}
+</style>
+</helmet>
+<div style="width: 380px; height: 340px; box-sizing: border-box; padding: 16px; background: #efe9dc; font-family: 'Zen Kaku Gothic New', system-ui, sans-serif; color: #16130f; font-variant-numeric: tabular-nums">
+<section aria-label="Vogel" style="background: #f8f4ea; border: 1px solid #16130f; box-shadow: 4px 4px 0 #16130f; height: 100%; box-sizing: border-box; display: flex; flex-direction: column">
+<div style="height: 30px; flex: none; background: #1b2a8c; display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid #16130f">
+<span style="font-family: 'VT323', 'DotGothic16', monospace; font-size: 20px; color: #ffffff; flex-grow: 1">{{exe}}</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 16px; color: #ffffff">鳥</span>
+</div>
+<div style="padding: 16px; display: flex; gap: 14px; align-items: center">
+<div style="width: 96px; height: 80px; flex: none; background: #8cc0e8; border: 1px solid #16130f; display: flex; align-items: flex-end; justify-content: center">
+<svg viewBox="0 0 200 160" role="img" aria-label="{{vogelLabel}}" style="width: 88px; height: 70px">
+<path d="M60 100 C60 70 90 55 120 62 C145 68 155 90 148 110 C140 128 100 132 75 122 C66 118 60 110 60 100 Z" fill="#16130f"></path>
+<circle cx="128" cy="55" r="20" fill="#16130f"></circle>
+<path d="M146 49 L172 56 L146 63 Z" fill="#16130f"></path>
+<path d="M62 104 L28 120 L38 106 L26 98 L60 96" fill="#16130f"></path>
+<path d="M100 127 L96 148 M114 127 L116 148" stroke="#16130f" stroke-width="3" fill="none"></path>
+<sc-if value="{{wakker}}" hint-placeholder-val="{{ true }}"><circle cx="135" cy="50" r="5" fill="#f8f4ea"></circle></sc-if>
+<sc-if value="{{slaapt}}" hint-placeholder-val="{{ false }}"><path d="M128 51 Q135 57 142 51" stroke="#f8f4ea" stroke-width="3" fill="none"></path></sc-if>
+</svg>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 26px; line-height: 1.05">{{naam}}</span>
+<span style="font-size: 13px; line-height: 18px; font-weight: 500; color: #5e574c">{{status}}</span>
+</div>
+</div>
+<div style="margin: 0 16px; padding: 12px 0; border-top: 1px solid #d3c9b6; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">uit het dagboek</span>
+<p style="margin: 0; font-size: 15px; line-height: 22px">De man met de blauwe jas staat op de lijst. Voor de zekerheid.</p>
+</div>
+<div style="margin-top: auto; padding: 0 16px 14px; display: flex; justify-content: flex-end">
+<a href="#" style="font-size: 13px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center">Naar zijn site</a>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"naam":{"editor":"text","default":"Kraai"},"slaapt":{"editor":"boolean","default":false},"$preview":{"width":380,"height":340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var naam = this.props.naam ?? 'Kraai';
+    var slaapt = this.props.slaapt ?? false;
+    return {
+      naam: naam,
+      exe: naam.toLowerCase() + '.exe',
+      slaapt: slaapt,
+      wakker: !slaapt,
+      status: slaapt ? 'Slaapt. Laptop was uit.' : 'Zoekt: hoeveel weegt een walnoot',
+      vogelLabel: slaapt ? naam + ' slaapt' : naam + ' kijkt rond'
+    };
+  }
+}
+</script>
+</body>
+</html>

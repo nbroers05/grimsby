@@ -1,0 +1,316 @@
+/* Copy of the shared parts of housestyle.css from nbroers05/Dashboard (tokens, desktop, window, text, buttons, lists).
+   Copied as-is on 2026-11-14; when the Dashboard house style changes, copy again instead of editing here.
+   Grimsby-specific layout lives in site.css. */
+
+/* ---------- Noah's house style (since 1.2.0) ----------
+   Design: the design system "Noah Huisstijl" (claude.ai/artifact/1uHEFBcpmD23vuaQRoQED9). Everything is a window from 2001
+   with a file name and a Japanese word in the title bar, blue with red on paper.
+   On via html.nh (Settings › Theme, the default). Two moods on html[data-mood]: digital (Digital Future, by day) and
+   titlecard (Title card, at night); housestyle.js picks it. Since 1.8.0 Digital Future is Digital Future + Poster in one:
+   the sky, cream paper windows with black ink and a hard black shadow, glossy navy title bars, bright blue accents,
+   and every tile its own face (bottom of this file). Window titles come from data-nh-exe / data-nh-kanji (housestyle.js).
+   Styles only: layout, order and functions stay the same. Everything starts with html.nh. */
+
+/* ---------- Tokens (from the design system's tokens.json) ---------- */
+html.nh {
+  --paper: #efe9dc; --paper-raised: #f8f4ea; --ink: #16130f; --nh-muted: #5e574c;
+  --line: #16130f; --line-soft: #d3c9b6;
+  --eva: #1556cf; --sky: #bfe6fa; --red: #de2f1f; --titlebar: #1b2a8c;
+  --on-eva: #fff; --ah-c: #00ade6; --on-ah: #04263a; --focus: #d7261e;
+  --holiday: var(--holiday-p, var(--red));   /* the theme's holiday color (themes.js sets --holiday-p / --holiday-t), otherwise red */
+  --shadow-window: 4px 4px 0 #16130f; --shadow-control: 2px 2px 0 #16130f;
+  --font-display: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --font-pixel: "DotGothic16", "MS Gothic", ui-monospace, monospace;
+  /* Window names in the title bars (1.7.7): VT323, because in DotGothic16 an i looks like an l ("appie.exe" read as "apple.exe") */
+  --font-bar: "VT323", var(--font-pixel);
+  --nh-bar: 30px;
+  --nh-gap: 14px;
+
+  /* The normal dashboard variables follow the house style */
+  --bg: var(--paper);
+  --text: var(--ink);
+  --muted: var(--nh-muted);
+  --surface: color-mix(in srgb, var(--ink) 6%, transparent);
+  --surface-hover: var(--sky);
+  --accent: var(--eva);
+  color-scheme: light;
+}
+html.nh[data-mood="titlecard"] {
+  --paper: #0b0b0d; --paper-raised: #141417; --ink: #f2efe8; --nh-muted: #a7a29a;
+  --line: #5c5852; --line-soft: #2a2a30;
+  --eva: #1b2a8c; --sky: #1c2e52; --red: #e3241b; --titlebar: #000; --focus: #e3241b;
+  --shadow-window: none; --shadow-control: none;
+  --holiday: var(--holiday-t, var(--red));
+  color-scheme: dark;
+}
+
+/* ---------- Desktop ---------- */
+html.nh body {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+html.nh[data-mood="digital"] body { background: #b9def3 url("housestyle/sky-light-landscape.jpg") center top / cover no-repeat fixed; }
+html.nh[data-mood="digital"].portrait-wide body,
+html.nh[data-mood="digital"].phone-mode body { background-image: url("housestyle/sky-light-portrait.jpg"); }
+/* Title card: black with one thin line */
+html.nh[data-mood="titlecard"] body { background: var(--paper) linear-gradient(var(--line-soft), var(--line-soft)) 0 62% / 100% 1px no-repeat fixed; }
+
+/* Cover color (--tint, from dash.js): Digital Future a soft glow top right, Title card a glow at the horizon.
+   Only touches the desktop, never the windows. */
+html.nh body::before {
+  background: radial-gradient(70% 45% at 85% 0%, var(--tint), transparent 70%);
+  mix-blend-mode: soft-light;
+  opacity: .5;
+  transition: background-color 1.2s ease;
+}
+html.nh[data-mood="titlecard"] body::before { background: radial-gradient(90% 30% at 50% 100%, var(--tint), transparent 70%); opacity: .5; mix-blend-mode: normal; }
+
+/* Grain over the whole page: almost nothing in Digital Future (4.5%), strong in Title card */
+html.nh body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: .045;
+  mix-blend-mode: multiply;
+}
+html.nh[data-mood="titlecard"] body::after { opacity: .16; mix-blend-mode: screen; filter: invert(1); }
+
+/* Theme backgrounds and top bar colors don't belong to the house style (a theme may not color the desktop) */
+html.nh .th-bg { display: none !important; }
+
+html.nh :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+html.nh a { color: var(--eva); }
+html.nh[data-mood="titlecard"] a { color: var(--ink); }
+html.nh * { scrollbar-color: var(--line-soft) transparent; }
+
+/* ---------- Layout: windows are closer together ---------- */
+html.nh .dashboard { gap: var(--nh-gap); }
+html.nh .tall-row { gap: var(--nh-gap); }
+
+/* ---------- Window ---------- */
+html.nh .card,
+html.nh .tile {
+  --c: var(--eva);
+  --ct: var(--eva);
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: var(--shadow-window);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: var(--ink);
+}
+html.nh[data-mood="titlecard"] :is(.card, .tile) { --ct: var(--ink); }
+html.nh .tile { padding: 0 16px 14px !important; border-color: var(--line) !important; }
+html.nh .tile.clickable:hover { filter: none; border-color: var(--line); background: color-mix(in srgb, var(--sky) 18%, var(--paper-raised)); }
+
+/* Title bar: the tile's heading (text hidden), with the file name and Japanese word from housestyle.js */
+html.nh .tile > .eyebrow,
+html.nh #lyrics > .w-row {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--nh-bar);
+  margin: 0 -16px 12px;
+  padding: 0 56px 0 10px;
+  background: var(--titlebar);
+  border-bottom: 1px solid var(--line);
+  color: var(--on-eva);
+  font-size: 0;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow: hidden;
+}
+html.nh #lyrics > .w-row { padding-right: 6px; }
+html.nh #lyrics > .w-row .eyebrow { margin: 0; font-size: 0; color: var(--on-eva); flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; }
+html.nh :is(.tile > .eyebrow, #lyrics .eyebrow)[data-nh-exe]::before {
+  content: attr(data-nh-exe);
+  font: 400 20px/1 var(--font-bar);
+  letter-spacing: .03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+html.nh :is(.tile > .eyebrow, #lyrics .eyebrow)[data-nh-kanji]::after {
+  content: attr(data-nh-kanji);
+  margin-left: auto;
+  flex: none;
+  font: 800 15px/1 var(--font-display);
+  letter-spacing: .1em;
+  opacity: .85;
+}
+/* Three small flat squares on the right: decoration only (1.7.6: smaller, no outline, so they don't look like buttons to click) */
+html.nh .tile > .eyebrow,
+html.nh :is(.player, #calendar) {
+  --nh-ctl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='10'%3E%3Cg fill='%23fff' fill-opacity='.38'%3E%3Crect width='10' height='10'/%3E%3Crect x='14' width='10' height='10'/%3E%3Crect x='28' width='10' height='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+html.nh .tile > .eyebrow { background: var(--nh-ctl) right 8px center / 38px 10px no-repeat, var(--titlebar); }
+
+/* Player and agenda have no heading-as-bar: title bar via ::before, Japanese word + buttons via ::after */
+html.nh :is(.player, #calendar) { position: relative; padding-top: calc(var(--nh-bar) + 16px) !important; overflow: hidden; }
+html.nh :is(.player, #calendar)::before {
+  content: attr(data-nh-exe);
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 3;
+  height: var(--nh-bar);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background: var(--titlebar);
+  border-bottom: 1px solid var(--line);
+  color: var(--on-eva);
+  font: 400 20px/var(--nh-bar) var(--font-bar);
+  letter-spacing: .03em;
+  filter: none;
+  transform: none;
+}
+html.nh :is(.player, #calendar)::after {
+  content: attr(data-nh-kanji);
+  position: absolute;
+  inset: 0 6px auto auto;
+  z-index: 4;
+  height: var(--nh-bar);
+  padding-right: 52px;
+  display: flex;
+  align-items: center;
+  background: var(--nh-ctl) right 2px center / 38px 10px no-repeat;
+  color: var(--on-eva);
+  font: 800 15px/1 var(--font-display);
+  letter-spacing: .1em;
+}
+
+/* Digital Future: a glossy title bar; the decoration squares have round corners, the last one red */
+html.nh[data-mood="digital"] .tile > .eyebrow,
+html.nh[data-mood="digital"] #lyrics > .w-row,
+html.nh[data-mood="digital"] :is(.player, #calendar)::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .42) 0%, rgba(255, 255, 255, .08) 48%, rgba(0, 0, 0, 0) 52%), var(--titlebar);
+}
+html.nh[data-mood="digital"] .tile > .eyebrow,
+html.nh[data-mood="digital"] :is(.player, #calendar) {
+  --nh-ctl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='10'%3E%3Crect width='10' height='10' rx='2' fill='%23fff' fill-opacity='.5'/%3E%3Crect x='14' width='10' height='10' rx='2' fill='%23fff' fill-opacity='.5'/%3E%3Crect x='28' width='10' height='10' rx='2' fill='%23f08a76'/%3E%3C/svg%3E");
+}
+html.nh[data-mood="digital"] .tile > .eyebrow { background: var(--nh-ctl) right 8px center / 38px 10px no-repeat, linear-gradient(180deg, rgba(255, 255, 255, .42) 0%, rgba(255, 255, 255, .08) 48%, rgba(0, 0, 0, 0) 52%), var(--titlebar); }
+
+/* Title card: a black bar, the name without .exe in capitals in the serif font, the Japanese word red, no buttons */
+html.nh[data-mood="titlecard"] .tile > .eyebrow,
+html.nh[data-mood="titlecard"] #lyrics > .w-row { background: var(--titlebar); border-bottom-color: var(--line-soft); padding-right: 10px; }
+html.nh[data-mood="titlecard"] :is(.tile > .eyebrow, #lyrics .eyebrow)[data-nh-name]::before,
+html.nh[data-mood="titlecard"] :is(.player, #calendar)::before {
+  content: attr(data-nh-name);
+  font: 800 15px/1 var(--font-display);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+html.nh[data-mood="titlecard"] :is(.player, #calendar)::before { line-height: var(--nh-bar); border-bottom-color: var(--line-soft); }
+html.nh[data-mood="titlecard"] :is(.tile > .eyebrow, #lyrics .eyebrow)::after,
+html.nh[data-mood="titlecard"] :is(.player, #calendar)::after { color: var(--holiday); opacity: 1; }
+html.nh[data-mood="titlecard"] :is(.player, #calendar)::after { background: none; padding-right: 4px; }
+
+/* ---------- Text ---------- */
+html.nh .eyebrow { color: var(--nh-muted); font-family: var(--font-pixel); font-weight: 400; letter-spacing: .02em; }
+html.nh .title { font-family: var(--font-display); font-weight: 800; letter-spacing: 0; color: var(--ink); }
+html.nh .w-big,
+html.nh.serif-nums .w-big,
+html.nh :is(.hl-num, .ah-month b, .ah-pay b, .film-score, .cine-score) {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+html.nh .w-big small { font-family: var(--font-body); font-weight: 500; color: var(--nh-muted); }
+html.nh .f1-count { font-family: var(--font-pixel); font-weight: 400; letter-spacing: 0; color: var(--ink); }
+html.nh .f1-count small { color: var(--nh-muted); }
+html.nh :is(.w-label, .ws-head, .ci-label) { font-family: var(--font-pixel); font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--nh-muted); font-size: .82rem; }
+html.nh :is(.w-note, .w-sub, .muted, .artist, .times) { color: var(--nh-muted); }
+html.nh .w-note a { color: var(--eva); }
+
+/* ---------- Buttons ---------- */
+html.nh :is(.w-btn, .pill-btn, .cal-nav-btn, .ph-btn, .desk-more-chev) {
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper-raised);
+  box-shadow: var(--shadow-control);
+  color: var(--ink);
+  font: 700 .85rem/1.2 var(--font-body);
+  filter: none;
+}
+html.nh :is(.w-btn, .pill-btn, .cal-nav-btn):hover { background: var(--sky); filter: none; }
+html.nh :is(.w-btn, .pill-btn, .cal-nav-btn):active { transform: translate(2px, 2px); box-shadow: none; }
+html.nh .w-btn.ghost { background: var(--paper-raised); color: var(--ink); }
+html.nh .pill-btn { background: var(--red); color: var(--on-eva); border-color: var(--line); }
+html.nh .w-btn.lb { background: var(--paper-raised); color: var(--ink); }
+html.nh .text-btn { color: var(--nh-muted); text-decoration: underline; text-underline-offset: 3px; }
+html.nh .text-btn:hover { color: var(--ink); }
+html.nh[data-mood="digital"] :is(.w-btn, .pill-btn, .cal-nav-btn) { border-radius: 3px; background: linear-gradient(180deg, #fff 0%, #f8f4ea 50%, #ebe3d0 100%); }
+html.nh[data-mood="digital"] .pill-btn { background: linear-gradient(180deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 50%), var(--eva); color: var(--on-eva); }
+html.nh[data-mood="titlecard"] :is(.w-btn, .pill-btn, .cal-nav-btn) { background: transparent; font-family: var(--font-display); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; }
+html.nh[data-mood="titlecard"] .pill-btn { background: var(--red); border-color: var(--red); }
+
+/* Player buttons: square */
+html.nh .btn { border: 1px solid var(--line); border-radius: 0; background: var(--paper-raised); box-shadow: var(--shadow-control); color: var(--ink); }
+html.nh .btn svg { fill: currentColor; }
+html.nh .btn:hover { background: var(--sky); }
+html.nh .btn.small { background: transparent; border-color: transparent; box-shadow: none; }
+html.nh .btn.small:hover { background: var(--sky); border-color: var(--line); }
+html.nh .btn.pill { background: var(--eva); color: var(--on-eva); border-color: var(--line); }
+html.nh .btn[aria-pressed="true"], html.nh #repeat:not([data-mode="off"]) { color: var(--red); }
+html.nh .btn.off { opacity: .35; }
+html.nh[data-mood="digital"] .btn { border-radius: 3px; background: linear-gradient(180deg, #fff 0%, #f8f4ea 50%, #ebe3d0 100%); }
+html.nh[data-mood="digital"] .btn.small { background: transparent; }
+html.nh[data-mood="digital"] .btn.pill { background: linear-gradient(180deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 50%), var(--eva); }
+html.nh[data-mood="titlecard"] .btn { background: transparent; }
+html.nh[data-mood="titlecard"] .btn.pill { background: var(--red); border-color: var(--red); }
+
+/* Segment buttons (List/Week etc.) = tabs */
+html.nh .seg { padding: 0; gap: 0; border-radius: 0; background: none; border: 1px solid var(--line); }
+html.nh .seg button { padding: 5px 12px; border: 0; border-right: 1px solid var(--line-soft); border-radius: 0; background: transparent; color: var(--nh-muted); font: 400 .85rem/1.2 var(--font-pixel); }
+html.nh .seg button:last-child { border-right: 0; }
+html.nh .seg button[aria-pressed="true"] { background: var(--eva); color: var(--on-eva); }
+html.nh[data-mood="titlecard"] .seg { border-color: var(--line-soft); }
+html.nh[data-mood="titlecard"] .seg button[aria-pressed="true"] { background: transparent; color: var(--ink); box-shadow: inset 0 -2px 0 var(--red); }
+
+/* Labels (pills) */
+html.nh .w-pill { border: 1px solid var(--line); border-radius: 999px; background: var(--paper-raised); color: var(--ink); font: 700 .75rem/1.3 var(--font-body); }
+html.nh .w-pill.good { background: var(--paper-raised); color: var(--ink); }
+html.nh .w-pill.bad, html.nh .w-pill.live { background: var(--red); color: var(--on-eva); border-color: var(--red); }
+
+/* Lists: rows with a thin line between them; no colored stripe on the left, no round corners */
+html.nh :is(.al-item, .ml-item, .ds-row, .cv-item, .td-item, .ws-item) {
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+}
+html.nh .al-item.lv-urgent, html.nh .cv-item.u-late { background: transparent; }
+html.nh button.al-item:hover { background: color-mix(in srgb, var(--sky) 30%, transparent); }
+html.nh :is(.u-red, .u-late) .cv-when, html.nh .al-item.lv-urgent :is(b, strong) { color: var(--red); }
+html.nh .u-orange .cv-when { color: var(--ink); }
+
+/* Input fields */
+html.nh :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-family: var(--font-body);
+  box-shadow: inset 2px 2px 0 var(--line-soft);
+}
+html.nh[data-mood="titlecard"] :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]) { box-shadow: none; }
+
+/* ---------- Reduce motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html.nh body::before { transition: none; }
+}

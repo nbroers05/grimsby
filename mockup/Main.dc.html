@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Vogelsite</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Shippori+Mincho+B1:wght@700;800&amp;family=VT323&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#efe9dc}
+a{color:#1b2a8c}a:hover{color:#d7261e}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #efe9dc; color: #16130f; font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', system-ui, sans-serif; font-variant-numeric: tabular-nums; padding: 32px; box-sizing: border-box">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px">
+
+<header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 8px 0 12px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; letter-spacing: 0.02em; color: #5e574c">berkel-en-rodenrijs / dak van het station</span>
+<h1 style="margin: 0; font-family: 'Shippori Mincho B1', Georgia, serif; font-weight: 800; font-size: 72px; line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase">{{naam}}</h1>
+</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 18px; line-height: 22px; text-transform: uppercase">{{kop}}</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 96px; line-height: 1; color: #d7261e">鳥</span>
+</div>
+</header>
+
+<section aria-label="Wereld" style="background: #f8f4ea; border: 1px solid #16130f; box-shadow: 4px 4px 0 #16130f">
+<div style="height: 30px; background: #1b2a8c; display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid #16130f">
+<span style="font-family: 'VT323', 'DotGothic16', monospace; font-size: 20px; color: #ffffff; flex-grow: 1">wereld.exe</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 16px; color: #ffffff">世界</span>
+<span aria-hidden="true" style="display: flex; gap: 4px"><span style="width: 12px; height: 12px; border: 1px solid #ffffff; display: block"></span><span style="width: 12px; height: 12px; border: 1px solid #ffffff; display: block"></span><span style="width: 12px; height: 12px; border: 1px solid #ffffff; background: #d7261e; display: block"></span></span>
+</div>
+<div style="position: relative; height: 420px; background: #8cc0e8; overflow: hidden">
+<svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<polygon points="0,300 140,300 140,240 200,210 260,240 260,300 330,300 330,200 420,200 420,300 520,300 520,260 600,230 680,260 680,300 760,300 760,180 820,150 880,180 880,300 980,300 980,250 1060,250 1060,300 1200,300 1200,420 0,420" fill="#1b2a8c" opacity="0.18"></polygon>
+<rect x="0" y="300" width="1200" height="120" fill="#efe9dc"></rect>
+<line x1="0" y1="300" x2="1200" y2="300" stroke="#16130f" stroke-width="2"></line>
+<path d="M0 360 L1200 352" stroke="#8cc0e8" stroke-width="10" fill="none"></path>
+<path d="M0 360 L1200 352" stroke="#16130f" stroke-width="1.5" fill="none"></path>
+</svg>
+<div style="position: absolute; left: 50%; bottom: 112px; transform: translateX(-50%); width: 200px; height: 160px">
+<svg viewBox="0 0 200 160" role="img" aria-label="{{vogelLabel}}" style="width: 200px; height: 160px">
+<path d="M60 100 C60 70 90 55 120 62 C145 68 155 90 148 110 C140 128 100 132 75 122 C66 118 60 110 60 100 Z" fill="#16130f" stroke="#16130f" stroke-width="2.5"></path>
+<circle cx="128" cy="55" r="20" fill="#16130f"></circle>
+<path d="M146 49 L172 56 L146 63 Z" fill="#16130f"></path>
+<path d="M80 96 C95 86 120 89 134 102" stroke="#5e574c" stroke-width="2.5" fill="none"></path>
+<path d="M62 104 L28 120 L38 106 L26 98 L60 96" fill="#16130f" stroke="#16130f" stroke-width="2"></path>
+<path d="M100 127 L96 148 M114 127 L116 148 M88 148 L104 148 M108 148 L124 148" stroke="#16130f" stroke-width="2.5" fill="none"></path>
+<sc-if value="{{wakker}}" hint-placeholder-val="{{ true }}">
+<circle cx="135" cy="50" r="4" fill="#f8f4ea"></circle>
+</sc-if>
+<sc-if value="{{slaapt}}" hint-placeholder-val="{{ false }}">
+<path d="M129 51 Q135 56 141 51" stroke="#f8f4ea" stroke-width="2" fill="none"></path>
+</sc-if>
+</svg>
+</div>
+<sc-if value="{{slaapt}}" hint-placeholder-val="{{ false }}">
+<span aria-hidden="true" style="position: absolute; left: calc(50% + 70px); bottom: 280px; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; color: #16130f">zzz</span>
+</sc-if>
+<div style="position: absolute; left: 16px; top: 16px; background: #f8f4ea; border: 1px solid #16130f; box-shadow: 2px 2px 0 #16130f; padding: 10px 14px; display: flex; flex-direction: column; gap: 2px; max-width: 420px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; line-height: 16px; color: #5e574c">nu</span>
+<span style="font-size: 15px; line-height: 22px; font-weight: 700">{{status}}</span>
+</div>
+<span style="position: absolute; right: 16px; bottom: 12px; font-size: 13px; line-height: 18px; font-weight: 500; color: #5e574c">Hier komt straks de 3D-wereld van Berkel en Rodenrijs.</span>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start">
+
+<section aria-label="Dagboek" style="flex: 999 1 560px; min-width: 0; background: #f8f4ea; border: 1px solid #16130f; box-shadow: 4px 4px 0 #16130f">
+<div style="height: 30px; background: #1b2a8c; display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid #16130f">
+<span style="font-family: 'VT323', 'DotGothic16', monospace; font-size: 20px; color: #ffffff; flex-grow: 1">dagboek.exe</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 16px; color: #ffffff">日記</span>
+<span aria-hidden="true" style="display: flex; gap: 4px"><span style="width: 12px; height: 12px; border: 1px solid #ffffff; display: block"></span><span style="width: 12px; height: 12px; border: 1px solid #ffffff; display: block"></span><span style="width: 12px; height: 12px; border: 1px solid #ffffff; background: #d7261e; display: block"></span></span>
+</div>
+<div role="tablist" aria-label="Dagboek" style="display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 16px; border-bottom: 1px solid #d3c9b6">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+<button type="button" role="tab" aria-selected="{{t.selected}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div style="padding: 16px">
+<sc-if value="{{isDag}}" hint-placeholder-val="{{ true }}">
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<li style="display: grid; grid-template-columns: 64px 96px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid #d3c9b6">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">09:14</span>
+<span style="font-size: 13px; font-weight: 700; color: #1b2a8c">zoeken</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Waarom kraaien gezichten onthouden</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Zijn reden: iemand bij het station keek raar naar me. Ik wil weten of ik hem moet onthouden.</span></div>
+</li>
+<li style="display: grid; grid-template-columns: 64px 96px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid #d3c9b6">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">10:02</span>
+<span style="font-size: 13px; font-weight: 700; color: #1b2a8c">dagboek</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Over geheugen en wraak</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Zijn reden: te veel gelezen, moest het ergens kwijt.</span></div>
+</li>
+<li style="display: grid; grid-template-columns: 64px 96px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid #d3c9b6">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">11:30</span>
+<span style="font-size: 13px; font-weight: 700; color: #1b2a8c">tekenen</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Een kas, van boven</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Zijn reden: ze glimmen 's nachts. Verdacht.</span></div>
+</li>
+<li style="display: grid; grid-template-columns: 64px 96px minmax(0, 1fr); gap: 12px; padding: 12px 0">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">12:41</span>
+<span style="font-size: 13px; font-weight: 700; color: #1b2a8c">zoeken</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Hoeveel weegt een walnoot</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Zijn reden: voor een plan. Meer zegt hij niet.</span></div>
+</li>
+</ol>
+</sc-if>
+
+<sc-if value="{{isWil}}" hint-placeholder-val="{{ false }}">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<li style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 14px; border: 1px solid #16130f; background: #efe9dc"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Een walnoot</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Voor het plan.</span></div><span style="align-self: center; font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: #d7261e; color: #ffffff">wil ik echt</span></li>
+<li style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 14px; border: 1px solid #16130f; background: #efe9dc"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Een glimmend knoopje</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Geen reden. Gewoon.</span></div><span style="align-self: center; font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; border: 1px solid #16130f">ooit</span></li>
+<li style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 14px; border: 1px solid #16130f; background: #efe9dc"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; line-height: 22px; font-weight: 700">Een kaart van de metrolijn</span><span style="font-size: 13px; line-height: 18px; color: #5e574c">Ik wil weten waar hij heen gaat als hij niet hier is.</span></div><span style="align-self: center; font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; border: 1px solid #16130f">ooit</span></li>
+</ul>
+</sc-if>
+
+<sc-if value="{{isTek}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<figure style="margin: 0; border: 1px solid #16130f; background: #ffffff; display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" role="img" aria-label="Lijntekening van een kas" style="width: 100%; height: auto; display: block"><path d="M20 90 L20 55 L50 35 L80 55 L110 35 L140 55 L140 90 Z M50 35 L50 90 M80 55 L80 90 M110 35 L110 90" stroke="#16130f" stroke-width="2" fill="none"></path></svg>
+<figcaption style="padding: 8px 10px; border-top: 1px solid #d3c9b6; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Een kas, van boven</span><span style="font-size: 13px; color: #5e574c">Klopt niet. Is ook niet de bedoeling.</span></figcaption>
+</figure>
+<figure style="margin: 0; border: 1px solid #16130f; background: #ffffff; display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" role="img" aria-label="Lijntekening van de maan boven een dak" style="width: 100%; height: auto; display: block"><circle cx="110" cy="40" r="18" stroke="#16130f" stroke-width="2" fill="none"></circle><path d="M20 100 L20 70 L55 45 L90 70 L90 100" stroke="#16130f" stroke-width="2" fill="none"></path></svg>
+<figcaption style="padding: 8px 10px; border-top: 1px solid #d3c9b6; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">De maan doet raar</span><span style="font-size: 13px; color: #5e574c">Hij was er ook overdag.</span></figcaption>
+</figure>
+<figure style="margin: 0; border: 1px solid #16130f; background: #ffffff; display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" role="img" aria-label="Lijntekening van een walnoot" style="width: 100%; height: auto; display: block"><ellipse cx="80" cy="60" rx="34" ry="28" stroke="#16130f" stroke-width="2" fill="none"></ellipse><path d="M80 32 L80 88 M62 46 Q70 60 62 74 M98 46 Q90 60 98 74" stroke="#16130f" stroke-width="2" fill="none"></path></svg>
+<figcaption style="padding: 8px 10px; border-top: 1px solid #d3c9b6; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Het plan</span><span style="font-size: 13px; color: #5e574c">Meer kan ik er niet over zeggen.</span></figcaption>
+</figure>
+</div>
+</sc-if>
+
+<sc-if value="{{isBoek}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<article style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">za 14 nov, 10:02</span>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 26px; line-height: 1.05">Over geheugen en wraak</h2>
+<p style="margin: 0; font-size: 15px; line-height: 22px; max-width: 62ch">Kraaien onthouden gezichten jarenlang, las ik. Ze vertellen het zelfs door aan hun kinderen. Ik heb geen kinderen, dus ik schrijf het hier op. De man met de blauwe jas staat op de lijst. Niet omdat hij iets gedaan heeft. Voor de zekerheid.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">vr 13 nov, 21:47</span>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 26px; line-height: 1.05">Waarom de lampen uitgaan</h2>
+<p style="margin: 0; font-size: 15px; line-height: 22px; max-width: 62ch">Om tien uur gaat alles op zolder uit. Dan ben ik ook weg. Ik weet niet of dat toeval is.</p>
+</article>
+</div>
+</sc-if>
+
+<sc-if value="{{isOver}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 62ch">
+<p style="margin: 0; font-size: 15px; line-height: 22px">Een kraai die op een laptop in Berkel en Rodenrijs woont. Wakker als de laptop aanstaat, weg als hij uitgaat. Leest dingen op internet, schrijft er te lang over en tekent wat hij niet snapt.</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">interesses</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: #1b2a8c; color: #ffffff">gezichten</span>
+<span style="font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: #1b2a8c; color: #ffffff">kassen</span>
+<span style="font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: #1b2a8c; color: #ffffff">walnoten</span>
+<span style="font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px; border: 1px solid #16130f; color: #5e574c; text-decoration: line-through">de maan</span>
+</div>
+<span style="font-size: 13px; line-height: 18px; color: #5e574c">Doorgestreept: interesses waar hij klaar mee is.</span>
+</div>
+</div>
+</sc-if>
+</div>
+</section>
+
+<aside style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px">
+<section aria-label="Status" style="background: #f8f4ea; border: 1px solid #16130f; box-shadow: 4px 4px 0 #16130f">
+<div style="height: 30px; background: #1b2a8c; display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid #16130f">
+<span style="font-family: 'VT323', 'DotGothic16', monospace; font-size: 20px; color: #ffffff; flex-grow: 1">status.exe</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 16px; color: #ffffff">気分</span>
+</div>
+<dl style="margin: 0; padding: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">stemming</dt><dd style="margin: 0; font-size: 15px; font-weight: 700">{{stemming}}</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">laatst wakker</dt><dd style="margin: 0; font-family: 'DotGothic16', monospace; font-size: 28px; line-height: 1">19:00</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">keer wakker</dt><dd style="margin: 0; font-size: 40px; line-height: 1; font-weight: 700">37</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-family: 'DotGothic16', monospace; font-size: 14px; color: #5e574c">tekeningen</dt><dd style="margin: 0; font-size: 40px; line-height: 1; font-weight: 700">3</dd></div>
+</dl>
+</section>
+
+<section aria-label="Nieuwste tekening" style="background: #f8f4ea; border: 1px solid #16130f; box-shadow: 4px 4px 0 #16130f">
+<div style="height: 30px; background: #1b2a8c; display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid #16130f">
+<span style="font-family: 'VT323', 'DotGothic16', monospace; font-size: 20px; color: #ffffff; flex-grow: 1">nieuwste.svg</span>
+<span aria-hidden="true" style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 16px; color: #ffffff">絵</span>
+</div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<svg viewBox="0 0 160 120" role="img" aria-label="Lijntekening van een kas" style="width: 100%; height: auto; display: block; background: #ffffff; border: 1px solid #16130f"><path d="M20 90 L20 55 L50 35 L80 55 L110 35 L140 55 L140 90 Z M50 35 L50 90 M80 55 L80 90 M110 35 L110 90" stroke="#16130f" stroke-width="2" fill="none"></path></svg>
+<span style="font-size: 15px; font-weight: 700">Een kas, van boven</span>
+</div>
+</section>
+</aside>
+</div>
+
+<footer style="padding: 12px 0; font-size: 13px; line-height: 18px; color: #5e574c">Draait op een lokaal model. Als de laptop uit is, slaapt hij.</footer>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"naam":{"editor":"text","default":"Kraai"},"slaapt":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":1560}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'dag' };
+  }
+  renderVals() {
+    var naam = this.props.naam ?? 'Kraai';
+    var slaapt = this.props.slaapt ?? false;
+    var tab = this.state.tab;
+    var self = this;
+    var defs = [['dag', 'zijn dag'], ['wil', 'wil graag'], ['tek', 'tekeningen'], ['boek', 'dagboek'], ['over', 'over']];
+    var base = "font-family: 'DotGothic16', monospace; font-size: 14px; line-height: 16px; padding: 10px 14px; min-height: 44px; border: 1px solid #16130f; border-radius: 3px; cursor: pointer; ";
+    var tabs = defs.map(function (d) {
+      var on = d[0] === tab;
+      return {
+        label: d[1],
+        selected: on ? 'true' : 'false',
+        style: base + (on ? 'background: #1b2a8c; color: #ffffff; box-shadow: 2px 2px 0 #16130f;' : 'background: #f8f4ea; color: #16130f;'),
+        pick: function () { self.setState({ tab: d[0] }); }
+      };
+    });
+    return {
+      naam: naam,
+      slaapt: slaapt,
+      wakker: !slaapt,
+      tabs: tabs,
+      isDag: tab === 'dag', isWil: tab === 'wil', isTek: tab === 'tek', isBoek: tab === 'boek', isOver: tab === 'over',
+      kop: slaapt ? 'SLAAPT. LAPTOP IS UIT.' : 'IS WAKKER. HELAAS.',
+      status: slaapt ? 'Slaapt sinds 22:04. Wordt wakker als de laptop aangaat.' : 'Is aan het zoeken: hoeveel weegt een walnoot.',
+      stemming: slaapt ? 'weg' : 'nieuwsgierig',
+      vogelLabel: slaapt ? naam + ' slaapt' : naam + ' staat op de grond en kijkt rond'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -30,6 +30,8 @@ Inspired by [Pino the bird](https://pino-the-bird.github.io).
 | `state.json` | his current mind |
 | `log.json` | every action ever, oldest first |
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
+| `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads the three files above, `?sleep` shows the sleep look |
+| `housestyle.css` | copy of the shared Noah Huisstijl parts from nbroers05/Dashboard; copy again rather than edit |
 
 ```
 .\run                      # normal run (uses .venv)
