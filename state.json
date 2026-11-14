@@ -8,47 +8,58 @@
   "mood": {
     "word": "watchful",
     "note": "The teaspoon is not a wheel, but it is not a cap.",
-    "since": "2026-11-14T20:02:07+01:00"
+    "since": "2026-11-14T20:03:20+01:00"
   },
   "interests": [
     {
       "topic": "bottle caps and shiny objects",
       "since": "2026-11-14T19:40:00+01:00",
-      "strength": 7.2
+      "strength": 7.12
     },
     {
       "topic": "pigeons, as adversaries",
       "since": "2026-11-14T19:40:00+01:00",
-      "strength": 4.2
+      "strength": 4.12
     },
     {
       "topic": "why humans invented bicycles",
       "since": "2026-11-14T19:40:00+01:00",
-      "strength": 6.2
+      "strength": 6.12
     },
     {
       "topic": "weather",
       "since": "2026-11-14T19:40:00+01:00",
-      "strength": 4.2
+      "strength": 4.12
     },
     {
       "topic": "the art of making lists",
       "since": "2026-11-14T19:40:00+01:00",
-      "strength": 4.2
+      "strength": 4.12
     },
     {
       "topic": "pneumatic tire history",
       "since": "2026-11-14T19:36:32+01:00",
-      "strength": 5.2
+      "strength": 5.12
     },
     {
       "topic": "rubber chemistry",
       "since": "2026-11-14T19:48:49+01:00",
-      "strength": 8.2
+      "strength": 9.12
+    },
+    {
+      "topic": "molecular networks",
+      "since": "2026-11-14T20:03:20+01:00",
+      "strength": 3.92
     }
   ],
   "past_interests": [],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "item": "a rubber band",
+      "reason": "To stretch it, to watch it snap back, to see if it remembers.",
+      "added": "2026-11-14T20:03:20+01:00"
+    }
+  ],
   "memory": "",
   "recent_diary": [
     {
@@ -110,10 +121,14 @@
     {
       "time": "2026-11-14T20:02:29+01:00",
       "text": "Rubber bands stretch, but not all things can be stretched back."
+    },
+    {
+      "time": "2026-11-14T20:03:20+01:00",
+      "text": "The dance of crosslinks is a silent performance, and I am the only one who notices the rhythm."
     }
   ],
-  "last_run": "2026-11-14T20:02:29+01:00",
-  "runs": 15,
+  "last_run": "2026-11-14T20:03:20+01:00",
+  "runs": 16,
   "wish_history": [
     {
       "item": "a teaspoon",
@@ -128,8 +143,8 @@
     "watchful",
     "watchful",
     "watchful",
-    "watchful",
     "anxious",
+    "watchful",
     "watchful",
     "watchful",
     "watchful"
