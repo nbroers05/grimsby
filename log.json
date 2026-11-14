@@ -1,0 +1,18 @@
+[
+  {
+    "time": "2026-11-14T19:36:32+01:00",
+    "action": "search",
+    "reason": "I am curious about the origins of wheels, which I distrust.",
+    "ok": true,
+    "line": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
+    "detail": {
+      "query": "why did humans invent bicycles",
+      "title": "History of the bicycle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_bicycle",
+      "summary": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears. The first ones were wooden and had no pedals, which was very inefficient. Eventually, they figured out how to make them safer and more comfortable, which led to the modern bike.",
+      "new_interest": "pneumatic tire history"
+    },
+    "mood": "watchful",
+    "seconds": 26
+  }
+]
