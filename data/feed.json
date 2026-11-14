@@ -1,7 +1,33 @@
 {
  "v": 1,
- "at": "2026-11-14T23:36:11+01:00",
+ "at": "2026-11-14T23:38:15+01:00",
  "entries": [
+  {
+   "at": "2026-11-14T23:38:15+01:00",
+   "kind": "noticed",
+   "text": "Derek was there, and smug about it."
+  },
+  {
+   "at": "2026-11-14T23:38:15+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "I watch the pigeons because they are dull and Derek is duller.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-14T23:36:45+01:00",
+   "kind": "felt",
+   "text": "Sunlight on the tiles. A single drop of water hangs from the gutter. I count it. It’s the third one today."
+  },
+  {
+   "at": "2026-11-14T23:36:45+01:00",
+   "kind": "did",
+   "text": "flying from the library to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-14T23:33:11+01:00",
    "kind": "noticed",

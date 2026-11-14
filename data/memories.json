@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-14T23:36:11+01:00",
+ "at": "2026-11-14T23:38:15+01:00",
  "beliefs": [],
  "long": [
   {
@@ -75,6 +75,13 @@
   }
  ],
  "short": [
+  {
+   "text": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:36:45+01:00"
+  },
   {
    "text": "Pino: Pino sits in the meadow like a man who has forgotten the concept of action. Lazy is a choice, but it’s not one I’d make.",
    "kind": "person",
