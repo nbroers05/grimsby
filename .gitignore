@@ -9,3 +9,6 @@ world/cache/
 world/node_modules/
 world/build/
 world/build.log
+
+# brain v2 under construction: keep out of the hourly auto-push until cutover
+drive/
