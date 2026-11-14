@@ -3,3 +3,4 @@ run.log
 *.tmp
 __pycache__/
 .venv/
+quarantine.log

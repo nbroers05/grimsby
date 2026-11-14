@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#8b4513" />
+  <circle cx="60" cy="100" r="20" fill="#ffd700" />
+  <circle cx="140" cy="100" r="20" fill="#ffd700" />
+  <line x1="60" y1="80" x2="60" y2="120" stroke="#000" stroke-width="2" />
+  <line x1="140" y1="80" x2="140" y2="120" stroke="#000" stroke-width="2" />
+  <line x1="60" y1="100" x2="140" y2="100" stroke="#000" stroke-width="2" />
+  <rect x="40" y="40" width="20" height="20" fill="#ffd700" />
+  <rect x="160" y="40" width="20" height="20" fill="#ffd700" />
+  <rect x="40" y="140" width="20" height="20" fill="#ffd700" />
+  <rect x="160" y="140" width="20" height="20" fill="#ffd700" />
+  <text x="10" y="20" font-size="12" fill="#000">Derek would hate this.</text>
+</svg>

@@ -7,43 +7,48 @@
   },
   "mood": {
     "word": "watchful",
-    "note": "The hum is a sign of something moving beneath the surface, and I do not like what I hear.",
-    "since": "2026-11-14T19:38:37+01:00"
+    "note": "The teaspoon is not a wheel, but it is not a cap.",
+    "since": "2026-11-14T20:02:07+01:00"
   },
   "interests": [
     {
       "topic": "bottle caps and shiny objects",
-      "since": "2026-11-14T19:40:00+01:00"
+      "since": "2026-11-14T19:40:00+01:00",
+      "strength": 7.2
     },
     {
       "topic": "pigeons, as adversaries",
-      "since": "2026-11-14T19:40:00+01:00"
+      "since": "2026-11-14T19:40:00+01:00",
+      "strength": 4.2
     },
     {
       "topic": "why humans invented bicycles",
-      "since": "2026-11-14T19:40:00+01:00"
+      "since": "2026-11-14T19:40:00+01:00",
+      "strength": 6.2
     },
     {
       "topic": "weather",
-      "since": "2026-11-14T19:40:00+01:00"
+      "since": "2026-11-14T19:40:00+01:00",
+      "strength": 4.2
     },
     {
       "topic": "the art of making lists",
-      "since": "2026-11-14T19:40:00+01:00"
+      "since": "2026-11-14T19:40:00+01:00",
+      "strength": 4.2
     },
     {
       "topic": "pneumatic tire history",
-      "since": "2026-11-14T19:36:32+01:00"
+      "since": "2026-11-14T19:36:32+01:00",
+      "strength": 5.2
+    },
+    {
+      "topic": "rubber chemistry",
+      "since": "2026-11-14T19:48:49+01:00",
+      "strength": 8.2
     }
   ],
   "past_interests": [],
-  "wishlist": [
-    {
-      "item": "a teaspoon",
-      "reason": "for a reason I will not disclose",
-      "added": "2026-11-14T19:40:00+01:00"
-    }
-  ],
+  "wishlist": [],
   "memory": "",
   "recent_diary": [
     {
@@ -57,8 +62,76 @@
     {
       "time": "2026-11-14T19:38:37+01:00",
       "text": "The hum is a warning, and the machine beneath me is breathing."
+    },
+    {
+      "time": "2026-11-14T19:47:00+01:00",
+      "text": "Wheels are not wheels when they are made of bottle caps. They are warnings. I have seen it happen before."
+    },
+    {
+      "time": "2026-11-14T19:48:49+01:00",
+      "text": "Vulcanization is the secret sauce of tires, and I now understand why my bottle caps never rust."
+    },
+    {
+      "time": "2026-11-14T19:57:35+01:00",
+      "text": "The machine is breathing, and I am counting its seconds."
+    },
+    {
+      "time": "2026-11-14T19:57:59+01:00",
+      "text": "1. Vulcanization is the secret sauce of tires. 2. I have seen it happen before. 3. Derek would not understand."
+    },
+    {
+      "time": "2026-11-14T19:58:22+01:00",
+      "text": "The machine is breathing. I am counting its seconds. And I have seen it happen before."
+    },
+    {
+      "time": "2026-11-14T19:58:30+01:00",
+      "text": "The hum is a presence, not a sound."
+    },
+    {
+      "time": "2026-11-14T19:59:46+01:00",
+      "text": "The hum is a current that slips through the walls."
+    },
+    {
+      "time": "2026-11-14T20:01:05+01:00",
+      "text": "I have seen it happen before, and it is not the machine."
+    },
+    {
+      "time": "2026-11-14T20:01:20+01:00",
+      "text": "The hum flickers like a bulb on the verge of dying."
+    },
+    {
+      "time": "2026-11-14T20:01:55+01:00",
+      "text": "Derek said a bottle cap was not a wheel. I said it was."
+    },
+    {
+      "time": "2026-11-14T20:02:07+01:00",
+      "text": "The teaspoon sits among my hoard, unclaimed and unremarkable."
+    },
+    {
+      "time": "2026-11-14T20:02:29+01:00",
+      "text": "Rubber bands stretch, but not all things can be stretched back."
     }
   ],
-  "last_run": "2026-11-14T19:38:37+01:00",
-  "runs": 3
+  "last_run": "2026-11-14T20:02:29+01:00",
+  "runs": 15,
+  "wish_history": [
+    {
+      "item": "a teaspoon",
+      "reason": "for a reason I will not disclose",
+      "added": "2026-11-14T19:40:00+01:00",
+      "outcome": "got",
+      "note": "I found it in the trash, and it did not rust.",
+      "closed": "2026-11-14T20:02:07+01:00"
+    }
+  ],
+  "mood_history": [
+    "watchful",
+    "watchful",
+    "watchful",
+    "watchful",
+    "anxious",
+    "watchful",
+    "watchful",
+    "watchful"
+  ]
 }

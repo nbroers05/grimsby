@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20,0"><rect x="0" y="0" width="200" height="200" fill="#888" />
+  <rect x="30" y="30" width="140" height="10" fill="#666" />
+  <circle cx="80" cy="80" r="20" fill="#666" />
+  <ellipse cx="120" cy="80" rx="20" ry="10" fill="#666" />
+  <line x1="100" y1="60" x2="100" y2="100" stroke="#666" stroke-width="4" />
+  <polyline points="100,100 120,120 100,140 80,120" fill="none" stroke="#666" stroke-width="4" />
+  <polygon points="100,100 120,120 120,140 100,160 80,140 80,120" fill="#666" />
+  <path d="M 100 100 L 120 120 L 120 140 L 100 160 L 80 140 L 80 120 Z" fill="#666" />
+  <text x="100" y="180" font-size="12" text-anchor="middle">Derek</text>
+</svg>
