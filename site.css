@@ -118,3 +118,25 @@ html.nh .win-main > .eyebrow { margin: 0; }
   .wants li { flex-direction: column; align-items: flex-start; gap: 8px; }
   .win-main { flex-basis: 100%; }
 }
+
+/* ---------- 3D world (world.js) ---------- */
+.world { height: 480px; }
+#world3d canvas { display: block; width: 100%; height: 100%; }
+.world-flat { transition: opacity .6s ease; }
+.world.has-3d .world-flat { opacity: 0; pointer-events: none; }
+.world.has-3d .world-note { display: none; }
+.where { font: 400 13px/18px var(--font-body); color: var(--nh-muted); }
+.where:empty { display: none; }
+.world-ctl { position: absolute; right: 16px; top: 16px; z-index: 2; display: none; gap: 6px; }
+.world.has-3d .world-ctl { display: flex; }
+.world-ctl button { min-height: 32px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper-raised); color: var(--ink); font: 400 13px/1 var(--font-pixel); cursor: pointer; box-shadow: var(--shadow-control); }
+.world-ctl button[aria-pressed="true"] { background: var(--titlebar); color: #fff; }
+.world-credit { position: absolute; left: 8px; right: 8px; bottom: 6px; z-index: 2; display: none; text-align: right; font: 400 11px/14px var(--font-body); color: var(--nh-muted); pointer-events: none; }
+.world-credit a { color: inherit; pointer-events: auto; }
+.world.has-3d .world-credit { display: block; }
+.world[data-mood="titlecard"] .world-credit { color: #a7a29a; }
+@media (max-width: 640px) {
+  .world { height: 380px; }
+  .world-ctl { top: auto; bottom: 30px; }
+  .world-credit { text-align: left; }
+}

@@ -31,6 +31,9 @@ Inspired by [Pino the bird](https://pino-the-bird.github.io).
 | `log.json` | every action ever, oldest first |
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
 | `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads the three files above, `?sleep` shows the sleep look |
+| `world/build_world.py` | builds his 3D world: 3DBAG LoD 1.2 + OpenStreetMap → `world/berkel.glb` (Draco) + `world/poi.json`, local metres around the OSM village centre. Run with `world\.venv\Scripts\python world\build_world.py` (needs Node for the Draco step) |
+| `world.js` | the 3D world on the site: loads `world/berkel.glb`, puts Grimsby where his last action fits (search → library, diary → park bench, draw → church/windmill/statue/fountain), home and sleep on the roof of station Berkel Westpolder. Mood follows the time of day; `?mood=digital|poster|titlecard` and `?sleep` to test |
+| `world/viewer.html` | simple check viewer for the world (toon shading, moods, outline switch) |
 | `housestyle.css` | copy of the shared Noah Huisstijl parts from nbroers05/Dashboard; copy again rather than edit |
 
 ```

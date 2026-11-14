@@ -11,6 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@700;800&family=VT323&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="housestyle.css">
 <link rel="stylesheet" href="site.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
 </head>
 <body>
 <div class="page">
@@ -29,7 +35,7 @@
 <section class="tile win-world" aria-label="World">
   <div class="eyebrow" data-nh-exe="world.exe" data-nh-kanji="世界">World</div>
   <div class="world">
-    <!-- Placeholder scene. The 3D world mounts into #world3d later and can hide .world-flat. -->
+    <!-- Flat scene: shown while the 3D world (world.js -> #world3d) loads, and kept if it can't. -->
     <div class="world-flat" aria-hidden="true">
       <svg class="world-sky" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice">
         <polygon points="0,300 140,300 140,240 200,210 260,240 260,300 330,300 330,200 420,200 420,300 520,300 520,260 600,230 680,260 680,300 760,300 760,180 820,150 880,180 880,300 980,300 980,250 1060,250 1060,300 1200,300 1200,420 0,420" fill="#1b2a8c" opacity="0.18"/>
@@ -54,8 +60,13 @@
     <div class="now-box">
       <span class="label">now</span>
       <span class="now-text" id="now">Looking for Grimsby…</span>
+      <span class="where" id="where"></span>
     </div>
-    <span class="world-note">The 3D world of Berkel en Rodenrijs comes here later.</span>
+    <div class="world-ctl">
+      <button type="button" id="outline-btn" aria-pressed="false" title="Ink lines on the buildings">lines</button>
+    </div>
+    <span class="world-note">Loading Berkel en Rodenrijs…</span>
+    <span class="world-credit">drag to look around · ctrl + scroll to zoom · buildings <a href="https://3dbag.nl">3DBAG</a> (CC BY 4.0) · map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></span>
   </div>
 </section>
 
@@ -100,5 +111,6 @@
 <footer class="foot">Runs on a local model. When the computer is off, he sleeps. <a href="https://github.com/nbroers05/grimsby">Source</a></footer>
 </div>
 <script src="site.js"></script>
+<script type="module" src="world.js"></script>
 </body>
 </html>

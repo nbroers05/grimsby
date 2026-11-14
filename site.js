@@ -211,6 +211,7 @@
     var note = $("st-note");
     note.hidden = asleep || !mood.note;
     note.textContent = clean(mood.note);
+    return asleep;
   }
 
   function load() {
@@ -222,7 +223,9 @@
       var state = r[0] || {};
       var log = (Array.isArray(r[1]) ? r[1] : []).filter(function (e) { return e && e.ok && !e.withheld; });
       var drawings = Array.isArray(r[2]) ? r[2].filter(function (d) { return d && /^drawings\/[\w.-]+\.svg$/.test(d.file || ""); }) : [];
-      renderStatus(state, log, drawings);
+      var asleep = renderStatus(state, log, drawings);
+      window.GRIMSBY_DATA = { state: state, log: log, asleep: asleep };     // for world.js
+      document.dispatchEvent(new CustomEvent("grimsby:data", { detail: window.GRIMSBY_DATA }));
       renderDay(log);
       renderWants(state);
       renderDrawings(drawings);
