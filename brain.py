@@ -60,7 +60,8 @@ def iso(dt: datetime | None = None) -> str:
 
 def say(msg: str) -> None:
     line = f"[{iso()}] {msg}"
-    print(line, flush=True)
+    if sys.stdout:  # pythonw (Task Scheduler) has no console
+        print(line, flush=True)
     with RUNLOG.open("a", encoding="utf-8") as f:
         f.write(line + "\n")
 
@@ -575,4 +576,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception:  # noqa: BLE001 - leave a trace in run.log, the hourly job has no console
+        say("run crashed:\n" + traceback.format_exc())
+        sys.exit(2)

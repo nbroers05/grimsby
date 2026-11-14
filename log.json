@@ -14,5 +14,31 @@
     },
     "mood": "watchful",
     "seconds": 26
+  },
+  {
+    "time": "2026-11-14T19:37:42+01:00",
+    "action": "diary",
+    "reason": "I feel the need to record my suspicions about the computer's hum.",
+    "ok": true,
+    "line": "The computer hums like a wasp in honey. Badly.",
+    "detail": {
+      "topic": "Computer hum",
+      "entry": "The computer hums. A low, persistent sound, like a wasp trapped in a jar of honey. It is not the hum of a machine at rest, but of one that dreams in binary. I do not like it. It reminds me of the time I tried to teach a wheel to balance on a string. It failed. Badly."
+    },
+    "mood": "watchful",
+    "seconds": 4
+  },
+  {
+    "time": "2026-11-14T19:38:37+01:00",
+    "action": "diary",
+    "reason": "The hum has grown louder. I must record this.",
+    "ok": true,
+    "line": "The hum is a warning, and the machine beneath me is breathing.",
+    "detail": {
+      "topic": "The hum",
+      "entry": "The hum is not a sound, it is a warning. It comes from beneath the floorboards, where the wires twist like the tail of a disappointed serpent. It grows louder when I press my ear to the wood, as if the machine beneath me is breathing in rhythm with my own heartbeat. I have noted this pattern three times now, and each time it ends with a flicker in the light, like a candle in a storm."
+    },
+    "mood": "watchful",
+    "seconds": 4
   }
 ]
