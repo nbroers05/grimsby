@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T00:10:32+01:00",
+ "at": "2026-11-15T00:21:02+01:00",
  "beliefs": [],
  "long": [
   {
@@ -75,6 +75,20 @@
   }
  ],
  "short": [
+  {
+   "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T00:16:32+01:00"
+  },
+  {
+   "text": "I landed on a bench by the station, which is not a place I usually choose for perching, but the hunger was persuasive.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T00:12:02+01:00"
+  },
   {
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",

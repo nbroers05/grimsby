@@ -1,12 +1,8 @@
 {
  "v": 1,
- "at": "2026-11-15T00:10:32+01:00",
- "thought": "The shadow of the train tracks is longer than the shadow of the lamppost",
+ "at": "2026-11-15T00:21:02+01:00",
+ "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
  "loudest": [
-  {
-   "kind": "need",
-   "subject": "hunger"
-  },
   {
    "kind": "want",
    "subject": "A list of crown cork teeth counts"
@@ -20,7 +16,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "flying about town, as far as a bench by the station",
+ "busy": "drawing pigeons, as adversaries by the fountain next to the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",

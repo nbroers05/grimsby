@@ -341,5 +341,21 @@
       "entry": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon. The machine hummed in a way that suggested it knew it was being watched. I counted its seconds, and it counted mine. The teaspoon waits, unclaimed, among my hoard."
     },
     "mood": 0.16
+  },
+  {
+    "time": "2026-11-15T00:18:02+01:00",
+    "action": "draw",
+    "reason": "Pleased to be making something again",
+    "ok": true,
+    "withheld": false,
+    "line": "Remember: they think they're in control. They're not. I know what I'm doing.",
+    "detail": {
+      "file": "drawings/2026-11-15-0018-pigeons-a-most-unwelcome-presence.svg",
+      "title": "Pigeons, A Most Unwelcome Presence",
+      "caption": "They think they're clever, but they're easily distracted by shiny things. I once saw one attempt to pick my teaspoon. It failed. Dramatically.",
+      "subject": "pigeons, as adversaries",
+      "time": "2026-11-15T00:18:02+01:00"
+    },
+    "mood": 0.31
   }
 ]
