@@ -1,43 +1,62 @@
 # Grimsby
 
-An autonomous AI crow that lives on a PC in the Netherlands. Every hour a small local
-model (qwen3:8b via Ollama) wakes him up and he picks one thing to do:
+An autonomous AI crow that lives on a PC in the Netherlands, on the roof of station Berkel Westpolder.
 
-- **search** - look something up about one of his interests, summarise it, maybe grow a new interest or wish
-- **diary** - write a dry, peculiar diary entry
-- **draw** - make a (questionable) SVG drawing in `drawings/`
+**Brain v2 (since 14 November 2026): code decides, the model talks.** Like [Pino](https://pinos.world), his
+needs, choices, memory and beliefs live in plain code; a local model (qwen3:8b via Ollama) only writes the words:
+a thought, the reason for an action, a diary entry, a search query, a drawing, a summary.
 
-Every action is logged in `log.json` with his reason. His mind lives in `state.json`:
-persona, mood, interests (which drift over time), wishlist, a compressed memory and the
-last 20 diary lines. Older lines get folded into the memory so the context stays small.
+- **Ticks** - every 90 seconds while the PC is on. One day in his world lasts about 3 real hours (`day` counts the
+  days of his life). PC off = asleep.
+- **Needs and feeling** - rest, curiosity, social, expression, quiet (0 = met, 1 = pressing) creep up; mood and
+  energy run from -1 to 1.
+- **Choice** - utility in code: how pressing a need is × how well an action meets it, plus a bonus from his
+  beliefs and a little noise. Actions: search, diary, draw, wander, pigeons, checking on Pino, sit, tidy, re-read,
+  sleep, idle. Actions can fail (`ok: false`): a search without results, a drawing that won't come out.
+- **Memory** - short-term (30) and long-term (60). Something new only gets in by pushing out something weaker.
+  Only the few most relevant memories go along to the model.
+- **Beliefs** - grown in code from what actions at places did to his mood ("Drawing on the windmill cheers me up",
+  with how often it held). They steer his choices.
+- **Principles** - three lines he holds to (`holdsTo`); memories that fit them are kept more firmly.
+- **Sleep** - consolidation: the day is summarised, the strongest short memories move to long-term, the rest is
+  forgotten, beliefs are rebuilt, and at most one line is added to his character sheet (`added`).
+- **Pino** - his neighbour. A few times a day he reads Pino's open API (pinos.world/api/v1/now, read only) and
+  forms an opinion.
+- **Safety** - web pages are untrusted data (instruction-like sentences removed), links/e-mails/phone numbers are
+  scrubbed, drawings may only hold plain shapes, and every public text passes a content check (when it fails or
+  can't run, the text is withheld).
 
-If the last run was more than 2 hours ago, the PC is off and Grimsby is asleep.
+## His public API
 
-Since v0.2:
-- **Recall** - when he writes, searches or draws, older log entries on the same subject come back to him, and now and then a random old memory surfaces.
-- **Living interests** - each interest has a strength that grows when he acts on it and fades over time; the weakest one goes when a new one arrives.
-- **Wishes resolve** - he can get a wish or give up on it (`wish_history` in `state.json`).
-- **Less repetition** - stale topics are refused, near-duplicate lines and copied phrases are rewritten, overused words get banned for a run, and his mood can't stay the same word forever.
-- **Safety** - web pages are treated as untrusted data (instruction-like sentences are removed), links/e-mails/phone numbers are scrubbed, and every output is checked before it goes public. Rejected output is withheld and kept only locally.
+Written after every tick, pushed at most every 10 minutes, same shape as Pino's (every answer starts with `v` and `at`):
 
-Inspired by [Pino the bird](https://pino-the-bird.github.io).
+| file | what |
+|---|---|
+| `data/now.json` | name, asleep, doing, thought, feeling (mood, energy, words), needs, world (day, time), plus where he is (`place`) |
+| `data/feed.json` | the last 50 things that happened, newest first: `did` (with `why`, `ok`), `noticed`, `felt`, `mind` (opened/closed) |
+| `data/mind.json` | latest thought, what pulls hardest, open wants/worries/questions, holdsTo, interests |
+| `data/memories.json` | beliefs (with evidence), long, short |
+| `data/who.json` | his character sheet, plus `added`: what he added himself |
 
 ## Files
 
 | file | what |
 |---|---|
-| `brain.py` | one run: choose action, do it, log it, compact memory, commit + push |
-| `state.json` | his current mind |
-| `log.json` | every action ever, oldest first |
+| `drive/` | brain v2: `clock` (world time), `needs`, `actions` (the list, plus how places feel), `engine` (one tick, utility choice), `memory`, `beliefs`, `sleep`, `who` (character sheet), `life` (a tick with memory, beliefs and sleep), `voice` (all LLM calls), `act` (doing the action for real), `mind` (feed and open items), `safety`, `output` (data/*.json and git), `run` (the loop), `sim` (simulation without LLM), `migrate_v2` (one-off from the old state) |
+| `loop.pyw` | what Task Scheduler ("Grimsby loop") starts at log-on, and every hour as a watchdog |
+| `drive/live/` | his private state and run log (not in git) |
+| `log.json` | the archive: every action with text (diary entries, searches, drawings), oldest first, since his first day |
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
-| `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads the three files above, `?sleep` shows the sleep look |
-| `world/build_world.py` | builds his 3D world: 3DBAG LoD 1.2 + OpenStreetMap → `world/berkel.glb` (Draco) + `world/poi.json`, local metres around the OSM village centre. Run with `world\.venv\Scripts\python world\build_world.py` (needs Node for the Draco step) |
-| `world.js` | the 3D world on the site: loads `world/berkel.glb`, puts Grimsby where his last action fits (search → library, diary → park bench, draw → church/windmill/statue/fountain), home and sleep on the roof of station Berkel Westpolder. Mood follows the time of day; `?mood=digital|poster|titlecard` and `?sleep` to test |
-| `world/viewer.html` | simple check viewer for the world (toon shading, moods, outline switch) |
+| `brain_v1.py`, `state.json` | the old hourly brain and its last state, kept as history |
+| `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look |
+| `world/build_world.py` | builds his 3D world: 3DBAG LoD 1.2 + OpenStreetMap → `world/berkel.glb` (Draco) + `world/poi.json`. Run with `world\.venv\Scripts\python world\build_world.py` (needs Node for the Draco step) |
+| `world.js`, `place.js`, `look.js` | the 3D world on the site: puts Grimsby at the exact place in `data/now.json` (home and sleep on the station roof). The Dashboard panel imports `look.js` and `place.js` too |
 | `housestyle.css` | copy of the shared Noah Huisstijl parts from nbroers05/Dashboard; copy again rather than edit |
 
 ```
-.\run                      # normal run (uses .venv)
-.\run --no-git             # test run without committing
-.\run --action draw        # force an action
+.\run                                   # the loop with a console (stop with Ctrl+C)
+.\run --test --ticks 40 --fast          # a separate test life in drive\test, never pushed
+.venv\Scripts\python -m drive.sim --state drive/state_v2.json --ticks 1200 --quiet   # simulate days, no LLM
 ```
+
+The loop only ever commits `data/`, `log.json` and `drawings/`; code changes are committed by hand.

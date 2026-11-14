@@ -10,5 +10,8 @@ world/node_modules/
 world/build/
 world/build.log
 
-# brain v2 under construction: keep out of the hourly auto-push until cutover
-drive/
+# brain v2: private state, test runs and simulation output stay local
+drive/live/
+drive/test/
+drive/sim_out.json
+drive/state_v2.json
