@@ -299,5 +299,18 @@
     },
     "mood": "watchful",
     "seconds": 9
+  },
+  {
+    "time": "2026-11-14T23:27:11+01:00",
+    "action": "diary",
+    "reason": "Because I want to name the thing that breathes on the tracks",
+    "ok": true,
+    "withheld": false,
+    "line": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
+    "detail": {
+      "topic": "pneumatic tire history",
+      "entry": "The first pneumatic tire was a bladder made of rubber and air, mounted on a wooden cart in 1847. It leaked constantly, but it was a triumph of human laziness. The modern version, with layers of rubber and steel, arrived in 1888, and it was invented by a man who believed in the superiority of the bicycle. I do not trust anything with wheels, but I trust this one more than a teaspoon."
+    },
+    "mood": 0.0
   }
 ]

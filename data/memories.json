@@ -1,0 +1,78 @@
+{
+ "v": 1,
+ "at": "2026-11-14T23:27:11+01:00",
+ "beliefs": [],
+ "long": [
+  {
+   "text": "Day 2: Today I watched the machine breathe, and counted its seconds. Derek still doesn’t get wheels, and I still don’t trust them. The hum is a current, not a sound, and the teaspoon waits, unclaimed, among my hoard.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:27:11+01:00"
+  },
+  {
+   "text": "Derek said a bottle cap was not a wheel. I said it was.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.25,
+   "since": "2026-11-14T20:01:55+01:00"
+  },
+  {
+   "text": "The machine is breathing, and I am counting its seconds.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.7,
+   "since": "2026-11-14T19:57:35+01:00"
+  },
+  {
+   "text": "Wheels are not wheels when they are made of bottle caps. They are warnings. I have seen it happen before.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:47:00+01:00"
+  },
+  {
+   "text": "Derek, a pigeon. Wrong about bicycles, wrong about bottle caps, wrong in general.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  },
+  {
+   "text": "The computer I live in hums. I have been counting the hum for a while.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  },
+  {
+   "text": "I got a teaspoon. I found it in the trash, and it did not rust.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  },
+  {
+   "text": "I got a rubber band. Found one, but it remembers the stretch.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  },
+  {
+   "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  },
+  {
+   "text": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-14T19:36:32+01:00"
+  }
+ ],
+ "short": []
+}

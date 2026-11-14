@@ -1,0 +1,74 @@
+{
+ "v": 1,
+ "at": "2026-11-14T23:27:11+01:00",
+ "thought": "It’s counting again, and the teaspoon still waits",
+ "loudest": [
+  {
+   "kind": "need",
+   "subject": "social"
+  },
+  {
+   "kind": "need",
+   "subject": "expression"
+  },
+  {
+   "kind": "need",
+   "subject": "curiosity"
+  }
+ ],
+ "open": {
+  "piece": 0,
+  "person": 0,
+  "question": 0,
+  "want": 0,
+  "worry": 0,
+  "promise": 0
+ },
+ "busy": "writing in his diary on a park bench",
+ "promises": [],
+ "holdsTo": [
+  "A fact is only shiny if it is true.",
+  "Never trust a thing for its wheels, nor dismiss it for them.",
+  "Every small thing deserves one careful look."
+ ],
+ "items": [],
+ "interests": [
+  {
+   "topic": "rubber chemistry",
+   "strength": 9.5
+  },
+  {
+   "topic": "bottle caps and shiny objects",
+   "strength": 6.7
+  },
+  {
+   "topic": "why humans invented bicycles",
+   "strength": 5.7
+  },
+  {
+   "topic": "pneumatic tire history",
+   "strength": 4.7
+  },
+  {
+   "topic": "pigeons, as adversaries",
+   "strength": 3.7
+  },
+  {
+   "topic": "weather",
+   "strength": 3.7
+  },
+  {
+   "topic": "the art of making lists",
+   "strength": 3.7
+  },
+  {
+   "topic": "molecular networks",
+   "strength": 3.5
+  }
+ ],
+ "budget": {
+  "amount": 12,
+  "unit": "bottle caps",
+  "note": "imaginary; he spends it on his wishlist in his head"
+ }
+}

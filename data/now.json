@@ -1,0 +1,31 @@
+{
+ "v": 1,
+ "at": "2026-11-14T23:27:11+01:00",
+ "name": "Grimsby",
+ "asleep": false,
+ "doing": "writing in his diary on a park bench",
+ "thought": "It’s counting again, and the teaspoon still waits",
+ "feeling": {
+  "mood": 0.0,
+  "energy": 1.0,
+  "words": "Watchful. Something is not as it seems."
+ },
+ "needs": {
+  "rest": 0.01,
+  "curiosity": 0.51,
+  "social": 0.67,
+  "expression": 0.59,
+  "quiet": 0.28
+ },
+ "world": {
+  "name": "Berkel en Rodenrijs",
+  "day": 2,
+  "time": "14:45"
+ },
+ "action": "diary",
+ "place": {
+  "category": "bench",
+  "poi": "n7956105766",
+  "name": ""
+ }
+}
