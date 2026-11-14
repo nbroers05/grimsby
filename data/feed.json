@@ -1,7 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-14T23:38:15+01:00",
+ "at": "2026-11-14T23:48:45+01:00",
  "entries": [
+  {
+   "at": "2026-11-14T23:44:15+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "Because I need to fix a gap in my list of things that matter",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-14T23:42:45+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-14T23:38:15+01:00",
    "kind": "noticed",

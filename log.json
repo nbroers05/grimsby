@@ -328,5 +328,18 @@
       "new_interest": "Crown cork specifications"
     },
     "mood": 0.12
+  },
+  {
+    "time": "2026-11-14T23:44:15+01:00",
+    "action": "diary",
+    "reason": "Because I need to fix a gap in my list of things that matter",
+    "ok": true,
+    "withheld": false,
+    "line": "Tires evolved, I trusted one more than a teaspoon.",
+    "detail": {
+      "topic": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
+      "entry": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon. The machine hummed in a way that suggested it knew it was being watched. I counted its seconds, and it counted mine. The teaspoon waits, unclaimed, among my hoard."
+    },
+    "mood": 0.16
   }
 ]

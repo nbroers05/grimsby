@@ -1,12 +1,8 @@
 {
  "v": 1,
- "at": "2026-11-14T23:38:15+01:00",
- "thought": "The one with the red dot is pecking at the wrong spot again.",
+ "at": "2026-11-14T23:48:45+01:00",
+ "thought": "This pen writes better than the last one, but it still needs a cap—though I suppose I can trust it more than a teaspoon",
  "loudest": [
-  {
-   "kind": "need",
-   "subject": "social"
-  },
   {
    "kind": "want",
    "subject": "A list of crown cork teeth counts"
@@ -20,7 +16,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "keeping an eye on the pigeons by the fountain in the village centre",
+ "busy": "watching the world go by at the library",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",

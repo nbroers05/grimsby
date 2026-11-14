@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-14T23:38:15+01:00",
+ "at": "2026-11-14T23:48:45+01:00",
  "beliefs": [],
  "long": [
   {
@@ -75,6 +75,20 @@
   }
  ],
  "short": [
+  {
+   "text": "Tires evolved, I trusted one more than a teaspoon.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:48:45+01:00"
+  },
+  {
+   "text": "Derek was at the centre-fountain, and he was smug about it.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-14T23:42:45+01:00"
+  },
   {
    "text": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
    "kind": "fact",
