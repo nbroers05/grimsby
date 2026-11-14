@@ -33,8 +33,10 @@
 </header>
 
 <section class="tile win-world" aria-label="World">
-  <div class="eyebrow" data-nh-exe="world.exe" data-nh-kanji="世界">World</div>
-  <div class="world">
+  <div class="eyebrow" data-nh-exe="world.exe" data-nh-kanji="世界">World
+    <button type="button" class="bar-btn" id="world-open" aria-controls="world" aria-expanded="false" aria-label="Expand the world to full screen"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M2 6 V2 H6 M10 2 H14 V6 M14 10 V14 H10 M6 14 H2 V10" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>expand</button>
+  </div>
+  <div class="world" id="world">
     <!-- Flat scene: shown while the 3D world (world.js -> #world3d) loads, and kept if it can't. -->
     <div class="world-flat" aria-hidden="true">
       <svg class="world-sky" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice">
@@ -67,6 +69,77 @@
     </div>
     <span class="world-note">Loading Berkel en Rodenrijs…</span>
     <span class="world-credit">drag to look around · ctrl + scroll to zoom · buildings <a href="https://3dbag.nl">3DBAG</a> (CC BY 4.0) · map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></span>
+    <button type="button" class="walk-btn" id="world-walk" aria-controls="world">Walk around in his world<span aria-hidden="true">→</span></button>
+
+    <!-- Expanded world: the HUD (site.js fills it). Hidden while the world sits in the page. -->
+    <div class="hud" id="hud" hidden>
+      <section class="hud-win hud-needs" aria-label="How he is doing">
+        <div class="hud-bar"><span class="hud-exe" id="hud-exe">grimsby.exe</span><span class="hud-kanji" aria-hidden="true">気分</span></div>
+        <div class="hud-body">
+          <div class="needs" id="hud-needs"></div>
+          <div class="hud-mood"><span>mood <strong id="hud-mood">–</strong></span><span>energy <strong id="hud-energy">–</strong></span></div>
+          <span class="hint">The fuller the bar, the harder it pulls. Red: what he needs most.</span>
+        </div>
+      </section>
+
+      <section class="hud-win hud-now" id="hud-now" aria-label="Now">
+        <div class="hud-now-head"><span class="dot" aria-hidden="true"></span><span class="label">now</span>
+          <button type="button" class="x-btn" id="hud-now-hide" aria-label="Hide this card">×</button></div>
+        <span class="hud-now-title" id="hud-now-title">…</span>
+        <p class="hud-now-thought" id="hud-now-thought"></p>
+        <div class="hud-now-foot"><span class="hint" id="hud-now-where"></span><a href="#diary" id="hud-diary">read the diary</a></div>
+      </section>
+      <button type="button" class="hud-chip hud-now-show" id="hud-now-show" hidden>what is he doing?</button>
+
+      <div class="hud-right">
+        <div class="hud-top">
+          <div class="hud-clock"><span class="hud-time" id="hud-time">--:--</span><span class="hint" id="hud-day"></span></div>
+          <button type="button" class="hud-collapse" id="world-close"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M6 2 V6 H2 M14 6 H10 V2 M10 14 V10 H14 M2 10 H6 V14" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>collapse</button>
+        </div>
+        <section class="hud-win hud-map" aria-label="Map">
+          <div class="hud-bar"><span class="hud-exe">map.exe</span><span class="hud-kanji" aria-hidden="true">地図</span></div>
+          <svg id="hud-map" viewBox="0 0 230 190" role="img" aria-label="Map of his places, where he is and where you are"></svg>
+          <div class="hud-legend"><span><i class="lg-him" aria-hidden="true"></i>him</span><span><i class="lg-you" aria-hidden="true"></i>you</span></div>
+        </section>
+      </div>
+
+      <section class="hud-win hud-visitors" aria-label="Who is here now">
+        <div class="hud-bar"><span class="hud-exe">visitors.exe</span><span class="hud-kanji" aria-hidden="true">客</span></div>
+        <div class="hud-body">
+          <span class="label">here now · <span id="hud-count">1</span></span>
+          <div class="chips" id="hud-visitors"><span class="pill eva">you</span></div>
+          <p class="hint hud-vis-note">Nobody else can see you yet. Other visitors show up once his world goes online.</p>
+        </div>
+      </section>
+
+      <div class="hud-hint">drag to look around · ctrl + scroll to zoom · Esc to collapse</div>
+      <button type="button" class="leave-btn" id="leave-open">Leave something</button>
+      <div class="hud-chip leave-status" id="leave-status" role="status" hidden></div>
+    </div>
+
+    <div class="modal-back" id="leave-modal" hidden>
+      <section class="hud-win modal" role="dialog" aria-modal="true" aria-labelledby="leave-title">
+        <div class="hud-bar"><span class="hud-exe" id="leave-title">leave.exe</span><span class="hud-kanji" aria-hidden="true">贈物</span></div>
+        <form class="hud-body modal-body" id="leave-form" novalidate>
+          <div class="field"><label class="label" for="leave-name">your name</label>
+            <input id="leave-name" type="text" maxlength="24" autocomplete="nickname" required></div>
+          <fieldset class="field"><legend class="label">what you leave behind</legend>
+            <div class="chips" id="leave-items">
+              <button type="button" data-item="walnut" aria-pressed="true">a walnut</button>
+              <button type="button" data-item="button" aria-pressed="false">a button</button>
+              <button type="button" data-item="note" aria-pressed="false">just a note</button>
+              <button type="button" data-item="other" aria-pressed="false">something else</button>
+            </div></fieldset>
+          <div class="field"><label class="label" for="leave-note">note (may be empty)</label>
+            <textarea id="leave-note" rows="4" maxlength="280"></textarea>
+            <span class="hint count" id="leave-count">0 / 280</span></div>
+          <span class="hint">He reads it when he is awake. If he is asleep, it waits for him.</span>
+          <span class="err" id="leave-err" hidden></span>
+          <div class="modal-actions"><button type="button" class="btn-plain" id="leave-cancel">Never mind</button>
+            <button type="submit" class="btn-eva">Put it down</button></div>
+        </form>
+      </section>
+    </div>
   </div>
 </section>
 
@@ -78,6 +151,7 @@
       <button type="button" role="tab" id="tab-wants" aria-controls="panel-wants" data-tab="wants">wants</button>
       <button type="button" role="tab" id="tab-drawings" aria-controls="panel-drawings" data-tab="drawings">drawings</button>
       <button type="button" role="tab" id="tab-diary" aria-controls="panel-diary" data-tab="diary">diary</button>
+      <button type="button" role="tab" id="tab-facts" aria-controls="panel-facts" data-tab="facts">facts</button>
       <button type="button" role="tab" id="tab-about" aria-controls="panel-about" data-tab="about">about</button>
     </div>
     <div class="panels">
@@ -85,6 +159,7 @@
       <div role="tabpanel" id="panel-wants" aria-labelledby="tab-wants" hidden></div>
       <div role="tabpanel" id="panel-drawings" aria-labelledby="tab-drawings" hidden></div>
       <div role="tabpanel" id="panel-diary" aria-labelledby="tab-diary" hidden></div>
+      <div role="tabpanel" id="panel-facts" aria-labelledby="tab-facts" hidden></div>
       <div role="tabpanel" id="panel-about" aria-labelledby="tab-about" hidden></div>
     </div>
   </section>

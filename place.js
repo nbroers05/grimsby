@@ -10,7 +10,7 @@ export const PLACES = {                             // old brain (log.json entri
 };
 // Brain v2 actions -> one of the three poses look.js/world.js know (head down, looking around, hopping)
 const POSES = { diary: "diary", read_back: "diary", tidy: "diary", search: "search", wander: "search",
-  pigeons: "search", neighbour: "search", draw: "draw" };
+  pigeons: "search", neighbour: "search", draw: "draw", eat: "draw" };
 export const pose = (action) => POSES[action] || null;
 const WORDS = {
   library: "at the library", bench: "on a bench in the park", church: "on the church roof",

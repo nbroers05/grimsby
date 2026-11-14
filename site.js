@@ -50,7 +50,7 @@
   }
 
   // ---------- tabs ----------
-  var TABS = ["day", "wants", "drawings", "diary", "about"];
+  var TABS = ["day", "wants", "drawings", "diary", "facts", "about"];
   function pick(name, focus) {
     TABS.forEach(function (t) {
       var on = t === name;
@@ -153,18 +153,47 @@
 
   function renderDiary(log) {
     var p = $("panel-diary"); p.textContent = "";
-    var entries = log.filter(function (e) { return e.action === "diary" && (e.detail || {}).entry; }).reverse();
+    var entries = log.filter(function (e) {
+      return (e.action === "diary" || e.action === "dream") && (e.detail || {}).entry;
+    }).reverse();
     if (!entries.length) { p.appendChild(el("p", "empty", "The diary is still empty.")); return; }
     var box = el("div", "entries");
     entries.forEach(function (e) {
       var d = e.detail || {};
-      var a = el("article");
-      a.appendChild(el("span", "label")).appendChild(timeEl(e.time, stamp(e.time)));
-      a.appendChild(el("h2", null, cap(d.topic || "Untitled")));
+      var dream = e.action === "dream";
+      var a = el("article", dream ? "dream" : null);
+      var head = el("span", "label");
+      if (dream) head.appendChild(el("span", "pill dream-tag", "dream"));
+      head.appendChild(timeEl(e.time, stamp(e.time)));
+      a.appendChild(head);
+      a.appendChild(el("h2", null, dream ? "A dream" : cap(d.topic || "Untitled")));
       a.appendChild(el("p", null, clean(d.entry || e.line)));
       box.appendChild(a);
     });
     p.appendChild(box);
+  }
+
+  function renderFacts(mems) {
+    var p = $("panel-facts"); p.textContent = "";
+    var facts = (mems.beliefs || []).filter(function (b) { return b && b.text; }).slice().sort(function (a, b) {
+      return (b.n || 0) - (a.n || 0);
+    });
+    if (!facts.length) { p.appendChild(el("p", "empty", "He has not concluded anything yet. He is gathering evidence.")); return; }
+    p.appendChild(el("p", "day-head", "what he has come to believe, newest first"));
+    var ol = el("ol", "facts");
+    facts.forEach(function (f) {
+      var li = el("li");
+      li.appendChild(el("span", "fact-n", f.n ? "fact " + f.n : "fact"));
+      var t = el("div", "txt");
+      t.appendChild(el("b", null, clean(f.text)));
+      var sub = "based on " + f.evidence + (f.evidence === 1 ? " time" : " times");
+      if (f.since) sub += " · since " + stamp(f.since);
+      t.appendChild(el("span", null, sub));
+      li.appendChild(t);
+      ol.appendChild(li);
+    });
+    p.appendChild(ol);
+    p.appendChild(el("p", "hint", "Facts fade when the evidence does. A fact that comes back keeps its number."));
   }
 
   function chipRow(box, label, own, added) {
@@ -195,19 +224,23 @@
       w.appendChild(ol);
       box.appendChild(w);
     }
-    var beliefs = (mems.beliefs || []).slice(0, 8);
-    if (beliefs.length) {
-      var b = el("div", "about-row");
-      b.appendChild(el("span", "label", "what he has come to believe"));
-      var ul = el("ul", "beliefs");
-      beliefs.forEach(function (x) {
-        var li = el("li", null, clean(x.text));
-        li.appendChild(el("span", "hint", " (" + x.evidence + " times)"));
+    var v = el("div", "about-row version");
+    var ver = who.version || 1;
+    v.appendChild(el("span", "label", "version " + ver + " of him"));
+    var log = Array.isArray(who.changelog) ? who.changelog : [];
+    if (!log.length) v.appendChild(el("p", null, "As he was written. Nothing about him has changed yet; that happens in his sleep."));
+    else {
+      var ul = el("ul", "versions");
+      log.forEach(function (c) {
+        var li = el("li");
+        li.appendChild(el("span", "fact-n", "v" + c.version));
+        var when = c.day ? "the night of day " + c.day : c.at ? stamp(c.at) : "before versions were kept";
+        li.appendChild(txt(cap(clean(c.added)) + ".", "Added to his " + clean(c.field) + ", " + when + "."));
         ul.appendChild(li);
       });
-      b.appendChild(ul);
-      box.appendChild(b);
+      v.appendChild(ul);
     }
+    box.appendChild(v);
     chipRow(box, "interests, strongest first", (mind.interests || []).map(function (i) { return i.topic; }), []);
     box.appendChild(el("span", "hint", "Dark chips are things he added to himself while he slept."));
     p.appendChild(box);
@@ -255,6 +288,174 @@
     return asleep;
   }
 
+  // ---------- expanded world: the HUD ----------
+  var worldBox = $("world"), hud = $("hud");
+  var places = null, lastNow = {}, lastAsleep = false;
+  getJSON("world/places.json").then(function (d) { places = d.places || []; drawMap(); }).catch(function () {});
+
+  function fillNeeds(box, needs) {
+    box.textContent = "";
+    var top = null;
+    NEEDS.forEach(function (n) { var v = needs[n[0]] || 0; if (top === null || v > (needs[top] || 0)) top = n[0]; });
+    NEEDS.forEach(function (n) {
+      var v = Math.max(0, Math.min(1, needs[n[0]] || 0));
+      var row = el("div", "need" + (n[0] === top && v > 0.3 ? " top" : ""));
+      row.appendChild(el("span", "need-name", n[1]));
+      var bar = el("span", "need-bar"), fill = el("span", "need-fill");
+      fill.style.width = Math.round(v * 100) + "%";
+      bar.appendChild(fill); row.appendChild(bar);
+      row.title = n[1] + ": " + Math.round(v * 100) + "%" + (row.classList.contains("top") ? " (pulls hardest)" : "");
+      box.appendChild(row);
+    });
+  }
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs, parent) {
+    var n = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  var mapFit = null;
+  function drawMap() {
+    var svg = $("hud-map");
+    if (!svg || !places || !places.length) return;
+    svg.textContent = "";
+    var xs = places.map(function (p) { return p.x; }), zs = places.map(function (p) { return p.z; });
+    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), z0 = Math.min.apply(null, zs), z1 = Math.max.apply(null, zs);
+    var pad = 18, w = 230, h = 190;
+    var s = Math.min((w - 2 * pad) / Math.max(1, x1 - x0), (h - 2 * pad) / Math.max(1, z1 - z0));
+    var ox = (w - (x1 - x0) * s) / 2, oz = (h - (z1 - z0) * s) / 2;
+    mapFit = function (x, z) { return [ox + (x - x0) * s, oz + (z - z0) * s]; };
+    svgEl("rect", { x: 0, y: 0, width: w, height: h, class: "map-ground" }, svg);
+    places.forEach(function (p) {
+      var c = mapFit(p.x, p.z);
+      var dot = svgEl("circle", { cx: c[0].toFixed(1), cy: c[1].toFixed(1), r: 3.2, class: "map-place" + (p.id === "home" ? " home" : "") }, svg);
+      svgEl("title", {}, dot).textContent = cap(p.name);
+    });
+    svgEl("polygon", { id: "map-you", class: "map-you", points: "0,-6 5,4 -5,4" }, svg);
+    svgEl("polygon", { id: "map-him", class: "map-him", points: "0,-6 6,0 0,6 -6,0" }, svg);
+    placeMarkers();
+  }
+  function placeMarkers() {
+    if (!mapFit) return;
+    var pid = lastAsleep ? "home" : ((lastNow.place || {}).id || "home");
+    var p = places.filter(function (q) { return q.id === pid; })[0] || places[0];
+    var c = mapFit(p.x, p.z);
+    var him = document.getElementById("map-him");
+    if (him) him.setAttribute("transform", "translate(" + c[0].toFixed(1) + " " + c[1].toFixed(1) + ")");
+    var you = document.getElementById("map-you"), w3 = window.__grimsbyWorld;
+    var t = w3 && w3.controls ? w3.controls.target : null;
+    var cy = t ? mapFit(t.x, t.z) : [c[0] + 9, c[1] + 9];
+    cy = [Math.max(6, Math.min(224, cy[0])), Math.max(6, Math.min(184, cy[1]))];
+    if (you) you.setAttribute("transform", "translate(" + cy[0].toFixed(1) + " " + cy[1].toFixed(1) + ")");
+  }
+
+  function renderHud(now, asleep, mems) {
+    lastNow = now; lastAsleep = asleep;
+    var at = now.at ? new Date(now.at).getTime() : 0;
+    var off = !at || Date.now() - at > STALE_AFTER;
+    var name = clean(now.name) || "Grimsby";
+    $("hud-exe").textContent = name.toLowerCase() + ".exe";
+    fillNeeds($("hud-needs"), off ? {} : (now.needs || {}));
+    var f = now.feeling || {};
+    $("hud-mood").textContent = off ? "away" : moodWord(f.mood || 0);
+    $("hud-energy").textContent = off ? "–" : energyWord(f.energy || 0);
+    $("hud-now-title").textContent = off ? "Asleep. The computer is off." : asleep ? "Asleep on the roof" : cap(now.doing || "Looking around");
+    $("hud-now-thought").textContent = off ? "He is processing what he saw today. He wakes up when the computer does." :
+      asleep ? "Head under his wing." : now.thought ? "“" + clean(now.thought) + "”" : clean(f.words);
+    var where = $("where");
+    $("hud-now-where").textContent = where ? where.textContent : "";
+    var w = now.world || {};
+    $("hud-day").textContent = w.day ? "day " + w.day + " of his life, " + clean(w.time) + " his time" : "";
+    placeMarkers();
+  }
+  function tickClock() {
+    $("hud-time").textContent = fmt(new Date().toISOString(), { hour: "2-digit", minute: "2-digit", hour12: false });
+    var where = $("where");                       // world.js writes it after the data arrives
+    if (where) $("hud-now-where").textContent = where.textContent;
+    placeMarkers();
+  }
+
+  var opener = null, clockTimer = null;
+  function setOpen(open, from) {
+    if (open === worldBox.classList.contains("open")) return;
+    worldBox.classList.toggle("open", open);
+    document.documentElement.classList.toggle("world-open", open);
+    hud.hidden = !open;
+    $("world-open").setAttribute("aria-expanded", open ? "true" : "false");
+    $("world-walk").setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) {
+      opener = from || $("world-open");
+      tickClock(); clockTimer = setInterval(tickClock, 1000);
+      if (location.hash !== "#world") history.pushState({ world: true }, "", "#world");
+      $("world-close").focus();
+    } else {
+      clearInterval(clockTimer); closeModal();
+      if (location.hash === "#world") history.pushState({}, "", location.pathname + location.search);
+      if (opener) opener.focus();
+    }
+  }
+  $("world-open").addEventListener("click", function (e) { setOpen(true, e.currentTarget); });
+  $("world-walk").addEventListener("click", function (e) { setOpen(true, e.currentTarget); });
+  $("world-close").addEventListener("click", function () { setOpen(false); });
+  $("hud-diary").addEventListener("click", function (e) { e.preventDefault(); setOpen(false); pick("diary"); $("tab-diary").scrollIntoView({ block: "center" }); });
+  window.addEventListener("popstate", function () { setOpen(location.hash === "#world"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape" || !worldBox.classList.contains("open")) return;
+    if (!$("leave-modal").hidden) closeModal(); else setOpen(false);
+  });
+  if (location.hash === "#world") setOpen(true);
+
+  function showNowCard(show) {
+    $("hud-now").hidden = !show; $("hud-now-show").hidden = show;
+    try { localStorage.setItem("grimsby-nowcard", show ? "1" : "0"); } catch (e) {}
+    (show ? $("hud-now-hide") : $("hud-now-show")).focus();
+  }
+  $("hud-now-hide").addEventListener("click", function () { showNowCard(false); });
+  $("hud-now-show").addEventListener("click", function () { showNowCard(true); });
+  try { if (localStorage.getItem("grimsby-nowcard") === "0") { $("hud-now").hidden = true; $("hud-now-show").hidden = false; } } catch (e) {}
+
+  // Leave something: the form works; delivery comes with the online world (WERELD.md step 3), so for now it says so.
+  var item = "walnut";
+  function closeModal() {
+    if ($("leave-modal").hidden) return;
+    $("leave-modal").hidden = true; $("leave-open").focus();
+  }
+  $("leave-open").addEventListener("click", function () {
+    $("leave-modal").hidden = false; $("leave-status").hidden = true; $("leave-err").hidden = true;
+    try { $("leave-name").value = localStorage.getItem("grimsby-name") || ""; } catch (e) {}
+    ($("leave-name").value ? $("leave-note") : $("leave-name")).focus();
+  });
+  $("leave-cancel").addEventListener("click", closeModal);
+  $("leave-modal").addEventListener("click", function (e) { if (e.target === e.currentTarget) closeModal(); });
+  $("leave-items").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-item]");
+    if (!b) return;
+    item = b.dataset.item;
+    [].forEach.call(this.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+  });
+  $("leave-note").addEventListener("input", function () {
+    $("leave-count").textContent = this.value.length + " / 280"; $("leave-err").hidden = true;
+  });
+  $("leave-name").addEventListener("input", function () { $("leave-err").hidden = true; });
+  $("leave-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nm = $("leave-name").value.trim(), note = $("leave-note").value.trim();
+    var err = $("leave-err");
+    if (!nm) { err.textContent = "Fill in a name first, so he knows who to be suspicious of."; err.hidden = false; $("leave-name").focus(); return; }
+    if (item === "note" && !note) { err.textContent = "Just a note needs a note."; err.hidden = false; $("leave-note").focus(); return; }
+    try { localStorage.setItem("grimsby-name", nm); } catch (x) {}
+    $("leave-modal").hidden = true;
+    var st = $("leave-status");
+    st.textContent = "";
+    st.appendChild(el("b", null, "Not delivered yet."));
+    st.appendChild(el("span", "hint", "His world is not online yet, so nothing reaches him. Once it is, your things land by the water and his answer appears next to them."));
+    st.hidden = false;
+    clearTimeout(st._t); st._t = setTimeout(function () { st.hidden = true; }, 10000);
+    $("leave-open").focus();
+  });
+
   function load() {
     var none = function () { return {}; };
     Promise.all([
@@ -276,7 +477,9 @@
       renderWants(mind, feed);
       renderDrawings(drawings);
       renderDiary(log);
+      renderFacts(mems);
       renderAbout(who, mind, mems);
+      renderHud(now, asleep, mems);
     }).catch(function () {
       $("now").textContent = "Could not reach Grimsby. Try again in a bit.";
     });
