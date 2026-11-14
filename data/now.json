@@ -1,33 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-14T23:59:15+01:00",
+ "at": "2026-11-15T00:10:32+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "watching the world go by on a bench in the Gouden Griffelplantsoen",
- "thought": "The ink is fading, but the words are still sharp.",
+ "doing": "flying about town, as far as a bench by the station",
+ "thought": "The shadow of the train tracks is longer than the shadow of the lamppost",
  "feeling": {
-  "mood": 0.31,
-  "energy": 0.68,
-  "words": "Sunlight on the tiles. A single drop of water hangs from the gutter. I count it. It’s the third one today."
+  "mood": 0.35,
+  "energy": 0.73,
+  "words": "The moon is a thin slice of cheese, hanging low over the station. A single light flickers in the distance, like a bad memory. I am content. Just a little."
  },
  "needs": {
-  "rest": 0.1,
-  "curiosity": 0.1,
+  "rest": 0.05,
+  "curiosity": 0.13,
   "social": 0.13,
-  "expression": 0.05,
-  "quiet": 0.0
+  "expression": 0.18,
+  "quiet": 0.07,
+  "hunger": 0.33
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 2,
-  "time": "19:01"
+  "time": "20:32"
  },
- "action": "idle",
+ "action": "wander",
  "place": {
-  "id": "plantsoen-bench",
-  "name": "a bench in the Gouden Griffelplantsoen",
-  "words": "on a bench in the Gouden Griffelplantsoen",
-  "poi": "n4949888156",
+  "id": "station-bench",
+  "name": "a bench by the station",
+  "words": "on a bench by the station",
+  "poi": "n3065409934",
   "category": "bench"
  },
  "flying": null

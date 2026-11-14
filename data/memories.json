@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-14T23:59:15+01:00",
+ "at": "2026-11-15T00:10:32+01:00",
  "beliefs": [],
  "long": [
   {
@@ -14,7 +14,7 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 1.5,
+   "recalled": 2.75,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
@@ -79,7 +79,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 1.0,
+   "recalled": 2.25,
    "since": "2026-11-14T23:54:45+01:00"
   },
   {
@@ -114,7 +114,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 2.5,
    "since": "2026-11-14T23:31:41+01:00"
   }
  ]
