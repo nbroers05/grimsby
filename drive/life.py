@@ -15,7 +15,8 @@ from .actions import ACTIONS, RISE_ASLEEP_SHARE
 
 OFF_GAP = timedelta(minutes=15)          # longer than this between ticks = the laptop was off = he slept
 KIND = {"search": "fact", "read_back": "moment", "diary": "work", "draw": "work", "wander": "moment",
-        "pigeons": "person", "neighbour": "person", "sit": "moment", "tidy": "work"}
+        "pigeons": "person", "neighbour": "person", "sit": "moment", "tidy": "work",
+        "eat": "moment"}
 QUIET_ACTIONS = ("sit",)                 # mostly not worth a memory
 
 

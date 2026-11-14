@@ -4,14 +4,18 @@ When he falls asleep (or on the first tick after the laptop was off):
   1. the short-term memory is summarised into one long-term memory
   2. the strongest short-term memories move to long-term (pushing out weaker ones), the rest is forgotten
   3. long-term memories fade a little (`recalled` shrinks)
-  4. beliefs are rebuilt from the faded stats
-  5. at most one addition to his character sheet, in `who.added`
+  4. beliefs are rebuilt from the faded stats (new ones get a fact number; see beliefs.py)
+  5. at most one addition to his character sheet, in `who.added`; each one makes a new version of him
+  6. one dream: 3-5 random memories from short and long term, shuffled together
 
-Steps 1 and 5 are worded by the LLM (`voice`, see run.Voice); without one, code writes a plain version.
+Steps 1, 5, 6 and the closers of new failure beliefs are worded by the LLM (`voice`, see run.Voice); without
+one, code writes a plain version. The dream is the night's only extra LLM call.
 """
 
 from __future__ import annotations
 
+import random
+import re
 from collections import Counter
 from datetime import datetime
 
@@ -23,10 +27,11 @@ NIGHT_FADE = 0.9               # recalled *= this every night
 ADD_EVIDENCE = 20              # a belief this well established may become part of who he is
 ADD_EVERY_NIGHTS = 3           # and at most one addition per this many nights
 MAX_NIGHTS_KEPT = 10
+DREAM_MIN, DREAM_MAX = 3, 5
 
 PLAIN = {"search": "looked things up", "read_back": "re-read old pages", "diary": "wrote in my diary",
          "draw": "drew", "wander": "flew about town", "pigeons": "watched the pigeons",
-         "neighbour": "checked on Pino", "sit": "sat still", "tidy": "tidied the hoard"}
+         "neighbour": "checked on Pino", "sit": "sat still", "tidy": "tidied the hoard", "eat": "ate"}
 
 
 def plain_summary(short: list[dict], day: int) -> str:
@@ -53,6 +58,29 @@ def character_candidate(state: dict) -> tuple[str, str] | None:
     return None
 
 
+def dream_pieces(mem: dict, rng: random.Random) -> list[dict]:
+    pool = [m for m in mem["short"] + mem["long"] if not m.get("about", "").startswith("day@")]
+    if len(pool) < DREAM_MIN:
+        pool = mem["short"] + mem["long"]
+    return rng.sample(pool, min(len(pool), rng.randint(DREAM_MIN, DREAM_MAX)))
+
+
+def plain_dream(pieces: list[dict], rng: random.Random) -> str:
+    """Without a voice: cut the memories into bits and deal them out in the wrong order."""
+    bits = []
+    for m in pieces:
+        t = re.sub(r"^Day \d+(, [0-9:]+)?: ", "", m["text"]).rstrip(".")
+        bits += [b.strip() for b in re.split(r"[,:;]| and ", t) if len(b.strip()) > 3]
+    rng.shuffle(bits)
+    bits = [b if b.split()[0] not in ("A", "An", "The", "Looking", "Drawing", "Writing", "Sitting", "Having",
+                                      "Keeping", "Checking", "Tidying", "Re-reading")
+            else b[0].lower() + b[1:] for b in bits[:6]]          # names keep their capital
+    if not bits:
+        return "A dream with nothing in it, which was restful."
+    return "Dreamt " + bits[0] + "".join((", but then " if i % 2 else ", and ") + b
+                                         for i, b in enumerate(bits[1:])) + "."
+
+
 def may_add(state: dict) -> bool:
     recent = state.get("nights", [])[-(ADD_EVERY_NIGHTS - 1):]
     return not any(n.get("added") for n in recent)
@@ -64,6 +92,12 @@ def consolidate(state: dict, real: datetime, voice=None, why: str = "fell asleep
     short = mem["short"]
     report = {"at": real.isoformat(timespec="seconds"), "day": day, "why": why, "short": len(short),
               "promoted": [], "forgotten": 0, "dropped": [], "summary": None}
+
+    rng = random.Random(real.timestamp())
+    pieces = dream_pieces(mem, rng)                       # before the short-term memory is cleared
+    if pieces:
+        report["dream"] = {"text": (voice.dream(pieces) if voice else None) or plain_dream(pieces, rng),
+                           "from": [m["text"] for m in pieces]}
 
     if short:
         text = (voice.summarise(short, day) if voice else None) or plain_summary(short, day)
@@ -87,13 +121,18 @@ def consolidate(state: dict, real: datetime, voice=None, why: str = "fell asleep
         m["recalled"] = round(m["recalled"] * NIGHT_FADE, 2)
 
     report["beliefs"] = beliefs.update(state)
+    for b in report["beliefs"]["new"]:
+        if b.get("closer") and voice:                     # a failure belief: the closer in his own words
+            b["closer"] = voice.closer(b["text"]) or b["closer"]
+            state["facts"][b["text"]]["closer"] = b["closer"]
 
     if may_add(state):
         cand = character_candidate(state)                 # code decides what; the voice only words it
         if cand and voice:
             cand = (cand[0], voice.phrase(cand[0], cand[1]) or cand[1])
-        if cand and who.add(state["who"], *cand):
+        if cand and who.add(state["who"], *cand, real=real, day=day):
             report["added"] = {cand[0]: cand[1]}
+            report["version"] = state["who"]["version"]
 
     state["nights"] = (state.get("nights", []) + [report])[-MAX_NIGHTS_KEPT:]
     return report

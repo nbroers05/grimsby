@@ -8,7 +8,7 @@
   var REFRESH = 2 * 60 * 1000;
   var TZ = "Europe/Amsterdam";
   var KIND = { did: "did", noticed: "noticed", felt: "felt", mind: "mind" };
-  var NEEDS = [["rest", "rest"], ["curiosity", "curiosity"], ["social", "company"], ["expression", "making"], ["quiet", "quiet"]];
+  var NEEDS = [["rest", "rest"], ["curiosity", "curiosity"], ["social", "company"], ["expression", "making"], ["quiet", "quiet"], ["hunger", "hunger"]];
 
   var $ = function (id) { return document.getElementById(id); };
 

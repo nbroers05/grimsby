@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import clock, life, mind, output, voice, world
+from . import beliefs, clock, life, mind, output, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -70,6 +70,10 @@ def load() -> dict:
     s.setdefault("feeling", {"words": s.pop("feeling_words", None), "mood": s["mood"], "energy": s["energy"],
                              "tick": 0})
     s.setdefault("ticks", 0)
+    if beliefs.number_old(s):
+        say(f"numbered his beliefs as facts (up to fact {s['facts_made']})")
+    if who.migrate(s["who"]):
+        say(f"his character sheet is now version {s['who']['version']}")
     return s
 
 
@@ -92,6 +96,23 @@ class Voice:
             return f"Day {day}: {text}"
         except (VoiceDown, Withheld) as e:
             say(f"no day summary: {e}")
+            return None
+
+    def dream(self, pieces: list[dict]) -> str | None:
+        try:
+            text = voice.dream(self.state, self.real, pieces)
+            voice.vet([text], "a crow's dream, a muddle of his memories")
+            return text
+        except (VoiceDown, Withheld) as e:
+            say(f"no dream words: {e}")
+            return None
+
+    def closer(self, belief: str) -> str | None:
+        try:
+            text = voice.closer(self.state, belief)
+            voice.vet([text], "a crow's dry remark about something he will not do again")
+            return text
+        except (VoiceDown, Withheld):
             return None
 
     def phrase(self, field: str, plain: str) -> str | None:
@@ -120,10 +141,17 @@ def after_tick(s: dict, ev: dict, real: datetime) -> None:
             if night.get("summary"):
                 mind.feed(s, "noticed", night["summary"], real)
             for b in night["beliefs"]["new"]:
-                mind.feed(s, "noticed", f"I have come to believe: {b}", real)
+                mind.feed(s, "noticed", f"Fact {b['n']}: {beliefs.full_text(b)}", real, fact=b["n"])
+            for b in night["beliefs"].get("back", []):
+                mind.feed(s, "noticed", f"Fact {b['n']} holds after all: {beliefs.full_text(b)}", real, fact=b["n"])
             if night.get("added"):
                 (field, text), = night["added"].items()
-                mind.feed(s, "mind", f"Something about me: {text}.", real, change="opened", about="self")
+                mind.feed(s, "mind", f"Something about me: {text}. (Version {night.get('version')} of me.)", real,
+                          change="opened", about="self")
+            if night.get("dream"):                 # in the diary, as its own kind
+                Executor(s, real, random.Random(), ARCHIVE, say).archive(
+                    "dream", True, night["dream"]["text"], {"kind": "dream", "entry": night["dream"]["text"],
+                                                            "from": night["dream"]["from"]}, "asleep")
             say(f"night (day {night['day']}, {night['why']}): {night['short']} short -> {len(night['promoted'])} kept")
     p = s.get("pending") or {}
     if ev["started"] and s["doing"] and s["doing"].get("travel", 0) > 0:

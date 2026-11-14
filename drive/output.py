@@ -68,12 +68,14 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
                                for t in sorted(s.get("topics", []), key=lambda t: -t["strength"])],
                  "budget": s.get("budget")}
 
-    mems = {**head, "beliefs": [beliefs.public(b) for b in sorted(s.get("beliefs", []), key=lambda b: -b["evidence"])],
+    mems = {**head, "beliefs": [beliefs.public(b) for b in sorted(s.get("beliefs", []), key=lambda b: -(b.get("n") or 0))],
             "long": [memory.public(m) for m in sorted(s["memories"]["long"], key=lambda m: m["since"], reverse=True)],
             "short": [memory.public(m) for m in sorted(s["memories"]["short"], key=lambda m: m["since"], reverse=True)]}
 
     who = {**head, **{k: s["who"][k] for k in ("name", "core", "backstory", "traits", "values", "fears", "quirks",
-                                               "voice", "holdsTo", "added")}}
+                                               "voice", "holdsTo", "added")},
+           # additions: which version of him this is, and what changed in each version (newest first)
+           "version": s["who"].get("version", 1), "changelog": list(reversed(s["who"].get("changelog", [])))}
     return {"now": now, "feed": feed, "mind": mind_json, "memories": mems, "who": who}
 
 

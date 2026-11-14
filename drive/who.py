@@ -1,7 +1,8 @@
 """Grimsby's character sheet: who he is, not what he must do.
 
 Written from the old persona in state.json. `added` holds what he added himself while sleeping (at most one
-item per night), so it stays visible which parts are his own.
+item per night), so it stays visible which parts are his own. Every night something is added, `version` goes up
+by one and `changelog` says what changed in that version (version 1 is the sheet as it was written).
 """
 
 from __future__ import annotations
@@ -26,7 +27,10 @@ SHEET = {
              "Occasional numbered lists. Never cheerful for long.",
     "holdsTo": [text for text, _ in HOLDS_TO],
     "added": {"traits": [], "values": [], "fears": [], "quirks": []},
+    "version": 1,
+    "changelog": [],
 }
+CHANGELOG_MAX = 50
 
 
 def fresh() -> dict:
@@ -34,12 +38,30 @@ def fresh() -> dict:
     return copy.deepcopy(SHEET)
 
 
-def add(who: dict, field: str, text: str) -> bool:
-    """One addition by Grimsby himself. Refuses duplicates."""
+def migrate(who: dict) -> bool:
+    """Sheets from before versions: version 1 plus one per item already added (dates unknown)."""
+    if "version" in who:
+        return False
+    who["version"], who["changelog"] = 1, []
+    for field, items in who["added"].items():
+        for text in items:
+            who["version"] += 1
+            who["changelog"].append({"version": who["version"], "at": None, "day": None, "field": field,
+                                     "added": text})
+    return True
+
+
+def add(who: dict, field: str, text: str, real=None, day: int | None = None) -> bool:
+    """One addition by Grimsby himself: a new version of him. Refuses duplicates."""
     if field not in who["added"]:
         return False
     known = {t.lower() for t in who[field] + who["added"][field]}
     if text.lower() in known:
         return False
     who["added"][field].append(text)
+    migrate(who)
+    who["version"] += 1
+    who["changelog"] = (who["changelog"] + [{"version": who["version"],
+                                             "at": real.isoformat(timespec="seconds") if real else None,
+                                             "day": day, "field": field, "added": text}])[-CHANGELOG_MAX:]
     return True

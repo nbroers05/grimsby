@@ -1,5 +1,5 @@
 {
- "note": "Grimsby's world as his brain knows it: places, where they are (metres, same frame as poi.json) and what can happen there. The brain never sees the 3D; `poi` and `category` are only for the site. `feel` is how a place affects his mood (hidden from him; his beliefs have to find it out).",
+ "note": "Grimsby's world as his brain knows it: places, where they are (metres, same frame as poi.json) and what can happen there. The brain never sees the 3D; `poi` and `category` are only for the site. `feel` is how a place affects his mood (hidden from him; his beliefs have to find it out). `food` is what he can find at an eating place (words only).",
  "places": [
   {
    "id": "home",
@@ -194,6 +194,91 @@
    "feel_for": {},
    "poi": "w253339756",
    "category": "windmill"
+  },
+  {
+   "id": "albert-heijn",
+   "name": "the Albert Heijn",
+   "words": "by the trolleys at the Albert Heijn",
+   "x": 75.0,
+   "z": -290.0,
+   "actions": [
+    "eat",
+    "sit"
+   ],
+   "feel": 0.01,
+   "feel_for": {
+    "eat": 0.03
+   },
+   "poi": "n2589814366",
+   "category": "supermarket",
+   "food": [
+    "a crust by the trolleys",
+    "half a croissant from the bench",
+    "a cracker someone dropped at the entrance"
+   ]
+  },
+  {
+   "id": "jumbo",
+   "name": "the Jumbo",
+   "words": "at the Jumbo by the station",
+   "x": -1293.0,
+   "z": 70.8,
+   "actions": [
+    "eat"
+   ],
+   "feel": -0.01,
+   "feel_for": {
+    "eat": -0.025
+   },
+   "poi": "n3867952219",
+   "category": "supermarket",
+   "food": [
+    "a crust that was, frankly, worse",
+    "a squashed grape",
+    "a bit of bread roll, slightly damp"
+   ]
+  },
+  {
+   "id": "mcdonalds",
+   "name": "the McDonald's",
+   "words": "by the bin at the McDonald's",
+   "x": -1584.0,
+   "z": 1063.8,
+   "actions": [
+    "eat"
+   ],
+   "feel": 0.0,
+   "feel_for": {
+    "eat": 0.02
+   },
+   "poi": "n6470322643",
+   "category": "fast_food",
+   "food": [
+    "chips from the bin",
+    "a single chip, cold, perfect",
+    "the corner of a bun"
+   ]
+  },
+  {
+   "id": "de-turk",
+   "name": "De Turk",
+   "words": "on the terrace of De Turk",
+   "x": -1297.7,
+   "z": 57.2,
+   "actions": [
+    "eat"
+   ],
+   "feel": 0.005,
+   "feel_for": {
+    "eat": 0.01
+   },
+   "poi": "n3867952211",
+   "category": "restaurant",
+   "food": [
+    "a strip of flatbread from under a table",
+    "a bit of grilled onion",
+    "a crumb of baklava"
+   ]
   }
  ]
 }

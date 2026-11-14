@@ -30,7 +30,8 @@ PIGEONS_OK = ["Derek was there, and smug about it", "three pigeons and Derek, in
               "Derek, alone, pretending not to see me"]
 PIGEONS_FAIL = ["no Derek anywhere, which is suspicious", "the pigeons ignored me entirely", "a gull took the spot"]
 NEED_REASON = {"rest": "you are tired", "curiosity": "you are curious", "social": "you are lonely",
-               "expression": "you want to make or write something", "quiet": "you want quiet"}
+               "expression": "you want to make or write something", "quiet": "you want quiet",
+               "hunger": "you are hungry"}
 
 
 class Executor:
@@ -251,6 +252,17 @@ class Executor:
         p["noticed"].append(what[0].upper() + what[1:] + ".")
         p["memory"] = voice.memory_line(self.state, self.real, f"At the {p['place']}: {what}.", self.recall("Derek pigeon"))
         p["public"] = [p["memory"], what]
+
+    def do_eat(self, p: dict) -> None:
+        p["ok"] = self.rng.random() >= ACTIONS["eat"].fail           # whether there is anything is luck
+        food = world.place(p["place"]).get("food") or ["a crumb"]
+        what = self.rng.choice(food) if p["ok"] else "nothing; someone had been there first"
+        p["doing"] = f"looking for something to eat {world.words(p['place'])}"
+        p["content"] = f"you found {what}"
+        p["noticed"].append(f"Found {what} {world.words(p['place'])}.")
+        p["memory"] = voice.memory_line(self.state, self.real, f"You went to eat {world.words(p['place'])} and found "
+                                        f"{what}.", self.recall(world.name(p["place"]) + " eat"))
+        p["public"] = [p["memory"]]
 
     def do_wander(self, p: dict) -> None:
         name = world.name(p["place"])

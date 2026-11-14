@@ -6,7 +6,7 @@ Mood and energy run from -1 to 1.
 
 from __future__ import annotations
 
-NEEDS = ("rest", "curiosity", "social", "expression", "quiet")
+NEEDS = ("rest", "curiosity", "social", "expression", "quiet", "hunger")
 
 # rise per tick (one tick = 90 real seconds = 12 world minutes)
 RISE = {
@@ -15,10 +15,12 @@ RISE = {
     "social": 0.012,
     "expression": 0.016,
     "quiet": 0.014,
+    "hunger": 0.013,          # Pino's fullness, the other way round: empty after ~60 ticks (12 world hours)
 }
 REST_TIRED = 0.030        # extra rest rise per tick at energy -1 (scales linearly)
 REST_NIGHT = 0.012        # extra rest rise per tick during world night
 ENERGY_AWAKE = -0.004     # being awake costs a little energy on top of what actions cost
+ENERGY_HUNGRY = -0.006    # ...and more on an empty stomach
 MOOD_BASELINE = -0.05     # he is a crow of dry temperament
 MOOD_PULL = 0.03          # share of the distance to the baseline mood that closes every tick
 MOOD_PRESSING = 0.012     # mood drop per tick for each need above PRESSING
@@ -36,6 +38,7 @@ def fresh() -> dict:
 def rise(s: dict, night: bool, asleep: bool) -> None:
     """Needs creep up. Asleep, everything but rest rises at a quarter of the speed."""
     for n in NEEDS:
+        s["needs"].setdefault(n, 0.3)          # a need added later (hunger) starts half-way, not at zero
         r = RISE[n]
         if n == "rest":
             r += REST_TIRED * max(0.0, -s["energy"]) + (REST_NIGHT if night else 0.0)
@@ -45,7 +48,8 @@ def rise(s: dict, night: bool, asleep: bool) -> None:
             r *= 0.25          # = actions.RISE_ASLEEP_SHARE
         s["needs"][n] = clamp(s["needs"][n] + r, 0.0, 1.0)
     if not asleep:
-        s["energy"] = clamp(s["energy"] + ENERGY_AWAKE, -1.0, 1.0)
+        hungry = ENERGY_HUNGRY if s["needs"]["hunger"] > PRESSING else 0.0
+        s["energy"] = clamp(s["energy"] + ENERGY_AWAKE + hungry, -1.0, 1.0)
 
 
 def drift_mood(s: dict) -> None:

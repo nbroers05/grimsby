@@ -5,7 +5,7 @@ side   : needs that grow from doing it
 energy : energy change per tick while doing it
 ticks  : how long it takes (sleep is open-ended, see engine.wake_up)
 fail   : chance it goes wrong in the simulation (live, the real outcome decides: a search without results,
-         an SVG that will not parse, Derek not being there, Pino not answering)
+         an SVG that will not parse, Derek not being there, Pino not answering, nothing in the bin)
 Where an action can happen is in world/places.json (each place lists its actions; see world.py).
 """
 
@@ -48,6 +48,8 @@ ACTIONS: dict[str, Action] = {a.name: a for a in [
            {"rest": 0.08, "quiet": 0.40}, energy=+0.05),
     Action("tidy", "tidying his hoard", 3,
            {"quiet": 0.20, "expression": 0.15}, energy=-0.01, mood_ok=0.03),
+    Action("eat", "looking for something to eat", 2,      # where the food is: world/places.json (`food`)
+           {"hunger": 0.80}, energy=+0.04, fail=0.12),
     Action("sleep", "asleep", 0,
            {"rest": 0.07, "quiet": 0.04}, energy=+0.05),   # sleep relief/energy are per tick
     Action("idle", "watching the world go by", 1,
