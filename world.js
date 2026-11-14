@@ -1,5 +1,5 @@
 // Grimsby's 3D world: Berkel en Rodenrijs (world/berkel.glb) with the crow at the place that fits what he did last.
-// site.js loads the data and sends it here with a "grimsby:data" event; this file only draws.
+// site.js loads data/now.json and sends it here with a "grimsby:data" event ({now, asleep}); this file only draws.
 // If WebGL or the files fail, the flat placeholder scene in index.html simply stays.
 // The look (materials, moods, crow) is in look.js and the choice of place in place.js: the dashboard panel uses them too.
 import * as THREE from "three";
@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { INK, MOODS, makeLook, moodNow } from "./look.js";
-import { placeFor, whereText, perch as perchOf } from "./place.js";
+import { placeFor, placeForNow, pose as poseFor, whereText, perch as perchOf } from "./place.js";
 
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const params = new URLSearchParams(location.search);
@@ -183,12 +183,12 @@ function pose(now) {
 let ready = false, pending = null;
 function onData(d) {
   if (!ready) { pending = d; return; }
-  const entry = d.log && d.log[d.log.length - 1];
-  const key = (entry ? entry.time : "") + "|" + d.asleep;
+  const now = d.now || {};
+  const place = placeForNow(now, d.asleep, pois);
+  const key = (place.poi ? place.poi.id : "") + "|" + d.asleep + "|" + now.action;
   if (key === state.key) return;
   const first = !state.key;
-  state.key = key; state.asleep = !!d.asleep; state.action = d.asleep ? null : entry && entry.action;
-  const place = placeFor(entry, d.asleep, pois);
+  state.key = key; state.asleep = !!d.asleep; state.action = d.asleep ? null : poseFor(now.action);
   if (!place.poi) return;
   const target = perch(place.poi);
   if (whereEl) whereEl.textContent = whereText(place, d.asleep);

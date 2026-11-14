@@ -1,12 +1,14 @@
-// Grimsby's site. Reads state.json, log.json and drawings/index.json (written by brain.py) and fills the page.
+// Grimsby's site. Reads his public API (data/now, feed, mind, memories, who .json, written by the drive loop in
+// drive/) plus the archive (log.json for diary entries, drawings/index.json) and fills the page.
 // Everything Grimsby writes is model output, so it only ever goes in via textContent, and drawings via <img>.
 (function () {
   "use strict";
 
-  var SLEEP_AFTER = 2 * 60 * 60 * 1000;   // last run longer than 2 h ago = the computer is off
-  var REFRESH = 5 * 60 * 1000;
+  var STALE_AFTER = 25 * 60 * 1000;      // now.json older than this = the laptop is off = he sleeps
+  var REFRESH = 2 * 60 * 1000;
   var TZ = "Europe/Amsterdam";
-  var ACT = { search: "search", diary: "diary", draw: "drawing" };
+  var KIND = { did: "did", noticed: "noticed", felt: "felt", mind: "mind" };
+  var NEEDS = [["rest", "rest"], ["curiosity", "curiosity"], ["social", "company"], ["expression", "making"], ["quiet", "quiet"]];
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -33,6 +35,12 @@
   function timeEl(iso, text) { var t = el("time", null, text); t.dateTime = iso; return t; }
   function clean(s) { return String(s == null ? "" : s).trim(); }
   function cap(s) { s = clean(s); return s.charAt(0).toUpperCase() + s.slice(1); }
+  function moodWord(m) {
+    return m < -0.5 ? "miserable" : m < -0.2 ? "low" : m < 0.05 ? "flat" : m < 0.25 ? "fine" : m < 0.5 ? "pleased" : "unusually cheerful";
+  }
+  function energyWord(e) {
+    return e < -0.5 ? "worn out" : e < -0.1 ? "tired" : e < 0.4 ? "steady" : e < 0.8 ? "alert" : "full of beans";
+  }
 
   function getJSON(path) {
     return fetch(path + "?t=" + Date.now(), { cache: "no-store" }).then(function (r) {
@@ -69,61 +77,51 @@
   pick(start);
 
   // ---------- render ----------
-  function headline(e) {
-    var d = e.detail || {};
-    if (e.action === "search") return cap(d.query || d.title || "something");
-    if (e.action === "diary") return cap(d.topic || e.line);
-    if (e.action === "draw") return cap(d.title || d.subject || "a drawing");
-    return cap(e.line);
-  }
-  function nowText(e) {
-    var d = e.detail || {};
-    if (e.action === "search") return "Just looked up: " + clean(d.query || d.title).toLowerCase() + ".";
-    if (e.action === "diary") return "Just wrote in his diary about " + clean(d.topic || "something").toLowerCase() + ".";
-    if (e.action === "draw") return "Just drew " + clean(d.title || "something") + ".";
-    return clean(e.line);
-  }
-
-  function renderDay(log) {
+  function renderDay(feed) {
     var p = $("panel-day"); p.textContent = "";
-    if (!log.length) { p.appendChild(el("p", "empty", "He has not done anything yet.")); return; }
-    var last = log[log.length - 1].time;
-    var key = dayKey(last);
+    var entries = (feed.entries || []).filter(function (e) { return e && e.at && KIND[e.kind]; });
+    if (!entries.length) { p.appendChild(el("p", "empty", "He has not done anything yet.")); return; }
+    var key = dayKey(entries[0].at);
     var today = dayKey(new Date().toISOString()) === key;
-    p.appendChild(el("p", "day-head", today ? "today" : dayName(last)));
+    p.appendChild(el("p", "day-head", today ? "today, newest first" : dayName(entries[0].at) + ", newest first"));
     var ol = el("ol", "day");
-    log.filter(function (e) { return dayKey(e.time) === key; }).forEach(function (e) {
-      var li = el("li");
-      li.appendChild(timeEl(e.time, hm(e.time)));
-      li.appendChild(el("span", "act", ACT[e.action] || e.action));
-      li.appendChild(txt(headline(e), e.reason ? "His reason: " + clean(e.reason) : ""));
+    entries.filter(function (e) { return dayKey(e.at) === key; }).forEach(function (e) {
+      var li = el("li", "k-" + e.kind + (e.ok === false ? " failed" : ""));
+      li.appendChild(timeEl(e.at, hm(e.at)));
+      var label = e.kind === "mind" ? (e.change === "closed" ? "let go" : "took on") : KIND[e.kind];
+      li.appendChild(el("span", "act", e.ok === false ? "tried" : label));
+      var sub = e.kind === "did" && e.why ? "Why: " + clean(e.why) : e.ok === false ? "It didn't work." : "";
+      li.appendChild(txt(cap(e.text), sub));
       ol.appendChild(li);
     });
     p.appendChild(ol);
   }
 
-  function wishRow(w, closed) {
-    var li = el("li", closed ? "closed" : "");
-    var sub = closed ? clean(w.note || w.reason) : clean(w.reason);
-    li.appendChild(txt(cap(w.item), sub));
-    if (!closed) li.appendChild(el("span", "pill hot", "wants it"));
-    else if (w.outcome === "got") li.appendChild(el("span", "pill eva", "got it"));
-    else li.appendChild(el("span", "pill gone", "gave up"));
-    return li;
-  }
-  function renderWants(state) {
+  var ITEM = { want: "wants it", question: "wonders", worry: "worried", promise: "promised" };
+  function renderWants(mind, feed) {
     var p = $("panel-wants"); p.textContent = "";
-    var open = state.wishlist || [], done = (state.wish_history || []).slice().reverse();
-    if (!open.length && !done.length) { p.appendChild(el("p", "empty", "He wants nothing. He says.")); return; }
-    if (open.length) {
+    var items = mind.items || [];
+    var closed = (feed.entries || []).filter(function (e) { return e.kind === "mind" && e.change === "closed"; });
+    if (!items.length && !closed.length) { p.appendChild(el("p", "empty", "He wants nothing. He says.")); return; }
+    if (items.length) {
       var ul = el("ul", "wants");
-      open.forEach(function (w) { ul.appendChild(wishRow(w, false)); });
+      items.slice().reverse().forEach(function (i) {
+        var li = el("li");
+        li.appendChild(txt(cap(i.subject), clean(i.why)));
+        li.appendChild(el("span", "pill " + (i.kind === "want" ? "hot" : "eva"), ITEM[i.kind] || i.kind));
+        ul.appendChild(li);
+      });
       p.appendChild(ul);
-    } else p.appendChild(el("p", "empty", "Nothing on his list right now."));
-    if (done.length) {
-      p.appendChild(el("p", "sub-head", "earlier"));
+    } else p.appendChild(el("p", "empty", "Nothing on his mind right now."));
+    if (closed.length) {
+      p.appendChild(el("p", "sub-head", "let go lately"));
       var ul2 = el("ul", "wants");
-      done.forEach(function (w) { ul2.appendChild(wishRow(w, true)); });
+      closed.forEach(function (e) {
+        var li = el("li", "closed");
+        li.appendChild(txt(cap(e.text), stamp(e.at)));
+        li.appendChild(el("span", "pill gone", e.about || "done"));
+        ul2.appendChild(li);
+      });
       p.appendChild(ul2);
     }
   }
@@ -155,7 +153,7 @@
 
   function renderDiary(log) {
     var p = $("panel-diary"); p.textContent = "";
-    var entries = log.filter(function (e) { return e.action === "diary"; }).reverse();
+    var entries = log.filter(function (e) { return e.action === "diary" && (e.detail || {}).entry; }).reverse();
     if (!entries.length) { p.appendChild(el("p", "empty", "The diary is still empty.")); return; }
     var box = el("div", "entries");
     entries.forEach(function (e) {
@@ -169,68 +167,116 @@
     p.appendChild(box);
   }
 
-  function renderAbout(state) {
+  function chipRow(box, label, own, added) {
+    if (!own.length && !added.length) return;
+    var wrap = el("div", "about-row");
+    wrap.appendChild(el("span", "label", label));
+    var chips = el("div", "chips");
+    own.forEach(function (t) { chips.appendChild(el("span", "pill", clean(t))); });
+    added.forEach(function (t) { var c = el("span", "pill eva", clean(t)); c.title = "He added this himself"; chips.appendChild(c); });
+    wrap.appendChild(chips);
+    box.appendChild(wrap);
+  }
+  function renderAbout(who, mind, mems) {
     var p = $("panel-about"); p.textContent = "";
     var box = el("div", "about");
-    box.appendChild(el("p", null, "A crow who lives on a computer in Berkel en Rodenrijs. Awake when the computer is on, gone when it goes off. Reads things on the internet, writes too much about them and draws what he does not understand."));
-    var wrap = el("div"); wrap.style.cssText = "display:flex;flex-direction:column;gap:8px";
-    wrap.appendChild(el("span", "label", "interests"));
-    var chips = el("div", "chips");
-    (state.interests || []).slice().sort(function (a, b) { return (b.strength || 0) - (a.strength || 0); })
-      .forEach(function (i) { chips.appendChild(el("span", "pill eva", clean(i.topic))); });
-    (state.past_interests || []).slice().reverse().forEach(function (t) {
-      chips.appendChild(el("span", "pill gone", clean(typeof t === "string" ? t : t.topic)));
-    });
-    wrap.appendChild(chips);
-    wrap.appendChild(el("span", "hint", (state.past_interests || []).length
-      ? "Strongest first. Struck through: interests he is done with."
-      : "Strongest first. Ones he gets bored of will show up struck through."));
-    box.appendChild(wrap);
+    if (who.core) box.appendChild(el("p", null, clean(who.core)));
+    if (who.backstory) box.appendChild(el("p", "hint", clean(who.backstory)));
+    var added = who.added || {};
+    chipRow(box, "traits", who.traits || [], added.traits || []);
+    chipRow(box, "values", who.values || [], added.values || []);
+    chipRow(box, "fears", who.fears || [], added.fears || []);
+    chipRow(box, "quirks", who.quirks || [], added.quirks || []);
+    if ((who.holdsTo || []).length) {
+      var w = el("div", "about-row");
+      w.appendChild(el("span", "label", "holds to"));
+      var ol = el("ol", "holds");
+      who.holdsTo.forEach(function (t) { ol.appendChild(el("li", null, clean(t))); });
+      w.appendChild(ol);
+      box.appendChild(w);
+    }
+    var beliefs = (mems.beliefs || []).slice(0, 8);
+    if (beliefs.length) {
+      var b = el("div", "about-row");
+      b.appendChild(el("span", "label", "what he has come to believe"));
+      var ul = el("ul", "beliefs");
+      beliefs.forEach(function (x) {
+        var li = el("li", null, clean(x.text));
+        li.appendChild(el("span", "hint", " (" + x.evidence + " times)"));
+        ul.appendChild(li);
+      });
+      b.appendChild(ul);
+      box.appendChild(b);
+    }
+    chipRow(box, "interests, strongest first", (mind.interests || []).map(function (i) { return i.topic; }), []);
+    box.appendChild(el("span", "hint", "Dark chips are things he added to himself while he slept."));
     p.appendChild(box);
   }
 
-  function renderStatus(state, log, drawings) {
-    var lastRun = state.last_run ? new Date(state.last_run).getTime() : 0;
-    var asleep = !lastRun || Date.now() - lastRun > SLEEP_AFTER || /[?&]sleep\b/.test(location.search);   // ?sleep = test the sleep look
-    var name = clean((state.persona || {}).name) || "Grimsby";
+  function renderStatus(now, drawings) {
+    var at = now.at ? new Date(now.at).getTime() : 0;
+    var off = !at || Date.now() - at > STALE_AFTER;
+    var asleep = off || !!now.asleep || /[?&]sleep\b/.test(location.search);   // ?sleep = test the sleep look
+    var name = clean(now.name) || "Grimsby";
     document.documentElement.classList.toggle("asleep", asleep);
     $("name").textContent = name;
     document.title = name + (asleep ? " (asleep)" : "");
-    $("kop").textContent = asleep ? "Asleep. Computer is off." : "Is awake. Unfortunately.";
+    $("kop").textContent = off ? "Asleep. Computer is off." : asleep ? "Asleep on the roof." : "Is awake. Unfortunately.";
     var crow = document.querySelector(".world-flat");
-    crow.setAttribute("aria-label", asleep ? name + " is asleep" : name + " is standing on the ground, looking around");
-    var last = log[log.length - 1];
-    $("now").textContent = asleep
-      ? (lastRun ? "Asleep since " + hm(state.last_run) + (dayKey(state.last_run) === dayKey(new Date().toISOString()) ? "" : " on " + dayName(state.last_run)) + ". Wakes up when the computer turns on." : "Has not woken up yet.")
-      : (last ? nowText(last) : "Just woke up.");
-    var mood = state.mood || {};
-    $("st-mood").textContent = asleep ? "away" : (clean(mood.word) || "–");
-    $("st-last").textContent = state.last_run ? hm(state.last_run) : "–";
-    $("st-runs").textContent = state.runs != null ? state.runs : "–";
+    crow.setAttribute("aria-label", asleep ? name + " is asleep" : name + " is " + clean(now.doing || "looking around"));
+    var nowEl = $("now"); nowEl.textContent = "";
+    if (off) {
+      nowEl.textContent = at ? "Asleep since " + hm(now.at) + (dayKey(now.at) === dayKey(new Date().toISOString()) ? "" : " on " + dayName(now.at)) + ". Wakes up when the computer turns on." : "Has not woken up yet.";
+    } else {
+      nowEl.appendChild(el("span", "now-doing", cap(now.doing || (asleep ? "asleep" : "looking around")) + "."));
+      if (now.thought && !asleep) nowEl.appendChild(el("span", "now-thought", "“" + clean(now.thought) + "”"));
+    }
+    var f = now.feeling || {};
+    $("st-mood").textContent = off ? "away" : moodWord(f.mood || 0);
+    $("st-energy").textContent = off ? "–" : energyWord(f.energy || 0);
+    var w = now.world || {};
+    $("st-world").textContent = w.day ? "day " + w.day + ", " + clean(w.time) : "–";
     $("st-drawings").textContent = drawings.length;
     var note = $("st-note");
-    note.hidden = asleep || !mood.note;
-    note.textContent = clean(mood.note);
+    note.hidden = off || !f.words;
+    note.textContent = clean(f.words);
+    var needs = $("st-needs"); needs.textContent = "";
+    needs.hidden = off;
+    NEEDS.forEach(function (n) {
+      var v = Math.max(0, Math.min(1, (now.needs || {})[n[0]] || 0));
+      var row = el("div", "need");
+      row.appendChild(el("span", "need-name", n[1]));
+      var bar = el("span", "need-bar"); var fill = el("span", "need-fill");
+      fill.style.width = Math.round(v * 100) + "%";
+      bar.appendChild(fill); row.appendChild(bar);
+      row.title = n[1] + ": " + Math.round(v * 100) + "% (how hard it pulls)";
+      needs.appendChild(row);
+    });
     return asleep;
   }
 
   function load() {
+    var none = function () { return {}; };
     Promise.all([
-      getJSON("state.json"),
+      getJSON("data/now.json"),
+      getJSON("data/feed.json").catch(none),
+      getJSON("data/mind.json").catch(none),
+      getJSON("data/memories.json").catch(none),
+      getJSON("data/who.json").catch(none),
       getJSON("log.json").catch(function () { return []; }),
       getJSON("drawings/index.json").catch(function () { return []; })
     ]).then(function (r) {
-      var state = r[0] || {};
-      var log = (Array.isArray(r[1]) ? r[1] : []).filter(function (e) { return e && e.ok && !e.withheld; });
-      var drawings = Array.isArray(r[2]) ? r[2].filter(function (d) { return d && /^drawings\/[\w.-]+\.svg$/.test(d.file || ""); }) : [];
-      var asleep = renderStatus(state, log, drawings);
-      window.GRIMSBY_DATA = { state: state, log: log, asleep: asleep };     // for world.js
+      var now = r[0] || {}, feed = r[1], mind = r[2], mems = r[3], who = r[4];
+      var log = (Array.isArray(r[5]) ? r[5] : []).filter(function (e) { return e && e.ok && !e.withheld; });
+      var drawings = Array.isArray(r[6]) ? r[6].filter(function (d) { return d && /^drawings\/[\w.-]+\.svg$/.test(d.file || ""); }) : [];
+      var asleep = renderStatus(now, drawings);
+      window.GRIMSBY_DATA = { now: now, asleep: asleep };     // for world.js
       document.dispatchEvent(new CustomEvent("grimsby:data", { detail: window.GRIMSBY_DATA }));
-      renderDay(log);
-      renderWants(state);
+      renderDay(feed);
+      renderWants(mind, feed);
       renderDrawings(drawings);
       renderDiary(log);
-      renderAbout(state);
+      renderAbout(who, mind, mems);
     }).catch(function () {
       $("now").textContent = "Could not reach Grimsby. Try again in a bit.";
     });

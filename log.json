@@ -285,5 +285,19 @@
     },
     "mood": "watchful",
     "seconds": 64
+  },
+  {
+    "time": "2026-11-14T23:00:10+01:00",
+    "action": "diary",
+    "reason": "I need to record the shift in the air, and the weight of the moment.",
+    "ok": true,
+    "withheld": false,
+    "line": "The weight of the moment is silence between clinks and sighs.",
+    "detail": {
+      "topic": "The weight of the moment",
+      "entry": "The weight of the moment is the silence between the clink of a bottle cap and the sigh of a pigeon. I counted the seconds, but they were not mine to keep. Derek’s shadow flits past the window, and I do not flinch. The teaspoon glints in the dark like a forgotten promise."
+    },
+    "mood": "watchful",
+    "seconds": 9
   }
 ]

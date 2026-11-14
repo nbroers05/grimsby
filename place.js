@@ -3,11 +3,15 @@
 // close-up of every possible place for the panel).
 
 export const HOME = "n3149917960";                 // OSM: station Berkel Westpolder. He lives on its roof.
-export const PLACES = {                             // what he did last -> where he goes
+export const PLACES = {                             // old brain (log.json entries): what he did last -> where he goes
   search: ["library"],
   diary: ["bench"],
   draw: ["church", "windmill", "artwork", "fountain"],
 };
+// Brain v2 actions -> one of the three poses look.js/world.js know (head down, looking around, hopping)
+const POSES = { diary: "diary", read_back: "diary", tidy: "diary", search: "search", wander: "search",
+  pigeons: "search", neighbour: "search", draw: "draw" };
+export const pose = (action) => POSES[action] || null;
 const WORDS = {
   library: "at the library", bench: "on a bench in the park", church: "on the church roof",
   windmill: "on the windmill", artwork: "next to a statue", fountain: "by the fountain",
@@ -23,6 +27,18 @@ export function placeFor(entry, asleep, pois) {
   const options = pois.filter(p => cats.includes(p.category));
   if (!options.length) return { poi: home, home: true };
   return { poi: options[hash(entry.time) % options.length], home: false };
+}
+
+// Brain v2: data/now.json says where he is (place.poi = an id from world/poi.json, place.category as fallback)
+export function placeForNow(now, asleep, pois) {
+  const home = pois.find(p => p.id === HOME) || pois.find(p => p.category === "station");
+  const pl = now && now.place;
+  if (asleep || !pl || pl.category === "home" || pl.poi === HOME) return { poi: home, home: true };
+  const exact = pois.find(p => p.id === pl.poi);
+  if (exact) return { poi: exact, home: false };
+  const options = pois.filter(p => p.category === pl.category);
+  if (!options.length) return { poi: home, home: true };
+  return { poi: options[hash(now.at || "") % options.length], home: false };
 }
 
 export function whereText(place, asleep) {

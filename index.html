@@ -94,10 +94,11 @@
       <div class="eyebrow" data-nh-exe="status.exe" data-nh-kanji="気分">Status</div>
       <dl class="stats">
         <div><dt>mood</dt><dd class="st-mood" id="st-mood">–</dd></div>
-        <div><dt>last awake</dt><dd class="st-time" id="st-last">–</dd></div>
-        <div><dt>times awake</dt><dd class="st-big" id="st-runs">–</dd></div>
+        <div><dt>energy</dt><dd class="st-mood" id="st-energy">–</dd></div>
+        <div><dt>his world</dt><dd class="st-mood" id="st-world">–</dd></div>
         <div><dt>drawings</dt><dd class="st-big" id="st-drawings">–</dd></div>
       </dl>
+      <div class="needs" id="st-needs" aria-label="What pulls at him" hidden></div>
       <p class="mood-note" id="st-note" hidden></p>
     </section>
 
@@ -108,7 +109,7 @@
   </aside>
 </div>
 
-<footer class="foot">Runs on a local model. When the computer is off, he sleeps. <a href="https://github.com/nbroers05/grimsby">Source</a></footer>
+<footer class="foot">Runs on a local model: code decides what he does, the model only finds the words. When the computer is off, he sleeps. His data: <a href="data/now.json">now</a> · <a href="data/feed.json">feed</a> · <a href="data/mind.json">mind</a> · <a href="data/memories.json">memories</a> · <a href="data/who.json">who</a>. <a href="https://github.com/nbroers05/grimsby">Source</a>. Neighbour: Pino, from <a href="https://pinos.world">pinos.world</a>.</footer>
 </div>
 <script src="site.js"></script>
 <script type="module" src="world.js"></script>
