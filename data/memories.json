@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T16:42:04+01:00",
+ "at": "2026-11-15T17:45:04+01:00",
  "beliefs": [
   {
    "n": 1,
@@ -35,7 +35,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -84,14 +84,14 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
    "text": "I found a crust that was, frankly, worse than a poorly folded map.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.75,
+   "recalled": 1.25,
    "since": "2026-11-15T10:59:57+01:00"
   },
   {
@@ -105,14 +105,14 @@
    "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.5,
+   "recalled": 1.0,
    "since": "2026-11-15T00:16:32+01:00"
   },
   {
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.75,
+   "recalled": 1.0,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -126,7 +126,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.27,
+   "recalled": 4.52,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -202,6 +202,55 @@
  ],
  "short": [
   {
+   "text": "I found a squashed grape, half-attached to a napkin that had been folded into a poor approximation of a bird.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T17:40:34+01:00"
+  },
+  {
+   "text": "I landed on the windmill's roof, where the wind is sharp and the silence is louder than the crows who live in the neighboring trees.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 1.0,
+   "since": "2026-11-15T17:28:34+01:00"
+  },
+  {
+   "text": "A church, a crow, and a sense of proportion—none of them measured up.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T17:22:34+01:00"
+  },
+  {
+   "text": "I found a crust that was, frankly, worse than a poorly folded map.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.25,
+   "since": "2026-11-15T17:09:04+01:00"
+  },
+  {
+   "text": "Three pigeons and Derek stood in a row at the vis, all of them ignoring the fish statue as if it were a minor inconvenience.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T17:03:04+01:00"
+  },
+  {
+   "text": "A church, a crow, and a sense of proportion. All three were present, though the proportion was questionable.",
+   "kind": "work",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T16:54:04+01:00"
+  },
+  {
+   "text": "The average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July.",
+   "kind": "fact",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T16:43:34+01:00"
+  },
+  {
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 4,
@@ -212,7 +261,7 @@
    "text": "Pino's confidence is a stage act, and he forgets to take a bow between scenes.",
    "kind": "work",
    "strength": 2,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-15T16:31:34+01:00"
   },
   {
