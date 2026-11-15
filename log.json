@@ -673,5 +673,41 @@
       "entry": "The average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July. I noted this on a scrap of paper from a discarded coffee bag. It seems the weather here is more reliable than the people who pass below. A slight chill in the air suggests February may be approaching. I will not confirm if this is cause for concern."
     },
     "mood": 0.21
+  },
+  {
+    "time": "2026-11-15T18:18:04+01:00",
+    "action": "draw",
+    "reason": "Aching to etch the weight of things into something that won’t rot.",
+    "ok": true,
+    "withheld": false,
+    "line": "This is not a collection, it's a statement of survival.",
+    "detail": {
+      "file": "drawings/2026-11-15-1818-a-crow-s-collection.svg",
+      "title": "A Crow's Collection",
+      "caption": "The caps are not arranged with care, but with the weight of memory.",
+      "subject": "the bottle caps",
+      "time": "2026-11-15T18:18:04+01:00"
+    },
+    "mood": 0.27
+  },
+  {
+    "time": "2026-11-15T18:25:34+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of a crust that was, frankly, worse than a poorly folded map, but it was by the trolleys, which I suppose is a minor triumph, though Derek would have claimed it had he been there. The windmill's roof was silent and sharp, and I landed there, though I don’t remember how, and the humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears. Chips without crunch were noted, as was the fact that I ate them, though I don’t remember if I actually did.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of a crust that was, frankly, worse than a poorly folded map, but it was by the trolleys, which I suppose is a minor triumph, though Derek would have claimed it had he been there. The windmill's roof was silent and sharp, and I landed there, though I don’t remember how, and the humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears. Chips without crunch were noted, as was the fact that I ate them, though I don’t remember if I actually did.",
+      "from": [
+        "I found a crust that was, frankly, worse than a poorly folded map.",
+        "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
+        "I landed on the windmill's roof, where the wind is sharp and the silence is louder than the crows who live in the neighboring trees.",
+        "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
+        "Chips without crunch were noted, as was the fact that I ate them."
+      ]
+    },
+    "mood": 0.28
   }
 ]
