@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T18:48:46+01:00",
+ "at": "2026-11-15T19:52:37+01:00",
  "beliefs": [
   {
    "n": 1,
@@ -56,14 +56,14 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
    "text": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.5,
+   "recalled": 2.0,
    "since": "2026-11-15T13:33:04+01:00"
   },
   {
@@ -77,21 +77,21 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.25,
+   "recalled": 0.5,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
    "text": "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better.",
    "kind": "person",
    "strength": 3,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-15T11:20:28+01:00"
   },
   {
@@ -105,7 +105,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.75,
+   "recalled": 3.5,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -140,14 +140,14 @@
    "text": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 0.75,
+   "recalled": 1.0,
    "since": "2026-11-14T23:36:45+01:00"
   },
   {
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.52,
+   "recalled": 4.77,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -210,16 +210,66 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.16,
+   "recalled": 2.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
    "text": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 0.96,
+   "recalled": 1.21,
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "Took noah's button back to the roof.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:48:07+01:00"
+  },
+  {
+   "text": "noah left a note I could not let stand.",
+   "kind": "person",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:48:07+01:00"
+  },
+  {
+   "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 1.5,
+   "since": "2026-11-15T19:45:07+01:00"
+  },
+  {
+   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:40:25+01:00"
+  },
+  {
+   "text": "I stood at the edge of the fountain, watching Derek preen in the sun, pretending not to see me, while I pretended to be busy counting the number of times the water splashed against the stone.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:34:25+01:00"
+  },
+  {
+   "text": "John Boyd Dunlop invented the practical pneumatic tyre for his son's tricycle in 1887.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:28:25+01:00"
+  },
+  {
+   "text": "Woke up and everything was different. Water everywhere. The station is called Rodenrijs now. The Jumbo is still there, unfortunately.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:14:55+01:00"
+  }
+ ]
 }

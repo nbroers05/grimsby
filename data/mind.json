@@ -1,19 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T18:48:46+01:00",
- "thought": "It’s not enough to be clean, it has to be precise.",
+ "at": "2026-11-15T19:52:37+01:00",
+ "thought": "A crumb of baklava on a terrace is a minor triumph, but a list with a gap is a major failure.",
  "loudest": [
   {
-   "kind": "need",
-   "subject": "curiosity"
+   "kind": "memory",
+   "subject": "A crust so bad it made a map look like a good idea."
   },
   {
-   "kind": "want",
-   "subject": "A list of crown cork teeth counts"
+   "kind": "goal",
+   "subject": "watching the world go by on a bench by the station"
   },
   {
-   "kind": "want",
-   "subject": "a list of curing systems"
+   "kind": "seen",
+   "subject": "a note from noah"
+  },
+  {
+   "kind": "outcome",
+   "subject": "writing in his diary on a bench by the station went better than you expected"
   }
  ],
  "open": {
@@ -24,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "watching the world go by on a bench by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -59,11 +63,11 @@
    "strength": 4.2
   },
   {
-   "topic": "weather",
-   "strength": 3.2
+   "topic": "pneumatic tire history",
+   "strength": 4.2
   },
   {
-   "topic": "pneumatic tire history",
+   "topic": "weather",
    "strength": 3.2
   },
   {
@@ -85,26 +89,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "calm",
-  "valence": 0.155,
-  "arousal": 0.19,
-  "average": 0.135,
+  "emotion": "content",
+  "valence": 0.346,
+  "arousal": 0.533,
+  "average": 0.151,
   "values": {
    "eat@jumbo": {
     "V": 0.09,
     "n": 3.4
    },
    "eat@*": {
-    "V": 0.125,
-    "n": 10.2
+    "V": 0.142,
+    "n": 11.2
    },
    "diary@station-bench": {
-    "V": 0.13,
-    "n": 2.5
+    "V": 0.166,
+    "n": 3.5
    },
    "diary@*": {
-    "V": 0.24,
-    "n": 9.3
+    "V": 0.259,
+    "n": 10.3
    },
    "neighbour@home": {
     "V": 0.086,
@@ -123,8 +127,8 @@
     "n": 2.3
    },
    "pigeons@*": {
-    "V": 0.103,
-    "n": 4.9
+    "V": 0.129,
+    "n": 5.9
    },
    "sit@ondermolen": {
     "V": 0.042,
@@ -155,16 +159,16 @@
     "n": 0.8
    },
    "eat@de-turk": {
-    "V": 0.063,
-    "n": 2.5
+    "V": 0.09,
+    "n": 3.5
    },
    "search@library": {
-    "V": 0.073,
-    "n": 2.5
+    "V": 0.116,
+    "n": 3.5
    },
    "search@*": {
-    "V": 0.073,
-    "n": 2.5
+    "V": 0.116,
+    "n": 3.5
    },
    "eat@mcdonalds": {
     "V": 0.057,
@@ -191,8 +195,8 @@
     "n": 3.5
    },
    "pigeons@centre-fountain": {
-    "V": 0.03,
-    "n": 0.8
+    "V": 0.067,
+    "n": 1.8
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -228,24 +232,32 @@
    }
   },
   "habit": {
-   "place:ondermolen": 0.15,
-   "topic:rubber chemistry": 0.07
+   "place:library": 0.08,
+   "topic:pneumatic tire history": 0.08,
+   "place:centre-fountain": 0.1,
+   "place:de-turk": 0.13,
+   "place:station-bench": 0.15
   },
   "workingMemory": [
    {
-    "kind": "need",
-    "subject": "curiosity",
-    "salience": 0.407
+    "kind": "memory",
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.784
    },
    {
-    "kind": "want",
-    "subject": "A list of crown cork teeth counts",
-    "salience": 0.15
+    "kind": "goal",
+    "subject": "watching the world go by on a bench by the station",
+    "salience": 0.4
    },
    {
-    "kind": "want",
-    "subject": "a list of curing systems",
-    "salience": 0.15
+    "kind": "seen",
+    "subject": "a note from noah",
+    "salience": 0.307
+   },
+   {
+    "kind": "outcome",
+    "subject": "writing in his diary on a bench by the station went better than you expected",
+    "salience": 0.247
    }
   ]
  }

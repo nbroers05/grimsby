@@ -1,37 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-15T18:48:46+01:00",
+ "at": "2026-11-15T19:52:37+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Berkel Westpolder",
- "thought": "It’s not enough to be clean, it has to be precise.",
+ "asleep": false,
+ "doing": "watching the world go by on a bench by the station",
+ "thought": "A crumb of baklava on a terrace is a minor triumph, but a list with a gap is a major failure.",
  "feeling": {
-  "mood": 0.16,
-  "energy": 1,
-  "words": "The sun glints off the fish statue. A chip crumbles in my beak. Derek’s shadow stretches but doesn’t touch me.",
-  "emotion": "calm",
-  "arousal": 0.19
+  "mood": 0.35,
+  "energy": 0.78,
+  "words": "A single drop of rain hits the edge of the tin. It makes a sound like a coin falling into a pocket. I count it twice.",
+  "emotion": "content",
+  "arousal": 0.53
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.41,
-  "social": 0.32,
-  "expression": 0.07,
-  "quiet": 0.0,
-  "hunger": 0.17
+  "rest": 0.07,
+  "curiosity": 0.24,
+  "social": 0.04,
+  "expression": 0.08,
+  "quiet": 0.09,
+  "hunger": 0.12
  },
  "world": {
-  "name": "Berkel en Rodenrijs",
+  "name": "the island",
   "day": 9,
-  "time": "01:37"
+  "time": "10:08"
  },
- "action": "sleep",
+ "action": "idle",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Berkel Westpolder",
-  "poi": "n3149917960",
-  "category": "station"
+  "id": "station-bench",
+  "name": "a bench by the station",
+  "words": "on a bench by the station",
+  "obj": "bank-station",
+  "poi": "bank-station",
+  "category": "bench"
  },
  "flying": null
 }
