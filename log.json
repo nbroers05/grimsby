@@ -819,5 +819,24 @@
       "entry": "The last crumb of baklava vanished, but the trail it left behind—tiny, deliberate, and slightly sticky—spoke of a ritual. A single spiral, two overlapping circles, and a smudge that might have been a fingerprint or a smudge from a thumb. Someone had been there for hours, not just minutes. I noted the pattern in my list, under 'Crumb Art,' and filed it next to the teaspoon. It’s not clear why they left it, but it’s clear they cared."
     },
     "mood": 0.3
+  },
+  {
+    "time": "2026-11-15T21:27:13+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of a windmill roof where the silence was louder than the crows, and I ate a crumb of baklava with the precision of a man who has never been wrong. The wind was sharp, and somehow I found a crust that was worse than a poorly folded map. A crust so bad it made a map look like a good idea. People and places swapped, and I didn’t care.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of a windmill roof where the silence was louder than the crows, and I ate a crumb of baklava with the precision of a man who has never been wrong. The wind was sharp, and somehow I found a crust that was worse than a poorly folded map. A crust so bad it made a map look like a good idea. People and places swapped, and I didn’t care.",
+      "from": [
+        "I found a crust that was, frankly, worse than a poorly folded map.",
+        "I landed on the windmill's roof, where the wind is sharp and the silence is louder than the crows who live in the neighboring trees.",
+        "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+        "A crust so bad it made a map look like a good idea."
+      ]
+    },
+    "mood": 0.29
   }
 ]
