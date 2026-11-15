@@ -1,5 +1,10 @@
 # Tekenen v2: code tekent, het model bedenkt
 
+> Status 15-11-2026: built and live (stap 1-4) in `drive/draw/`. Test sheet: `python -m drive.draw.test` (writes to
+> `drive/test/tekenen/`, not in git, so not `drawings/test.html`: the loop publishes all of `drawings/`). No bigger
+> model: the RTX 3070 has 8 GB and qwen3:8b already fills it. Learned symbols are crude; the retry keeps the least
+> broken version, which is not the same as the most recognisable.
+
 Gebruik Opus voor stap 1 en 2, Sonnet mag voor 3 en 4. Doe dit na blok B uit VOLGENDE.md. Het mag voor of na blok C, maar niet tegelijk met werk aan `voice.py`.
 
 ## Het probleem

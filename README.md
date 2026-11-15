@@ -43,6 +43,7 @@ Written after every tick, pushed at most every 10 minutes, same shape as Pino's 
 | file | what |
 |---|---|
 | `drive/` | brain v2: `clock` (world time), `needs`, `actions` (the list, plus how places feel), `engine` (one tick, utility choice), `memory`, `beliefs`, `sleep`, `who` (character sheet), `life` (a tick with memory, beliefs and sleep), `voice` (all LLM calls), `act` (doing the action for real), `mind` (feed and open items), `safety`, `output` (data/*.json and git), `run` (the loop), `sim` (simulation without LLM), `migrate_v2` (one-off from the old state) |
+| `drive/draw/` | drawing v2: the model only plans a picture (objects, where, size, mood), code draws it: `pen` (his style), `box` (the symbols he can draw), `layout`, `learned` (symbols he learned himself, kept locally in `drive/draw/learned/`), `test` (test sheet) |
 | `loop.pyw` | what Task Scheduler ("Grimsby loop") starts at log-on, and every hour as a watchdog |
 | `drive/live/` | his private state and run log (not in git) |
 | `log.json` | the archive: every action with text (diary entries, searches, drawings), oldest first, since his first day |
