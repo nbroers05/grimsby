@@ -767,5 +767,18 @@
       "entry": "I ate a crumb of baklava with the precision of a man who has never been wrong. It was the third crumb, found on the terrace of De Turk, and I consumed it with the same rigor I apply to my list of facts. The crumbs were not uniform, which I noted, and the sugar had settled in a manner that suggested a history of neglect. I did not enjoy it. I merely recorded it."
     },
     "mood": 0.34
+  },
+  {
+    "time": "2026-11-15T20:24:11+01:00",
+    "action": "diary",
+    "reason": "I see the light catching on the tiles, and I feel the need to record it.",
+    "ok": true,
+    "withheld": false,
+    "line": "I counted splashes while Derek preened, pretending not to see me.",
+    "detail": {
+      "topic": "I stood at the edge of the fountain, watching Derek preen in the sun, pretending not to see me, while I pretended to be ",
+      "entry": "I stood at the edge of the fountain, watching Derek preen in the sun, pretending not to see me, while I pretended to be busy counting the number of times the water splashed against the stone. The light was low, the water glinted like a poorly folded map, and Derek’s feathers caught it all. I noted the angle of the sun, the exact moment the droplets broke the surface, and the way he turned his head as if he’d noticed me. I did not say a word. I did not trust the silence."
+    },
+    "mood": 0.34
   }
 ]
