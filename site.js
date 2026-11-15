@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var STALE_AFTER = 25 * 60 * 1000;      // now.json older than this = the laptop is off = he sleeps
+  var STALE_AFTER = 25 * 60 * 1000;      // now (Supabase bird_state, else now.json) older than this = the laptop is off = he sleeps
   var REFRESH = 2 * 60 * 1000;
   var TZ = "Europe/Amsterdam";
   var KIND = { did: "did", noticed: "noticed", felt: "felt", mind: "mind" };
@@ -47,6 +47,61 @@
       if (!r.ok) throw new Error(path + " " + r.status);
       return r.json();
     });
+  }
+
+  // ---------- live: Supabase (WERELD.md step 2), with data/*.json as fallback ----------
+  // Only the publishable key is used here, and RLS lets it read only.
+  var SB = null;
+  try {
+    var C = window.GRIMSBY_CONFIG && window.GRIMSBY_CONFIG.supabase;
+    if (C && window.supabase) SB = window.supabase.createClient(C.url, C.key, { auth: { persistSession: false } });
+  } catch (e) { SB = null; }
+
+  function withPos(row) {
+    var now = Object.assign({}, row.now || {});
+    if (row.x != null) now.pos = { x: row.x, z: row.z, target: { x: row.target_x, z: row.target_z, id: row.target_id } };
+    return now;
+  }
+  function liveNow() {
+    return SB.from("bird_state").select("now,x,z,target_x,target_z,target_id,at").eq("id", 1).maybeSingle()
+      .then(function (r) { if (r.error || !r.data) throw r.error || new Error("no bird_state"); return withPos(r.data); });
+  }
+  function liveFeed() {
+    return SB.from("feed").select("at,kind,text,why,ok,action,extra").order("at", { ascending: false }).limit(50)
+      .then(function (r) {
+        if (r.error || !r.data || !r.data.length) throw r.error || new Error("empty feed");
+        var entries = r.data.map(function (e) {
+          var o = Object.assign({}, e.extra || {}, { at: e.at, kind: e.kind, text: e.text });
+          ["why", "ok", "action"].forEach(function (k) { if (e[k] != null) o[k] = e[k]; });
+          return o;
+        });
+        return { v: 1, at: entries[0].at, entries: entries };
+      });
+  }
+  function getNow() { return SB ? liveNow().catch(function () { return getJSON("data/now.json"); }) : getJSON("data/now.json"); }
+  function getFeed() { return SB ? liveFeed().catch(function () { return getJSON("data/feed.json"); }) : getJSON("data/feed.json"); }
+
+  var last = { drawings: [], mems: {}, mind: {}, feed: {} };
+  function applyNow(now) {
+    var asleep = renderStatus(now, last.drawings);
+    window.GRIMSBY_DATA = { now: now, asleep: asleep };     // for world.js
+    document.dispatchEvent(new CustomEvent("grimsby:data", { detail: window.GRIMSBY_DATA }));
+    renderHud(now, asleep, last.mems);
+  }
+  var feedTimer = null;
+  function subscribe() {
+    if (!SB) return;
+    SB.channel("grimsby-live")
+      .on("postgres_changes", { event: "*", schema: "public", table: "bird_state" }, function (p) {
+        if (p && p.new && p.new.now) applyNow(withPos(p.new));
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "feed" }, function () {
+        clearTimeout(feedTimer);                    // a tick inserts a few rows at once: refresh once
+        feedTimer = setTimeout(function () {
+          liveFeed().then(function (feed) { last.feed = feed; renderDay(feed); renderWants(last.mind, feed); }).catch(function () {});
+        }, 800);
+      })
+      .subscribe();
   }
 
   // ---------- tabs ----------
@@ -459,8 +514,8 @@
   function load() {
     var none = function () { return {}; };
     Promise.all([
-      getJSON("data/now.json"),
-      getJSON("data/feed.json").catch(none),
+      getNow(),
+      getFeed().catch(none),
       getJSON("data/mind.json").catch(none),
       getJSON("data/memories.json").catch(none),
       getJSON("data/who.json").catch(none),
@@ -470,20 +525,19 @@
       var now = r[0] || {}, feed = r[1], mind = r[2], mems = r[3], who = r[4];
       var log = (Array.isArray(r[5]) ? r[5] : []).filter(function (e) { return e && e.ok && !e.withheld; });
       var drawings = Array.isArray(r[6]) ? r[6].filter(function (d) { return d && /^drawings\/[\w.-]+\.svg$/.test(d.file || ""); }) : [];
-      var asleep = renderStatus(now, drawings);
-      window.GRIMSBY_DATA = { now: now, asleep: asleep };     // for world.js
-      document.dispatchEvent(new CustomEvent("grimsby:data", { detail: window.GRIMSBY_DATA }));
+      last = { drawings: drawings, mems: mems, mind: mind, feed: feed };
+      applyNow(now);
       renderDay(feed);
       renderWants(mind, feed);
       renderDrawings(drawings);
       renderDiary(log);
       renderFacts(mems);
       renderAbout(who, mind, mems);
-      renderHud(now, asleep, mems);
     }).catch(function () {
       $("now").textContent = "Could not reach Grimsby. Try again in a bit.";
     });
   }
   load();
-  setInterval(load, REFRESH);
+  subscribe();
+  setInterval(load, SB ? 4 * REFRESH : REFRESH);   // live: Realtime does the work, this only catches up
 })();

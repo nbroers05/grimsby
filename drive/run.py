@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import beliefs, clock, learn, life, mind, output, voice, who, world
+from . import beliefs, clock, cloud, learn, life, mind, output, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -219,8 +219,9 @@ def main() -> int:
                 s["ticks"] += 1
                 after_tick(s, ev, real)
                 save(s)
-                output.write(s, real, DATA)
+                out = output.write(s, real, DATA)
                 if PUBLIC:
+                    cloud.push(s, out["now"], out["feed"]["entries"], say)
                     output.publish(s, real, ROOT, say)
             except Exception:  # noqa: BLE001 - one bad tick must not kill the loop
                 say("tick failed:\n" + traceback.format_exc())

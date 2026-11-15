@@ -16,6 +16,8 @@ from .actions import ACTIONS
 V = 1
 FEED_PUBLIC = 50
 PUSH_EVERY = 10 * 60          # seconds
+DATA_EVERY = 60 * 60          # with Supabase live, data/*.json is only a fallback: pushed at most hourly
+CLOUD_FRESH = 30 * 60         # Supabase counts as live if a write worked this recently
 PUBLISH = ["data", "log.json", "drawings"]     # only these are ever committed by the loop (never git add -A)
 
 
@@ -82,9 +84,22 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
     return {"now": now, "feed": feed, "mind": mind_json, "memories": mems, "who": who}
 
 
-def write(s: dict, real: datetime, data_dir: Path) -> None:
-    for name, content in files(s, real).items():
+def write(s: dict, real: datetime, data_dir: Path) -> dict[str, dict]:
+    out = files(s, real)
+    for name, content in out.items():
         write_json(data_dir / f"{name}.json", content)
+    return out
+
+
+def paths(s: dict, real: datetime, root: Path, force: bool) -> list[str]:
+    """What to commit this time. While Supabase is live, data/ goes along only hourly (or on the final push)."""
+    ok = s.get("cloud_ok_at")
+    live = bool(ok and (real - datetime.fromisoformat(ok)).total_seconds() < CLOUD_FRESH)
+    last = s.get("last_data_push")
+    data_due = force or not live or not last or (real - datetime.fromisoformat(last)).total_seconds() >= DATA_EVERY
+    if data_due:
+        s["last_data_push"] = real.isoformat(timespec="seconds")
+    return [p for p in PUBLISH if (root / p).exists() and (p != "data" or data_due)]
 
 
 def git(root: Path, *args: str) -> subprocess.CompletedProcess:
@@ -100,10 +115,11 @@ def publish(s: dict, real: datetime, root: Path, say, force: bool = False) -> No
     s["last_push"] = real.isoformat(timespec="seconds")
     if not (root / ".git").exists():
         return
-    git(root, "add", "--", *[p for p in PUBLISH if (root / p).exists()])
+    todo = paths(s, real, root, force)
+    git(root, "add", "--", *todo)
     did = next((e for e in s.get("feed", []) if e["kind"] == "did"), None)
     msg = f"Grimsby, day {clock.world(real)['day']}: {did['text'] if did else 'awake'}"[:100]
-    r = git(root, "commit", "-m", msg, "--", *[p for p in PUBLISH if (root / p).exists()])
+    r = git(root, "commit", "-m", msg, "--", *todo)
     if r.returncode != 0 and "nothing to commit" not in (r.stdout + r.stderr):
         say(f"commit failed: {(r.stderr or r.stdout).strip()[:300]}")
         return

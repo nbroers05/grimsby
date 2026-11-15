@@ -15,3 +15,8 @@ drive/live/
 drive/test/
 drive/sim_out.json
 drive/state_v2.json
+
+# Supabase service key: local only, never in the site or repo
+.env
+.env.*
+!.env.example
