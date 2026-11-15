@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T12:30:04+01:00",
- "thought": "The tiles are colder than last night.",
+ "at": "2026-11-15T13:33:04+01:00",
+ "thought": "The sun is bright, but the air smells like old bread and regret",
  "loudest": [
   {
    "kind": "outcome",
-   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
-  },
-  {
-   "kind": "need",
-   "subject": "rest"
-  },
-  {
-   "kind": "want",
-   "subject": "A list of crown cork teeth counts"
+   "subject": "having a look around on a bench by the station went better than you expected"
   },
   {
    "kind": "memory",
-   "subject": "The pigeons ignored me entirely, which is a kindness I do not deserve."
+   "subject": "A crust so bad it made a map look like a good idea."
+  },
+  {
+   "kind": "goal",
+   "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)"
+  },
+  {
+   "kind": "outcome",
+   "subject": "looking for something to eat by the bin at the McDonald's went better than you expected"
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "flying to a bench in the Gouden Griffelplantsoen",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -84,17 +84,17 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.162,
-  "arousal": 0.533,
-  "average": 0.086,
+  "valence": 0.153,
+  "arousal": 0.426,
+  "average": 0.089,
   "values": {
    "eat@jumbo": {
     "V": 0.077,
     "n": 1.8
    },
    "eat@*": {
-    "V": 0.088,
-    "n": 2.8
+    "V": 0.113,
+    "n": 3.8
    },
    "diary@station-bench": {
     "V": 0.103,
@@ -163,38 +163,44 @@
    "search@*": {
     "V": 0.02,
     "n": 0.9
+   },
+   "eat@mcdonalds": {
+    "V": 0.038,
+    "n": 1
+   },
+   "wander@station-bench": {
+    "V": 0.039,
+    "n": 1
+   },
+   "wander@*": {
+    "V": 0.039,
+    "n": 1
    }
   },
   "habit": {
-   "place:home": 0.06,
-   "place:station-fountain": 0.3,
-   "place:ondermolen": 0.12,
-   "place:de-turk": 0.05,
-   "place:station-bench": 0.09,
-   "place:library": 0.13,
-   "topic:rubber chemistry": 0.13,
-   "place:plantsoen-bench": 0.16
+   "place:mcdonalds": 0.16,
+   "place:station-bench": 0.19
   },
   "workingMemory": [
    {
     "kind": "outcome",
-    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
-    "salience": 0.262
-   },
-   {
-    "kind": "need",
-    "subject": "rest",
-    "salience": 0.16
-   },
-   {
-    "kind": "want",
-    "subject": "A list of crown cork teeth counts",
-    "salience": 0.15
+    "subject": "having a look around on a bench by the station went better than you expected",
+    "salience": 0.793
    },
    {
     "kind": "memory",
-    "subject": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
-    "salience": 0.116
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.491
+   },
+   {
+    "kind": "goal",
+    "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)",
+    "salience": 0.4
+   },
+   {
+    "kind": "outcome",
+    "subject": "looking for something to eat by the bin at the McDonald's went better than you expected",
+    "salience": 0.321
    }
   ]
  }

@@ -1,37 +1,40 @@
 {
  "v": 1,
- "at": "2026-11-15T12:30:04+01:00",
+ "at": "2026-11-15T13:33:04+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Berkel Westpolder",
- "thought": "The tiles are colder than last night.",
+ "asleep": false,
+ "doing": "flying to a bench in the Gouden Griffelplantsoen",
+ "thought": "The sun is bright, but the air smells like old bread and regret",
  "feeling": {
-  "mood": 0.16,
-  "energy": 0.44,
-  "words": "Pigeons hover like ink blots. I am writing in the dark. A spoonful of rain is not a spoonful of rain.",
+  "mood": 0.15,
+  "energy": 0.91,
+  "words": "Drowsy. Full of beans. The sun is a pale yellow smear on the sky.",
   "emotion": "content",
-  "arousal": 0.53
+  "arousal": 0.43
  },
  "needs": {
-  "rest": 0.1,
-  "curiosity": 0.08,
-  "social": 0.22,
-  "expression": 0.02,
-  "quiet": 0.0,
-  "hunger": 0.26
+  "rest": 0.04,
+  "curiosity": 0.0,
+  "social": 0.21,
+  "expression": 0.27,
+  "quiet": 0.16,
+  "hunger": 0.05
  },
  "world": {
   "name": "Berkel en Rodenrijs",
-  "day": 6,
-  "time": "23:08"
+  "day": 7,
+  "time": "07:32"
  },
- "action": "sleep",
+ "action": "diary",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Berkel Westpolder",
-  "poi": "n3149917960",
-  "category": "station"
+  "id": "plantsoen-bench",
+  "name": "a bench in the Gouden Griffelplantsoen",
+  "words": "on a bench in the Gouden Griffelplantsoen",
+  "poi": "n4949888156",
+  "category": "bench"
  },
- "flying": null
+ "flying": {
+  "from": "a bench by the station",
+  "to": "a bench in the Gouden Griffelplantsoen"
+ }
 }

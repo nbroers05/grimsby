@@ -1,7 +1,57 @@
 {
  "v": 1,
- "at": "2026-11-15T12:30:04+01:00",
+ "at": "2026-11-15T13:33:04+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T13:33:04+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T13:30:04+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as a bench by the station",
+   "why": "Lonely, so I’m checking the spot where a bird might sit and pretend it’s company",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-15T13:28:34+01:00",
+   "kind": "did",
+   "text": "flying from the McDonald's to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T13:24:04+01:00",
+   "kind": "noticed",
+   "text": "Found chips from the bin by the bin at the McDonald's."
+  },
+  {
+   "at": "2026-11-15T13:24:04+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the bin at the McDonald's",
+   "why": "I need sustenance.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T13:22:34+01:00",
+   "kind": "felt",
+   "text": "Drowsy. Full of beans. The sun is a pale yellow smear on the sky."
+  },
+  {
+   "at": "2026-11-15T13:22:34+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the McDonald's",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-15T12:25:34+01:00",
    "kind": "did",
@@ -312,56 +362,6 @@
    "at": "2026-11-15T10:56:57+01:00",
    "kind": "felt",
    "text": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls."
-  },
-  {
-   "at": "2026-11-15T10:56:57+01:00",
-   "kind": "noticed",
-   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
-  },
-  {
-   "at": "2026-11-15T10:56:57+01:00",
-   "kind": "did",
-   "text": "looking for something to eat at the Jumbo by the station",
-   "why": "Someone needs to document the indignity of a crust",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T10:55:27+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to the Jumbo",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T00:25:32+01:00",
-   "kind": "did",
-   "text": "falling asleep on the roof of station Berkel Westpolder",
-   "why": null,
-   "ok": true,
-   "action": "sleep"
-  },
-  {
-   "at": "2026-11-15T00:25:32+01:00",
-   "kind": "noticed",
-   "text": "Day 2: Today I hoarded a damp bread roll and a fact about tires. Derek is still smug, and I still distrust him. Pino remains lazy, and I remain unimpressed. The teaspoon remains unexplained, and my list remains intact."
-  },
-  {
-   "at": "2026-11-15T00:24:02+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T00:18:02+01:00",
-   "kind": "did",
-   "text": "drawing pigeons, as adversaries by the fountain next to the station",
-   "why": "Pleased to be making something again",
-   "ok": true,
-   "action": "draw"
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T12:30:04+01:00",
+ "at": "2026-11-15T13:33:04+01:00",
  "beliefs": [],
  "long": [
   {
@@ -35,7 +35,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -151,5 +151,20 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T13:33:04+01:00"
+  },
+  {
+   "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T13:27:04+01:00"
+  }
+ ]
 }
