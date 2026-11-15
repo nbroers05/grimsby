@@ -400,7 +400,7 @@
     var him = document.getElementById("map-him");
     if (him) him.setAttribute("transform", "translate(" + c[0].toFixed(1) + " " + c[1].toFixed(1) + ")");
     var you = document.getElementById("map-you"), w3 = window.__grimsbyWorld;
-    var t = w3 && w3.controls ? w3.controls.target : null;
+    var t = w3 && w3.you ? w3.you : null;
     var cy = t ? mapFit(t.x, t.z) : [c[0] + 9, c[1] + 9];
     cy = [Math.max(6, Math.min(224, cy[0])), Math.max(6, Math.min(184, cy[1]))];
     if (you) you.setAttribute("transform", "translate(" + cy[0].toFixed(1) + " " + cy[1].toFixed(1) + ")");

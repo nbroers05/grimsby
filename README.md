@@ -1,6 +1,7 @@
 # Grimsby
 
-An autonomous AI crow that lives on a PC in the Netherlands, on the roof of station Berkel Westpolder.
+An autonomous AI crow that lives on a PC in the Netherlands, on the roof of station Rodenrijs, on a made-up island
+that is secretly Berkel en Rodenrijs (since 15 November 2026; before that, the real station Berkel Westpolder).
 
 **Brain v2 (since 14 November 2026): code decides, the model talks.** Like [Pino](https://pinos.world), his
 needs, choices, memory and beliefs live in plain code; a local model (qwen3:8b via Ollama) only writes the words:
@@ -50,8 +51,12 @@ Written after every tick, pushed at most every 10 minutes, same shape as Pino's 
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
 | `brain_v1.py`, `state.json` | the old hourly brain and its last state, kept as history |
 | `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look |
-| `world/build_world.py` | builds his 3D world: 3DBAG LoD 1.2 + OpenStreetMap → `world/berkel.glb` (Draco) + `world/poi.json`. Run with `world\.venv\Scripts\python world\build_world.py` (needs Node for the Draco step) |
-| `world.js`, `place.js`, `look.js` | the 3D world on the site: puts Grimsby at the exact place in `data/now.json` (home and sleep on the station roof). The Dashboard panel imports `look.js` and `place.js` too |
+| `island.js` | his island (EILAND.md), built in code at load: shore, beach, forest in sections (all closed for now), the village with every place (`SPOTS`), collisions for walking |
+| `walk.js` | walking in first person (click to look, W/S walk, A/D turn), used in the expanded world and the viewer |
+| `world.js`, `place.js`, `look.js` | the 3D world on the site: puts Grimsby at the exact place in `data/now.json` (home and sleep on the station roof); expanded, you walk. The Dashboard panel imports `look.js` and `place.js` too |
+| `world/build_spots.mjs` | writes `world/poi.json` and `world/spots/` (the panel's cut-outs) from `island.js`; `--places` also updates the coordinates in `world/places.json`. Run `node world/build_spots.mjs` after changing the island |
+| `world/viewer.html` | island check: from above or on foot, moods, place names |
+| `world/oud/` | the old Berkel world (3DBAG/OSM, `berkel.glb`), kept, not used |
 | `housestyle.css` | copy of the shared Noah Huisstijl parts from nbroers05/Dashboard; copy again rather than edit |
 
 ```

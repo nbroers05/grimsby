@@ -5,10 +5,10 @@ __pycache__/
 .venv/
 quarantine.log
 world/.venv/
-world/cache/
+world/oud/cache/
 world/node_modules/
-world/build/
-world/build.log
+world/oud/build/
+world/oud/build.log
 
 # brain v2: private state, test runs and simulation output stay local
 drive/live/

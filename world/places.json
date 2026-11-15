@@ -1,12 +1,12 @@
 {
- "note": "Grimsby's world as his brain knows it: places, where they are (metres, same frame as poi.json) and what can happen there. The brain never sees the 3D; `poi` and `category` are only for the site. `feel` is how a place affects his mood (hidden from him; his beliefs have to find it out). `food` is what he can find at an eating place (words only).",
+ "note": "Grimsby's world as his brain knows it: places, where they are (metres on the island, x = east, z = south; taken from SPOTS in island.js by world/build_spots.mjs --places) and what can happen there. The brain never sees the 3D; `obj` and `category` are only for the site. `feel` is how a place affects his mood (hidden from him; his beliefs have to find it out). `food` is what he can find at an eating place (words only).",
  "places": [
   {
    "id": "home",
    "name": "the station roof",
-   "words": "on the roof of station Berkel Westpolder",
-   "x": -1344.2,
-   "z": 135.1,
+   "words": "on the roof of station Rodenrijs",
+   "x": -76,
+   "z": 169,
    "actions": [
     "sit",
     "sleep",
@@ -15,17 +15,17 @@
     "neighbour",
     "idle"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {},
-   "poi": "n3149917960",
+   "obj": "station-rodenrijs",
    "category": "station"
   },
   {
    "id": "station-fountain",
    "name": "the fountain by the station",
    "words": "by the fountain next to the station",
-   "x": -1284.4,
-   "z": 116.6,
+   "x": -56.6,
+   "z": 170,
    "actions": [
     "pigeons",
     "draw"
@@ -34,15 +34,15 @@
    "feel_for": {
     "pigeons": -0.02
    },
-   "poi": "n3772233411",
+   "obj": "fontein-station",
    "category": "fountain"
   },
   {
    "id": "ondermolen",
    "name": "the mill memorial",
    "words": "at the memorial for the old Ondermolen",
-   "x": -1212.7,
-   "z": 70.4,
+   "x": -36.4,
+   "z": 168,
    "actions": [
     "draw",
     "sit",
@@ -50,30 +50,30 @@
    ],
    "feel": 0.01,
    "feel_for": {},
-   "poi": "n5228884161",
+   "obj": "ondermolen-steen",
    "category": "artwork"
   },
   {
    "id": "station-bench",
    "name": "a bench by the station",
    "words": "on a bench by the station",
-   "x": -1292.9,
-   "z": 200.5,
+   "x": -64,
+   "z": 182.2,
    "actions": [
     "diary",
     "sit"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {},
-   "poi": "n3065409934",
+   "obj": "bank-station",
    "category": "bench"
   },
   {
    "id": "plantsoen-bench",
    "name": "a bench in the Gouden Griffelplantsoen",
    "words": "on a bench in the Gouden Griffelplantsoen",
-   "x": -746.0,
-   "z": 532.1,
+   "x": 77,
+   "z": 173.2,
    "actions": [
     "diary",
     "read_back",
@@ -83,75 +83,75 @@
    "feel_for": {
     "diary": 0.01
    },
-   "poi": "n4949888156",
+   "obj": "bank-plantsoen",
    "category": "bench"
   },
   {
    "id": "de-bron",
    "name": "de Bron",
    "words": "on the roof of de Bron church",
-   "x": -135.6,
-   "z": 299.7,
+   "x": 71,
+   "z": 134,
    "actions": [
     "draw",
     "sit"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {},
-   "poi": "w253339272",
+   "obj": "de-bron",
    "category": "church"
   },
   {
    "id": "library",
    "name": "the library",
    "words": "at the library",
-   "x": -14.7,
-   "z": -356.4,
+   "x": -21,
+   "z": 173,
    "actions": [
     "search",
     "read_back",
     "diary"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {},
-   "poi": "n12473802428",
+   "obj": "bibliotheek",
    "category": "library"
   },
   {
    "id": "vis",
    "name": "the fish statue",
    "words": "next to Vis, the fish statue",
-   "x": 102.9,
-   "z": -321.6,
+   "x": 4.2,
+   "z": 166,
    "actions": [
     "draw",
     "pigeons"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {},
-   "poi": "n2758164446",
+   "obj": "vis",
    "category": "artwork"
   },
   {
    "id": "centre-fountain",
    "name": "the fountain in the centre",
    "words": "by the fountain in the village centre",
-   "x": 193.1,
-   "z": -264.0,
+   "x": 19.4,
+   "z": 172,
    "actions": [
     "pigeons"
    ],
    "feel": -0.005,
    "feel_for": {},
-   "poi": "n6735227811",
+   "obj": "fontein-centrum",
    "category": "fountain"
   },
   {
    "id": "dorpskerk",
    "name": "the Dorpskerk",
    "words": "on the roof of the Dorpskerk",
-   "x": 331.2,
-   "z": -191.9,
+   "x": 38,
+   "z": 130,
    "actions": [
     "draw",
     "sit"
@@ -160,15 +160,15 @@
    "feel_for": {
     "wander": 0.015
    },
-   "poi": "w253316484",
+   "obj": "dorpskerk",
    "category": "church"
   },
   {
    "id": "hichte-mill",
    "name": "the windmill at De Hichte",
    "words": "on the windmill at De Hichte",
-   "x": 113.0,
-   "z": -1587.9,
+   "x": -128,
+   "z": 182,
    "actions": [
     "draw",
     "sit"
@@ -177,30 +177,30 @@
    "feel_for": {
     "draw": 0.02
    },
-   "poi": "n11895763509",
+   "obj": "molen-de-hichte",
    "category": "windmill"
   },
   {
    "id": "de-valk",
    "name": "De Valk",
    "words": "on De Valk, the windmill at the edge of town",
-   "x": -3116.6,
-   "z": 1259.8,
+   "x": 128,
+   "z": 182,
    "actions": [
     "draw",
     "sit"
    ],
    "feel": 0.03,
    "feel_for": {},
-   "poi": "w253339756",
+   "obj": "molen-de-valk",
    "category": "windmill"
   },
   {
    "id": "albert-heijn",
    "name": "the Albert Heijn",
    "words": "by the trolleys at the Albert Heijn",
-   "x": 75.0,
-   "z": -290.0,
+   "x": -9,
+   "z": 135,
    "actions": [
     "eat",
     "sit"
@@ -209,7 +209,7 @@
    "feel_for": {
     "eat": 0.03
    },
-   "poi": "n2589814366",
+   "obj": "albert-heijn",
    "category": "supermarket",
    "food": [
     "a crust by the trolleys",
@@ -221,8 +221,8 @@
    "id": "jumbo",
    "name": "the Jumbo",
    "words": "at the Jumbo by the station",
-   "x": -1293.0,
-   "z": 70.8,
+   "x": -98,
+   "z": 136,
    "actions": [
     "eat"
    ],
@@ -230,7 +230,7 @@
    "feel_for": {
     "eat": -0.025
    },
-   "poi": "n3867952219",
+   "obj": "jumbo",
    "category": "supermarket",
    "food": [
     "a crust that was, frankly, worse",
@@ -242,16 +242,16 @@
    "id": "mcdonalds",
    "name": "the McDonald's",
    "words": "by the bin at the McDonald's",
-   "x": -1584.0,
-   "z": 1063.8,
+   "x": 103,
+   "z": 139,
    "actions": [
     "eat"
    ],
-   "feel": 0.0,
+   "feel": 0,
    "feel_for": {
     "eat": 0.02
    },
-   "poi": "n6470322643",
+   "obj": "mcdonalds",
    "category": "fast_food",
    "food": [
     "chips from the bin",
@@ -263,8 +263,8 @@
    "id": "de-turk",
    "name": "De Turk",
    "words": "on the terrace of De Turk",
-   "x": -1297.7,
-   "z": 57.2,
+   "x": -64,
+   "z": 135,
    "actions": [
     "eat"
    ],
@@ -272,7 +272,7 @@
    "feel_for": {
     "eat": 0.01
    },
-   "poi": "n3867952211",
+   "obj": "de-turk",
    "category": "restaurant",
    "food": [
     "a strip of flatbread from under a table",

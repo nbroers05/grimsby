@@ -36,7 +36,7 @@ SLEEP_MAX_TICKS = 60           # 60 ticks = 12 world hours = 1.5 real hours
 
 def new_state() -> dict:
     s = needs.fresh()
-    s.update({"doing": None, "history": [], "done_at": {}, "at": world.HOME, "world_version": 1})
+    s.update({"doing": None, "history": [], "done_at": {}, "at": world.HOME, "world_version": 2})
     learn.setup(s)
     return s
 

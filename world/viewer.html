@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World check</title>
+<title>Island check</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@700;800&family=VT323&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -22,6 +22,8 @@
   .row select { flex: 1; min-height: 32px; font: 400 13px var(--font-body); }
   .stats { padding: 0 14px; font: 400 13px/18px var(--font-pixel); color: var(--ink); white-space: pre-wrap; margin: 0 0 8px; }
   .credit { padding: 0 14px; font-size: 11px; line-height: 15px; color: var(--nh-muted); margin: 0; }
+  .hint { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); font: 400 15px var(--font-pixel); color: var(--ink); background: var(--paper-raised); border: 1px solid var(--line); padding: 6px 12px; z-index: 2; pointer-events: none; max-width: calc(100% - 32px); }
+  .hint[hidden] { display: none; }
   .loading { position: fixed; inset: 0; display: grid; place-items: center; font: 400 28px var(--font-bar); color: var(--ink); z-index: 1; pointer-events: none; }
 </style>
 <script type="importmap">
@@ -33,184 +35,173 @@
 </head>
 <body>
 <canvas id="view"></canvas>
-<div class="loading" id="loading">loading berkel.glb…</div>
+<div class="loading" id="loading">building the island…</div>
+<div class="hint" id="hint" hidden>click to look around · W/S walk · A/D turn · shift hurry · Esc lets go of the mouse</div>
 
-<section class="tile panel" aria-label="World check">
-  <div class="eyebrow" data-nh-exe="world-check.exe" data-nh-kanji="世界">World check</div>
+<section class="tile panel" aria-label="Island check">
+  <div class="eyebrow" data-nh-exe="island-check.exe" data-nh-kanji="島">Island check</div>
+  <div class="row"><span class="lbl">mode</span>
+    <button data-mode="look" aria-pressed="true">look from above</button><button data-mode="walk" aria-pressed="false">walk</button>
+  </div>
   <div class="row"><span class="lbl">mood</span>
     <button data-mood="digital">digital future</button><button data-mood="poster">poster</button><button data-mood="titlecard">title card</button>
   </div>
   <div class="row"><span class="lbl">look</span>
     <button id="outline" aria-pressed="false">outline</button>
-    <button id="pois" aria-pressed="true">POIs</button>
+    <button id="labels" aria-pressed="true">place names</button>
   </div>
-  <div class="row"><span class="lbl">fly to</span><select id="goto"><option value="">centre</option></select></div>
+  <div class="row"><span class="lbl">fly to</span><select id="goto"><option value="">the whole island</option><option value="village" selected>the village</option></select></div>
   <pre class="stats" id="stats">…</pre>
-  <p class="credit">Buildings © 3DBAG (CC BY 4.0). Map data © OpenStreetMap contributors (ODbL). Drag to pan, right-drag to turn, scroll to zoom.</p>
+  <p class="credit">Built in code (island.js); nothing is downloaded but three.js. From above: drag to pan, right-drag to turn, scroll to zoom.</p>
 </section>
 
 <script type="module">
 import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { MapControls } from "three/addons/controls/MapControls.js";
+import { INK, MOODS, makeLook, moodNow } from "../look.js";
+import { buildIsland, islandMeshes } from "../island.js";
+import { makeWalker } from "../walk.js";
 
 const t0 = performance.now();
 const canvas = document.getElementById("view");
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, logarithmicDepthBuffer: true });
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
-
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 20000);
-camera.position.set(420, 520, 620);
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.3, 9000);
 const controls = new MapControls(camera, canvas);
-controls.target.set(0, 0, 0);
 controls.enableDamping = true;
-controls.maxPolarAngle = Math.PI * 0.46;
-controls.minDistance = 30; controls.maxDistance = 9000;
+controls.maxPolarAngle = Math.PI * 0.47;
+controls.minDistance = 8; controls.maxDistance = 2200;
 
-// Soft three-step toon ramp: linear filtering between the steps keeps the edges soft
-function ramp(steps) {
-  const d = new Uint8Array(steps.flatMap(v => [v, v, v, 255]));
-  const t = new THREE.DataTexture(d, steps.length, 1, THREE.RGBAFormat);
-  t.minFilter = t.magFilter = THREE.LinearFilter; t.needsUpdate = true; return t;
-}
-const gradientMap = ramp([150, 150, 205, 205, 255, 255]);
+const look = makeLook(THREE);
+scene.add(look.hemi, look.sun);
 
-// House style colours, a touch lighter for 3D
-const C = {
-  ground: "#f3eee3", ground_side: "#cbbfa6", green: "#d3dcb4", water: "#9ccbec",
-  paths: "#e3dacb", roads: "#c4bcae", rail: "#8f877a",
-  walls: "#f8f4ea", roofs: "#8c95cc", greenhouse: "#bfe1f5",
-};
-const mats = {};
-for (const [k, c] of Object.entries(C)) {
-  mats[k] = new THREE.MeshToonMaterial({ color: c, gradientMap });
-}
-mats.greenhouse.transparent = true; mats.greenhouse.opacity = 0.5; mats.greenhouse.depthWrite = false;
-for (const k of ["green", "water", "paths", "roads", "rail"]) { mats[k].polygonOffset = true; mats[k].polygonOffsetFactor = -1; }
-
-const hemi = new THREE.HemisphereLight("#fff6e6", "#1b2a8c", 1.2);
-const sun = new THREE.DirectionalLight("#ffffff", 1.6);
-sun.position.set(-600, 900, 400);
-scene.add(hemi, sun);
-
-const MOODS = {
-  digital:   { bg: "#bfe6fa", fog: "#cfeaf8", sky: "#eaf6ff", ground: "#1b2a8c", hemi: 1.25, sun: "#ffffff", sunI: 1.5, sunPos: [-800, 700, 300], walls: "#f8f4ea" },
-  poster:    { bg: "#efe9dc", fog: "#efe9dc", sky: "#fff1d8", ground: "#3a3f8f", hemi: 1.1, sun: "#ffe7c4", sunI: 1.7, sunPos: [500, 900, 500], walls: "#f8f4ea" },
-  titlecard: { bg: "#0b0b0d", fog: "#0b0b0d", sky: "#2a3570", ground: "#05060c", hemi: 0.55, sun: "#9fb0ff", sunI: 0.35, sunPos: [300, 800, -600], walls: "#b9b4aa" },
-};
-function setMood(m) {
-  const s = MOODS[m];
-  scene.background = new THREE.Color(s.bg);
-  scene.fog = new THREE.Fog(s.fog, 1800, 7000);
-  hemi.color.set(s.sky); hemi.groundColor.set(s.ground); hemi.intensity = s.hemi;
-  sun.color.set(s.sun); sun.intensity = s.sunI; sun.position.set(...s.sunPos);
-  mats.walls.color.set(s.walls);
-  edgeMat.color.set(m === "titlecard" ? "#5c5852" : "#16130f");
-  document.body.style.background = s.bg;
-  document.querySelectorAll("[data-mood]").forEach(b => b.setAttribute("aria-pressed", b.dataset.mood === m));
-}
-const edgeMat = new THREE.LineBasicMaterial({ color: "#16130f", transparent: true, opacity: 0.55 });
-
-// The one red thing in the scene: a marker where the bird would be (for now: the station)
-const marker = new THREE.Mesh(new THREE.ConeGeometry(4, 14, 4), new THREE.MeshToonMaterial({ color: "#d7261e", gradientMap }));
-marker.rotation.x = Math.PI; marker.visible = false;
-scene.add(marker);
-
-const draco = new DRACOLoader().setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/gltf/");
-const loader = new GLTFLoader().setDRACOLoader(draco);
-
-let fileBytes = 0;
-const [gltf, poi] = await Promise.all([
-  fetch("berkel.glb").then(async r => { const b = await r.arrayBuffer(); fileBytes = b.byteLength; return loader.parseAsync(b, ""); }),
-  fetch("poi.json").then(r => r.json()),
-]);
-const tLoaded = performance.now();
-const world = gltf.scene;
-const meshes = {};
-world.traverse(o => {
-  if (!o.isMesh) return;
-  meshes[o.name] = o;
-  // The .glb carries positions only. Toon has no flatShading switch, so unweld and give every face its own normal.
-  o.geometry = o.geometry.toNonIndexed();
-  o.geometry.computeVertexNormals();
-  o.material = mats[o.name] || mats.walls;
-  if (o.name === "greenhouse") o.renderOrder = 2;
-});
-scene.add(world);
+const island = buildIsland(THREE);
+const tBuilt = performance.now();
+const { group, meshes, spinners } = islandMeshes(THREE, island, look.mats);
+scene.add(group);
 document.getElementById("loading").remove();
 
-// Outline: edges of the buildings, built only when switched on
+// night lamps
+const lampTex = (() => {
+  const c = document.createElement("canvas"); c.width = c.height = 64;
+  const x = c.getContext("2d"), gr = x.createRadialGradient(32, 32, 0, 32, 32, 32);
+  gr.addColorStop(0, "rgba(255,226,160,1)"); gr.addColorStop(0.25, "rgba(255,200,110,.55)"); gr.addColorStop(1, "rgba(255,190,90,0)");
+  x.fillStyle = gr; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
+})();
+const lampGeo = new THREE.BufferGeometry(); lampGeo.setAttribute("position", new THREE.BufferAttribute(island.lamps, 3));
+const lamps = new THREE.Points(lampGeo, new THREE.PointsMaterial({ size: 5, map: lampTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+scene.add(lamps);
+
+// the crow on his roof, with the one red thing in the scene: the ring
+const raySolid = ["roofs", "walls"].map(k => meshes[k]).filter(Boolean);
+const ray = new THREE.Raycaster();
+const heightAt = (x, z) => { ray.set(new THREE.Vector3(x, 300, z), new THREE.Vector3(0, -1, 0)); const h = ray.intersectObjects(raySolid, false)[0]; return h ? h.point.y : 0; };
+const home = island.pois.find(p => p.place === "home");
+const crow = look.makeCrow(); crow.group.scale.setScalar(0.55);
+crow.group.position.set(home.x, heightAt(home.x, home.z), home.z); crow.group.rotation.y = -0.6;
+look.restPose(crow, false, null);
+const ring = look.ring(); ring.scale.setScalar(0.4); ring.position.copy(crow.group.position); ring.position.y += 0.08;
+scene.add(crow.group, ring);
+
+// place names as little paper labels
+function label(text) {
+  const c = document.createElement("canvas"), x = c.getContext("2d"), f = "500 30px 'Zen Kaku Gothic New', system-ui, sans-serif";
+  x.font = f; const w = Math.ceil(x.measureText(text).width) + 24; c.width = w; c.height = 46;
+  x.font = f; x.fillStyle = "#f8f4ea"; x.fillRect(0, 0, w, 46); x.strokeStyle = INK; x.lineWidth = 3; x.strokeRect(1.5, 1.5, w - 3, 43);
+  x.fillStyle = INK; x.textBaseline = "middle"; x.fillText(text, 12, 24);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), depthTest: false, transparent: true }));
+  s.scale.set(w / 46 * 2.6, 2.6, 1); s.renderOrder = 5; return s;
+}
+const labels = new THREE.Group();
+let labelsOn = true;
+for (const p of island.pois) { const s = label(p.place); s.position.set(p.x, heightAt(p.x, p.z) + 5, p.z); labels.add(s); }
+scene.add(labels);
+document.getElementById("labels").onclick = e => {
+  const on = e.currentTarget.getAttribute("aria-pressed") !== "true";
+  e.currentTarget.setAttribute("aria-pressed", on); labelsOn = on; labels.visible = on && mode !== "walk";
+};
+
+// outline
+const edgeMat = new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.5 });
 let edges = null;
 document.getElementById("outline").onclick = e => {
   const on = e.currentTarget.getAttribute("aria-pressed") !== "true";
   e.currentTarget.setAttribute("aria-pressed", on);
   if (on && !edges) {
-    const t = performance.now();
     edges = new THREE.Group();
-    for (const k of ["walls", "roofs", "greenhouse"]) {
-      if (meshes[k]) edges.add(new THREE.LineSegments(new THREE.EdgesGeometry(meshes[k].geometry, 25), edgeMat));
-    }
+    for (const k of ["walls", "roofs", "stone", "awning"]) if (meshes[k]) edges.add(new THREE.LineSegments(new THREE.EdgesGeometry(meshes[k].geometry, 25), edgeMat));
     scene.add(edges);
-    info.edges = `${Math.round(performance.now() - t)} ms to build`;
   }
   if (edges) edges.visible = on;
 };
 
-// POIs: small eva dots, one red marker
-const cats = {};
-const dotGeo = new THREE.SphereGeometry(2.2, 8, 6);
-const dotMat = new THREE.MeshToonMaterial({ color: "#1b2a8c", gradientMap });
-const dots = new THREE.InstancedMesh(dotGeo, dotMat, poi.pois.length);
-const m4 = new THREE.Matrix4();
-poi.pois.forEach((p, i) => { m4.makeTranslation(p.x, 4, p.z); dots.setMatrixAt(i, m4); cats[p.category] = (cats[p.category] || 0) + 1; });
-scene.add(dots);
-document.getElementById("pois").onclick = e => {
-  const on = e.currentTarget.getAttribute("aria-pressed") !== "true";
-  e.currentTarget.setAttribute("aria-pressed", on); dots.visible = on;
-};
-const sel = document.getElementById("goto");
-poi.pois.filter(p => p.name || p.category === "station")
-  .sort((a, b) => a.category.localeCompare(b.category) || (a.name || "").localeCompare(b.name || ""))
-  .forEach(p => sel.add(new Option(`${p.category}: ${p.name || "(no name)"}`, `${p.x},${p.z}`)));
-const station = poi.pois.find(p => p.category === "station" && p.name) || poi.pois.find(p => p.category === "station");
-if (station) { marker.position.set(station.x, 26, station.z); marker.visible = true; }
-sel.onchange = () => {
-  const [x, z] = (sel.value || "0,0").split(",").map(Number);
-  const off = camera.position.clone().sub(controls.target).setLength(sel.value ? 260 : 900);
-  controls.target.set(x, 0, z); camera.position.set(x, 0, z).add(off);
-};
-
-const tris = Object.values(meshes).reduce((s, m) => s + m.geometry.attributes.position.count / 3, 0);
-const info = {};
-const statsEl = document.getElementById("stats");
-let frames = 0, last = performance.now(), fps = 0;
-function renderStats() {
-  statsEl.textContent =
-    `file      ${(fileBytes / 1e6).toFixed(2)} MB\n` +
-    `ready in  ${((tLoaded - t0) / 1000).toFixed(2)} s\n` +
-    `triangles ${Math.round(tris).toLocaleString("en")}\n` +
-    `meshes    ${Object.keys(meshes).length}   fps ${fps}\n` +
-    `POIs      ${poi.pois.length}` + (info.edges ? `\noutline   ${info.edges}` : "");
+// moods: the site's house-style moods; fog comes closer while walking
+let mood = moodNow(), mode = "look";
+function setMood(m) {
+  mood = m;
+  look.applyMood(scene, m, mode === "walk" ? [60, 420] : [700, 2600]);
+  lamps.visible = m === "titlecard";
+  edgeMat.color.set(m === "titlecard" ? "#5c5852" : INK);
+  document.body.style.background = MOODS[m].bg;
+  document.querySelectorAll("[data-mood]").forEach(b => b.setAttribute("aria-pressed", b.dataset.mood === m));
 }
-
-const h = new Date().getHours();
-setMood(h < 12 && h >= 6 ? "digital" : h >= 12 && h < 18 ? "poster" : "titlecard");
 document.querySelectorAll("[data-mood]").forEach(b => b.onclick = () => setMood(b.dataset.mood));
+
+// modes: from above (map controls) or walking (first person, starting on the platform)
+const walker = makeWalker(THREE, camera, canvas, island);
+const hint = document.getElementById("hint");
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll("[data-mode]").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === m));
+  controls.enabled = m === "look";
+  hint.hidden = m !== "walk";
+  labels.visible = labelsOn && m !== "walk";
+  if (m === "walk") { walker.reset(); walker.start(); }
+  else { walker.stop(); fly("village"); }
+  setMood(mood);
+}
+document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => setMode(b.dataset.mode));
+
+const sel = document.getElementById("goto");
+island.pois.forEach(p => sel.add(new Option(`${p.place} (${p.name})`, p.place)));
+function fly(v) {
+  if (mode === "walk") { setMode("look"); }
+  if (!v) { controls.target.set(0, 0, 20); camera.position.set(260, 560, 760); return; }
+  if (v === "village") { controls.target.set(0, 0, 158); camera.position.set(-70, 130, 340); return; }
+  const p = island.pois.find(q => q.place === v);
+  controls.target.set(p.x, 2, p.z); camera.position.set(p.x - 30, 26, p.z + 38);
+}
+sel.onchange = () => fly(sel.value);
+
+const statsEl = document.getElementById("stats");
+let frames = 0, last = performance.now(), fps = 0, tReady = 0;
+function renderStats() {
+  const w = walker.pos;
+  statsEl.textContent =
+    `built in  ${((tBuilt - t0) / 1000).toFixed(2)} s (code, no file)\n` +
+    `ready in  ${((tReady - t0) / 1000).toFixed(2)} s\n` +
+    `triangles ${island.stats.tris.toLocaleString("en")}   fps ${fps}\n` +
+    `trees ${island.stats.trees}, places ${island.pois.length}` +
+    (mode === "walk" ? `\nyou: x ${w.x.toFixed(0)}, z ${w.z.toFixed(0)}` : "");
+}
 addEventListener("resize", () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
 
-renderer.setAnimationLoop(() => {
-  controls.update();
-  marker.rotation.y += 0.02;
+setMood(mood);
+fly("village");
+tReady = performance.now();
+let prev = performance.now();
+renderer.setAnimationLoop(now => {
+  const dt = (now - prev) / 1000; prev = now;
+  if (mode === "walk") walker.update(dt); else controls.update();
+  for (const s of spinners) s.rotation.z -= dt * 0.6;
   renderer.render(scene, camera);
   frames++;
-  const now = performance.now();
   if (now - last > 1000) { fps = frames; frames = 0; last = now; renderStats(); }
 });
 renderStats();
-window.__world = { info, meshes, tris, fileBytes, ready: (tLoaded - t0), scene, camera, controls, renderer, setMood };
+window.__island = { island, meshes, scene, camera, controls, renderer, setMood, setMode, walker, fly, ring, crow };
 </script>
 </body>
 </html>

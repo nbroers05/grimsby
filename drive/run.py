@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import beliefs, clock, cloud, learn, life, mind, output, voice, who, world
+from . import beliefs, clock, cloud, learn, life, memory, mind, output, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -66,7 +66,13 @@ def load() -> dict:
     s = json.loads(STATE.read_text(encoding="utf-8"))
     mind.migrate_wants(s)
     if world.migrate_state(s):
-        say("moved his beliefs and memories from place categories to world/places.json")
+        say(f"his world is now version {s['world_version']} (world/places.json)")
+    if s.pop("island_news", False):                 # once, on the first start after the move to the island
+        real = datetime.now().astimezone()
+        mind.feed(s, "noticed", world.ISLAND_NEWS, real)
+        memory.add(s["memories"]["short"], memory.make(world.ISLAND_NEWS, "moment", 4, real, -0.1, "sit@home"),
+                   memory.SHORT_MAX)
+        say("told him about the island")
     s.setdefault("feeling", {"words": s.pop("feeling_words", None), "mood": s["mood"], "energy": s["energy"],
                              "tick": 0})
     s.setdefault("ticks", 0)

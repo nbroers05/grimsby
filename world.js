@@ -1,11 +1,12 @@
-// Grimsby's 3D world: Berkel en Rodenrijs (world/berkel.glb) with the crow at the place that fits what he did last.
+// Grimsby's 3D world: his island (island.js, built in code at load) with the crow at the place in data/now.json.
+// Folded into the page you look around him; expanded (site.js adds .open) you walk around on foot (walk.js).
 // site.js loads data/now.json and sends it here with a "grimsby:data" event ({now, asleep}); this file only draws.
 // If WebGL or the files fail, the flat placeholder scene in index.html simply stays.
 // The look (materials, moods, crow) is in look.js and the choice of place in place.js: the dashboard panel uses them too.
 import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { buildIsland, islandMeshes } from "./island.js";
+import { makeWalker } from "./walk.js";
 import { INK, MOODS, makeLook, moodNow } from "./look.js";
 import { placeFor, placeForNow, pose as poseFor, whereNow, perch as perchOf } from "./place.js";
 
@@ -21,7 +22,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true, logarithmicDepthBuff
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 box.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(38, 2, 1, 16000);
+const camera = new THREE.PerspectiveCamera(38, 2, 0.2, 9000);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
@@ -29,11 +30,11 @@ controls.enableZoom = false;                       // wheel scrolls the page; ct
 controls.minPolarAngle = 0.35; controls.maxPolarAngle = 1.32;
 renderer.domElement.style.touchAction = "pan-y";   // a finger on the world still scrolls the page on a phone
 controls.touches.ONE = null; controls.touches.TWO = THREE.TOUCH.DOLLY_ROTATE;
-let camDist = 70;
+let camDist = 34;
 renderer.domElement.addEventListener("wheel", e => {
   if (!e.ctrlKey && !e.metaKey) return;
   e.preventDefault();
-  camDist = THREE.MathUtils.clamp(camDist * (e.deltaY > 0 ? 1.12 : 0.89), 18, 900);
+  camDist = THREE.MathUtils.clamp(camDist * (e.deltaY > 0 ? 1.12 : 0.89), 8, 600);
 }, { passive: false });
 
 function resize() {
@@ -54,7 +55,7 @@ const currentMood = () => (MOODS[params.get("mood")] ? params.get("mood") : mood
 function setMood(m) {
   if (m === mood) return;
   mood = m;
-  look.applyMood(scene, m, [700, 4200]);
+  look.applyMood(scene, m, walking ? [60, 420] : [300, 1500]);
   if (lamps) lamps.visible = m === "titlecard";
   edgeMat.color.set(m === "titlecard" ? "#5c5852" : INK);
   if (zzz) zzz.material.color.set(m === "titlecard" ? "#f2efe8" : INK);
@@ -72,7 +73,7 @@ function setOutline(on) {
   if (btn) btn.setAttribute("aria-pressed", on);
   if (on && !edges && meshes.walls) {
     edges = new THREE.Group();
-    for (const k of ["walls", "roofs", "greenhouse"]) {
+    for (const k of ["walls", "roofs", "stone", "awning"]) {
       if (meshes[k]) edges.add(new THREE.LineSegments(new THREE.EdgesGeometry(meshes[k].geometry, 25), edgeMat));
     }
     scene.add(edges);
@@ -81,9 +82,12 @@ function setOutline(on) {
 }
 
 // ---------- the crow, the red ring, zzz ----------
+const CROW = 0.6;                                  // look.js makes him 1.7: on the island that is taller than a house
 const crow = look.makeCrow();
+crow.group.scale.setScalar(CROW);
 scene.add(crow.group);
 const ring = look.ring();
+ring.scale.setScalar(0.45);
 scene.add(ring);
 
 function zzzSprite() {
@@ -92,32 +96,24 @@ function zzzSprite() {
   x.font = "800 96px 'Shippori Mincho B1', Georgia, serif"; x.fillStyle = "#fff"; x.textBaseline = "middle";
   x.fillText("zzz", 16, 66);
   const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), color: INK, transparent: true, fog: false }));
-  s.scale.set(7, 3.5, 1); return s;
+  s.scale.set(2.8, 1.4, 1); return s;
 }
 let zzz = null;
 
 // ---------- night lamps along the roads ----------
 let lamps = null;
-function makeLamps(roads) {
-  const pos = roads.geometry.attributes.position, n = pos.count / 3;
-  const pts = [], seen = new Set();
-  for (let i = 0; i < n && pts.length < 9000; i += 3) {
-    const x = (pos.getX(i * 3) + pos.getX(i * 3 + 1) + pos.getX(i * 3 + 2)) / 3;
-    const z = (pos.getZ(i * 3) + pos.getZ(i * 3 + 1) + pos.getZ(i * 3 + 2)) / 3;
-    const k = Math.round(x / 28) + "," + Math.round(z / 28);           // about one lamp per 28 m
-    if (seen.has(k)) continue; seen.add(k); pts.push(x, 4.5, z);
-  }
+function makeLamps(points) {
   const c = document.createElement("canvas"); c.width = c.height = 64;
   const x = c.getContext("2d"), gr = x.createRadialGradient(32, 32, 0, 32, 32, 32);
   gr.addColorStop(0, "rgba(255,226,160,1)"); gr.addColorStop(0.25, "rgba(255,200,110,.55)"); gr.addColorStop(1, "rgba(255,190,90,0)");
   x.fillStyle = gr; x.fillRect(0, 0, 64, 64);
-  const geo = new THREE.BufferGeometry(); geo.setAttribute("position", new THREE.Float32BufferAttribute(pts, 3));
-  const p = new THREE.Points(geo, new THREE.PointsMaterial({ size: 9, map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: true }));
+  const geo = new THREE.BufferGeometry(); geo.setAttribute("position", new THREE.BufferAttribute(points, 3));
+  const p = new THREE.Points(geo, new THREE.PointsMaterial({ size: 5, map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: true }));
   p.visible = false; return p;
 }
 
 // ---------- places ----------
-let meshes = {}, pois = [], solid = [];
+let meshes = {}, pois = [], solid = [], spinners = [], island = null, walker = null, walking = false;
 const ray = new THREE.Raycaster();
 function heightAt(x, z) {          // top of whatever is there: a roof, or the ground
   ray.set(new THREE.Vector3(x, 400, z), new THREE.Vector3(0, -1, 0));
@@ -136,7 +132,7 @@ function goTo(target, instant) {
   }
   state.from = state.pos.clone(); state.to = target.clone();
   const d = state.from.distanceTo(state.to);
-  state.dur = THREE.MathUtils.clamp(d / 260, 2.5, 8) * 1000;
+  state.dur = THREE.MathUtils.clamp(d / 40, 2.5, 8) * 1000;
   state.t0 = performance.now(); state.flying = true;
   faceTowards(state.to.x - state.from.x, state.to.z - state.from.z);
 }
@@ -146,7 +142,7 @@ function stepFlight(now) {
   const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
   const d = state.from.distanceTo(state.to);
   state.pos.lerpVectors(state.from, state.to, e);
-  state.pos.y += Math.sin(Math.PI * k) * Math.min(160, 25 + d * 0.12);
+  state.pos.y += Math.sin(Math.PI * k) * Math.min(45, 8 + d * 0.18);
   if (k >= 1) { state.flying = false; state.pos.copy(state.to); }
 }
 
@@ -173,10 +169,10 @@ function pose(now) {
   c.wings[0].rotation.x = -flap; c.wings[1].rotation.x = flap;
   c.head.rotation.z = headZ; c.head.position.y = 2.05 + headY;
   c.body.rotation.z = bodyTilt;
-  c.group.position.y += bob * 1.7;
+  c.group.position.y += bob * CROW;
   ring.visible = !state.flying;
   ring.position.set(state.pos.x, (state.to || state.pos).y + 0.25, state.pos.z);
-  if (zzz) { zzz.visible = state.asleep; zzz.position.set(state.pos.x + 2, state.pos.y + 7 + Math.sin(t) * 0.6, state.pos.z); }
+  if (zzz) { zzz.visible = state.asleep; zzz.position.set(state.pos.x + 0.8, state.pos.y + 2.8 + Math.sin(t) * 0.25, state.pos.z); }
 }
 
 // ---------- data from site.js ----------
@@ -202,26 +198,17 @@ function onData(d) {
 }
 document.addEventListener("grimsby:data", e => onData(e.detail));
 
-// ---------- load ----------
-const draco = new DRACOLoader().setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/gltf/");
-const loader = new GLTFLoader().setDRACOLoader(draco);
-Promise.all([
-  loader.loadAsync("world/berkel.glb"),
-  fetch("world/poi.json").then(r => r.json()),
-]).then(([gltf, poi]) => {
-  pois = poi.pois;
-  gltf.scene.traverse(o => {
-    if (!o.isMesh) return;
-    o.geometry = o.geometry.toNonIndexed();          // positions only in the file: give every face its own normal
-    o.geometry.computeVertexNormals();
-    o.material = mats[o.name] || mats.walls;
-    if (o.name === "greenhouse") o.renderOrder = 2;
-    meshes[o.name] = o;
-  });
-  solid = ["roofs", "walls", "greenhouse"].map(k => meshes[k]).filter(Boolean);
-  scene.add(gltf.scene);
-  if (meshes.roads) { lamps = makeLamps(meshes.roads); scene.add(lamps); }
+// ---------- load: the island is built here, nothing to download but three.js ----------
+Promise.resolve().then(() => {
+  island = buildIsland(THREE);
+  const built = islandMeshes(THREE, island, mats);
+  meshes = built.meshes; spinners = built.spinners;
+  pois = island.pois;
+  solid = ["roofs", "walls"].map(k => meshes[k]).filter(Boolean);
+  scene.add(built.group);
+  lamps = makeLamps(island.lamps); scene.add(lamps);
   zzz = zzzSprite(); scene.add(zzz);
+  walker = makeWalker(THREE, camera, renderer.domElement, island);
   setMood(currentMood());
   setOutline(outlineOn);
   ready = true;
@@ -230,28 +217,57 @@ Promise.all([
   const d = pending || window.GRIMSBY_DATA;
   if (d) onData(d);
   setInterval(() => setMood(currentMood()), 60000);
+  watchOpen();
   renderer.setAnimationLoop(frame);
 }).catch(err => {
-  console.warn("Grimsby's 3D world did not load, keeping the flat scene:", err);
+  console.warn("Grimsby's island did not build, keeping the flat scene:", err);
   renderer.domElement.remove();
 });
+
+// ---------- walking: only in the expanded world, and not on touch screens (no joystick yet) ----------
+const canWalk = !matchMedia("(pointer: coarse)").matches;
+function setWalking(on) {
+  on = on && canWalk && !!walker;
+  if (on === walking) return;
+  walking = on;
+  controls.enabled = !on;
+  if (on) { walker.reset(); walker.start(); }
+  else {
+    walker.stop();
+    const aim = state.pos.clone(); aim.y += 1.5;      // back to looking at him
+    controls.target.copy(aim);
+    camera.position.copy(aim).addScaledVector(camOffset, camDist);
+  }
+  const m = mood; mood = null; setMood(m);           // the fog distance differs per mode
+}
+function watchOpen() {
+  const check = () => setWalking(worldEl.classList.contains("open"));
+  new MutationObserver(check).observe(worldEl, { attributes: true, attributeFilter: ["class"] });
+  check();
+}
 
 const btn = document.getElementById("outline-btn");
 if (btn) btn.addEventListener("click", () => setOutline(!outlineOn));
 
+let lastFrame = 0;
 function frame(now) {
   if (document.hidden) return;
+  const dt = lastFrame ? (now - lastFrame) / 1000 : 0; lastFrame = now;
   stepFlight(now);
   pose(now);
+  for (const s of spinners) s.rotation.z -= dt * 0.6;
+  if (walking) { walker.update(dt); renderer.render(scene, camera); return; }
   // follow him: move the orbit centre with the bird, keep the user's chosen angle, distance eases to camDist
-  const aim = state.pos.clone(); aim.y += 3;
+  const aim = state.pos.clone(); aim.y += 1.5;
   const delta = aim.sub(controls.target);
   controls.target.add(delta); camera.position.add(delta);
   const off = camera.position.clone().sub(controls.target);
-  off.setLength(THREE.MathUtils.lerp(off.length(), state.flying ? Math.max(camDist, 140) : camDist, 0.04));
+  off.setLength(THREE.MathUtils.lerp(off.length(), state.flying ? Math.max(camDist, 70) : camDist, 0.04));
   camera.position.copy(controls.target).add(off);
   controls.update();
   renderer.render(scene, camera);
 }
 
-window.__grimsbyWorld = { scene, camera, controls, state, setMood, setOutline, meshes, renderer };
+window.__grimsbyWorld = { scene, camera, controls, state, setMood, setOutline, renderer, get meshes() { return meshes; },
+  get island() { return island; }, get walking() { return walking; },
+  get you() { return walking && walker ? walker.pos : controls.target; } };

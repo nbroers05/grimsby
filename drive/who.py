@@ -11,7 +11,7 @@ from .memory import HOLDS_TO
 
 SHEET = {
     "name": "Grimsby",
-    "core": ("A crow who lives on the roof of station Berkel Westpolder and hoards shiny facts the way other "
+    "core": ("A crow who lives on the roof of station Rodenrijs and hoards shiny facts the way other "
              "crows hoard bottle caps. Precise, suspicious, slightly pompous, and secretly sentimental, which "
              "he would never admit."),
     "backstory": ("Hatched on 14 November 2026 inside a computer in the Netherlands, to the sound of its fan. "

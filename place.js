@@ -1,8 +1,8 @@
 // Where Grimsby is, shared by the site (world.js) and the dashboard panel.
-// The categories and HOME must match SPOT_CATEGORIES / HOME in world/build_world.py (that script cuts out a small
-// close-up of every possible place for the panel).
+// The places and their ids come from island.js (SPOTS); world/build_spots.mjs writes world/poi.json and the panel's
+// close-ups (world/spots/<id>.json) from it.
 
-export const HOME = "n3149917960";                 // OSM: station Berkel Westpolder. He lives on its roof.
+export const HOME = "station-rodenrijs";           // the island's station. He lives on its roof.
 export const PLACES = {                             // old brain (log.json entries): what he did last -> where he goes
   search: ["library"],
   diary: ["bench"],

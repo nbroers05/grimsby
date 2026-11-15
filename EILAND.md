@@ -1,5 +1,12 @@
 # Eiland: Grimsby woont op een verzonnen eiland dat stiekem Berkel is
 
+> Status 15-11-2026: phase 1 built and live (Noah tested it). `island.js` (built in code, ~0.25 s, no .glb), `walk.js`
+> (walking, WERELD step 1 controls without sound), `world/viewer.html`, `world/build_spots.mjs` (places.json, poi.json,
+> spots for the dashboard panel in the old format). The village is a bit bigger than the sketch (~250 x 96 m) so the
+> Jumbo and McDonald's are not in the forest. Brain: `world_version` 2, distances count x14 (`FEEL_SCALE` in
+> drive/world.py; the sim shows about as much flying as on the old map). Old world in `world/oud/`. Not yet: touch
+> joystick, sounds (block 4), opening forest sections.
+
 Besloten op 15-11-2026. Dit vervangt de 3DBAG/OSM-aanpak uit VOLGENDE.md blok E (techniek) en de kaart uit WERELD.md stap 1. De stijl uit blok E (toon-shading, huisstijlkleuren, A Short Hike-gevoel) blijft gewoon staan.
 
 Gebruik Opus. Eerst een plan, dan bouwen, dan mij laten kijken in de viewer voordat het op de site komt.

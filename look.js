@@ -7,6 +7,9 @@ export const INK = "#16130f", RED = "#d7261e";
 export const COLORS = {
   ground: "#f3eee3", ground_side: "#cbbfa6", green: "#d3dcb4", water: "#9ccbec",
   paths: "#e3dacb", roads: "#c4bcae", rail: "#8f877a", walls: "#f8f4ea", roofs: "#8c95cc", greenhouse: "#bfe1f5",
+  // the island (island.js)
+  sand: "#f1e2b8", forest: "#bccb9c", trees: "#9db985", trees2: "#83a674", trunk: "#7d6a55", stone: "#e2dbcc",
+  awning: "#8cc0e8", sail: "#f8f4ea",
 };
 
 // Digital Future in the morning, Poster in the afternoon, Title card at night (same names as the dashboard's html[data-mood])

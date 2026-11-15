@@ -48,11 +48,12 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
            "feeling": {"mood": round(s["mood"], 2), "energy": round(s["energy"], 2), "words": f.get("words"),
                        "emotion": learn.emotion(s), "arousal": round(s.get("arousal", 0), 2)},
            "needs": {k: round(v, 2) for k, v in s["needs"].items()},
-           "world": {"name": "Berkel en Rodenrijs", "day": w["day"], "time": w["time"]},
+           "world": {"name": "the island", "day": w["day"], "time": w["time"]},
            # additions to Pino's shape, for the 3D world and the dashboard panel
            "action": d["action"] if d else None,
-           # where he is, or where he is flying to; poi/category only for the 3D world (world/places.json)
-           "place": {"id": pl["id"], "name": pl["name"], "words": pl["words"], "poi": pl["poi"],
+           # where he is, or where he is flying to; obj/category only for the 3D world (world/places.json).
+           # `poi` = the same obj id, kept because the dashboard panel's place.js reads place.poi.
+           "place": {"id": pl["id"], "name": pl["name"], "words": pl["words"], "obj": pl["obj"], "poi": pl["obj"],
                      "category": pl["category"]},
            "flying": {"from": world.name(d["from"]), "to": world.name(d["place"])} if flying else None}
 

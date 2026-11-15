@@ -3,6 +3,7 @@
   "private": true,
   "description": "Build tools for Grimsby's world (Draco compression of berkel.glb)",
   "devDependencies": {
-    "@gltf-transform/cli": "4.2.1"
+    "@gltf-transform/cli": "4.2.1",
+    "three": "^0.170.0"
   }
 }

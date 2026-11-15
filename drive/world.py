@@ -1,7 +1,7 @@
 """Grimsby's world as his brain knows it: world/places.json. Places, where they are, what can happen there.
 
 He is always at one place (state["at"]). Going somewhere else takes travel ticks and costs energy, so the
-choice of action and place weighs how far away it is. The brain knows nothing about the 3D world; the `poi` and
+choice of action and place weighs how far away it is. The brain knows nothing about the 3D world; the `obj` and
 `category` fields in places.json are only passed on to the site.
 """
 
@@ -14,6 +14,11 @@ from pathlib import Path
 
 PLACES_FILE = Path(__file__).resolve().parent.parent / "world" / "places.json"
 HOME = "home"
+# The island (EILAND.md) is Berkel at toy scale: places are ~14x closer than on the old map. For his body the
+# village should feel as far as Berkel did, or every flight is free and he flits about all day. So distances
+# count x FEEL_SCALE ("crow km"); the 3D world still flies the real metres. Checked in drive.sim (15-11-2026):
+# with this, place changes and flying ticks per day stay close to the old map.
+FEEL_SCALE = 14.0
 KM_PER_TICK = 1.2              # a crow in no hurry: 1.2 km per tick (12 world minutes)
 ENERGY_PER_KM = 0.04
 TRAVEL_COST = 0.035            # utility lost per km...
@@ -44,7 +49,7 @@ def places_for(action: str, here: str = HOME) -> list[str]:
 
 def km(a: str, b: str) -> float:
     pa, pb = place(a), place(b)
-    return math.hypot(pa["x"] - pb["x"], pa["z"] - pb["z"]) / 1000
+    return math.hypot(pa["x"] - pb["x"], pa["z"] - pb["z"]) / 1000 * FEEL_SCALE
 
 
 def travel_ticks(a: str, b: str) -> int:
@@ -68,9 +73,23 @@ def feel(action: str, pid: str) -> float:
     return p.get("feel", 0.0) + p.get("feel_for", {}).get(action, 0.0)
 
 
+ISLAND_NEWS = ("Woke up and everything was different. Water everywhere. The station is called Rodenrijs now. "
+               "The Jumbo is still there, unfortunately.")
+
+
 def migrate_state(s: dict) -> bool:
-    """Old place categories -> place ids (beliefs, their stats, memories, the running action). Returns changed."""
-    if s.get("world_version") == 1:
+    """Bring his state up to the current world. Returns changed.
+    v1: old place categories -> place ids (beliefs, their stats, memories, the running action).
+    v2: the island (EILAND.md). Ids stay the same, so nothing moves in his head; only `island_news` is set, so the
+    loop tells him once (run.load). Old memories that say Westpolder stay: that is his history."""
+    if s.get("world_version", 0) == 1:
+        s["world_version"] = 2
+        s["island_news"] = True
+        who = s.get("who", {})                       # his address on the character sheet is a fact, not a choice
+        if isinstance(who.get("core"), str):
+            who["core"] = who["core"].replace("station Berkel Westpolder", "station Rodenrijs")
+        return True
+    if s.get("world_version", 0) >= 2:
         return False
     conv = lambda key: (lambda a, p: f"{a}@{OLD_CATEGORY.get(p, p)}")(*key.split("@", 1)) if "@" in key else key  # noqa: E731
     s["belief_stats"] = {conv(k): v for k, v in s.get("belief_stats", {}).items()}
@@ -84,4 +103,5 @@ def migrate_state(s: dict) -> bool:
             s[key]["place"] = OLD_CATEGORY.get(s[key]["place"], s[key]["place"])
     s.setdefault("at", s["doing"]["place"] if s.get("doing") else HOME)
     s["world_version"] = 1
+    migrate_state(s)
     return True

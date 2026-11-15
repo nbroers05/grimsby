@@ -131,7 +131,7 @@ def context(state: dict, real, recalled: list[dict] | None = None, extra: str = 
     banned = overused(state)
     return (f"{sheet(state, principles)}\n\n"
             f"It is the {part} of day {wt['day']} of your life ({wt['time']}). You live on the roof of station "
-            f"Berkel Westpolder, in Berkel en Rodenrijs, the Netherlands.\n"
+            f"Rodenrijs, in the village on the south coast of a small island off the Dutch coast.\n"
             f"You feel {learn.emotion(state)}, {mood_words(state['mood'], state['energy']).split(', ')[1]}.\n"
             f"On your mind right now (most pressing first):\n{mind_lines}\n"
             + extra
