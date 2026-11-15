@@ -571,5 +571,18 @@
       "time": "2026-11-15T14:45:04+01:00"
     },
     "mood": 0.32
+  },
+  {
+    "time": "2026-11-15T15:10:34+01:00",
+    "action": "diary",
+    "reason": "Because I need to record the suspiciousness of straight lines.",
+    "ok": true,
+    "withheld": false,
+    "line": "A place where people move in straight lines is suspicious.",
+    "detail": {
+      "topic": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
+      "entry": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious. They walk with their heads down, as if following a thread beneath the ground. No one looks up, no one stops, no one seems to notice the bench. I watched for ten minutes. No one noticed me."
+    },
+    "mood": 0.24
   }
 ]
