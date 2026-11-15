@@ -1,37 +1,37 @@
 {
  "v": 1,
- "at": "2026-11-15T17:45:04+01:00",
+ "at": "2026-11-15T18:48:46+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "writing in his diary on a bench by the station",
- "thought": "The temperature here is predictable, which is more than I can say for some humans.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Berkel Westpolder",
+ "thought": "It’s not enough to be clean, it has to be precise.",
  "feeling": {
-  "mood": 0.2,
-  "energy": 0.53,
+  "mood": 0.16,
+  "energy": 1,
   "words": "The sun glints off the fish statue. A chip crumbles in my beak. Derek’s shadow stretches but doesn’t touch me.",
-  "emotion": "content",
-  "arousal": 0.54
+  "emotion": "calm",
+  "arousal": 0.19
  },
  "needs": {
-  "rest": 0.16,
-  "curiosity": 0.1,
-  "social": 0.14,
-  "expression": 0.0,
-  "quiet": 0.04,
-  "hunger": 0.04
+  "rest": 0.0,
+  "curiosity": 0.41,
+  "social": 0.32,
+  "expression": 0.07,
+  "quiet": 0.0,
+  "hunger": 0.17
  },
  "world": {
   "name": "Berkel en Rodenrijs",
-  "day": 8,
-  "time": "17:08"
+  "day": 9,
+  "time": "01:37"
  },
- "action": "diary",
+ "action": "sleep",
  "place": {
-  "id": "station-bench",
-  "name": "a bench by the station",
-  "words": "on a bench by the station",
-  "poi": "n3065409934",
-  "category": "bench"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Berkel Westpolder",
+  "poi": "n3149917960",
+  "category": "station"
  },
  "flying": null
 }

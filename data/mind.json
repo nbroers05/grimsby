@@ -1,23 +1,19 @@
 {
  "v": 1,
- "at": "2026-11-15T17:45:04+01:00",
- "thought": "The temperature here is predictable, which is more than I can say for some humans.",
+ "at": "2026-11-15T18:48:46+01:00",
+ "thought": "It’s not enough to be clean, it has to be precise.",
  "loudest": [
   {
-   "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
+   "kind": "need",
+   "subject": "curiosity"
   },
   {
-   "kind": "memory",
-   "subject": "Chips without crunch were noted, as was the fact that I ate them."
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts"
   },
   {
-   "kind": "goal",
-   "subject": "writing in his diary on a bench by the station"
-  },
-  {
-   "kind": "memory",
-   "subject": "The average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July."
+   "kind": "want",
+   "subject": "a list of curing systems"
   }
  ],
  "open": {
@@ -28,7 +24,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "writing in his diary on a bench by the station",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -52,35 +48,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.7
+   "strength": 9.4
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.5
+   "strength": 6.2
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 4.5
+   "strength": 4.2
   },
   {
    "topic": "weather",
-   "strength": 3.5
+   "strength": 3.2
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 3.5
+   "strength": 3.2
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 2.5
+   "strength": 2.2
   },
   {
    "topic": "the art of making lists",
-   "strength": 2.5
+   "strength": 2.2
   },
   {
    "topic": "molecular networks",
-   "strength": 2.3
+   "strength": 2.0
   }
  ],
  "budget": {
@@ -89,46 +85,46 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.197,
-  "arousal": 0.538,
-  "average": 0.132,
+  "emotion": "calm",
+  "valence": 0.155,
+  "arousal": 0.19,
+  "average": 0.135,
   "values": {
    "eat@jumbo": {
     "V": 0.09,
-    "n": 3.7
+    "n": 3.4
    },
    "eat@*": {
-    "V": 0.119,
-    "n": 10.1
+    "V": 0.125,
+    "n": 10.2
    },
    "diary@station-bench": {
-    "V": 0.103,
-    "n": 1.7
+    "V": 0.13,
+    "n": 2.5
    },
    "diary@*": {
-    "V": 0.232,
-    "n": 9.1
+    "V": 0.24,
+    "n": 9.3
    },
    "neighbour@home": {
     "V": 0.086,
-    "n": 1.8
+    "n": 1.7
    },
    "neighbour@*": {
     "V": 0.086,
-    "n": 1.8
+    "n": 1.7
    },
    "diary@plantsoen-bench": {
     "V": 0.155,
-    "n": 3.5
+    "n": 3.2
    },
    "pigeons@station-fountain": {
     "V": 0.046,
-    "n": 2.5
+    "n": 2.3
    },
    "pigeons@*": {
     "V": 0.103,
-    "n": 5.4
+    "n": 4.9
    },
    "sit@ondermolen": {
     "V": 0.042,
@@ -136,7 +132,7 @@
    },
    "sit@*": {
     "V": 0.122,
-    "n": 3.6
+    "n": 3.3
    },
    "read_back@home": {
     "V": 0.047,
@@ -147,105 +143,109 @@
     "n": 0.8
    },
    "draw@ondermolen": {
-    "V": 0.028,
-    "n": 0.8
+    "V": 0.051,
+    "n": 1.7
    },
    "draw@*": {
-    "V": 0.068,
-    "n": 2.8
+    "V": 0.086,
+    "n": 3.5
    },
    "sit@de-bron": {
     "V": 0.042,
     "n": 0.8
    },
    "eat@de-turk": {
-    "V": 0.046,
-    "n": 1.8
+    "V": 0.063,
+    "n": 2.5
    },
    "search@library": {
     "V": 0.073,
-    "n": 2.8
+    "n": 2.5
    },
    "search@*": {
     "V": 0.073,
-    "n": 2.8
+    "n": 2.5
    },
    "eat@mcdonalds": {
     "V": 0.057,
-    "n": 1.8
+    "n": 1.7
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@*": {
-    "V": 0.101,
-    "n": 2.8
+    "V": 0.108,
+    "n": 3.5
    },
    "pigeons@vis": {
     "V": 0.054,
-    "n": 1.9
+    "n": 1.8
    },
    "eat@albert-heijn": {
     "V": 0.035,
-    "n": 2.8
+    "n": 2.6
    },
    "diary@library": {
     "V": 0.125,
-    "n": 3.8
+    "n": 3.5
    },
    "pigeons@centre-fountain": {
     "V": 0.03,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@albert-heijn": {
     "V": 0.031,
-    "n": 0.9
+    "n": 0.8
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 1.9
+    "n": 1.8
    },
    "wander@vis": {
     "V": 0.04,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@dorpskerk": {
     "V": 0.039,
-    "n": 1
+    "n": 0.9
    },
    "wander@hichte-mill": {
     "V": 0.039,
-    "n": 1
+    "n": 0.9
+   },
+   "wander@ondermolen": {
+    "V": 0.021,
+    "n": 0.9
+   },
+   "tidy@home": {
+    "V": 0.031,
+    "n": 0.9
+   },
+   "tidy@*": {
+    "V": 0.031,
+    "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.29,
-   "place:dorpskerk": 0.17,
-   "place:jumbo": 0.24,
-   "place:hichte-mill": 0.12,
-   "place:station-bench": 0.19
+   "place:ondermolen": 0.15,
+   "topic:rubber chemistry": 0.07
   },
   "workingMemory": [
    {
-    "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.491
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.407
    },
    {
-    "kind": "memory",
-    "subject": "Chips without crunch were noted, as was the fact that I ate them.",
-    "salience": 0.405
+    "kind": "want",
+    "subject": "A list of crown cork teeth counts",
+    "salience": 0.15
    },
    {
-    "kind": "goal",
-    "subject": "writing in his diary on a bench by the station",
-    "salience": 0.4
-   },
-   {
-    "kind": "memory",
-    "subject": "The average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July.",
-    "salience": 0.375
+    "kind": "want",
+    "subject": "a list of curing systems",
+    "salience": 0.15
    }
   ]
  }

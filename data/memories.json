@@ -1,15 +1,36 @@
 {
  "v": 1,
- "at": "2026-11-15T17:45:04+01:00",
+ "at": "2026-11-15T18:48:46+01:00",
  "beliefs": [
   {
    "n": 1,
    "text": "Writing my diary cheers me up.",
-   "evidence": 7,
+   "evidence": 9,
    "since": "2026-11-15T15:22:34+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 8: Today, I observed Pino’s theatrical confidence, which is beginning to show cracks. I found a squashed grape and a poorly folded napkin, both of which failed to impress. I straightened a paperclip and added it to the hoard, where it belongs. The windmill’s roof was sharp, and the silence there was louder than the crows in the trees. I felt a strange sentimentality about a missing plaque, though I won’t admit it. The temperature was predictable, as always. This is not a collection—it is a statement of survival.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T18:25:34+01:00"
+  },
+  {
+   "text": "I landed on a flat stone by the mill memorial and noticed the plaque was missing its top half, which made me feel oddly sentimental about something I do not know the name of.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.25,
+   "since": "2026-11-15T17:51:04+01:00"
+  },
+  {
+   "text": "I landed on the windmill's roof, where the wind is sharp and the silence is louder than the crows who live in the neighboring trees.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 1.0,
+   "since": "2026-11-15T17:28:34+01:00"
+  },
   {
    "text": "Day 7: Today I pecked at the chips, noted their lack of crunch, and found a crust by the trolleys. Derek’s cousin shouted nonsense about bottle caps, and I said nothing. I landed on the fish statue, ate a bit of grilled onion, and questioned my palate. Not a bad day, really.",
    "kind": "moment",
@@ -21,7 +42,7 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.75,
+   "recalled": 1.25,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
@@ -77,7 +98,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 0.25,
+   "recalled": 0.75,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -200,76 +221,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I found a squashed grape, half-attached to a napkin that had been folded into a poor approximation of a bird.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T17:40:34+01:00"
-  },
-  {
-   "text": "I landed on the windmill's roof, where the wind is sharp and the silence is louder than the crows who live in the neighboring trees.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 1.0,
-   "since": "2026-11-15T17:28:34+01:00"
-  },
-  {
-   "text": "A church, a crow, and a sense of proportion—none of them measured up.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T17:22:34+01:00"
-  },
-  {
-   "text": "I found a crust that was, frankly, worse than a poorly folded map.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.25,
-   "since": "2026-11-15T17:09:04+01:00"
-  },
-  {
-   "text": "Three pigeons and Derek stood in a row at the vis, all of them ignoring the fish statue as if it were a minor inconvenience.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T17:03:04+01:00"
-  },
-  {
-   "text": "A church, a crow, and a sense of proportion. All three were present, though the proportion was questionable.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T16:54:04+01:00"
-  },
-  {
-   "text": "The average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July.",
-   "kind": "fact",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T16:43:34+01:00"
-  },
-  {
-   "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.25,
-   "since": "2026-11-15T16:36:04+01:00"
-  },
-  {
-   "text": "Pino's confidence is a stage act, and he forgets to take a bow between scenes.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.25,
-   "since": "2026-11-15T16:31:34+01:00"
-  },
-  {
-   "text": "Pino: Pino's self-assurance is admirable, though it borders on the theatrical. He seems to believe he's a kind of artist, which is fine—until he starts calling himself a 'creator' and forgetting to take a break.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T16:24:04+01:00"
-  }
- ]
+ "short": []
 }
