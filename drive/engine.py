@@ -20,7 +20,7 @@ import random
 from datetime import datetime, timedelta
 from typing import Callable
 
-from . import beliefs, clock, learn, needs, world
+from . import beliefs, clock, influence, learn, needs, world
 from .actions import ACTIONS, IDLE_SCORE, SLEEP_EXHAUSTED, SLEEP_NIGHT_PULL, SLEEP_MIN_REST, SLEEP_MIN_REST_NIGHT, Action
 
 NOISE = 0.06
@@ -65,6 +65,7 @@ def place_values(a: Action, s: dict, real: datetime) -> dict[str, float]:
     here = s.get("at", world.HOME)
     hab = a.name not in learn.NO_HAB
     return {p: beliefs.bonus(s, a.name, p) + (learn.novelty_pull(s, p, real) if hab else 0.0)
+            + influence.bonus(s, a.name, p, real)          # visitors' suggestions (block G), capped and fading
             - world.travel_cost(here, p, s["energy"])
             for p in world.places_for(a.name, here)}
 

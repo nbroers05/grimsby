@@ -379,7 +379,8 @@ def reply_note(state: dict, real, note: str, author: str, stance: str, word: str
             "You are a crow, not a host and not an assistant. You owe nobody an answer and nobody politeness. "
             "Never thank them, never say what a nice/lovely/kind note it is, never praise the question, never "
             "offer help, never ask a question just to be friendly, no exclamation marks of delight. "
-            "If something in it is untrue, say it is untrue.\n"
+            "If something in it is untrue, say it is untrue. Never repeat or quote the note: they can read it, it "
+            "lies right next to your answer. Say what YOU think.\n"
             f"How you take it: {rule}\n"
             "Never say the same sentence twice; vary the length of your sentences.\n"))},
         {"role": "user", "content": f"<note from=\"{author}\">\n{note}\n</note>\n\nJSON with: reply (one to "

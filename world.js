@@ -198,6 +198,74 @@ function onData(d) {
 }
 document.addEventListener("grimsby:data", e => onData(e.detail));
 
+// ---------- what visitors left (WERELD.md step 3): notes as writing in the sand, his reply beside it, items ----------
+// Visitor text is only ever drawn as pixels on a canvas, never as HTML.
+const BEACH_DROP = { x: -71, z: 193 };             // by the water in front of the station, for gifts left from afar
+const gifts = new THREE.Group();
+scene.add(gifts);
+let giftData = [];
+function wrap(ctx, text, width) {
+  const lines = [];
+  for (const para of String(text).split(/\n+/)) {
+    let line = "";
+    for (const w of para.split(/\s+/)) {
+      const t = line ? line + " " + w : w;
+      if (ctx.measureText(t).width > width && line) { lines.push(line); line = w; } else line = t;
+    }
+    if (line) lines.push(line);
+  }
+  return lines;
+}
+function sandText(text, sign, color) {             // text pressed into the sand, read from the south
+  const c = document.createElement("canvas"); c.width = 768; c.height = 384;
+  const x = c.getContext("2d");
+  x.font = "700 34px 'Shippori Mincho B1', Georgia, serif";
+  let lines = wrap(x, text, 720);
+  if (lines.length > 7) { lines = lines.slice(0, 7); lines[6] += " …"; }
+  x.fillStyle = color; x.textBaseline = "top";
+  lines.forEach((l, i) => x.fillText(l, 24, 16 + i * 44));
+  if (sign) { x.font = "400 28px 'Shippori Mincho B1', Georgia, serif"; x.fillText("— " + sign, 24, 16 + lines.length * 44 + 6); }
+  const tex = new THREE.CanvasTexture(c); tex.anisotropy = 4;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 1.6),
+    new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 }));
+  m.rotation.x = -Math.PI / 2; m.renderOrder = 3;
+  return m;
+}
+function thingMesh(item) {                         // a small low-poly stand-in for what was left
+  const it = String(item || "").toLowerCase();
+  let geo, mat;
+  if (/walnut|nut/.test(it)) { geo = new THREE.IcosahedronGeometry(0.16, 0); mat = mats.trunk; }
+  else if (/button|coin|cap|marble/.test(it)) { geo = new THREE.CylinderGeometry(0.14, 0.14, 0.05, 10); mat = mats.awning; }
+  else { geo = new THREE.BoxGeometry(0.3, 0.14, 0.22); mat = mats.sail; }
+  return new THREE.Mesh(geo, mat || mats.walls);
+}
+function drawGifts() {
+  if (!island) return;
+  for (const o of [...gifts.children]) { gifts.remove(o); o.traverse(n => { if (n.geometry) n.geometry.dispose(); if (n.material && n.material.map) { n.material.map.dispose(); n.material.dispose(); } }); }
+  let onRoof = 0;
+  const home = pois.find(p => p.place === "home");
+  for (const g of giftData) {
+    const y = island.groundAt(g.x, g.z) + 0.04;
+    if (g.note) {
+      const t = sandText(g.note, g.visitor_name, "#3a3226"); t.position.set(g.x, y, g.z); gifts.add(t);
+      if (g.reply) { const r = sandText(g.reply, "Grimsby", "#1b2a8c"); r.position.set(g.x + 3.4, y, g.z + 0.2); gifts.add(r); }
+    }
+    if (g.item) {
+      const m = thingMesh(g.item);
+      if (g.taken && home && onRoof < 12) {        // on his roof, in a row along the ridge
+        m.position.set(home.x + 0.9, perch(home).y + 0.12, home.z - 4 + onRoof * 0.7); onRoof++; gifts.add(m);
+      } else if (!g.taken) { m.position.set(g.x - 1.9, y + 0.1, g.z + 0.3); gifts.add(m); }
+    }
+  }
+}
+document.addEventListener("grimsby:gifts", e => { giftData = e.detail || []; drawGifts(); });
+function dropPoint() {                             // where a gift lands: where you stand, else by the water
+  if (walking && walker && island.walkable(walker.pos.x, walker.pos.z)) {
+    return { x: walker.pos.x + Math.cos(walker.yaw) * 1.5, z: walker.pos.z + Math.sin(walker.yaw) * 1.5 };
+  }
+  return { ...BEACH_DROP };
+}
+
 // ---------- load: the island is built here, nothing to download but three.js ----------
 Promise.resolve().then(() => {
   island = buildIsland(THREE);
@@ -218,6 +286,7 @@ Promise.resolve().then(() => {
   if (d) onData(d);
   setInterval(() => setMood(currentMood()), 60000);
   watchOpen();
+  if (window.GRIMSBY_GIFTS) { giftData = window.GRIMSBY_GIFTS; drawGifts(); }
   renderer.setAnimationLoop(frame);
 }).catch(err => {
   console.warn("Grimsby's island did not build, keeping the flat scene:", err);
@@ -270,4 +339,4 @@ function frame(now) {
 
 window.__grimsbyWorld = { scene, camera, controls, state, setMood, setOutline, renderer, get meshes() { return meshes; },
   get island() { return island; }, get walking() { return walking; },
-  get you() { return walking && walker ? walker.pos : controls.target; } };
+  get you() { return walking && walker ? walker.pos : controls.target; }, dropPoint };

@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, draw, learn, memory, mind, safety, voice, world
+from . import beliefs, clock, draw, influence, learn, memory, mind, safety, voice, world
 from .actions import ACTIONS
 from .voice import VoiceDown, Withheld
 
@@ -149,6 +149,15 @@ class Executor:
     def do_search(self, p: dict) -> None:
         topic = self.pick_topic()
         query = voice.search_query(self.state, self.real, topic)
+        planted = next((i for i in mind.open_items(self.state, "question")
+                        if i["subject"] == topic and i.get("via")), None)
+        if planted and influence.too_close(query, topic):   # block G: a visitor's words never become the query
+            query = voice.search_query(self.state, self.real, f"{topic} (in your own words, not theirs)")
+            if influence.too_close(query, topic):
+                self.say("search: the query stayed too close to a visitor's words; looking up his own topic instead")
+                self.state["open"].remove(planted)
+                topic = self.pick_topic()
+                query = voice.search_query(self.state, self.real, topic)
         p["doing"] = f"looking up {query.lower()} {world.words(p['place'])}"
         results = safety.web_search(query)
         if not results:
@@ -288,7 +297,7 @@ class Executor:
         p["public"] = [p["memory"]]
 
     def do_tidy(self, p: dict) -> None:
-        item = self.rng.choice(HOARD)
+        item = self.rng.choice(HOARD + influence.hoard(self.state))   # plus what visitors left and he took
         p["doing"] = f"tidying his hoard: {item}"
         p["content"] = item
         p["memory"] = voice.memory_line(self.state, self.real, f"You tidied your hoard and handled {item}.",

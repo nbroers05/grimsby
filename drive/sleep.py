@@ -20,7 +20,7 @@ import re
 from collections import Counter
 from datetime import datetime
 
-from . import beliefs, clock, learn, memory, who
+from . import beliefs, clock, influence, learn, memory, who
 
 PROMOTE = 5                    # at most this many short memories move to long-term per night
 PROMOTE_MIN = 3.0              # keep_score needed to be worth keeping
@@ -56,7 +56,7 @@ def character_candidate(state: dict) -> tuple[str, str] | None:
                 continue
             where = "" if place == "*" else " " + beliefs.where(place)
             return "quirks", f"{habit}{where} when a day needs mending"
-    return None
+    return influence.sheet_candidate(state)               # repeated influence by one visitor (block G)
 
 
 def replay_weight(m: dict) -> float:

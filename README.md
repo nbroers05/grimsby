@@ -51,6 +51,8 @@ Written after every tick, pushed at most every 10 minutes, same shape as Pino's 
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
 | `brain_v1.py`, `state.json` | the old hourly brain and its last state, kept as history |
 | `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look |
+| `drive/influence.py` | how visitors can influence him (VOLGENDE.md block G): suggestions, planted questions, opinions about places, items, a ceiling per visitor per day; visitor text never starts a tool. Check: `python -m drive.sim_influence` |
+| `supabase/gifts.sql` | WERELD step 3: table `gifts` (anyone leaves and reads, only the brain answers), rate limit in the database |
 | `island.js` | his island (EILAND.md), built in code at load: shore, beach, forest in sections (all closed for now), the village with every place (`SPOTS`), collisions for walking |
 | `walk.js` | walking in first person (click to look, W/S walk, A/D turn), used in the expanded world and the viewer |
 | `world.js`, `place.js`, `look.js` | the 3D world on the site: puts Grimsby at the exact place in `data/now.json` (home and sleep on the station roof); expanded, you walk. The Dashboard panel imports `look.js` and `place.js` too |

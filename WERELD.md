@@ -30,6 +30,11 @@ Tabellen (voorstel, mag je verbeteren):
 
 ## Stap 3: iets achterlaten en briefjes
 
+> Status 15-11-2026: built and live. `supabase/gifts.sql` (table, rate limit 5/hour per browser + per IP + overall,
+> stored only as hashes), site: leave form -> Supabase, notes as writing in the sand with his reply beside them,
+> items on the sand until he takes them (then on his roof), your own replies shown on your next visit. Brain:
+> `cloud.fetch_gifts` / `answer_gift`, `notes.py` (stance, echo guard), `drive/influence.py` (block G).
+
 - Knop "laat iets achter" (zoals pinos.world): een voorwerp (kiezen uit een lijstje of zelf typen) en/of een briefje, plus een zelfgekozen bezoekersnaam. Wordt neergelegd op de plek waar de bezoeker staat, of bij zijn slaapplek.
 - Tabel `gifts`: id, visitor_name, item, note, x, z, created_at, seen (bool), reply.
 - Anon mag invoegen en lezen. Alleen het brein mag seen en reply zetten.

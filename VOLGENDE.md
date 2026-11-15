@@ -93,6 +93,11 @@ De wereld wordt een verzonnen eiland dat stiekem Berkel is. Zie EILAND.md. Daarm
 
 ## G. Invloed van bezoekers (15-11-2026)
 
+> Status 15-11-2026: routes built in `drive/influence.py` with WERELD step 3; sim `python -m drive.sim_influence`.
+> A plain opinion from a trusted visitor (0.8) moves his meals at the Jumbo 23% -> 43%, a distrusted one (-0.5)
+> 23% -> 13%; "you should..." is mostly refused and then pushes him slightly the other way. At a stranger's trust
+> (0.3) little shows: trust only learns in BREIN-v3 phase 3 (block 5), and the sheet line needs |trust| >= 0.35.
+
 Bezoekers moeten hem echt kunnen beinvloeden. Niet als bevel, maar zoals mensen elkaar beinvloeden: hij hoort het, weegt het af en doet er iets mee, of juist niet. Bouw dit mee met WERELD.md stap 3 en BREIN-v3.md fase 3 (punt 8, model van bezoekers).
 
 Hoe het werkt (allemaal in code, het model praat alleen):

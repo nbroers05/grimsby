@@ -272,3 +272,4 @@ html.world-open, html.world-open body { overflow: hidden; }
 .entries .label { display: flex; align-items: center; gap: 8px; }
 .pill.dream-tag { background: var(--paper); font: 400 13px/18px var(--font-pixel); }
 .about-row.version p { margin: 0; }
+#leave-other { margin-top: 8px; }

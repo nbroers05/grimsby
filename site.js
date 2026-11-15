@@ -57,6 +57,51 @@
     if (C && window.supabase) SB = window.supabase.createClient(C.url, C.key, { auth: { persistSession: false } });
   } catch (e) { SB = null; }
 
+  // Gifts (WERELD.md step 3) go through their own client, which sends a random id of this browser along: the
+  // database counts gifts per id for its rate limit (supabase/gifts.sql). Not a login, and never shown.
+  var clientId = "";
+  try {
+    clientId = localStorage.getItem("grimsby-client") || "";
+    if (!clientId) { clientId = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)); localStorage.setItem("grimsby-client", clientId); }
+  } catch (e) { clientId = String(Math.random()).slice(2); }
+  var SBG = null;
+  try {
+    if (C && window.supabase) SBG = window.supabase.createClient(C.url, C.key, { auth: { persistSession: false },
+      global: { headers: { "x-grimsby-client": clientId } } });
+  } catch (e) { SBG = null; }
+  var GIFT_DAYS = 7, GIFT_MAX = 40;
+  function myGifts() { try { return JSON.parse(localStorage.getItem("grimsby-gifts") || "[]"); } catch (e) { return []; } }
+  function rememberGift(id) {
+    try { localStorage.setItem("grimsby-gifts", JSON.stringify(myGifts().concat([id]).slice(-50))); } catch (e) {}
+  }
+  function loadGifts() {
+    if (!SBG) return;
+    var since = new Date(Date.now() - GIFT_DAYS * 864e5).toISOString();
+    SBG.from("gifts").select("id,visitor_name,item,note,x,z,created_at,reply,taken")
+      .gte("created_at", since).order("created_at", { ascending: false }).limit(GIFT_MAX)
+      .then(function (r) {
+        if (r.error) return;
+        window.GRIMSBY_GIFTS = r.data || [];
+        document.dispatchEvent(new CustomEvent("grimsby:gifts", { detail: window.GRIMSBY_GIFTS }));
+        showMyReplies(window.GRIMSBY_GIFTS);
+      });
+  }
+  // His answers to what you left, once each (on this browser)
+  function showMyReplies(gifts) {
+    var mine = myGifts(), shown;
+    try { shown = JSON.parse(localStorage.getItem("grimsby-replies-seen") || "[]"); } catch (e) { shown = []; }
+    var g = gifts.filter(function (x) { return mine.indexOf(x.id) >= 0 && x.reply && shown.indexOf(x.id) < 0; })[0];
+    if (!g) return;
+    var st = $("leave-status");
+    st.textContent = "";
+    st.appendChild(el("b", null, "He answered you"));
+    st.appendChild(el("span", "hint", "“" + clean(g.reply) + "”"));
+    st.appendChild(el("span", "hint", "next to your note in the sand"));
+    st.hidden = false;
+    clearTimeout(st._t); st._t = setTimeout(function () { st.hidden = true; }, 15000);
+    try { localStorage.setItem("grimsby-replies-seen", JSON.stringify(shown.concat([g.id]).slice(-50))); } catch (e) {}
+  }
+
   function withPos(row) {
     var now = Object.assign({}, row.now || {});
     if (row.x != null) now.pos = { x: row.x, z: row.z, target: { x: row.target_x, z: row.target_z, id: row.target_id } };
@@ -88,12 +133,15 @@
     document.dispatchEvent(new CustomEvent("grimsby:data", { detail: window.GRIMSBY_DATA }));
     renderHud(now, asleep, last.mems);
   }
-  var feedTimer = null;
+  var feedTimer = null, giftTimer = null;
   function subscribe() {
     if (!SB) return;
     SB.channel("grimsby-live")
       .on("postgres_changes", { event: "*", schema: "public", table: "bird_state" }, function (p) {
         if (p && p.new && p.new.now) applyNow(withPos(p.new));
+      })
+      .on("postgres_changes", { event: "*", schema: "public", table: "gifts" }, function () {
+        clearTimeout(giftTimer); giftTimer = setTimeout(loadGifts, 600);   // new gifts, his replies, taken items
       })
       .on("postgres_changes", { event: "INSERT", schema: "public", table: "feed" }, function () {
         clearTimeout(feedTimer);                    // a tick inserts a few rows at once: refresh once
@@ -471,7 +519,7 @@
   $("hud-now-show").addEventListener("click", function () { showNowCard(true); });
   try { if (localStorage.getItem("grimsby-nowcard") === "0") { $("hud-now").hidden = true; $("hud-now-show").hidden = false; } } catch (e) {}
 
-  // Leave something: the form works; delivery comes with the online world (WERELD.md step 3), so for now it says so.
+  // Leave something (WERELD.md step 3): into Supabase, where you stand (or by the water near the station).
   var item = "walnut";
   function closeModal() {
     if ($("leave-modal").hidden) return;
@@ -489,6 +537,8 @@
     if (!b) return;
     item = b.dataset.item;
     [].forEach.call(this.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    $("leave-other").hidden = item !== "other";
+    if (item === "other") $("leave-other").focus();
   });
   $("leave-note").addEventListener("input", function () {
     $("leave-count").textContent = this.value.length + " / 280"; $("leave-err").hidden = true;
@@ -500,15 +550,33 @@
     var err = $("leave-err");
     if (!nm) { err.textContent = "Fill in a name first, so he knows who to be suspicious of."; err.hidden = false; $("leave-name").focus(); return; }
     if (item === "note" && !note) { err.textContent = "Just a note needs a note."; err.hidden = false; $("leave-note").focus(); return; }
+    var thing = item === "walnut" ? "a walnut" : item === "button" ? "a button" : item === "other" ? $("leave-other").value.trim() : "";
+    if (item === "other" && !thing) { err.textContent = "Say what it is."; err.hidden = false; $("leave-other").focus(); return; }
     try { localStorage.setItem("grimsby-name", nm); } catch (x) {}
-    $("leave-modal").hidden = true;
     var st = $("leave-status");
-    st.textContent = "";
-    st.appendChild(el("b", null, "Not delivered yet."));
-    st.appendChild(el("span", "hint", "His world is not online yet, so nothing reaches him. Once it is, your things land by the water and his answer appears next to them."));
-    st.hidden = false;
-    clearTimeout(st._t); st._t = setTimeout(function () { st.hidden = true; }, 10000);
-    $("leave-open").focus();
+    function status(head, text) {
+      st.textContent = ""; st.appendChild(el("b", null, head)); st.appendChild(el("span", "hint", text)); st.hidden = false;
+      clearTimeout(st._t); st._t = setTimeout(function () { st.hidden = true; }, 10000);
+    }
+    if (!SBG) { err.textContent = "His world cannot be reached right now. Try again later."; err.hidden = false; return; }
+    var w3 = window.__grimsbyWorld, at = w3 && w3.dropPoint ? w3.dropPoint() : { x: -72, z: 192 };
+    var send = $("leave-form").querySelector("button[type=submit]");
+    send.disabled = true;
+    SBG.from("gifts").insert({ visitor_name: nm, item: thing || null, note: note || null,
+      x: Math.round(at.x * 10) / 10, z: Math.round(at.z * 10) / 10 }).select("id").single().then(function (r) {
+      send.disabled = false;
+      if (r.error) {
+        err.textContent = /too many|rate_limit/i.test((r.error.message || "") + (r.error.hint || "")) ?
+          "That is a lot of things for one crow. Try again in an hour." : "It did not land. Try again in a bit.";
+        err.hidden = false; return;
+      }
+      rememberGift(r.data.id);
+      $("leave-note").value = ""; $("leave-count").textContent = "0 / 280"; $("leave-other").value = "";
+      $("leave-modal").hidden = true;
+      status("It is in the sand.", "Anyone walking past can read it. His answer appears next to it once he has read it (and wants to).");
+      loadGifts();
+      $("leave-open").focus();
+    }, function () { send.disabled = false; err.textContent = "It did not land. Try again in a bit."; err.hidden = false; });
   });
 
   function load() {
@@ -538,6 +606,7 @@
     });
   }
   load();
+  loadGifts();
   subscribe();
   setInterval(load, SB ? 4 * REFRESH : REFRESH);   // live: Realtime does the work, this only catches up
 })();

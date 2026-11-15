@@ -46,7 +46,7 @@ def configured() -> tuple[str, str] | None:
     return url, key
 
 
-def request(cfg: tuple[str, str], method: str, path: str, body=None, prefer: str = "") -> None:
+def request(cfg: tuple[str, str], method: str, path: str, body=None, prefer: str = ""):
     url, key = cfg
     req = urllib.request.Request(f"{url}/rest/v1/{path}", method=method,
                                  data=None if body is None else json.dumps(body, ensure_ascii=False).encode("utf-8"))
@@ -57,7 +57,8 @@ def request(cfg: tuple[str, str], method: str, path: str, body=None, prefer: str
     if prefer:
         req.add_header("Prefer", prefer)
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        r.read()
+        raw = r.read()
+    return json.loads(raw) if method == "GET" and raw else None
 
 
 def position(s: dict) -> dict:
@@ -72,6 +73,45 @@ def position(s: dict) -> dict:
                 "target_x": b["x"], "target_z": b["z"], "target_id": b["id"]}
     p = world.place(d["place"]) if d else here
     return {"x": p["x"], "z": p["z"], "target_x": p["x"], "target_z": p["z"], "target_id": p["id"]}
+
+
+GIFTS_PER_TICK = 20          # fetched at most per tick; the rest next tick
+
+
+def fetch_gifts(say) -> list[dict]:
+    """WERELD step 3: gifts nobody has seen yet, oldest first, marked seen at once. Their text is only ever data:
+    it goes to notes.py (stance, influence) and, as a quote, into the prompt for his reply. Never fatal."""
+    cfg = configured()
+    if not cfg:
+        return []
+    try:
+        rows = request(cfg, "GET", "gifts?seen=eq.false&order=created_at.asc"
+                                   f"&select=id,visitor_name,item,note,x,z,created_at&limit={GIFTS_PER_TICK}") or []
+        if rows:
+            ids = ",".join(str(int(r["id"])) for r in rows)
+            request(cfg, "PATCH", f"gifts?id=in.({ids})", {"seen": True}, prefer="return=minimal")
+        return rows
+    except (urllib.error.URLError, OSError, ValueError) as e:
+        if not _seen.get("gifts_down"):
+            say(f"cloud: could not fetch gifts ({e}); tries again next tick")
+        _seen["gifts_down"] = True
+        return []
+
+
+def answer_gift(gift_id: int, reply: str | None, taken: bool, at: str, say) -> bool:
+    """His reply (written next to the note in the sand) and/or that he took the item."""
+    cfg = configured()
+    if not cfg or (not reply and not taken):
+        return False
+    body = {"taken": True} if taken else {}
+    if reply:
+        body.update(reply=reply, replied_at=at)
+    try:
+        request(cfg, "PATCH", f"gifts?id=eq.{int(gift_id)}", body, prefer="return=minimal")
+        return True
+    except (urllib.error.URLError, OSError, ValueError) as e:
+        say(f"cloud: could not write the reply to gift {gift_id} ({e})")
+        return False
 
 
 def feed_row(e: dict) -> dict:

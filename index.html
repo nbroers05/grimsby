@@ -129,11 +129,12 @@
               <button type="button" data-item="button" aria-pressed="false">a button</button>
               <button type="button" data-item="note" aria-pressed="false">just a note</button>
               <button type="button" data-item="other" aria-pressed="false">something else</button>
-            </div></fieldset>
+            </div>
+            <input id="leave-other" type="text" maxlength="40" placeholder="what is it? (a feather, a key...)" aria-label="what you leave behind" hidden></fieldset>
           <div class="field"><label class="label" for="leave-note">note (may be empty)</label>
             <textarea id="leave-note" rows="4" maxlength="280"></textarea>
             <span class="hint count" id="leave-count">0 / 280</span></div>
-          <span class="hint">He reads it when he is awake. If he is asleep, it waits for him.</span>
+          <span class="hint">It lands in the sand where you stand (or by the water near the station), for everyone to read. He reads it when he is awake; if he is asleep, it waits for him. At most 5 an hour.</span>
           <span class="err" id="leave-err" hidden></span>
           <div class="modal-actions"><button type="button" class="btn-plain" id="leave-cancel">Never mind</button>
             <button type="submit" class="btn-eva">Put it down</button></div>

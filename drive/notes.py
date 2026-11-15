@@ -20,7 +20,7 @@ import random
 import re
 from datetime import datetime
 
-from . import attend, learn, memory, needs, safety
+from . import attend, influence, learn, memory, needs, safety
 from .text import words
 
 MAX_LEN = 280
@@ -71,6 +71,17 @@ def why_weights(state: dict, note: str) -> dict[str, float]:
     return {k: round(max(0.0, v), 3) for k, v in w.items()}
 
 
+def echoes(reply: str, note: str) -> bool:
+    """Does the reply repeat the note (a sentence of it word for word, or mostly the same words)?"""
+    r = re.sub(r"[^a-z0-9 ]", " ", reply.lower())
+    for sent in re.split(r"(?<=[.!?])\s+", note):
+        s = " ".join(re.sub(r"[^a-z0-9 ]", " ", sent.lower()).split())
+        if len(s.split()) >= 4 and s in " ".join(r.split()):
+            return True
+    rw, nw = words(reply), words(note)               # or (nearly) only the note's own words, in any order
+    return bool(rw and nw) and len(rw & nw) / len(rw | nw) >= 0.9
+
+
 def content_words(note: str) -> list[str]:
     return [t for t in re.findall(r"[A-Za-z]{4,}", note) if t.lower() not in STOP]
 
@@ -101,12 +112,24 @@ def handle(state: dict, note: dict, real: datetime, rng: random.Random, voice=No
         return {**st, "reply": None, "memory": None}
     learn.jolt(state, learn.AROUSAL_VISITOR)
     attend.consider(state, [attend.seen_note(author)])
+    # block G: what of it gets through (code only; nothing here can start an action or a tool)
+    effects = influence.receive(state, text, author, st["stance"], real)
+    took = influence.consider_item(state, note.get("item") or "", author, real, rng) if note.get("item") else None
 
     reply = None
-    if voice and st["stance"] != "ignore":
+    if voice and text and st["stance"] != "ignore":
         recalled = memory.recall(state["memories"], f"{author} {text}", bump=False, real=real, mood=state["mood"])
-        reply = voice.reply_note(state, real, text, author, st["stance"], st["word"], recalled)
-        voice.vet([reply], f"a crow's reply to a visitor's note ({st['stance']})")
+        try:                                    # no words (model down, or the check withheld them): no reply
+            for _ in range(2):                  # no mirror: a reply that parrots the note is no reply
+                reply = voice.reply_note(state, real, text, author, st["stance"], st["word"], recalled)
+                if not echoes(reply, text):
+                    break
+            else:
+                reply = None
+            if reply:
+                voice.vet([reply], f"a crow's reply to a visitor's note ({st['stance']})")
+        except Exception:  # noqa: BLE001 - the note is handled either way, so nothing counts twice
+            reply = None
 
     # what it does to him: talking is company and costs quiet; ignoring costs nothing
     if st["stance"] in ("answer", "disagree", "misread"):
@@ -119,10 +142,12 @@ def handle(state: dict, note: dict, real: datetime, rng: random.Random, voice=No
             "disagree": f"{author} left a note I could not let stand.",
             "misread": f"{author} left a note about {st['word'] or 'something'}.",
             "answer": f"{author} left a note, and I answered it."}[st["stance"]]
+    if not text:
+        line = f"{author} left something by the water" + (" and I took it." if took and took["taken"] else ".")
     mem = memory.make(line, "person", 2 + (1 if st["stance"] in ("disagree", "refuse") else 0), real,
                       0.1 if st["stance"] == "answer" else 0.0, "note@" + author)
     memory.add(state["memories"]["short"], mem, memory.SHORT_MAX)
-    return {**st, "reply": reply, "memory": line}
+    return {**st, "reply": reply, "memory": line, "effects": effects, "took": took}
 
 
 WAIT_MAX = 10                  # notes lying around unread; older ones blow away

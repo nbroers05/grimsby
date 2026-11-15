@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import beliefs, clock, cloud, learn, life, memory, mind, output, voice, who, world
+from . import beliefs, clock, cloud, learn, life, memory, mind, notes, output, safety, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -195,6 +195,34 @@ def after_tick(s: dict, ev: dict, real: datetime) -> None:
             say(f"no feeling words: {e}")
 
 
+def gifts_in(s: dict, real: datetime) -> None:
+    """WERELD step 3: what visitors left by the water goes on his pile of notes (notes.py). Only data."""
+    for g in cloud.fetch_gifts(say):
+        name = safety.scrub(g.get("visitor_name") or "someone")[:24] or "someone"
+        item = safety.scrub(g.get("item") or "")[:40]
+        notes.drop(s, {"id": g["id"], "from": name, "text": g.get("note") or "", "item": item})
+        what = f"a note and {item}" if item and g.get("note") else (item or "a note")
+        mind.feed(s, "noticed", f"{name} left {what} by the water.", real)
+        say(f"gift {g['id']} from {name}: {what}")
+
+
+def gifts_out(s: dict, real: datetime, rng: random.Random) -> None:
+    """One waiting note per tick, if he is up to it. His reply and what he took go back to Supabase."""
+    for got in notes.tend(s, real, rng, voice):
+        took = got.get("took") or {}
+        at = real.isoformat(timespec="seconds")
+        if got.get("reply"):
+            mind.feed(s, "did", f"answered {got['from']} by the water", real, why=None, ok=True, action="reply")
+        if took.get("taken"):
+            mind.feed(s, "noticed", f"Took {got['from']}'s {took['item']} back to the roof.", real)
+        if got.get("id"):
+            cloud.answer_gift(got["id"], got.get("reply"), bool(took.get("taken")), at, say)
+        eff = got.get("effects") or {}
+        say(f"note from {got['from']}: {got['stance']}" + (f", replied" if got.get("reply") else "")
+            + (f", took {took['item']}" if took.get("taken") else "")
+            + "".join(f", {k} {v}" for k, v in eff.items() if v))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--ticks", type=int, default=0, help="stop after this many ticks (0 = never)")
@@ -220,10 +248,13 @@ def main() -> int:
             LOCK.write_text(str(time.time()))
             started = time.time()
             try:
+                if PUBLIC:
+                    gifts_in(s, real)
                 ex = Executor(s, real, rng, ARCHIVE, say)
                 ev = life.tick(s, real, rng, ex, describe=describe_from_pending(s), voice=Voice(s, real))
                 s["ticks"] += 1
                 after_tick(s, ev, real)
+                gifts_out(s, real, rng)
                 save(s)
                 out = output.write(s, real, DATA)
                 if PUBLIC:
