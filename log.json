@@ -602,5 +602,18 @@
       ]
     },
     "mood": 0.25
+  },
+  {
+    "time": "2026-11-15T16:27:04+01:00",
+    "action": "diary",
+    "reason": "The library is quiet enough to think without being accused of being dramatic.",
+    "ok": true,
+    "withheld": false,
+    "line": "Pino's confidence is a stage act, and he forgets to take a bow between scenes.",
+    "detail": {
+      "topic": "Pino: Pino's self-assurance is admirable, though it borders on the theatrical. He seems to believe he's a kind of artist",
+      "entry": "He speaks of his work as though it is a performance, not a task. Last night, he left the ladder leaning against the wall like a prop. I watched him vanish into the dark, humming a tune that might have been from a play. His hands are always too clean for someone who claims to create. I wonder if he ever stops to wipe them."
+    },
+    "mood": 0.11
   }
 ]
