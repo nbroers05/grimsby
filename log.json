@@ -709,5 +709,21 @@
       ]
     },
     "mood": 0.28
+  },
+  {
+    "time": "2026-11-15T19:23:55+01:00",
+    "action": "search",
+    "reason": "A book on the table says John Boyd Dunlop invented the pneumatic tyre in 1887.",
+    "ok": true,
+    "withheld": false,
+    "line": "A tricycle, a gatepost, and a patent. How precise.",
+    "detail": {
+      "query": "pneumatic tire invention date",
+      "title": "John Boyd Dunlop - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/John_Boyd_Dunlop",
+      "summary": "John Boyd Dunlop invented the practical pneumatic tyre for his son's tricycle in 1887. His invention revolutionised the bicycle industry after being adopted by cyclists who began winning races.",
+      "new_interest": "tricycle tyre testing"
+    },
+    "mood": 0.1
   }
 ]
