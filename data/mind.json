@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-15T19:52:37+01:00",
- "thought": "A crumb of baklava on a terrace is a minor triumph, but a list with a gap is a major failure.",
+ "at": "2026-11-15T20:55:43+01:00",
+ "thought": "The pattern of crumbs suggests a deliberate act, not mere chance.",
  "loudest": [
   {
-   "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
+   "kind": "outcome",
+   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
   },
   {
    "kind": "goal",
-   "subject": "watching the world go by on a bench by the station"
+   "subject": "watching the world go by on a bench in the Gouden Griffelplantsoen"
   },
   {
-   "kind": "seen",
-   "subject": "a note from noah"
+   "kind": "memory",
+   "subject": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon."
   },
   {
-   "kind": "outcome",
-   "subject": "writing in his diary on a bench by the station went better than you expected"
+   "kind": "memory",
+   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 0,
-  "want": 2,
+  "question": 1,
+  "want": 3,
   "worry": 0,
   "promise": 0
  },
- "busy": "watching the world go by on a bench by the station",
+ "busy": "watching the world go by on a bench in the Gouden Griffelplantsoen",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -47,12 +47,23 @@
    "subject": "a list of curing systems",
    "since": "2026-11-15T14:07:34+01:00",
    "why": "to verify the five types mentioned and add them to my hoard"
+  },
+  {
+   "kind": "want",
+   "subject": "a list of UV-resistant rubbers",
+   "since": "2026-11-15T19:55:37+01:00",
+   "why": "to keep my hoard precise and unbroken"
+  },
+  {
+   "kind": "question",
+   "subject": "when was pneumatic tire invented",
+   "since": "2026-11-15T20:37:43+01:00"
   }
  ],
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.4
+   "strength": 10.0
   },
   {
    "topic": "bottle caps and shiny objects",
@@ -71,16 +82,16 @@
    "strength": 3.2
   },
   {
+   "topic": "UV-resistant materials",
+   "strength": 3.0
+  },
+  {
    "topic": "pigeons, as adversaries",
    "strength": 2.2
   },
   {
    "topic": "the art of making lists",
    "strength": 2.2
-  },
-  {
-   "topic": "molecular networks",
-   "strength": 2.0
   }
  ],
  "budget": {
@@ -90,25 +101,25 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.346,
-  "arousal": 0.533,
-  "average": 0.151,
+  "valence": 0.22,
+  "arousal": 0.588,
+  "average": 0.154,
   "values": {
    "eat@jumbo": {
     "V": 0.09,
     "n": 3.4
    },
    "eat@*": {
-    "V": 0.142,
-    "n": 11.2
+    "V": 0.129,
+    "n": 13.2
    },
    "diary@station-bench": {
-    "V": 0.166,
-    "n": 3.5
+    "V": 0.186,
+    "n": 5.5
    },
    "diary@*": {
-    "V": 0.259,
-    "n": 10.3
+    "V": 0.266,
+    "n": 13.3
    },
    "neighbour@home": {
     "V": 0.086,
@@ -119,16 +130,16 @@
     "n": 1.7
    },
    "diary@plantsoen-bench": {
-    "V": 0.155,
-    "n": 3.2
+    "V": 0.183,
+    "n": 4.2
    },
    "pigeons@station-fountain": {
     "V": 0.046,
     "n": 2.3
    },
    "pigeons@*": {
-    "V": 0.129,
-    "n": 5.9
+    "V": 0.136,
+    "n": 6.9
    },
    "sit@ondermolen": {
     "V": 0.042,
@@ -159,16 +170,16 @@
     "n": 0.8
    },
    "eat@de-turk": {
-    "V": 0.09,
-    "n": 3.5
+    "V": 0.091,
+    "n": 5.5
    },
    "search@library": {
-    "V": 0.116,
-    "n": 3.5
+    "V": 0.109,
+    "n": 5.5
    },
    "search@*": {
-    "V": 0.116,
-    "n": 3.5
+    "V": 0.109,
+    "n": 5.5
    },
    "eat@mcdonalds": {
     "V": 0.057,
@@ -179,12 +190,12 @@
     "n": 0.8
    },
    "wander@*": {
-    "V": 0.108,
-    "n": 3.5
+    "V": 0.122,
+    "n": 4.5
    },
    "pigeons@vis": {
-    "V": 0.054,
-    "n": 1.8
+    "V": 0.072,
+    "n": 2.8
    },
    "eat@albert-heijn": {
     "V": 0.035,
@@ -229,35 +240,40 @@
    "tidy@*": {
     "V": 0.031,
     "n": 0.9
+   },
+   "wander@jumbo": {
+    "V": 0.031,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.08,
-   "topic:pneumatic tire history": 0.08,
-   "place:centre-fountain": 0.1,
-   "place:de-turk": 0.13,
-   "place:station-bench": 0.15
+   "place:library": 0.22,
+   "place:de-turk": 0.28,
+   "place:station-bench": 0.29,
+   "topic:pneumatic tire history": 0.13,
+   "place:vis": 0.15,
+   "place:plantsoen-bench": 0.18
   },
   "workingMemory": [
    {
-    "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.784
+    "kind": "outcome",
+    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
+    "salience": 0.493
    },
    {
     "kind": "goal",
-    "subject": "watching the world go by on a bench by the station",
+    "subject": "watching the world go by on a bench in the Gouden Griffelplantsoen",
     "salience": 0.4
    },
    {
-    "kind": "seen",
-    "subject": "a note from noah",
-    "salience": 0.307
+    "kind": "memory",
+    "subject": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
+    "salience": 0.336
    },
    {
-    "kind": "outcome",
-    "subject": "writing in his diary on a bench by the station went better than you expected",
-    "salience": 0.247
+    "kind": "memory",
+    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+    "salience": 0.246
    }
   ]
  }

@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T19:52:37+01:00",
+ "at": "2026-11-15T20:55:43+01:00",
  "beliefs": [
   {
    "n": 1,
@@ -56,14 +56,14 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 2.0,
+   "recalled": 2.75,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
    "text": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 2.0,
+   "recalled": 2.5,
    "since": "2026-11-15T13:33:04+01:00"
   },
   {
@@ -105,7 +105,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 3.5,
+   "recalled": 4.5,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -140,14 +140,14 @@
    "text": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 1.0,
+   "recalled": 1.5,
    "since": "2026-11-14T23:36:45+01:00"
   },
   {
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.77,
+   "recalled": 6.02,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -161,7 +161,7 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 4.48,
+   "recalled": 5.23,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
@@ -210,18 +210,67 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.41,
+   "recalled": 2.91,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
    "text": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 1.21,
+   "recalled": 1.71,
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
  "short": [
+  {
+   "text": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:54:13+01:00"
+  },
+  {
+   "text": "Derek stood at the vis, head tilted, as if he were reading a book I didn’t write.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:48:13+01:00"
+  },
+  {
+   "text": "Searched for when was pneumatic tire invented and found nothing at all.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:42:13+01:00"
+  },
+  {
+   "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:34:41+01:00"
+  },
+  {
+   "text": "I counted splashes while Derek preened, pretending not to see me.",
+   "kind": "work",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:28:41+01:00"
+  },
+  {
+   "text": "I landed on the Jumbo's roof with the grace of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:18:11+01:00"
+  },
+  {
+   "text": "The page explains that most rubber degrades in sunlight due to UV radiation, with some materials like EPDM and silicone being more resistant.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T19:58:41+01:00"
+  },
   {
    "text": "Took noah's button back to the roof.",
    "kind": "moment",
@@ -239,15 +288,15 @@
   {
    "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
    "kind": "work",
-   "strength": 4,
-   "recalled": 1.5,
+   "strength": 5,
+   "recalled": 3.0,
    "since": "2026-11-15T19:45:07+01:00"
   },
   {
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
+   "strength": 5,
+   "recalled": 1.0,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {

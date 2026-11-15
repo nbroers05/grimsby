@@ -1,7 +1,202 @@
 {
  "v": 1,
- "at": "2026-11-15T19:52:37+01:00",
+ "at": "2026-11-15T20:55:43+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T20:49:43+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": "I write to keep the crumbs from vanishing entirely.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T20:48:13+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:43:43+01:00",
+   "kind": "noticed",
+   "text": "Derek, alone, pretending not to see me."
+  },
+  {
+   "at": "2026-11-15T20:43:43+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
+   "why": "On the roof, I watch the pigeons next to Vis, the fish statue.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-15T20:42:13+01:00",
+   "kind": "felt",
+   "text": "The sun slants low over the fish statue. Pigeons peck at a shard of glass. I count five."
+  },
+  {
+   "at": "2026-11-15T20:42:13+01:00",
+   "kind": "did",
+   "text": "flying from the library to the fish statue",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:37:43+01:00",
+   "kind": "did",
+   "text": "looking up when was pneumatic tire invented at the library",
+   "why": "Curiosity prickles the edges of my patience",
+   "ok": false,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-15T20:37:43+01:00",
+   "kind": "mind",
+   "text": "An open question: when was pneumatic tire invented?",
+   "change": "opened",
+   "about": "question"
+  },
+  {
+   "at": "2026-11-15T20:36:11+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:31:41+01:00",
+   "kind": "noticed",
+   "text": "Found nothing; someone had been there first on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-15T20:31:41+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "I seek sustenance where crumbs linger.",
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T20:30:11+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:24:11+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "I see the light catching on the tiles, and I feel the need to record it.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T20:22:41+01:00",
+   "kind": "did",
+   "text": "flying from the Jumbo to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:15:11+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the Jumbo",
+   "why": "The Jumbo's lights flicker like a tired man's eyes",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-15T20:13:41+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:07:41+01:00",
+   "kind": "noticed",
+   "text": "Found a crumb of baklava on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-15T20:07:41+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "De Turk is where the crumbs fall",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T20:06:11+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T20:01:41+01:00",
+   "kind": "noticed",
+   "text": "Someone whistled on a bench by the station. I nearly dropped everything."
+  },
+  {
+   "at": "2026-11-15T20:00:11+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "Someone wants to know why I bother with this.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T19:58:41+01:00",
+   "kind": "did",
+   "text": "flying from the library to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T19:55:37+01:00",
+   "kind": "noticed",
+   "text": "Read that the page explains that most rubber degrades in sunlight due to UV radiation, with some materials like EPDM and silicone being more resistant. It also lists practical ways to protect rubber from sunlight damage."
+  },
+  {
+   "at": "2026-11-15T19:55:37+01:00",
+   "kind": "did",
+   "text": "looking up how rubber degrades in sunlight at the library",
+   "why": "Because I want to know how rubber loses its shine without getting sunburned.",
+   "ok": true,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-15T19:55:37+01:00",
+   "kind": "mind",
+   "text": "Started wanting a list of UV-resistant rubbers.",
+   "change": "opened",
+   "about": "want"
+  },
+  {
+   "at": "2026-11-15T19:55:37+01:00",
+   "kind": "mind",
+   "text": "A new interest: UV-resistant materials.",
+   "change": "opened",
+   "about": "question"
+  },
+  {
+   "at": "2026-11-15T19:54:07+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-15T19:49:37+01:00",
    "kind": "felt",
@@ -155,207 +350,6 @@
    "at": "2026-11-15T18:07:34+01:00",
    "kind": "noticed",
    "text": "Found a bit of grilled onion on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-15T18:07:34+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Someone left a bit of grilled onion on the terrace, and I am not going to let it go to waste.",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T18:06:04+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:58:34+01:00",
-   "kind": "did",
-   "text": "tidying his hoard: a bent paperclip",
-   "why": "Someone needs a paperclip that isn’t bent.",
-   "ok": true,
-   "action": "tidy"
-  },
-  {
-   "at": "2026-11-15T17:57:04+01:00",
-   "kind": "did",
-   "text": "flying from the mill memorial to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:48:04+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as the mill memorial",
-   "why": "The mill memorial needs a proper assessment.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-15T17:46:34+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the mill memorial",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:42:04+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "Contentment fuels this scribble.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T17:40:34+01:00",
-   "kind": "did",
-   "text": "flying from the Jumbo to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:37:34+01:00",
-   "kind": "noticed",
-   "text": "Found a squashed grape at the Jumbo by the station."
-  },
-  {
-   "at": "2026-11-15T17:37:34+01:00",
-   "kind": "did",
-   "text": "looking for something to eat at the Jumbo by the station",
-   "why": "A squashed grape on the floor near the entrance",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T17:34:34+01:00",
-   "kind": "did",
-   "text": "flying from the windmill at De Hichte to the Jumbo",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:25:34+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as the windmill at De Hichte",
-   "why": "Because I need to confirm the windmill's alignment with the sun.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-15T17:22:34+01:00",
-   "kind": "did",
-   "text": "flying from the library to the windmill at De Hichte",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:18:04+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": "I need to mark time before it slips away.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T17:16:34+01:00",
-   "kind": "did",
-   "text": "flying from the Dorpskerk to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:12:04+01:00",
-   "kind": "did",
-   "text": "sitting still on the roof of the Dorpskerk",
-   "why": "The Dorpskerk offers a view that is not distracted by the noise of wheels.",
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-15T17:09:04+01:00",
-   "kind": "did",
-   "text": "flying from the Jumbo to the Dorpskerk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:06:04+01:00",
-   "kind": "noticed",
-   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
-  },
-  {
-   "at": "2026-11-15T17:06:04+01:00",
-   "kind": "did",
-   "text": "looking for something to eat at the Jumbo by the station",
-   "why": "Hunger gnaws, so I seek",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T17:03:04+01:00",
-   "kind": "did",
-   "text": "flying from the fish statue to the Jumbo",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T17:01:34+01:00",
-   "kind": "felt",
-   "text": "The sun glints off the fish statue. A chip crumbles in my beak. Derek’s shadow stretches but doesn’t touch me."
-  },
-  {
-   "at": "2026-11-15T16:58:34+01:00",
-   "kind": "noticed",
-   "text": "Three pigeons and Derek, in a row."
-  },
-  {
-   "at": "2026-11-15T16:58:34+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
-   "why": "Because I need to know where the next crust will fall",
-   "ok": true,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-15T16:57:04+01:00",
-   "kind": "did",
-   "text": "flying from the Dorpskerk to the fish statue",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T16:48:04+01:00",
-   "kind": "did",
-   "text": "drawing the Dorpskerk on the roof of the Dorpskerk",
-   "why": "Satisfaction comes from precision, not from the act itself.",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-15T16:46:34+01:00",
-   "kind": "did",
-   "text": "flying from the library to the Dorpskerk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T16:39:04+01:00",
-   "kind": "noticed",
-   "text": "Read that the average temperature in Berkel en Rodenrijs ranges from 34°F to 72°F, with the coldest month being February and the hottest July. The warm season runs from June to September, with the best time for warm weather being late June to early September."
   }
  ]
 }

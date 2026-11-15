@@ -793,5 +793,18 @@
       "found": false
     },
     "mood": 0.23
+  },
+  {
+    "time": "2026-11-15T20:49:43+01:00",
+    "action": "diary",
+    "reason": "I write to keep the crumbs from vanishing entirely.",
+    "ok": true,
+    "withheld": false,
+    "line": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
+    "detail": {
+      "topic": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind ar",
+      "entry": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes. The dust had settled in concentric rings, the residue of a slow, deliberate feast. There were no signs of a struggle, no crumbs scattered in haste. Only the faint echo of a single, lingering taste. I took a moment to consider the possibility of a ghost."
+    },
+    "mood": 0.13
   }
 ]
