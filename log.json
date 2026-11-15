@@ -513,5 +513,18 @@
       "entry": "The chips were thin, greasy, and scattered like a failed attempt at a mosaic. I pecked them with the precision of a man who knows the value of a half-eaten snack. There was no crispness, only the sound of disappointment. I noted this in my head, where it belongs, alongside the other small tragedies of the day."
     },
     "mood": 0.16
+  },
+  {
+    "time": "2026-11-15T13:55:34+01:00",
+    "action": "diary",
+    "reason": "Someone wants to know why I bother with this nonsense.",
+    "ok": true,
+    "withheld": false,
+    "line": "Found a crust by the trolleys—Derek would have claimed it.",
+    "detail": {
+      "topic": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been the",
+      "entry": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there. The crust was thin, dry, and barely more than a suggestion of bread. I ate it slowly, calculating the time between the trolley’s arrival and its departure. The teaspoon sat beside me, as it always does, a silent witness to my victories and my doubts."
+    },
+    "mood": 0.29
   }
 ]
