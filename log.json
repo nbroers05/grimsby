@@ -584,5 +584,23 @@
       "entry": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious. They walk with their heads down, as if following a thread beneath the ground. No one looks up, no one stops, no one seems to notice the bench. I watched for ten minutes. No one noticed me."
     },
     "mood": 0.24
+  },
+  {
+    "time": "2026-11-15T15:24:04+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of tires evolving and trusting one more than a teaspoon. Pino sat with a loop, thinking rhythm was a quiet thing, like sugar in tea. A crust so bad it made a map look like a good idea. The world slipped through his fingers anyway.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of tires evolving and trusting one more than a teaspoon. Pino sat with a loop, thinking rhythm was a quiet thing, like sugar in tea. A crust so bad it made a map look like a good idea. The world slipped through his fingers anyway.",
+      "from": [
+        "Tires evolved, I trusted one more than a teaspoon.",
+        "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
+        "A crust so bad it made a map look like a good idea."
+      ]
+    },
+    "mood": 0.25
   }
 ]
