@@ -806,5 +806,18 @@
       "entry": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes. The dust had settled in concentric rings, the residue of a slow, deliberate feast. There were no signs of a struggle, no crumbs scattered in haste. Only the faint echo of a single, lingering taste. I took a moment to consider the possibility of a ghost."
     },
     "mood": 0.13
+  },
+  {
+    "time": "2026-11-15T21:13:43+01:00",
+    "action": "diary",
+    "reason": "Excitement prickles the edges of my patience",
+    "ok": true,
+    "withheld": false,
+    "line": "The last crumb of baklava was gone, but the crumbs told a story only a careful eye could read.",
+    "detail": {
+      "topic": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
+      "entry": "The last crumb of baklava vanished, but the trail it left behind—tiny, deliberate, and slightly sticky—spoke of a ritual. A single spiral, two overlapping circles, and a smudge that might have been a fingerprint or a smudge from a thumb. Someone had been there for hours, not just minutes. I noted the pattern in my list, under 'Crumb Art,' and filed it next to the teaspoon. It’s not clear why they left it, but it’s clear they cared."
+    },
+    "mood": 0.3
   }
 ]
