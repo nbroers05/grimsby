@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T11:15:58+01:00",
- "thought": "They peck at crumbs, but never at the truth",
+ "at": "2026-11-15T11:27:03+01:00",
+ "thought": "That crust is less appealing than a poorly folded map",
  "loudest": [
   {
+   "kind": "memory",
+   "subject": "A crust so bad it made a map look like a good idea."
+  },
+  {
+   "kind": "memory",
+   "subject": "I found a crust that was, frankly, worse than a poorly folded map."
+  },
+  {
    "kind": "outcome",
-   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
-  },
-  {
-   "kind": "need",
-   "subject": "social"
-  },
-  {
-   "kind": "seen",
-   "subject": "the fountain by the station"
+   "subject": "sitting still at the memorial for the old Ondermolen went better than you expected"
   },
   {
    "kind": "goal",
-   "subject": "keeping an eye on the pigeons by the fountain next to the station"
+   "subject": "looking for something to eat at the Jumbo by the station"
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "keeping an eye on the pigeons by the fountain next to the station",
+ "busy": "looking for something to eat at the Jumbo by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -84,9 +84,9 @@
  },
  "brain": {
   "emotion": "keyed up",
-  "valence": 0.121,
-  "arousal": 0.924,
-  "average": 0.091,
+  "valence": 0.132,
+  "arousal": 0.834,
+  "average": 0.074,
   "values": {
    "eat@jumbo": {
     "V": 0.066,
@@ -115,34 +115,51 @@
    "diary@plantsoen-bench": {
     "V": 0.068,
     "n": 1
+   },
+   "pigeons@station-fountain": {
+    "V": 0.035,
+    "n": 1
+   },
+   "pigeons@*": {
+    "V": 0.035,
+    "n": 1
+   },
+   "sit@ondermolen": {
+    "V": 0.042,
+    "n": 1
+   },
+   "sit@*": {
+    "V": 0.042,
+    "n": 1
    }
   },
   "habit": {
-   "place:jumbo": 0.12,
-   "place:station-bench": 0.14,
-   "place:home": 0.16,
-   "place:plantsoen-bench": 0.18,
-   "place:station-fountain": 0.2
+   "place:jumbo": 0.27,
+   "place:station-bench": 0.09,
+   "place:home": 0.12,
+   "place:plantsoen-bench": 0.13,
+   "place:station-fountain": 0.15,
+   "place:ondermolen": 0.18
   },
   "workingMemory": [
    {
+    "kind": "memory",
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.616
+   },
+   {
+    "kind": "memory",
+    "subject": "I found a crust that was, frankly, worse than a poorly folded map.",
+    "salience": 0.59
+   },
+   {
     "kind": "outcome",
-    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
-    "salience": 1.031
-   },
-   {
-    "kind": "need",
-    "subject": "social",
-    "salience": 0.63
-   },
-   {
-    "kind": "seen",
-    "subject": "the fountain by the station",
-    "salience": 0.6
+    "subject": "sitting still at the memorial for the old Ondermolen went better than you expected",
+    "salience": 0.546
    },
    {
     "kind": "goal",
-    "subject": "keeping an eye on the pigeons by the fountain next to the station",
+    "subject": "looking for something to eat at the Jumbo by the station",
     "salience": 0.4
    }
   ]

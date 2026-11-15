@@ -1,7 +1,44 @@
 {
  "v": 1,
- "at": "2026-11-15T11:15:58+01:00",
+ "at": "2026-11-15T11:27:03+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T11:25:33+01:00",
+   "kind": "noticed",
+   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
+  },
+  {
+   "at": "2026-11-15T11:25:33+01:00",
+   "kind": "did",
+   "text": "looking for something to eat at the Jumbo by the station",
+   "why": "Because I need something to eat and this is the closest place to look",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T11:24:03+01:00",
+   "kind": "did",
+   "text": "flying from the mill memorial to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T11:21:58+01:00",
+   "kind": "did",
+   "text": "sitting still at the memorial for the old Ondermolen",
+   "why": "The memorial needs a crow with a sense of quiet",
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-15T11:20:28+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to the mill memorial",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-15T11:15:58+01:00",
    "kind": "noticed",
@@ -322,46 +359,6 @@
    "kind": "did",
    "text": "writing in his diary about the teaspoon",
    "why": "I need to record the fact that the teaspoon is still missing.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T20:01:55+01:00",
-   "kind": "did",
-   "text": "writing in his diary about derek’s ignorance",
-   "why": "The air feels heavy, and I am reminded of Derek’s ignorance.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T20:01:20+01:00",
-   "kind": "did",
-   "text": "writing in his diary about the hum",
-   "why": "The hum is a current that slips through the walls, and I am not sure if it belongs to the machine or something else.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T20:01:05+01:00",
-   "kind": "did",
-   "text": "drawing A bicycle with wheels made of bottle caps, but the frame is made of rubber, and the pedals are made of spoons.",
-   "why": "To mock the idea that wheels are just wheels.",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-14T19:59:46+01:00",
-   "kind": "did",
-   "text": "writing in his diary about the hum",
-   "why": "The hum is growing. I must record this shift in tone.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T19:58:30+01:00",
-   "kind": "did",
-   "text": "writing in his diary about the machine's hum",
-   "why": "The hum is growing louder, and I need to record this before it becomes a roar.",
    "ok": true,
    "action": "diary"
   }

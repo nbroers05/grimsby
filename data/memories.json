@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T11:15:58+01:00",
+ "at": "2026-11-15T11:27:03+01:00",
  "beliefs": [],
  "long": [
   {
@@ -14,7 +14,7 @@
    "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.25,
+   "recalled": 0.5,
    "since": "2026-11-15T00:16:32+01:00"
   },
   {
@@ -111,6 +111,20 @@
  ],
  "short": [
   {
+   "text": "Sat still at the memorial for the old Ondermolen. Nothing rolled my way.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T11:24:03+01:00"
+  },
+  {
+   "text": "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-15T11:20:28+01:00"
+  },
+  {
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
@@ -128,7 +142,7 @@
    "text": "I found a crust that was, frankly, worse than a poorly folded map.",
    "kind": "moment",
    "strength": 2,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-15T10:59:57+01:00"
   }
  ]

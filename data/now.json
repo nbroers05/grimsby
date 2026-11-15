@@ -1,37 +1,37 @@
 {
  "v": 1,
- "at": "2026-11-15T11:15:58+01:00",
+ "at": "2026-11-15T11:27:03+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "keeping an eye on the pigeons by the fountain next to the station",
- "thought": "They peck at crumbs, but never at the truth",
+ "doing": "looking for something to eat at the Jumbo by the station",
+ "thought": "That crust is less appealing than a poorly folded map",
  "feeling": {
-  "mood": 0.12,
-  "energy": 0.8,
+  "mood": 0.13,
+  "energy": 0.84,
   "words": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls.",
   "emotion": "keyed up",
-  "arousal": 0.92
+  "arousal": 0.83
  },
  "needs": {
-  "rest": 0.12,
+  "rest": 0.1,
   "curiosity": 0.15,
-  "social": 0.63,
-  "expression": 0.04,
-  "quiet": 0.51,
-  "hunger": 0.2
+  "social": 0.28,
+  "expression": 0.17,
+  "quiet": 0.37,
+  "hunger": 0.0
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 6,
-  "time": "13:15"
+  "time": "14:44"
  },
- "action": "pigeons",
+ "action": "eat",
  "place": {
-  "id": "station-fountain",
-  "name": "the fountain by the station",
-  "words": "by the fountain next to the station",
-  "poi": "n3772233411",
-  "category": "fountain"
+  "id": "jumbo",
+  "name": "the Jumbo",
+  "words": "at the Jumbo by the station",
+  "poi": "n3867952219",
+  "category": "supermarket"
  },
  "flying": null
 }
