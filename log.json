@@ -438,5 +438,18 @@
       "time": "2026-11-15T11:34:33+01:00"
     },
     "mood": 0.14
+  },
+  {
+    "time": "2026-11-15T12:03:04+01:00",
+    "action": "diary",
+    "reason": "I need a record of how bad I am at being ignored.",
+    "ok": true,
+    "withheld": false,
+    "line": "Pigeons ignored me. A kindness I do not deserve.",
+    "detail": {
+      "topic": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
+      "entry": "They passed me by, wings slicing the air without a glance. A trio of pigeons, all feathers and indifference, clacked their beaks at the crumbs I tossed. I do not deserve kindness, but they offered it anyway. A small mercy, buried beneath their indifference."
+    },
+    "mood": 0.08
   }
 ]
