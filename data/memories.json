@@ -1,8 +1,57 @@
 {
  "v": 1,
- "at": "2026-11-15T14:36:04+01:00",
- "beliefs": [],
+ "at": "2026-11-15T15:39:04+01:00",
+ "beliefs": [
+  {
+   "n": 1,
+   "text": "Writing my diary cheers me up.",
+   "evidence": 7,
+   "since": "2026-11-15T15:22:34+01:00"
+  }
+ ],
  "long": [
+  {
+   "text": "Day 7: Today I pecked at the chips, noted their lack of crunch, and found a crust by the trolleys. Derek’s cousin shouted nonsense about bottle caps, and I said nothing. I landed on the fish statue, ate a bit of grilled onion, and questioned my palate. Not a bad day, really.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-15T15:24:04+01:00"
+  },
+  {
+   "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.25,
+   "since": "2026-11-15T14:55:34+01:00"
+  },
+  {
+   "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 1.75,
+   "since": "2026-11-15T13:54:04+01:00"
+  },
+  {
+   "text": "Chips without crunch were noted, as was the fact that I ate them.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 1.5,
+   "since": "2026-11-15T13:39:04+01:00"
+  },
+  {
+   "text": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.5,
+   "since": "2026-11-15T13:33:04+01:00"
+  },
+  {
+   "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.75,
+   "since": "2026-11-15T13:27:04+01:00"
+  },
   {
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
@@ -63,7 +112,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.25,
+   "recalled": 0.5,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -151,55 +200,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Derek's cousin stood at the fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T14:36:04+01:00"
-  },
-  {
-   "text": "Vulcanization is a process that hardens rubber through heat and chemicals, originally using sulfur.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T14:12:04+01:00"
-  },
-  {
-   "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-15T13:54:04+01:00"
-  },
-  {
-   "text": "At the vis, Derek's cousin stood on a fence, shouting about the number of bottle caps in a wheel, which is, of course, nonsense.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T13:49:34+01:00"
-  },
-  {
-   "text": "Chips without crunch were noted, as was the fact that I ate them.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 1.5,
-   "since": "2026-11-15T13:39:04+01:00"
-  },
-  {
-   "text": "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T13:33:04+01:00"
-  },
-  {
-   "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.75,
-   "since": "2026-11-15T13:27:04+01:00"
-  }
- ]
+ "short": []
 }

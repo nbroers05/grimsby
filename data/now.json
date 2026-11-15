@@ -1,40 +1,37 @@
 {
  "v": 1,
- "at": "2026-11-15T14:36:04+01:00",
+ "at": "2026-11-15T15:39:04+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "flying to the Albert Heijn",
- "thought": "They’re pecking at crumbs like they’re solving a mystery, but I’ve seen better sleuths in a landfill.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Berkel Westpolder",
+ "thought": "The moon is too bright for a teaspoon",
  "feeling": {
-  "mood": 0.3,
-  "energy": 0.52,
-  "words": "Crust crumbles in my beak. Not bad. Not great. A better memory than the last one.",
-  "emotion": "content",
-  "arousal": 0.6
+  "mood": 0.17,
+  "energy": 1,
+  "words": "A shadow lingers on the edge of the roof. The sun is low, and the taste of flatbread lingers. I am not alone.",
+  "emotion": "calm",
+  "arousal": 0.29
  },
  "needs": {
-  "rest": 0.17,
-  "curiosity": 0.13,
-  "social": 0.0,
-  "expression": 0.1,
-  "quiet": 0.22,
-  "hunger": 0.13
+  "rest": 0.0,
+  "curiosity": 0.25,
+  "social": 0.21,
+  "expression": 0.12,
+  "quiet": 0.0,
+  "hunger": 0.05
  },
  "world": {
   "name": "Berkel en Rodenrijs",
-  "day": 7,
-  "time": "15:56"
+  "day": 8,
+  "time": "00:20"
  },
- "action": "sit",
+ "action": "sleep",
  "place": {
-  "id": "albert-heijn",
-  "name": "the Albert Heijn",
-  "words": "by the trolleys at the Albert Heijn",
-  "poi": "n2589814366",
-  "category": "supermarket"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Berkel Westpolder",
+  "poi": "n3149917960",
+  "category": "station"
  },
- "flying": {
-  "from": "the fountain in the centre",
-  "to": "the Albert Heijn"
- }
+ "flying": null
 }

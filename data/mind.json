@@ -1,23 +1,15 @@
 {
  "v": 1,
- "at": "2026-11-15T14:36:04+01:00",
- "thought": "They’re pecking at crumbs like they’re solving a mystery, but I’ve seen better sleuths in a landfill.",
+ "at": "2026-11-15T15:39:04+01:00",
+ "thought": "The moon is too bright for a teaspoon",
  "loudest": [
   {
-   "kind": "outcome",
-   "subject": "keeping an eye on the pigeons by the fountain in the village centre went better than you expected"
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts"
   },
   {
-   "kind": "goal",
-   "subject": "flying to the Albert Heijn (sitting still there)"
-  },
-  {
-   "kind": "seen",
-   "subject": "the fountain in the centre"
-  },
-  {
-   "kind": "memory",
-   "subject": "At the vis, Derek's cousin stood on a fence, shouting about the number of bottle caps in a wheel, which is, of course, nonsense."
+   "kind": "want",
+   "subject": "a list of curing systems"
   }
  ],
  "open": {
@@ -28,7 +20,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "flying to the Albert Heijn",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -52,35 +44,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 10.0
+   "strength": 9.7
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.8
+   "strength": 6.5
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 4.8
+   "strength": 4.5
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 3.8
+   "strength": 3.5
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 2.8
+   "strength": 2.5
   },
   {
    "topic": "weather",
-   "strength": 2.8
+   "strength": 2.5
   },
   {
    "topic": "the art of making lists",
-   "strength": 2.8
+   "strength": 2.5
   },
   {
    "topic": "molecular networks",
-   "strength": 2.6
+   "strength": 2.3
   }
  ],
  "budget": {
@@ -89,143 +81,143 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.302,
-  "arousal": 0.597,
-  "average": 0.121,
+  "emotion": "calm",
+  "valence": 0.169,
+  "arousal": 0.293,
+  "average": 0.125,
   "values": {
    "eat@jumbo": {
     "V": 0.077,
-    "n": 1.8
+    "n": 1.7
    },
    "eat@*": {
-    "V": 0.13,
-    "n": 5.8
+    "V": 0.126,
+    "n": 7.1
    },
    "diary@station-bench": {
     "V": 0.103,
-    "n": 1.8
+    "n": 1.7
    },
    "diary@*": {
-    "V": 0.216,
-    "n": 6.7
+    "V": 0.228,
+    "n": 7.1
    },
    "neighbour@home": {
     "V": 0.051,
-    "n": 0.9
+    "n": 0.8
    },
    "neighbour@*": {
     "V": 0.051,
-    "n": 0.9
+    "n": 0.8
    },
    "diary@plantsoen-bench": {
     "V": 0.155,
-    "n": 3.8
+    "n": 3.5
    },
    "pigeons@station-fountain": {
     "V": 0.046,
-    "n": 2.8
+    "n": 2.5
    },
    "pigeons@*": {
     "V": 0.09,
-    "n": 4.8
+    "n": 4.4
    },
    "sit@ondermolen": {
     "V": 0.042,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@*": {
-    "V": 0.078,
-    "n": 1.8
+    "V": 0.098,
+    "n": 2.6
    },
    "read_back@home": {
     "V": 0.047,
-    "n": 0.9
+    "n": 0.8
    },
    "read_back@*": {
     "V": 0.047,
-    "n": 0.9
+    "n": 0.8
    },
    "draw@ondermolen": {
     "V": 0.028,
-    "n": 0.9
+    "n": 0.8
    },
    "draw@*": {
-    "V": 0.028,
-    "n": 0.9
+    "V": 0.049,
+    "n": 1.8
    },
    "sit@de-bron": {
     "V": 0.042,
-    "n": 0.9
+    "n": 0.8
    },
    "eat@de-turk": {
-    "V": 0.023,
-    "n": 0.9
+    "V": 0.046,
+    "n": 1.8
    },
    "search@library": {
     "V": 0.041,
-    "n": 1.9
+    "n": 1.8
    },
    "search@*": {
     "V": 0.041,
-    "n": 1.9
+    "n": 1.8
    },
    "eat@mcdonalds": {
     "V": 0.057,
-    "n": 2
+    "n": 1.8
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 1
+    "n": 0.9
    },
    "wander@*": {
-    "V": 0.039,
-    "n": 1
+    "V": 0.073,
+    "n": 1.8
    },
    "pigeons@vis": {
     "V": 0.032,
-    "n": 1
+    "n": 0.9
    },
    "eat@albert-heijn": {
-    "V": 0.029,
-    "n": 1
+    "V": 0.03,
+    "n": 1.8
    },
    "diary@library": {
-    "V": 0.041,
-    "n": 1
+    "V": 0.079,
+    "n": 1.8
    },
    "pigeons@centre-fountain": {
     "V": 0.03,
-    "n": 1
+    "n": 0.9
+   },
+   "sit@albert-heijn": {
+    "V": 0.031,
+    "n": 0.9
+   },
+   "draw@dorpskerk": {
+    "V": 0.025,
+    "n": 0.9
+   },
+   "wander@vis": {
+    "V": 0.04,
+    "n": 0.9
    }
   },
   "habit": {
-   "place:plantsoen-bench": 0.15,
-   "place:library": 0.24,
-   "topic:rubber chemistry": 0.09,
-   "place:mcdonalds": 0.13,
-   "place:centre-fountain": 0.18
+   "place:albert-heijn": 0.17,
+   "place:library": 0.19,
+   "place:de-turk": 0.12
   },
   "workingMemory": [
    {
-    "kind": "outcome",
-    "subject": "keeping an eye on the pigeons by the fountain in the village centre went better than you expected",
-    "salience": 0.647
+    "kind": "want",
+    "subject": "A list of crown cork teeth counts",
+    "salience": 0.15
    },
    {
-    "kind": "goal",
-    "subject": "flying to the Albert Heijn (sitting still there)",
-    "salience": 0.4
-   },
-   {
-    "kind": "seen",
-    "subject": "the fountain in the centre",
-    "salience": 0.307
-   },
-   {
-    "kind": "memory",
-    "subject": "At the vis, Derek's cousin stood on a fence, shouting about the number of bottle caps in a wheel, which is, of course, nonsense.",
-    "salience": 0.295
+    "kind": "want",
+    "subject": "a list of curing systems",
+    "salience": 0.15
    }
   ]
  }
