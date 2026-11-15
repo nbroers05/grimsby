@@ -90,3 +90,17 @@ Opus voor A, B en WERELD stap 1-2. Sonnet mag voor C en WERELD stap 3-4.
 ## F. Update 15-11-2026: eiland
 
 De wereld wordt een verzonnen eiland dat stiekem Berkel is. Zie EILAND.md. Daarmee vervalt in blok E het deel "Techniek" (3DBAG, OSM, RD-omrekening) en de plekkentabel. "Stijl", "De kraai in 3D" en "Bezoekers" blijven gelden. Bezoekers spawnen op het perron van station Rodenrijs op het eiland. WERELD.md stap 2 t/m 4 blijven zoals ze zijn.
+
+## G. Invloed van bezoekers (15-11-2026)
+
+Bezoekers moeten hem echt kunnen beinvloeden. Niet als bevel, maar zoals mensen elkaar beinvloeden: hij hoort het, weegt het af en doet er iets mee, of juist niet. Bouw dit mee met WERELD.md stap 3 en BREIN-v3.md fase 3 (punt 8, model van bezoekers).
+
+Hoe het werkt (allemaal in code, het model praat alleen):
+- Plekken en acties. De code herkent in een briefje plek-namen en acties uit een vaste lijst (places.json en actions). Dat wordt een "suggestie" in zijn werkgeheugen, met saillantie = vertrouwen in die bezoeker x sociaal-behoefte, en geeft een bonus voor die actie@plek in de utility. Is het vertrouwen negatief, dan wordt het een straf: dan gaat hij er expres niet heen. Geen spiegel (blok B1) blijft gelden.
+- Onderwerpen. Een briefje kan een interesse of open vraag planten ("weet jij waarom duiven knikken?"). De code zet het onderwerp in zijn wants/questions. Later kan hij er zelf over zoeken: de zoekopdracht schrijft het model in zijn eigen woorden en die gaat door safety. De tekst van de bezoeker wordt nooit letterlijk een zoekopdracht.
+- Meningen over plekken. "De Jumbo is beter" telt als zwak bewijs voor zijn plekgebonden overtuigingen (ongeveer 0.3 van een eigen ervaring, gewogen met vertrouwen). Op termijn wint zijn eigen ervaring altijd.
+- Spullen. Een achtergelaten voorwerp kan hij meenemen naar zijn nest. Het wordt een herinnering en kan zijn stemming en interesses kleuren.
+- Karakterblad. Bezoekers kunnen er niet zelf iets op zetten, maar herhaalde invloed van dezelfde bezoeker kan in de slaap-consolidatie een regel opleveren ("ik luister meestal naar Sanne", of juist het omgekeerde).
+- Plafond. Per bezoeker per wereld-dag een maximum aan invloed (bonus en bewijs), zodat een persoon hem niet helemaal kan overnemen. Getallen als constanten bovenaan, en laat in de sim met de drie nepbezoekers zien dat het werkt.
+
+Wat niet mag: tekst van een bezoeker start nooit direct een tool. Dus geen web-zoekopdracht met hun letterlijke tekst, geen URL openen, geen bestand schrijven, geen code. Invloed loopt alleen via de routes hierboven.
