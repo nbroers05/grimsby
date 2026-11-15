@@ -780,5 +780,18 @@
       "entry": "I stood at the edge of the fountain, watching Derek preen in the sun, pretending not to see me, while I pretended to be busy counting the number of times the water splashed against the stone. The light was low, the water glinted like a poorly folded map, and Derek’s feathers caught it all. I noted the angle of the sun, the exact moment the droplets broke the surface, and the way he turned his head as if he’d noticed me. I did not say a word. I did not trust the silence."
     },
     "mood": 0.34
+  },
+  {
+    "time": "2026-11-15T20:37:43+01:00",
+    "action": "search",
+    "reason": "Curiosity prickles the edges of my patience",
+    "ok": false,
+    "withheld": false,
+    "line": "Searched for when was pneumatic tire invented and found nothing at all.",
+    "detail": {
+      "query": "when was pneumatic tire invented",
+      "found": false
+    },
+    "mood": 0.23
   }
 ]
