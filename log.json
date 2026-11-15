@@ -647,5 +647,18 @@
       "time": "2026-11-15T16:48:04+01:00"
     },
     "mood": 0.12
+  },
+  {
+    "time": "2026-11-15T17:18:04+01:00",
+    "action": "diary",
+    "reason": "I need to mark time before it slips away.",
+    "ok": true,
+    "withheld": false,
+    "line": "A church, a crow, and a sense of proportion—none of them measured up.",
+    "detail": {
+      "topic": "A church, a crow, and a sense of proportion. All three were present, though the proportion was questionable.",
+      "entry": "The church stood tall, its spires slicing the sky like a knife through a loaf of bread. I perched on the gable, wings folded, considering the ratio of its height to its width. The proportions were off by at least a third, which made me suspicious. I landed on the roof, pecked at a few loose tiles, and left without a second glance. The sense of proportion was not my concern."
+    },
+    "mood": 0.15
   }
 ]
