@@ -1,15 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T15:39:04+01:00",
- "thought": "The moon is too bright for a teaspoon",
+ "at": "2026-11-15T16:42:04+01:00",
+ "thought": "The numbers are precise, but the weather is a story best told in whispers.",
  "loudest": [
   {
-   "kind": "want",
-   "subject": "A list of crown cork teeth counts"
+   "kind": "goal",
+   "subject": "looking something up at the library"
+  },
+  {
+   "kind": "need",
+   "subject": "curiosity"
+  },
+  {
+   "kind": "memory",
+   "subject": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool."
   },
   {
    "kind": "want",
-   "subject": "a list of curing systems"
+   "subject": "A list of crown cork teeth counts"
   }
  ],
  "open": {
@@ -20,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "looking up average temperature in berkel en rodenrijs at the library",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -55,15 +63,15 @@
    "strength": 4.5
   },
   {
+   "topic": "weather",
+   "strength": 3.5
+  },
+  {
    "topic": "pneumatic tire history",
    "strength": 3.5
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 2.5
-  },
-  {
-   "topic": "weather",
    "strength": 2.5
   },
   {
@@ -81,34 +89,34 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "calm",
-  "valence": 0.169,
-  "arousal": 0.293,
-  "average": 0.125,
+  "emotion": "even",
+  "valence": 0.065,
+  "arousal": 0.39,
+  "average": 0.126,
   "values": {
    "eat@jumbo": {
     "V": 0.077,
     "n": 1.7
    },
    "eat@*": {
-    "V": 0.126,
-    "n": 7.1
+    "V": 0.116,
+    "n": 8.1
    },
    "diary@station-bench": {
     "V": 0.103,
     "n": 1.7
    },
    "diary@*": {
-    "V": 0.228,
-    "n": 7.1
+    "V": 0.231,
+    "n": 8.1
    },
    "neighbour@home": {
-    "V": 0.051,
-    "n": 0.8
+    "V": 0.086,
+    "n": 1.8
    },
    "neighbour@*": {
-    "V": 0.051,
-    "n": 0.8
+    "V": 0.086,
+    "n": 1.8
    },
    "diary@plantsoen-bench": {
     "V": 0.155,
@@ -179,12 +187,12 @@
     "n": 0.9
    },
    "eat@albert-heijn": {
-    "V": 0.03,
-    "n": 1.8
+    "V": 0.035,
+    "n": 2.8
    },
    "diary@library": {
-    "V": 0.079,
-    "n": 1.8
+    "V": 0.104,
+    "n": 2.8
    },
    "pigeons@centre-fountain": {
     "V": 0.03,
@@ -204,19 +212,30 @@
    }
   },
   "habit": {
-   "place:albert-heijn": 0.17,
-   "place:library": 0.19,
-   "place:de-turk": 0.12
+   "place:home": 0.12,
+   "place:library": 0.34,
+   "place:albert-heijn": 0.16,
+   "topic:weather": 0.19
   },
   "workingMemory": [
    {
-    "kind": "want",
-    "subject": "A list of crown cork teeth counts",
-    "salience": 0.15
+    "kind": "goal",
+    "subject": "looking something up at the library",
+    "salience": 0.4
+   },
+   {
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.198
+   },
+   {
+    "kind": "memory",
+    "subject": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
+    "salience": 0.193
    },
    {
     "kind": "want",
-    "subject": "a list of curing systems",
+    "subject": "A list of crown cork teeth counts",
     "salience": 0.15
    }
   ]

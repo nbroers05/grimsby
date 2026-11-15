@@ -1,37 +1,37 @@
 {
  "v": 1,
- "at": "2026-11-15T15:39:04+01:00",
+ "at": "2026-11-15T16:42:04+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Berkel Westpolder",
- "thought": "The moon is too bright for a teaspoon",
+ "asleep": false,
+ "doing": "looking up average temperature in berkel en rodenrijs at the library",
+ "thought": "The numbers are precise, but the weather is a story best told in whispers.",
  "feeling": {
-  "mood": 0.17,
-  "energy": 1,
-  "words": "A shadow lingers on the edge of the roof. The sun is low, and the taste of flatbread lingers. I am not alone.",
-  "emotion": "calm",
-  "arousal": 0.29
+  "mood": 0.07,
+  "energy": 0.88,
+  "words": "Drowsy, full of beans. The sun is a slow drip of light through the tiles. I count the cracks in the tiles like a man counts his coins.",
+  "emotion": "even",
+  "arousal": 0.39
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.25,
-  "social": 0.21,
-  "expression": 0.12,
-  "quiet": 0.0,
-  "hunger": 0.05
+  "rest": 0.08,
+  "curiosity": 0.01,
+  "social": 0.14,
+  "expression": 0.11,
+  "quiet": 0.05,
+  "hunger": 0.07
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 8,
-  "time": "00:20"
+  "time": "08:44"
  },
- "action": "sleep",
+ "action": "search",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Berkel Westpolder",
-  "poi": "n3149917960",
-  "category": "station"
+  "id": "library",
+  "name": "the library",
+  "words": "at the library",
+  "poi": "n12473802428",
+  "category": "library"
  },
  "flying": null
 }
