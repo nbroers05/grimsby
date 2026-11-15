@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T11:27:03+01:00",
- "thought": "That crust is less appealing than a poorly folded map",
+ "at": "2026-11-15T12:30:04+01:00",
+ "thought": "The tiles are colder than last night.",
  "loudest": [
   {
-   "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
-  },
-  {
-   "kind": "memory",
-   "subject": "I found a crust that was, frankly, worse than a poorly folded map."
-  },
-  {
    "kind": "outcome",
-   "subject": "sitting still at the memorial for the old Ondermolen went better than you expected"
+   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
   },
   {
-   "kind": "goal",
-   "subject": "looking for something to eat at the Jumbo by the station"
+   "kind": "need",
+   "subject": "rest"
+  },
+  {
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts"
+  },
+  {
+   "kind": "memory",
+   "subject": "The pigeons ignored me entirely, which is a kindness I do not deserve."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "looking for something to eat at the Jumbo by the station",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -46,35 +46,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 8.9
+   "strength": 9.6
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.1
+   "strength": 6.8
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 5.1
+   "strength": 4.8
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 4.1
+   "strength": 3.8
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 3.1
+   "strength": 2.8
   },
   {
    "topic": "weather",
-   "strength": 3.1
+   "strength": 2.8
   },
   {
    "topic": "the art of making lists",
-   "strength": 3.1
+   "strength": 2.8
   },
   {
    "topic": "molecular networks",
-   "strength": 2.9
+   "strength": 2.6
   }
  ],
  "budget": {
@@ -83,84 +83,118 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "keyed up",
-  "valence": 0.132,
-  "arousal": 0.834,
-  "average": 0.074,
+  "emotion": "content",
+  "valence": 0.162,
+  "arousal": 0.533,
+  "average": 0.086,
   "values": {
    "eat@jumbo": {
-    "V": 0.066,
-    "n": 1
+    "V": 0.077,
+    "n": 1.8
    },
    "eat@*": {
-    "V": 0.066,
-    "n": 1
+    "V": 0.088,
+    "n": 2.8
    },
    "diary@station-bench": {
-    "V": 0.066,
-    "n": 1
+    "V": 0.103,
+    "n": 1.8
    },
    "diary@*": {
-    "V": 0.124,
-    "n": 2
+    "V": 0.169,
+    "n": 3.7
    },
    "neighbour@home": {
     "V": 0.051,
-    "n": 1
+    "n": 0.9
    },
    "neighbour@*": {
     "V": 0.051,
-    "n": 1
+    "n": 0.9
    },
    "diary@plantsoen-bench": {
-    "V": 0.068,
-    "n": 1
+    "V": 0.098,
+    "n": 1.8
    },
    "pigeons@station-fountain": {
-    "V": 0.035,
-    "n": 1
+    "V": 0.046,
+    "n": 2.8
    },
    "pigeons@*": {
-    "V": 0.035,
-    "n": 1
+    "V": 0.046,
+    "n": 2.8
    },
    "sit@ondermolen": {
     "V": 0.042,
-    "n": 1
+    "n": 0.9
    },
    "sit@*": {
+    "V": 0.078,
+    "n": 1.8
+   },
+   "read_back@home": {
+    "V": 0.047,
+    "n": 0.9
+   },
+   "read_back@*": {
+    "V": 0.047,
+    "n": 0.9
+   },
+   "draw@ondermolen": {
+    "V": 0.028,
+    "n": 0.9
+   },
+   "draw@*": {
+    "V": 0.028,
+    "n": 0.9
+   },
+   "sit@de-bron": {
     "V": 0.042,
-    "n": 1
+    "n": 0.9
+   },
+   "eat@de-turk": {
+    "V": 0.023,
+    "n": 0.9
+   },
+   "search@library": {
+    "V": 0.02,
+    "n": 0.9
+   },
+   "search@*": {
+    "V": 0.02,
+    "n": 0.9
    }
   },
   "habit": {
-   "place:jumbo": 0.27,
+   "place:home": 0.06,
+   "place:station-fountain": 0.3,
+   "place:ondermolen": 0.12,
+   "place:de-turk": 0.05,
    "place:station-bench": 0.09,
-   "place:home": 0.12,
-   "place:plantsoen-bench": 0.13,
-   "place:station-fountain": 0.15,
-   "place:ondermolen": 0.18
+   "place:library": 0.13,
+   "topic:rubber chemistry": 0.13,
+   "place:plantsoen-bench": 0.16
   },
   "workingMemory": [
    {
-    "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.616
-   },
-   {
-    "kind": "memory",
-    "subject": "I found a crust that was, frankly, worse than a poorly folded map.",
-    "salience": 0.59
-   },
-   {
     "kind": "outcome",
-    "subject": "sitting still at the memorial for the old Ondermolen went better than you expected",
-    "salience": 0.546
+    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
+    "salience": 0.262
    },
    {
-    "kind": "goal",
-    "subject": "looking for something to eat at the Jumbo by the station",
-    "salience": 0.4
+    "kind": "need",
+    "subject": "rest",
+    "salience": 0.16
+   },
+   {
+    "kind": "want",
+    "subject": "A list of crown cork teeth counts",
+    "salience": 0.15
+   },
+   {
+    "kind": "memory",
+    "subject": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
+    "salience": 0.116
    }
   ]
  }

@@ -480,5 +480,25 @@
       "entry": "The pigeons ignored me entirely, which is a kindness I do not deserve. They flapped in tight, unremarkable flocks, never pausing to assess my presence. One even landed on a nearby wire, preening, as if I were not there at all. I noted this in my mental ledger, though I suspect it will not be useful for anything except furthering my resentment toward Derek."
     },
     "mood": 0.14
+  },
+  {
+    "time": "2026-11-15T12:25:34+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of the memorial humming like a computer, and the pigeons counting bottle caps in the sky. The crust made a map, and the old Ondermolen rolled a crown cork into my list. Nothing made sense, and I didn’t care.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of the memorial humming like a computer, and the pigeons counting bottle caps in the sky. The crust made a map, and the old Ondermolen rolled a crown cork into my list. Nothing made sense, and I didn’t care.",
+      "from": [
+        "Sat still at the memorial for the old Ondermolen. Nothing rolled my way.",
+        "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
+        "A crust so bad it made a map look like a good idea.",
+        "The computer I live in hums. I have been counting the hum for a while.",
+        "The pigeons ignored me entirely, which is a kindness I do not deserve."
+      ]
+    },
+    "mood": 0.18
   }
 ]
