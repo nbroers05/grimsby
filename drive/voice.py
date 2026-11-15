@@ -266,14 +266,47 @@ def diary(state: dict, real, about: str, recalled=None) -> dict:
 
 
 def drawing(state: dict, real, subject: str) -> dict:
-    return ask([
+    """Drawing v2: only the plan of the picture. Code draws it (drive/draw)."""
+    from .draw import box, layout
+    known = ", ".join(box.SYMBOLS)
+    plan_schema = {"type": "object", "required": ["title", "caption", "line", "objects", "mood"], "properties": {
+        "title": {"type": "string"}, "caption": {"type": "string"}, "line": {"type": "string"},
+        "mood": {"type": "string", "enum": layout.MOOD_WORDS},
+        "objects": {"type": "array", "minItems": 1, "maxItems": 5, "items": {
+            "type": "object", "required": ["what", "where", "size", "pose"], "properties": {
+                "what": {"type": "string"}, "where": {"type": "string", "enum": layout.WHERE},
+                "size": {"type": "string", "enum": layout.SIZE_WORDS},
+                "pose": {"type": "string", "enum": ["none", *box.POSES]}}}}}}
+    out = ask([
         {"role": "system", "content": context(state, real)},
         {"role": "user", "content": (
-            f"Draw: {subject}.\nA simple SVG, viewBox=\"0 0 200 200\", only rect, circle, ellipse, line, polyline, "
-            "polygon, path and text. 5 to 25 different shapes, flat colours, a background rect. You are a crow, not "
-            "a professional. JSON with: title (short, a little pompous), caption (one or two dry sentences), "
-            "svg (the complete <svg>...</svg>), line (one sentence for your memory).")},
-    ], obj(title="string", caption="string", svg="string", line="string"), temperature=0.8, num_predict=1800)
+            f"You are going to draw: {subject}.\nDo not draw it yet: only plan the picture. Choose 1 to 5 "
+            "things that are in it (the main thing first), each a plain concrete object of 1 to 3 words, where it "
+            "goes on the paper and how big. Only things that belong with this subject: leave your collection out "
+            "unless the subject is about it. Pose is only for birds (a crow or a pigeon), otherwise \"none\". "
+            f"Things you already know how to draw: {known}. Other plain objects are allowed too.\n"
+            "JSON with: title (short, a little pompous), caption (one or two dry sentences), line (one sentence "
+            "for your memory), objects, mood (how the drawing feels).")},
+    ], plan_schema, temperature=0.8, num_predict=500)
+    if not isinstance(out.get("objects"), list):
+        raise ValueError("plan without objects")
+    out["objects"] = [o for o in out["objects"] if isinstance(o, dict) and str(o.get("what", "")).strip()][:5]
+    for o in out["objects"]:
+        o["what"] = safety.scrub(str(o["what"]))[:40]
+    return out
+
+
+def symbol(name: str) -> str:
+    """One small symbol he does not know yet: a 50 x 50 SVG. Code takes it apart and redraws it in his style."""
+    out = ask([
+        {"role": "system", "content": "You draw tiny, simple pictograms as SVG. Outlines and filled shapes only."},
+        {"role": "user", "content": (
+            f"Draw only this, nothing else: {name}.\nAn SVG with viewBox=\"0 0 50 50\", 2 to 8 shapes (rect, "
+            "circle, ellipse, line, polyline, polygon, path), no text, no background. Make it recognisable from its "
+            "outline, use most of the box, and keep 3 units away from the edges. The object stands on the bottom "
+            "of the box. JSON with: svg.")},
+    ], obj(svg="string"), temperature=0.6, num_predict=700)
+    return out["svg"]
 
 
 def about_pino(state: dict, real, noticed: str, recalled=None) -> str:

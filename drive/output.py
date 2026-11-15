@@ -120,7 +120,8 @@ def publish(s: dict, real: datetime, root: Path, say, force: bool = False) -> No
     did = next((e for e in s.get("feed", []) if e["kind"] == "did"), None)
     msg = f"Grimsby, day {clock.world(real)['day']}: {did['text'] if did else 'awake'}"[:100]
     r = git(root, "commit", "-m", msg, "--", *todo)
-    if r.returncode != 0 and "nothing to commit" not in (r.stdout + r.stderr):
+    quiet = ("nothing to commit", "no changes added to commit")   # nothing of ours changed: not a failure
+    if r.returncode != 0 and not any(q in r.stdout + r.stderr for q in quiet):
         say(f"commit failed: {(r.stderr or r.stdout).strip()[:300]}")
         return
     r = git(root, "push")

@@ -20,3 +20,6 @@ drive/state_v2.json
 .env
 .env.*
 !.env.example
+
+# drawing v2: the symbols he learned himself (his vocabulary) stay local, like his state
+drive/draw/learned/

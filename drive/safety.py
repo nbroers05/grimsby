@@ -89,7 +89,7 @@ ALLOWED_TAGS = {"svg", "g", "rect", "circle", "ellipse", "line", "polyline", "po
                 "title", "defs", "lineargradient", "radialgradient", "stop"}
 
 
-def clean_svg(raw: str) -> tuple[str, list[str]]:
+def clean_svg(raw: str, min_shapes: int = 3, max_len: int = 30000) -> tuple[str, list[str]]:
     m = re.search(r"<svg\b.*?</svg>", raw or "", flags=re.S | re.I)
     if not m:
         raise ValueError("no <svg> element")
@@ -117,13 +117,13 @@ def clean_svg(raw: str) -> tuple[str, list[str]]:
                 parent.remove(child)
             seen.add(key)
     shapes = sum(1 for el in root.iter() if el.tag.split("}")[-1].lower() not in {"svg", "g", "title", "defs"})
-    if shapes < 3:
+    if shapes < min_shapes:
         raise ValueError("drawing too empty")
     texts = [t for el in root.iter() for t in [el.text] if t and t.strip()]
     for el in root.iter():
         if el.text:
             el.text = scrub(el.text)
     out = ET.tostring(root, encoding="unicode")
-    if len(out) > 30000:
+    if len(out) > max_len:
         raise ValueError("svg too large")
     return out, texts

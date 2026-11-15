@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, learn, memory, mind, safety, voice, world
+from . import beliefs, clock, draw, learn, memory, mind, safety, voice, world
 from .actions import ACTIONS
 from .voice import VoiceDown, Withheld
 
@@ -199,19 +199,24 @@ class Executor:
             ([wants[0]["subject"]] if wants else [])
         subject = self.rng.choice(options)
         p["doing"] = f"drawing {subject} {world.words(p['place'])}"
+        # drawing v2: the model plans the picture, code draws it with his pen (drive/draw)
+        learned_dir = ROOT / "drive" / "draw" / "learned" if self.dir.resolve() == ROOT else self.dir / "learned"
         for _ in range(2):
             out = voice.drawing(self.state, self.real, subject)
             try:
-                svg, svg_texts = safety.clean_svg(out["svg"])
+                out["_when"], out["_subject"] = self.real.isoformat(timespec="seconds"), subject
+                pic = draw.make(out, self.rng, learned_dir, voice.symbol)
+                svg, svg_texts = safety.clean_svg(pic["svg"], max_len=draw.MAX_SVG)
                 break
-            except Exception as e:  # noqa: BLE001 - any parse problem: try once more
-                self.say(f"bad svg: {e}")
+            except Exception as e:  # noqa: BLE001 - an empty plan or any parse problem: try once more
+                self.say(f"drawing did not come out: {e}")
         else:
             p.update(ok=False, memory=f"Tried to draw {subject}. The result is not fit to be seen.",
                      content=f"your drawing of {subject} came out as nothing")
             return
         title, caption = safety.scrub(out["title"]), safety.scrub(out["caption"])
-        p["public"] = [title, caption, out["line"], *svg_texts]
+        objects = [{k: o[k] for k in ("what", "where", "size", "pose", "drawn") if o.get(k)} for o in pic["objects"]]
+        p["public"] = [title, caption, out["line"], *svg_texts, *(o["what"] for o in objects)]
         voice.vet(p["public"], f"drawing of {subject!r}")
         d = self.dir / "drawings"
         d.mkdir(parents=True, exist_ok=True)
@@ -220,7 +225,8 @@ class Executor:
         index_path = d / "index.json"
         index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
         item = {"file": f"drawings/{fname}", "title": title, "caption": caption, "subject": subject,
-                "time": self.real.isoformat(timespec="seconds")}
+                "time": self.real.isoformat(timespec="seconds"), "version": 2, "mood": pic.get("mood"),
+                "objects": objects}
         index.append(item)
         index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         p["content"] = f"{title}: {caption}"
