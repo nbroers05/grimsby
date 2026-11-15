@@ -1,40 +1,37 @@
 {
  "v": 1,
- "at": "2026-11-15T11:05:57+01:00",
+ "at": "2026-11-15T11:15:58+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to the station roof",
- "thought": "The ink is drying too fast for a proper map of bad crust.",
+ "doing": "keeping an eye on the pigeons by the fountain next to the station",
+ "thought": "They peck at crumbs, but never at the truth",
  "feeling": {
-  "mood": 0.01,
-  "energy": 0.93,
+  "mood": 0.12,
+  "energy": 0.8,
   "words": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls.",
   "emotion": "keyed up",
-  "arousal": 0.69
+  "arousal": 0.92
  },
  "needs": {
-  "rest": 0.06,
-  "curiosity": 0.66,
-  "social": 0.9,
-  "expression": 0.43,
-  "quiet": 0.66,
-  "hunger": 0.1
+  "rest": 0.12,
+  "curiosity": 0.15,
+  "social": 0.63,
+  "expression": 0.04,
+  "quiet": 0.51,
+  "hunger": 0.2
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 6,
-  "time": "11:55"
+  "time": "13:15"
  },
- "action": "neighbour",
+ "action": "pigeons",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Berkel Westpolder",
-  "poi": "n3149917960",
-  "category": "station"
+  "id": "station-fountain",
+  "name": "the fountain by the station",
+  "words": "by the fountain next to the station",
+  "poi": "n3772233411",
+  "category": "fountain"
  },
- "flying": {
-  "from": "a bench by the station",
-  "to": "the station roof"
- }
+ "flying": null
 }

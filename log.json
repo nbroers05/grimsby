@@ -409,5 +409,18 @@
       "entry": "I found a crust that was, frankly, worse than a poorly folded map. It was a thin, crumpled thing, the color of a bruised pear, and it had the consistency of a damp newspaper. I considered it for a moment, then spat it into the gutter. The way it flopped over the edge made me think of Derek’s latest attempt to steal my teaspoon."
     },
     "mood": 0.02
+  },
+  {
+    "time": "2026-11-15T11:09:58+01:00",
+    "action": "diary",
+    "reason": "I need to record the shape of a bad crust",
+    "ok": true,
+    "withheld": false,
+    "line": "A crust so bad it made a map look like a good idea.",
+    "detail": {
+      "topic": "A crust so bad it made a map look like a good idea.",
+      "entry": "I found a crust that was, frankly, worse than a poorly folded map. It was the kind of crust that left a trail of crumbs like a whispered secret, and the texture suggested it had been through a war with a toaster. The thing was so bad, it made me consider the merits of a map. I didn’t take it. I left it. And I still don’t know why."
+    },
+    "mood": 0.06
   }
 ]

@@ -1,19 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-15T11:05:57+01:00",
- "thought": "The ink is drying too fast for a proper map of bad crust.",
+ "at": "2026-11-15T11:15:58+01:00",
+ "thought": "They peck at crumbs, but never at the truth",
  "loudest": [
+  {
+   "kind": "outcome",
+   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
+  },
   {
    "kind": "need",
    "subject": "social"
   },
   {
-   "kind": "need",
-   "subject": "quiet"
+   "kind": "seen",
+   "subject": "the fountain by the station"
   },
   {
-   "kind": "need",
-   "subject": "curiosity"
+   "kind": "goal",
+   "subject": "keeping an eye on the pigeons by the fountain next to the station"
   }
  ],
  "open": {
@@ -24,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "flying to the station roof",
+ "busy": "keeping an eye on the pigeons by the fountain next to the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -80,9 +84,9 @@
  },
  "brain": {
   "emotion": "keyed up",
-  "valence": 0.011,
-  "arousal": 0.685,
-  "average": 0.066,
+  "valence": 0.121,
+  "arousal": 0.924,
+  "average": 0.091,
   "values": {
    "eat@jumbo": {
     "V": 0.066,
@@ -97,13 +101,50 @@
     "n": 1
    },
    "diary@*": {
-    "V": 0.066,
+    "V": 0.124,
+    "n": 2
+   },
+   "neighbour@home": {
+    "V": 0.051,
+    "n": 1
+   },
+   "neighbour@*": {
+    "V": 0.051,
+    "n": 1
+   },
+   "diary@plantsoen-bench": {
+    "V": 0.068,
     "n": 1
    }
   },
   "habit": {
-   "place:jumbo": 0.16,
-   "place:station-bench": 0.18
-  }
+   "place:jumbo": 0.12,
+   "place:station-bench": 0.14,
+   "place:home": 0.16,
+   "place:plantsoen-bench": 0.18,
+   "place:station-fountain": 0.2
+  },
+  "workingMemory": [
+   {
+    "kind": "outcome",
+    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
+    "salience": 1.031
+   },
+   {
+    "kind": "need",
+    "subject": "social",
+    "salience": 0.63
+   },
+   {
+    "kind": "seen",
+    "subject": "the fountain by the station",
+    "salience": 0.6
+   },
+   {
+    "kind": "goal",
+    "subject": "keeping an eye on the pigeons by the fountain next to the station",
+    "salience": 0.4
+   }
+  ]
  }
 }

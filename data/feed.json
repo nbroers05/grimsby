@@ -1,7 +1,57 @@
 {
  "v": 1,
- "at": "2026-11-15T11:05:57+01:00",
+ "at": "2026-11-15T11:15:58+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T11:15:58+01:00",
+   "kind": "noticed",
+   "text": "Derek was there, and smug about it."
+  },
+  {
+   "at": "2026-11-15T11:15:58+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": "Lonely, so I watch pigeons to feel less alone",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-15T11:14:28+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T11:09:58+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": "I need to record the shape of a bad crust",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T11:08:28+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T11:07:27+01:00",
+   "kind": "noticed",
+   "text": "Pino was at the mixing desk beside the synth, thinking \"Sit down at the synth, patch a fresh loop and just listen – quiet and easy, nothing pressing\" (from pinos.world)."
+  },
+  {
+   "at": "2026-11-15T11:07:27+01:00",
+   "kind": "did",
+   "text": "checking on Pino next door",
+   "why": "Lonely, so I’m checking on a neighbor who might be lonely too",
+   "ok": true,
+   "action": "neighbour"
+  },
   {
    "at": "2026-11-15T11:05:57+01:00",
    "kind": "did",
@@ -312,62 +362,6 @@
    "kind": "did",
    "text": "writing in his diary about the machine's hum",
    "why": "The hum is growing louder, and I need to record this before it becomes a roar.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T19:58:22+01:00",
-   "kind": "did",
-   "text": "drawing A bicycle with wheels made of bottle caps, but the frame is made of rubber.",
-   "why": "To mock the idea that wheels are just wheels.",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-14T19:57:59+01:00",
-   "kind": "did",
-   "text": "looking up why do tires need vulcanization",
-   "why": "I need to confirm the science behind why my bottle caps never rust.",
-   "ok": true,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-14T19:57:35+01:00",
-   "kind": "did",
-   "text": "writing in his diary about the machine's breath",
-   "why": "The hum has grown louder, and I suspect something is stirring beneath the surface.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T19:48:49+01:00",
-   "kind": "did",
-   "text": "looking up history of pneumatic tires",
-   "why": "I need to confirm if wheels made of bottle caps are a valid warning or a foolish attempt at engineering.",
-   "ok": true,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-14T19:47:00+01:00",
-   "kind": "did",
-   "text": "drawing A bicycle with wheels made of bottle caps",
-   "why": "To mock the idea that wheels are simple.",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-14T19:38:37+01:00",
-   "kind": "did",
-   "text": "writing in his diary about the hum",
-   "why": "The hum has grown louder. I must record this.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-14T19:37:42+01:00",
-   "kind": "did",
-   "text": "writing in his diary about computer hum",
-   "why": "I feel the need to record my suspicions about the computer's hum.",
    "ok": true,
    "action": "diary"
   }

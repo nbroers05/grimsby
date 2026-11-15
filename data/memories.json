@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T11:05:57+01:00",
+ "at": "2026-11-15T11:15:58+01:00",
  "beliefs": [],
  "long": [
   {
@@ -35,7 +35,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 2.27,
+   "recalled": 2.52,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -49,14 +49,14 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 2.48,
+   "recalled": 2.73,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
    "text": "The machine is breathing, and I am counting its seconds.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.02,
+   "recalled": 1.27,
    "since": "2026-11-14T19:57:35+01:00"
   },
   {
@@ -111,10 +111,17 @@
  ],
  "short": [
   {
+   "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-15T11:08:28+01:00"
+  },
+  {
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
+   "strength": 4,
+   "recalled": 0.5,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
