@@ -10,7 +10,7 @@ import random
 from datetime import datetime, timedelta
 from typing import Callable
 
-from . import beliefs, clock, engine, memory, needs, sleep, world
+from . import attend, clock, engine, learn, memory, needs, sleep, world
 from .actions import ACTIONS, RISE_ASLEEP_SHARE
 
 OFF_GAP = timedelta(minutes=15)          # longer than this between ticks = the laptop was off = he slept
@@ -34,6 +34,9 @@ def remember(state: dict, done: dict, real: datetime, rng: random.Random, descri
     feel = max(-1.0, min(1.0, done["dmood"] * 6))
     m = memory.make(describe(done, real, rng), KIND[done["action"]], strength, real, feel,
                     f"{done['action']}@{done['place']}")
+    m["surprise"] = done.get("delta", 0.0)          # internal: how much it differed from what he expected
+    if "outcome" in done:
+        m["outcome"] = done["outcome"]                # internal: what it really gave (sleep replays it)
     return memory.add(state["memories"]["short"], m, memory.SHORT_MAX)
 
 
@@ -58,16 +61,22 @@ def tick(state: dict, real: datetime, rng: random.Random, outcome: Callable[[str
          describe=plain_describe, voice=None) -> dict:
     ev = {"slept_through": catch_up(state, real, voice)}
     state["pending_done"] = state.get("pending")   # the running action's result; a new start overwrites "pending"
+    learn.setup(state)
+    memory.setup(state["memories"], real)
     ev.update(engine.tick(state, real, rng, outcome))
     if ev["finished"]:
-        beliefs.observe(state.setdefault("belief_stats", {}), ev["finished"])
+        if ev["finished"]["action"] not in ("idle", "sleep"):
+            learn.surprise(state, learn.learn(state, ev["finished"], real))
         ev["memory"] = remember(state, ev["finished"], real, rng, describe)
+    recalled = None
     if ev["arrived"] == "sleep":                   # home on the roof: sleep is consolidation
         ev["night"] = sleep.consolidate(state, real, voice)
     elif ev["arrived"]:
         d = state["doing"]
-        recalled = memory.recall(state["memories"], f"{d['action']} {d['place']} {ACTIONS[d['action']].doing}")
+        recalled = memory.recall(state["memories"], f"{d['action']} {d['place']} {ACTIONS[d['action']].doing}",
+                                 real=real, mood=state["mood"])
         state["mood"] = needs.clamp(state["mood"] + memory.mood_from(recalled), -1, 1)
         ev["recalled"] = [m["text"] for m in recalled]
+    attend.tick(state, ev, recalled, (state.get("doing") or {}).get("novelty") if ev["arrived"] else None)
     state["last_tick"] = real.isoformat(timespec="seconds")
     return ev

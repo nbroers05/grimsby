@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, memory, mind, safety, voice, world
+from . import beliefs, clock, learn, memory, mind, safety, voice, world
 from .actions import ACTIONS
 from .voice import VoiceDown, Withheld
 
@@ -54,7 +54,8 @@ class Executor:
 
 
     def recall(self, about: str) -> list[dict]:
-        return memory.recall(self.state["memories"], about, bump=False)
+        # he really thinks of them for what he says: they count as thought of (forgetting curve, v3)
+        return memory.recall(self.state["memories"], about, bump=False, real=self.real, mood=self.state["mood"])
 
     def pick_topic(self) -> str:
         qs = mind.open_items(self.state, "question")
@@ -62,7 +63,11 @@ class Executor:
         options = [(i["subject"], 5.0) for i in qs] + [(t["topic"], max(0.5, t["strength"])) for t in topics]
         if not options:
             return "bottle caps"
-        return self.rng.choices([o for o, _ in options], weights=[w for _, w in options])[0]
+        # habituation: a topic he just looked into pulls less (v3)
+        weights = [w * (1 - learn.HAB_RELIEF * learn.habit(self.state, "topic:" + o.lower())) for o, w in options]
+        pick = self.rng.choices([o for o, _ in options], weights=weights)[0]
+        learn.encounter(self.state, "topic:" + pick.lower())
+        return pick
 
     def grow_topics(self, topic: str, new: str) -> None:
         topics = self.state.setdefault("topics", [])
@@ -92,7 +97,11 @@ class Executor:
         p = {"action": action, "place": place, "doing": doing, "memory": None, "noticed": [],
              "content": "", "archive": None, "thought": None, "why": None, "ok": True, "public": []}
         try:
-            getattr(self, "do_" + action, self.do_plain)(p)
+            if st.get("distracted"):                 # too sleepy or too wound up to concentrate (Yerkes-Dodson)
+                p.update(ok=False, memory=f"Tried {p['doing']}, but I could not keep my mind on it.",
+                         content="you could not concentrate")
+            else:
+                getattr(self, "do_" + action, self.do_plain)(p)
         except VoiceDown as e:
             self.say(f"voice down during {action}: {e}")
             p["ok"] = False
@@ -287,6 +296,7 @@ class Executor:
             return
         m = self.rng.choice(old)
         m["recalled"] = round(min(memory.RECALLED_MAX, m["recalled"] + 1), 2)
+        memory.touch(m, self.real, self.state["mood"])
         p["content"] = m["text"]
         p["memory"] = voice.memory_line(self.state, self.real, f"You re-read an old memory: \"{m['text']}\"", [m])
         p["public"] = [p["memory"]]

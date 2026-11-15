@@ -17,7 +17,7 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
-from . import beliefs, clock, engine, life, memory, notes, who, world
+from . import beliefs, clock, engine, learn, life, memory, notes, who, world
 from .actions import ACTIONS
 
 OUT = Path(__file__).with_name("sim_out.json")
@@ -69,6 +69,7 @@ def main() -> None:
     ap.add_argument("--start", help="real start time (ISO), default now")
     ap.add_argument("--state", help="start from a copy of this state file (e.g. drive/state_v2.json)")
     ap.add_argument("--quiet", action="store_true", help="only print the nights and the end result")
+    ap.add_argument("--check", type=int, default=0, help="print the check for brain v3 phase N (1, 2 or 3)")
     a = ap.parse_args()
 
     rng = random.Random(a.seed)
@@ -86,7 +87,7 @@ def main() -> None:
                   "nights": []})
     outcome = lambda name, place: rng.random() >= ACTIONS[name].fail  # noqa: E731
 
-    rows, done, noted = [], [], []
+    rows, done, noted, snap = [], [], [], {}
     if not a.quiet:
         print(f"{'tick':>4} {'world':>11}  {'rest':>4} {'cur':>4} {'soc':>4} {'exp':>4} {'qui':>4} {'hun':>4} "
               f"{'mood':>5} {'enrg':>5}  event")
@@ -123,7 +124,13 @@ def main() -> None:
                      "energy": round(s["energy"], 3), "doing": s["doing"]["action"] if s["doing"] else None,
                      "place": s["doing"]["place"] if s["doing"] else None,
                      "started": ev["started"], "finished": ev["finished"],
-                     "short": len(s["memories"]["short"]), "long": len(s["memories"]["long"])})
+                     "short": len(s["memories"]["short"]), "long": len(s["memories"]["long"]),
+                     "arousal": s.get("arousal"), "emotion": learn.emotion(s),
+                     "V": {k: round(v["V"], 4) for k, v in s.get("values", {}).items() if v.get("n")},
+                     "wm": [(i["kind"], i["subject"], round(i["sal"], 2)) for i in s.get("wm", [])]})
+        if a.check == 2 and len(s["nights"]) >= 5 and not snap:
+            snap.update(tick=t, real=real, mem=json.loads(json.dumps(s["memories"])),
+                        nights=json.loads(json.dumps(s["nights"])))
         real = clock.next_tick(real)
 
     c = Counter(f["action"] for f in done)
@@ -148,6 +155,81 @@ def main() -> None:
         "version": s["who"].get("version", 1), "changelog": s["who"].get("changelog", []), "notes": noted,
         "long": [memory.public(m) for m in s["memories"]["long"]]}}, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"written {OUT}")
+    if a.check == 1:
+        check1(rows, done)
+    if a.check == 2:
+        check2(rows, snap or {"tick": len(rows), "real": real, "mem": s["memories"], "nights": s["nights"]},
+               random.Random(a.seed + 1000), s["nights"])
+
+
+def check2(rows: list, snap: dict, pick: random.Random, all_nights: list) -> None:
+    """Brain v3 phase 2: which memories still exist after 5 nights and why; working memory at 10 random ticks."""
+    real, mem, nights = snap["real"], snap["mem"], snap["nights"]
+    print(f"\n==== check, brain v3 phase 2 (after {len(nights)} nights, tick {snap['tick']}) ====")
+    print("long-term memories still there (retention = exp(-days / S)):")
+    print(f"  {'ret':>4} {'S':>5} {'days':>4} {'touch':>5} {'str':>3} {'feel':>5} {'surpr':>6}  text")
+    for m in sorted(mem["long"], key=lambda m: -memory.retention(m, real)):
+        print(f"  {memory.retention(m, real):4.2f} {m.get('S', 0):5.1f} {memory.age(m, real):4.1f} "
+              f"{m.get('touched', 0):5d} {m['strength']:3d} {m.get('feel', 0):+5.2f} "
+              f"{m.get('surprise', 0) or 0:+6.3f}  {m['text'][:70]}")
+    faded = [f for n in nights for f in n.get("faded", [])]
+    pushed = [t for n in nights for t in n.get("dropped", [])]
+    print(f"forgotten along the curve: {len(faded)}" + "".join(
+        f"\n  after {f['days']} days, S {f['S']}: {f['text'][:70]}" for f in faded))
+    later = [(n["day"], f) for n in all_nights[len(nights):] for f in n.get("faded", [])]
+    if later:
+        print(f"forgotten in the {len(all_nights) - len(nights)} nights after that: {len(later)}" + "".join(
+            f"\n  night of day {d}, after {f['days']} days, S {f['S']}: {f['text'][:70]}" for d, f in later))
+    print(f"pushed out for something stronger: {len(pushed)}; short-term never kept: "
+          f"{sum(n['forgotten'] for n in nights)} of {sum(n['short'] for n in nights)}")
+    for n in nights:
+        rp = n.get("replay", [])
+        if rp:
+            print(f"  night day {n['day']} replayed: " + "; ".join(
+                f"{r['about'] or '-'} (surprise {r['surprise'] or 0:+.2f}"
+                + (f", V moved {memory_alpha(r['delta'])}" if r["delta"] is not None else "") + ")" for r in rp))
+    print("working memory at 10 random ticks:")
+    for t in sorted(pick.sample(range(len(rows)), min(10, len(rows)))):
+        r = rows[t]
+        print(f"  tick {r['tick']:>4} d{r['day']} {r['time']} ({r['doing'] or 'nothing'}):")
+        for kind, subject, sal in r["wm"]:
+            print(f"      {sal:4.2f} {kind:8s} {subject[:80]}")
+    kinds = Counter(k for r in rows for k, _, _ in r["wm"][:1])
+    print("winner (loudest) over all ticks:", ", ".join(f"{k} {v}" for k, v in kinds.most_common()))
+
+
+def memory_alpha(delta: float) -> str:
+    return f"{learn.ALPHA_REPLAY * delta:+.4f}"
+
+
+def check1(rows: list, done: list) -> None:
+    """Brain v3 phase 1: V per action@place over the ticks, how many places, arousal histogram."""
+    import math
+    print("\n==== check, brain v3 phase 1 ====")
+    last = rows[-1]["V"]
+    keys = sorted((k for k in last if not k.endswith("@*")), key=lambda k: -abs(last[k]))[:12]
+    marks = [t for t in (25, 50, 100, 150, 200, 250, 300) if t <= len(rows)]
+    print("V per action@place (ticks " + ", ".join(map(str, marks)) + "):")
+    for k in keys:
+        series = [rows[t - 1]["V"].get(k) for t in marks]
+        print(f"  {k:32s} " + " ".join("   .  " if v is None else f"{v:+.3f}" for v in series))
+    acts = [f for f in done if f["action"] not in ("idle", "sleep")]
+    places = Counter(f["place"] for f in acts)
+    tot = sum(places.values())
+    ent = -sum(c / tot * math.log2(c / tot) for c in places.values()) if tot else 0
+    print(f"places visited: {len(places)} different, spread (entropy) {ent:.2f} bits, "
+          f"action@place {len({(f['action'], f['place']) for f in acts})} different")
+    surprises = [abs(f["delta"]) for f in acts if "delta" in f]
+    if surprises:
+        print(f"surprise |delta|: mean {sum(surprises) / len(surprises):.3f}, first 10 actions "
+              f"{sum(surprises[:10]) / min(10, len(surprises)):.3f}, last 10 {sum(surprises[-10:]) / min(10, len(surprises)):.3f}")
+    print(f"distracted (search/draw failed on arousal): {sum(1 for f in acts if f.get('distracted'))} "
+          f"of {sum(1 for f in acts if f['action'] in learn.YD_ACTIONS)}")
+    hist = Counter(min(9, int(r["arousal"] * 10)) for r in rows)
+    print("arousal histogram (ticks per 0.1 band):")
+    for b in range(10):
+        print(f"  {b / 10:.1f}-{(b + 1) / 10:.1f} {hist[b]:4d} {'#' * (hist[b] // 3)}")
+    print("emotions:", ", ".join(f"{k} {v}" for k, v in Counter(r["emotion"] for r in rows).most_common()))
 
 
 def print_night(r: dict, s: dict) -> None:

@@ -78,7 +78,11 @@ def answers(state: dict, query: str, real: datetime) -> None:
 
 
 def loudest(state: dict, n: int = 3) -> list[dict]:
-    """What pulls hardest: the strongest needs and open items, for mind.json."""
-    out = [{"kind": "need", "subject": k} for k, v in sorted(state["needs"].items(), key=lambda kv: -kv[1]) if v > 0.3]
+    """What pulls hardest, for mind.json: his working memory, winner first (brain v3, attend.py). Before the first
+    tick of v3 it falls back to the strongest needs and open items."""
+    if state.get("wm"):
+        from . import attend
+        return attend.loudest(state)
+    out =[{"kind": "need", "subject": k} for k, v in sorted(state["needs"].items(), key=lambda kv: -kv[1]) if v > 0.3]
     out += [{"kind": i["kind"], "subject": i["subject"]} for i in reversed(open_items(state))]
     return out[:n]

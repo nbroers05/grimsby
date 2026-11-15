@@ -10,7 +10,7 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-from . import beliefs, clock, memory, mind, world
+from . import attend, beliefs, clock, learn, memory, mind, world
 from .actions import ACTIONS
 
 V = 1
@@ -43,7 +43,8 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
     w = clock.world(real)
     f = s.get("feeling", {})
     now = {**head, "name": s["who"]["name"], "asleep": asleep, "doing": doing, "thought": s.get("thought"),
-           "feeling": {"mood": round(s["mood"], 2), "energy": round(s["energy"], 2), "words": f.get("words")},
+           "feeling": {"mood": round(s["mood"], 2), "energy": round(s["energy"], 2), "words": f.get("words"),
+                       "emotion": learn.emotion(s), "arousal": round(s.get("arousal", 0), 2)},
            "needs": {k: round(v, 2) for k, v in s["needs"].items()},
            "world": {"name": "Berkel en Rodenrijs", "day": w["day"], "time": w["time"]},
            # additions to Pino's shape, for the 3D world and the dashboard panel
@@ -66,7 +67,9 @@ def files(s: dict, real: datetime) -> dict[str, dict]:
                             **({"why": i["why"]} if i.get("why") else {})} for i in open_],
                  "interests": [{"topic": t["topic"], "strength": round(t["strength"], 1)}
                                for t in sorted(s.get("topics", []), key=lambda t: -t["strength"])],
-                 "budget": s.get("budget")}
+                 "budget": s.get("budget"),
+                 # brain v3: data for the future 'brain scan' tab (not shown yet)
+                 "brain": {**learn.public(s), "workingMemory": attend.public(s)}}
 
     mems = {**head, "beliefs": [beliefs.public(b) for b in sorted(s.get("beliefs", []), key=lambda b: -(b.get("n") or 0))],
             "long": [memory.public(m) for m in sorted(s["memories"]["long"], key=lambda m: m["since"], reverse=True)],

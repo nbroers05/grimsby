@@ -20,12 +20,12 @@ import random
 from datetime import datetime, timedelta
 from typing import Callable
 
-from . import beliefs, clock, needs, world
+from . import beliefs, clock, learn, needs, world
 from .actions import ACTIONS, IDLE_SCORE, SLEEP_EXHAUSTED, SLEEP_NIGHT_PULL, SLEEP_MIN_REST, SLEEP_MIN_REST_NIGHT, Action
 
 NOISE = 0.06
-REPEAT_PENALTY = 0.08          # same as the last action
-LATELY_PENALTY = 0.03          # per time it was done in the last LATELY actions
+REPEAT_PENALTY = 0.05          # same as the last action (v3: was 0.08, habituation took over part of it)
+LATELY_PENALTY = 0.02          # per time it was done in the last LATELY actions (v3: was 0.03)
 LATELY = 8
 FAIL_MOOD = -0.10
 OK_MOOD = 0.01
@@ -37,6 +37,7 @@ SLEEP_MAX_TICKS = 60           # 60 ticks = 12 world hours = 1.5 real hours
 def new_state() -> dict:
     s = needs.fresh()
     s.update({"doing": None, "history": [], "done_at": {}, "at": world.HOME, "world_version": 1})
+    learn.setup(s)
     return s
 
 
@@ -58,15 +59,18 @@ def allowed(a: Action, s: dict, real: datetime) -> bool:
 PLACE_PULL = 25.0              # how strongly beliefs and distance steer the choice of place
 
 
-def place_values(a: Action, s: dict) -> dict[str, float]:
-    """For every place this action can happen: what he believes about it minus the cost of getting there."""
+def place_values(a: Action, s: dict, real: datetime) -> dict[str, float]:
+    """For every place this action can happen: what he expects of it (V), how new it is (x curiosity), minus the
+    cost of getting there."""
     here = s.get("at", world.HOME)
-    return {p: beliefs.bonus(s, a.name, p) - world.travel_cost(here, p, s["energy"])
+    hab = a.name not in learn.NO_HAB
+    return {p: beliefs.bonus(s, a.name, p) + (learn.novelty_pull(s, p, real) if hab else 0.0)
+            - world.travel_cost(here, p, s["energy"])
             for p in world.places_for(a.name, here)}
 
 
-def pick_place(a: Action, s: dict, rng: random.Random) -> str:
-    vals = place_values(a, s)
+def pick_place(a: Action, s: dict, rng: random.Random, real: datetime) -> str:
+    vals = place_values(a, s, real)
     places = list(vals)
     if len(places) == 1:
         return places[0]
@@ -87,7 +91,7 @@ def score(a: Action, s: dict, real: datetime, rng: random.Random) -> float:
     penalty = LATELY_PENALTY * recent.count(a.name)
     if recent and recent[-1] == a.name:
         penalty += REPEAT_PENALTY
-    vals = place_values(a, s)
+    vals = place_values(a, s, real)
     return base + (max(vals.values()) if vals else 0.0) + rng.uniform(0, NOISE) - penalty
 
 
@@ -108,21 +112,29 @@ def wake_up(s: dict, real: datetime) -> bool:
 
 
 def start(a: Action, s: dict, real: datetime, rng: random.Random) -> None:
-    place = pick_place(a, s, rng)
+    place = pick_place(a, s, rng, real)
     here = s.get("at", world.HOME)
     s["doing"] = {"action": a.name, "place": place, "from": here, "travel": world.travel_ticks(here, place),
-                  "ticks": 0, "ok": None, "met": 0.0, "since": real.isoformat(timespec="seconds")}
+                  "ticks": 0, "ok": None, "met": 0.0, "since": real.isoformat(timespec="seconds"),
+                  "expect": round(learn.value(s, f"{a.name}@{place}"), 4)}
     s["history"].append(a.name)
     s["history"] = s["history"][-50:]
     s["done_at"].setdefault(a.name, []).append(real.isoformat(timespec="seconds"))
     s["done_at"][a.name] = s["done_at"][a.name][-10:]
 
 
-def arrive(s: dict, outcome: Callable[[str, str], bool]) -> None:
-    """At the place: now the action really happens, and the world says whether it works."""
+def arrive(s: dict, outcome: Callable[[str, str], bool], real: datetime, rng: random.Random) -> None:
+    """At the place: now the action really happens, and the world says whether it works.
+
+    Habituation is measured before this visit counts; novelty meets curiosity. For searching and drawing, arousal
+    decides first whether he can keep his mind on it (Yerkes-Dodson); s["distracted"] tells the executor."""
     d = s["doing"]
     s["at"] = d["place"]
-    d["ok"] = outcome(d["action"], d["place"])
+    d["hab"] = round(learn.relief_factor(s, d["action"], d["place"]), 4)
+    d["novelty"] = round(learn.arrive(s, d["place"], d["action"], real), 3)
+    s["distracted"] = d["action"] in learn.YD_ACTIONS and rng.random() > learn.performance(s)
+    d["ok"] = outcome(d["action"], d["place"]) and not s["distracted"]
+    d["distracted"] = s.pop("distracted")
 
 
 def fly(s: dict) -> bool:
@@ -145,7 +157,7 @@ def progress(s: dict, real: datetime, rng: random.Random) -> dict | None:
         if not wake_up(s, real):
             return None
     else:
-        share = (1.0 if d["ok"] else 0.3) / a.ticks          # a failed try still scratches the itch a bit
+        share = (1.0 if d["ok"] else 0.3) / a.ticks * d.get("hab", 1.0)   # a failed try still scratches a bit
         d["met"] += needs.relieve(s, a.relief, share)
         needs.burden(s, a.side, 1.0 / a.ticks)
         s["energy"] = needs.clamp(s["energy"] + a.energy, -1, 1)
@@ -162,7 +174,8 @@ def progress(s: dict, real: datetime, rng: random.Random) -> dict | None:
         feel = world.feel(a.name, d["place"])
         s["mood"] = needs.clamp(s["mood"] + feel + rng.uniform(-PLACE_NOISE, PLACE_NOISE), -1, 1)
     done = {"action": a.name, "place": d["place"], "ok": d["ok"], "ticks": d["ticks"], "met": round(d["met"], 3),
-            "dmood": round(s["mood"] - before, 4)}
+            "dmood": round(s["mood"] - before, 4), "expect": d.get("expect", 0.0),
+            "distracted": d.get("distracted", False)}
     s["doing"] = None
     return done
 
@@ -173,11 +186,13 @@ def tick(s: dict, real: datetime, rng: random.Random, outcome: Callable[[str, st
     asleep = bool(s["doing"] and s["doing"]["action"] == "sleep")
     needs.rise(s, night, asleep)
     needs.drift_mood(s)
+    learn.decay_habits(s)
     event = {"finished": None, "started": None, "arrived": None, "top": None}
     d = s["doing"]
+    learn.arousal_tick(s, d, bool(d and d.get("travel", 0) > 0))
     if d and d.get("travel", 0) > 0:
         if fly(s):
-            arrive(s, outcome)
+            arrive(s, outcome, real, rng)
             event["arrived"] = d["action"]
         return event
     if d:
@@ -187,6 +202,6 @@ def tick(s: dict, real: datetime, rng: random.Random, outcome: Callable[[str, st
         start(a, s, real, rng)
         event["started"], event["top"] = a.name, top
         if s["doing"]["travel"] == 0:               # already there
-            arrive(s, outcome)
+            arrive(s, outcome, real, rng)
             event["arrived"] = a.name
     return event

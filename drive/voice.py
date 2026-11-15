@@ -3,8 +3,9 @@
 One model (qwen3:8b, fully in VRAM at 4096 context). A second, small model (qwen3:1.7b) is only a fallback for
 when the big one times out; both do not fit in the 8 GB together next to the desktop.
 
-Every call gets a small context: the character sheet, how he feels in words, what pulls at him, a few beliefs
-and the three or so memories code recalled. Public text goes through `vet` before anything is saved.
+Every call gets a small context: the character sheet, how he feels (an emotion word) and the at most four things in
+his working memory (attend.py: a need, what he is doing, a memory, something he just saw...; the memories code
+recalled for this text compete for a place there). Public text goes through `vet` before anything is saved.
 """
 
 from __future__ import annotations
@@ -18,7 +19,7 @@ from pathlib import Path
 
 import requests
 
-from . import beliefs, clock, safety, world
+from . import attend, clock, learn, safety, world
 from .text import similarity, words
 
 OLLAMA = "http://127.0.0.1:11434"
@@ -96,16 +97,6 @@ def mood_words(mood: float, energy: float) -> str:
     return f"{m}, {e}"
 
 
-NEED_WORDS = {"rest": "you need rest", "curiosity": "you want to find something out",
-              "social": "you want company, or at least someone to disapprove of",
-              "expression": "you want to make or write something", "quiet": "you want some quiet",
-              "hunger": "you are hungry"}
-
-
-def loudest(state: dict) -> tuple[str, float]:
-    return max(state["needs"].items(), key=lambda kv: kv[1])
-
-
 def sheet(state: dict, principles: bool = True) -> str:
     """The character sheet. Only one quirk per call (rotating), so the running jokes do not take over."""
     w = state["who"]
@@ -134,17 +125,15 @@ def context(state: dict, real, recalled: list[dict] | None = None, extra: str = 
     wt = clock.world(real)
     part = ("night" if clock.is_night(real) else "morning" if wt["hour"] < 12 else
             "afternoon" if wt["hour"] < 18 else "evening")
-    need, val = loudest(state)
-    pull = NEED_WORDS[need] if val > 0.25 else "nothing in particular pulls at you"
-    bel = "; ".join(b["text"] for b in sorted(state.get("beliefs", []), key=lambda b: -b["evidence"])[:3])
-    mem = "\n".join(f"- {m['text']}" for m in (recalled or []))
+    # brain v3: only what is in his working memory goes in (attend.py); the recalled memories compete for a place
+    wm = attend.for_voice(state, recalled)
+    mind_lines = "\n".join(f"- {i['text']}" for i in wm) or "- nothing in particular"
     banned = overused(state)
     return (f"{sheet(state, principles)}\n\n"
             f"It is the {part} of day {wt['day']} of your life ({wt['time']}). You live on the roof of station "
             f"Berkel Westpolder, in Berkel en Rodenrijs, the Netherlands.\n"
-            f"You feel {mood_words(state['mood'], state['energy'])}. Right now {pull}.\n"
-            + (f"Things you believe: {bel}\n" if bel else "")
-            + (f"What comes to mind:\n{mem}\n" if mem else "")
+            f"You feel {learn.emotion(state)}, {mood_words(state['mood'], state['energy']).split(', ')[1]}.\n"
+            f"On your mind right now (most pressing first):\n{mind_lines}\n"
             + extra
             + "\nWrite in English, in your own voice. Never mention being an AI, a model or a computer program. "
               "No links. Your running jokes (Derek, wheels, the teaspoon, numbered lists) are rare seasoning: "

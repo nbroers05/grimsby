@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import beliefs, clock, life, mind, output, voice, who, world
+from . import beliefs, clock, learn, life, mind, output, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -70,6 +70,7 @@ def load() -> dict:
     s.setdefault("feeling", {"words": s.pop("feeling_words", None), "mood": s["mood"], "energy": s["energy"],
                              "tick": 0})
     s.setdefault("ticks", 0)
+    learn.setup(s)
     if beliefs.number_old(s):
         say(f"numbered his beliefs as facts (up to fact {s['facts_made']})")
     if who.migrate(s["who"]):

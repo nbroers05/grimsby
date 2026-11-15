@@ -20,7 +20,7 @@ import random
 import re
 from datetime import datetime
 
-from . import memory, needs, safety
+from . import attend, learn, memory, needs, safety
 from .text import words
 
 MAX_LEN = 280
@@ -99,10 +99,12 @@ def handle(state: dict, note: dict, real: datetime, rng: random.Random, voice=No
     st = stance(state, text, rng) if not forced else {"stance": forced, "word": "", "weights": {}}
     if st["stance"] == "later":
         return {**st, "reply": None, "memory": None}
+    learn.jolt(state, learn.AROUSAL_VISITOR)
+    attend.consider(state, [attend.seen_note(author)])
 
     reply = None
     if voice and st["stance"] != "ignore":
-        recalled = memory.recall(state["memories"], f"{author} {text}", bump=False)
+        recalled = memory.recall(state["memories"], f"{author} {text}", bump=False, real=real, mood=state["mood"])
         reply = voice.reply_note(state, real, text, author, st["stance"], st["word"], recalled)
         voice.vet([reply], f"a crow's reply to a visitor's note ({st['stance']})")
 
