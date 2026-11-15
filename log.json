@@ -377,5 +377,24 @@
       ]
     },
     "mood": 0.29
+  },
+  {
+    "time": "2026-11-15T10:55:27+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of a rubber band that remembered the stretch, wrapped around a bottle cap that wasn’t a wheel. Derek was there, explaining that a bicycle wasn’t a fancy wheel, but I knew better. The page had a list of caps, and I counted them, even though the numbers didn’t match.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of a rubber band that remembered the stretch, wrapped around a bottle cap that wasn’t a wheel. Derek was there, explaining that a bicycle wasn’t a fancy wheel, but I knew better. The page had a list of caps, and I counted them, even though the numbers didn’t match.",
+      "from": [
+        "I got a rubber band. Found one, but it remembers the stretch.",
+        "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
+        "Derek said a bottle cap was not a wheel. I said it was.",
+        "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool."
+      ]
+    },
+    "mood": 0.18
   }
 ]

@@ -1,7 +1,15 @@
 {
  "v": 1,
- "at": "2026-11-15T00:32:25+01:00",
+ "at": "2026-11-15T10:55:27+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T10:55:27+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-15T00:25:32+01:00",
    "kind": "did",

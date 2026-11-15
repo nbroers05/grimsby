@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-15T00:32:25+01:00",
+ "at": "2026-11-15T10:55:27+01:00",
  "beliefs": [],
  "long": [
   {
@@ -35,7 +35,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.02,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -49,14 +49,14 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 2.48,
+   "recalled": 2.23,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
    "text": "The machine is breathing, and I am counting its seconds.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.85,
+   "recalled": 0.77,
    "since": "2026-11-14T19:57:35+01:00"
   },
   {
@@ -98,14 +98,14 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.57,
+   "recalled": 1.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
    "text": "Humans invented bicycles to move faster than horses, but they ended up creating a mess of wheels and gears.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 0.23,
+   "recalled": 0.21,
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],

@@ -1,11 +1,19 @@
 {
  "v": 1,
- "at": "2026-11-15T00:32:25+01:00",
+ "at": "2026-11-15T10:55:27+01:00",
  "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
  "loudest": [
   {
-   "kind": "want",
-   "subject": "A list of crown cork teeth counts"
+   "kind": "need",
+   "subject": "curiosity"
+  },
+  {
+   "kind": "need",
+   "subject": "expression"
+  },
+  {
+   "kind": "need",
+   "subject": "quiet"
   }
  ],
  "open": {
@@ -16,7 +24,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "flying to the Jumbo",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -34,40 +42,48 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.2
+   "strength": 8.9
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.4
+   "strength": 7.1
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 5.4
+   "strength": 5.1
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 4.4
+   "strength": 4.1
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 3.4
+   "strength": 3.1
   },
   {
    "topic": "weather",
-   "strength": 3.4
+   "strength": 3.1
   },
   {
    "topic": "the art of making lists",
-   "strength": 3.4
+   "strength": 3.1
   },
   {
    "topic": "molecular networks",
-   "strength": 3.2
+   "strength": 2.9
   }
  ],
  "budget": {
   "amount": 12,
   "unit": "bottle caps",
   "note": "imaginary; he spends it on his wishlist in his head"
+ },
+ "brain": {
+  "emotion": "content",
+  "valence": 0.182,
+  "arousal": 0.304,
+  "average": 0.0,
+  "values": {},
+  "habit": {}
  }
 }
