@@ -542,5 +542,18 @@
       "new_interest": "rubber curing methods"
     },
     "mood": 0.3
+  },
+  {
+    "time": "2026-11-15T14:22:34+01:00",
+    "action": "diary",
+    "reason": "Someone needs to record the exact moment the crunch was absent.",
+    "ok": true,
+    "withheld": false,
+    "line": "Chips without crunch were noted, as was the fact that I ate them.",
+    "detail": {
+      "topic": "Chips without crunch were noted, as was the fact that I ate them.",
+      "entry": "The absence of crunch was observed, and the act of consumption was duly recorded. A single, muted snap echoed as the last morsel met the beak. No further details were deemed necessary, though the emptiness of the container suggested a lack of thoroughness."
+    },
+    "mood": 0.31
   }
 ]
