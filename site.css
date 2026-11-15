@@ -273,3 +273,7 @@ html.world-open, html.world-open body { overflow: hidden; }
 .pill.dream-tag { background: var(--paper); font: 400 13px/18px var(--font-pixel); }
 .about-row.version p { margin: 0; }
 #leave-other { margin-top: 8px; }
+.hud-rename { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 4px; }
+.hud-rename label { width: 100%; }
+.hud-rename input { flex: 1; min-width: 0; min-height: 32px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 3px; background: #fff; color: #16130f; font: 400 14px var(--font-body); }
+.hud-rename button { min-height: 32px; padding: 0 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper-raised); color: var(--ink); cursor: pointer; }

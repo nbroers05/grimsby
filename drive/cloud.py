@@ -98,6 +98,28 @@ def fetch_gifts(say) -> list[dict]:
         return []
 
 
+def fetch_whistles(s: dict, say) -> list[dict]:
+    """WERELD step 4: whistles since the last tick ({x, z, at}). The first time only remembers where to start."""
+    cfg = configured()
+    if not cfg:
+        return []
+    try:
+        last = s.get("whistle_id")
+        if last is None:
+            rows = request(cfg, "GET", "whistles?select=id&order=id.desc&limit=1") or []
+            s["whistle_id"] = rows[0]["id"] if rows else 0
+            return []
+        rows = request(cfg, "GET", f"whistles?id=gt.{int(last)}&select=id,x,z,at&order=id.asc&limit=50") or []
+        if rows:
+            s["whistle_id"] = rows[-1]["id"]
+        return rows
+    except (urllib.error.URLError, OSError, ValueError) as e:
+        if not _seen.get("whistles_down"):
+            say(f"cloud: could not fetch whistles ({e}); tries again next tick")
+        _seen["whistles_down"] = True
+        return []
+
+
 def answer_gift(gift_id: int, reply: str | None, taken: bool, at: str, say) -> bool:
     """His reply (written next to the note in the sand) and/or that he took the item."""
     cfg = configured()

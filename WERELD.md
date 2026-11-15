@@ -45,6 +45,11 @@ Tabellen (voorstel, mag je verbeteren):
 
 ## Stap 4: andere bezoekers en extras
 
+> Status 15-11-2026: built and live. `others.js` (Presence for who is here, Broadcast for positions and whistles),
+> `sound.js` (sea, footsteps, birds, whistle, caw; synthesized, so no CC0 files to credit), `drive/hear.py` +
+> `supabase/whistles.sql` (the brain hears whistles within 25 m while awake). Only in the expanded world and not on
+> touch screens yet (no joystick).
+
 - Supabase Realtime Presence: andere bezoekers zien als simpel poppetje met hun naam.
 - Fluiten is hoorbaar voor anderen in de buurt, en de vogel kan het "horen" als noticed-gebeurtenis als hij wakker is.
 - Gebouwen betreedbaar maken komt later, net als bij Pino (eerst 1 gebouw).

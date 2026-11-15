@@ -23,7 +23,7 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import beliefs, clock, cloud, learn, life, memory, mind, notes, output, safety, voice, who, world
+from . import beliefs, clock, cloud, hear, learn, life, memory, mind, notes, output, safety, voice, who, world
 from .act import Executor
 from .voice import VoiceDown, Withheld
 
@@ -206,6 +206,15 @@ def gifts_in(s: dict, real: datetime) -> None:
         say(f"gift {g['id']} from {name}: {what}")
 
 
+def whistles_in(s: dict, real: datetime) -> None:
+    """WERELD step 4: a whistle close by, while he is awake, makes him jump (drive/hear.py)."""
+    ws = cloud.fetch_whistles(s, say)
+    if ws:
+        pos = cloud.position(s)
+        heard = hear.hear(s, ws, (pos["x"], pos["z"]), real, mind.feed)
+        say(f"whistles: {len(ws)}, heard {len(heard)}")
+
+
 def gifts_out(s: dict, real: datetime, rng: random.Random) -> None:
     """One waiting note per tick, if he is up to it. His reply and what he took go back to Supabase."""
     for got in notes.tend(s, real, rng, voice):
@@ -250,6 +259,7 @@ def main() -> int:
             try:
                 if PUBLIC:
                     gifts_in(s, real)
+                    whistles_in(s, real)
                 ex = Executor(s, real, rng, ARCHIVE, say)
                 ev = life.tick(s, real, rng, ex, describe=describe_from_pending(s), voice=Voice(s, real))
                 s["ticks"] += 1

@@ -69,6 +69,7 @@
     if (C && window.supabase) SBG = window.supabase.createClient(C.url, C.key, { auth: { persistSession: false },
       global: { headers: { "x-grimsby-client": clientId } } });
   } catch (e) { SBG = null; }
+  window.GRIMSBY_SBG = SBG;                          // world.js: other visitors (Realtime) and whistles
   var GIFT_DAYS = 7, GIFT_MAX = 40;
   function myGifts() { try { return JSON.parse(localStorage.getItem("grimsby-gifts") || "[]"); } catch (e) { return []; } }
   function rememberGift(id) {
@@ -518,6 +519,26 @@
   $("hud-now-hide").addEventListener("click", function () { showNowCard(false); });
   $("hud-now-show").addEventListener("click", function () { showNowCard(true); });
   try { if (localStorage.getItem("grimsby-nowcard") === "0") { $("hud-now").hidden = true; $("hud-now-show").hidden = false; } } catch (e) {}
+
+  // Who is here (WERELD.md step 4): world.js sends the names of the others it sees on the island
+  document.addEventListener("grimsby:visitors", function (e) {
+    var names = e.detail || [], box = $("hud-visitors");
+    box.textContent = "";
+    box.appendChild(el("span", "pill eva", "you"));
+    names.slice(0, 12).forEach(function (n) { box.appendChild(el("span", "pill", clean(n).slice(0, 24))); });
+    if (names.length > 12) box.appendChild(el("span", "pill", "+" + (names.length - 12)));
+    $("hud-count").textContent = String(names.length + 1);
+  });
+  try { $("hud-name").value = localStorage.getItem("grimsby-name") || ""; } catch (e) {}
+  $("hud-rename").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nm = $("hud-name").value.trim().slice(0, 24);
+    if (!nm) return;
+    try { localStorage.setItem("grimsby-name", nm); } catch (x) {}
+    $("leave-name").value = nm;
+    document.dispatchEvent(new CustomEvent("grimsby:rename", { detail: nm }));
+    $("hud-name").blur();
+  });
 
   // Leave something (WERELD.md step 3): into Supabase, where you stand (or by the water near the station).
   var item = "walnut";

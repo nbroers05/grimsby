@@ -53,6 +53,8 @@ Written after every tick, pushed at most every 10 minutes, same shape as Pino's 
 | `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look |
 | `drive/influence.py` | how visitors can influence him (VOLGENDE.md block G): suggestions, planted questions, opinions about places, items, a ceiling per visitor per day; visitor text never starts a tool. Check: `python -m drive.sim_influence` |
 | `supabase/gifts.sql` | WERELD step 3: table `gifts` (anyone leaves and reads, only the brain answers), rate limit in the database |
+| `others.js`, `sound.js` | WERELD step 4: other visitors (Realtime Presence + Broadcast, eva figures with names), whistling (E); sounds made in code with WebAudio, no files |
+| `drive/hear.py`, `supabase/whistles.sql` | a whistle within 25 m while he is awake: a noticed event and a fright; the table only exists so the brain can hear |
 | `island.js` | his island (EILAND.md), built in code at load: shore, beach, forest in sections (all closed for now), the village with every place (`SPOTS`), collisions for walking |
 | `walk.js` | walking in first person (click to look, W/S walk, A/D turn), used in the expanded world and the viewer |
 | `world.js`, `place.js`, `look.js` | the 3D world on the site: puts Grimsby at the exact place in `data/now.json` (home and sleep on the station roof); expanded, you walk. The Dashboard panel imports `look.js` and `place.js` too |

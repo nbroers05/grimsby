@@ -66,6 +66,7 @@
     </div>
     <div class="world-ctl">
       <button type="button" id="outline-btn" aria-pressed="false" title="Ink lines on the buildings">lines</button>
+      <button type="button" id="sound-btn" aria-pressed="true" title="Sea, footsteps, whistles (only while walking)">sound on</button>
     </div>
     <span class="world-note">Loading the island…</span>
     <span class="world-credit">drag to look around · ctrl + scroll to zoom · his island, built in code</span>
@@ -108,11 +109,13 @@
         <div class="hud-body">
           <span class="label">here now · <span id="hud-count">1</span></span>
           <div class="chips" id="hud-visitors"><span class="pill eva">you</span></div>
-          <p class="hint hud-vis-note">Nobody else can see you yet. Other visitors show up once his world goes online.</p>
+          <form class="hud-rename" id="hud-rename"><label class="hint" for="hud-name">your name here</label>
+            <input id="hud-name" type="text" maxlength="24" autocomplete="nickname"><button type="submit">ok</button></form>
+          <p class="hint hud-vis-note">Press E to whistle. Others nearby hear it, and so does he, if he is awake.</p>
         </div>
       </section>
 
-      <div class="hud-hint">click to look around · W/S walk · A/D turn · shift to hurry · Esc to collapse</div>
+      <div class="hud-hint">click to look around · W/S walk · A/D turn · shift to hurry · E whistle · Esc to collapse</div>
       <button type="button" class="leave-btn" id="leave-open">Leave something</button>
       <div class="hud-chip leave-status" id="leave-status" role="status" hidden></div>
     </div>

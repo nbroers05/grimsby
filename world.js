@@ -7,6 +7,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { buildIsland, islandMeshes } from "./island.js";
 import { makeWalker } from "./walk.js";
+import { makeOthers } from "./others.js";
+import * as sound from "./sound.js";
 import { INK, MOODS, makeLook, moodNow } from "./look.js";
 import { placeFor, placeForNow, pose as poseFor, whereNow, perch as perchOf } from "./place.js";
 
@@ -154,7 +156,11 @@ function pose(now) {
   c.shut.forEach(e => e.visible = state.asleep);
   c.legs.forEach(l => l.visible = !state.flying);
   let flap = 0.1, headY = 0, headZ = 0, bob = 0, bodyTilt = 0;
-  if (state.flying) {
+  const fright = state.fright ? (now - state.fright) / 1300 : 1;   // a whistle made him jump (WERELD step 4)
+  if (fright < 1 && !state.flying && !state.asleep) {
+    flap = Math.sin(t * 22) * 0.9 * (1 - fright); bob = Math.sin(Math.PI * Math.min(1, fright * 2.2)) * 1.6;
+    headZ = 0.35 * (1 - fright);
+  } else if (state.flying) {
     flap = Math.sin(t * 14) * 0.9; bodyTilt = -0.12;
   } else if (state.asleep) {
     headY = -0.35; headZ = -0.5; bob = Math.sin(t * 1.4) * 0.04;
@@ -276,7 +282,12 @@ Promise.resolve().then(() => {
   scene.add(built.group);
   lamps = makeLamps(island.lamps); scene.add(lamps);
   zzz = zzzSprite(); scene.add(zzz);
-  walker = makeWalker(THREE, camera, renderer.domElement, island);
+  walker = makeWalker(THREE, camera, renderer.domElement, island, { onWhistle: myWhistle });
+  others = makeOthers(THREE, scene, look.toon, {
+    client: window.GRIMSBY_SBG, groundAt: island.groundAt, name: walkName(),
+    onWhistle: p => { const d = walker.pos.distanceTo(new THREE.Vector3(p.x, walker.pos.y, p.z)); sound.whistle(1 - d / HEAR_FAR); startle(p); },
+    onList: names => document.dispatchEvent(new CustomEvent("grimsby:visitors", { detail: names })),
+  });
   setMood(currentMood());
   setOutline(outlineOn);
   ready = true;
@@ -295,14 +306,47 @@ Promise.resolve().then(() => {
 
 // ---------- walking: only in the expanded world, and not on touch screens (no joystick yet) ----------
 const canWalk = !matchMedia("(pointer: coarse)").matches;
+// ---------- other visitors, whistling and sound (WERELD.md step 4) ----------
+const HEAR_FAR = 60, CROW_HEARS = 25;
+let others = null, stepDist = 0, lastStep = null;
+function walkName() {
+  try { const n = localStorage.getItem("grimsby-name"); if (n) return n.slice(0, 24); } catch (e) {}
+  return "visitor " + Math.random().toString(36).slice(2, 5);
+}
+document.addEventListener("grimsby:rename", e => { if (others) others.rename(e.detail); });
+function startle(p) {                              // a whistle close to him, while he is awake: he jumps
+  if (state.asleep || state.flying) return;
+  if (Math.hypot(p.x - state.pos.x, p.z - state.pos.z) > CROW_HEARS) return;
+  state.fright = performance.now();
+  const d = walking ? walker.pos.distanceTo(state.pos) : 20;
+  setTimeout(() => sound.caw(Math.max(0, 1 - d / HEAR_FAR)), 120);
+}
+function myWhistle(pos) {
+  sound.start();
+  sound.whistle(1);
+  if (others) others.whistle(pos.x, pos.z);
+  startle(pos);
+  const sb = window.GRIMSBY_SBG;                   // so the brain can hear it too; over the limit = silently not
+  if (sb) sb.from("whistles").insert({ x: Math.round(pos.x * 10) / 10, z: Math.round(pos.z * 10) / 10 }).then(() => {}, () => {});
+}
+const soundBtn = document.getElementById("sound-btn");
+function showSound() { if (soundBtn) { soundBtn.setAttribute("aria-pressed", sound.isOn()); soundBtn.textContent = sound.isOn() ? "sound on" : "sound off"; } }
+if (soundBtn) soundBtn.addEventListener("click", () => { sound.setOn(!sound.isOn()); if (sound.isOn()) sound.start(); showSound(); });
+showSound();
+renderer.domElement.addEventListener("click", () => { if (walking) sound.start(); });
+
 function setWalking(on) {
   on = on && canWalk && !!walker;
   if (on === walking) return;
   walking = on;
   controls.enabled = !on;
-  if (on) { walker.reset(); walker.start(); }
+  if (on) {
+    walker.reset(); walker.start(); sound.start(); lastStep = null;
+    if (others) others.join(() => ({ x: walker.pos.x, z: walker.pos.z, yaw: walker.yaw }));
+  }
   else {
-    walker.stop();
+    walker.stop(); sound.stop();
+    if (others) others.leave();
     const aim = state.pos.clone(); aim.y += 1.5;      // back to looking at him
     controls.target.copy(aim);
     camera.position.copy(aim).addScaledVector(camOffset, camDist);
@@ -325,7 +369,16 @@ function frame(now) {
   stepFlight(now);
   pose(now);
   for (const s of spinners) s.rotation.z -= dt * 0.6;
-  if (walking) { walker.update(dt); renderer.render(scene, camera); return; }
+  if (walking) {
+    walker.update(dt);
+    if (others) others.update(dt);
+    const p = walker.pos;                          // footsteps every ~0.8 m; the sea louder near the shore
+    if (lastStep) { stepDist += Math.hypot(p.x - lastStep.x, p.z - lastStep.z); }
+    lastStep = { x: p.x, z: p.z };
+    if (stepDist > 0.8) { stepDist = 0; sound.step(!island.land.inVillage(p.x, p.z)); }
+    if (Math.random() < 0.05) sound.seaNear(Math.max(0, 1 - island.land.shoreDist(p.x, p.z) / 60));
+    renderer.render(scene, camera); return;
+  }
   // follow him: move the orbit centre with the bird, keep the user's chosen angle, distance eases to camDist
   const aim = state.pos.clone(); aim.y += 1.5;
   const delta = aim.sub(controls.target);
@@ -339,4 +392,4 @@ function frame(now) {
 
 window.__grimsbyWorld = { scene, camera, controls, state, setMood, setOutline, renderer, get meshes() { return meshes; },
   get island() { return island; }, get walking() { return walking; },
-  get you() { return walking && walker ? walker.pos : controls.target; }, dropPoint };
+  get you() { return walking && walker ? walker.pos : controls.target; }, dropPoint, get others() { return others; } };
