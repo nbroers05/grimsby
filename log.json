@@ -725,5 +725,18 @@
       "new_interest": "tricycle tyre testing"
     },
     "mood": 0.1
+  },
+  {
+    "time": "2026-11-15T19:41:55+01:00",
+    "action": "diary",
+    "reason": "The bench is cold and the ink is dry, but the page is clean.",
+    "ok": true,
+    "withheld": false,
+    "line": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+    "detail": {
+      "topic": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has neve",
+      "entry": "The crumb was no larger than a pinhead, but I consumed it with the solemnity of a man who has never been wrong. The taste lingered like a well-kept secret. I counted the seconds between bites. No crumbs were left, not even the ghost of one. A small victory, recorded and preserved."
+    },
+    "mood": 0.19
   }
 ]
