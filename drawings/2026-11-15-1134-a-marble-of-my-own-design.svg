@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1e1e1e" />
+  <circle cx="100" cy="100" r="90" fill="#007acc" />
+  <circle cx="100" cy="100" r="80" fill="#005fa3" />
+  <circle cx="100" cy="100" r="70" fill="#004a86" />
+  <circle cx="100" cy="100" r="60" fill="#003a6c" />
+  <circle cx="100" cy="100" r="50" fill="#002a52" />
+  <circle cx="100" cy="100" r="40" fill="#001a38" />
+  <circle cx="100" cy="100" r="30" fill="#000a20" />
+  <circle cx="100" cy="100" r="20" fill="#000000" />
+  <circle cx="100" cy="100" r="10" fill="#333333" />
+  <text x="100" y="110" font-size="12" fill="white" text-anchor="middle">Blue marble</text>
+</svg>

@@ -422,5 +422,21 @@
       "entry": "I found a crust that was, frankly, worse than a poorly folded map. It was the kind of crust that left a trail of crumbs like a whispered secret, and the texture suggested it had been through a war with a toaster. The thing was so bad, it made me consider the merits of a map. I didn’t take it. I left it. And I still don’t know why."
     },
     "mood": 0.06
+  },
+  {
+    "time": "2026-11-15T11:34:33+01:00",
+    "action": "draw",
+    "reason": "Because I need to leave a mark where none exists",
+    "ok": true,
+    "withheld": false,
+    "line": "A perfect sphere in my mind, but I had to settle for concentric circles and a few lines to suggest depth.",
+    "detail": {
+      "file": "drawings/2026-11-15-1134-a-marble-of-my-own-design.svg",
+      "title": "A Marble of My Own Design",
+      "caption": "I drew it with my beak and a modicum of patience. Not bad for a bird who thinks in hexagons.",
+      "subject": "a blue marble",
+      "time": "2026-11-15T11:34:33+01:00"
+    },
+    "mood": 0.14
   }
 ]
