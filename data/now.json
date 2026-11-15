@@ -1,40 +1,40 @@
 {
  "v": 1,
- "at": "2026-11-15T10:55:27+01:00",
+ "at": "2026-11-15T11:05:57+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to the Jumbo",
- "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
+ "doing": "flying to the station roof",
+ "thought": "The ink is drying too fast for a proper map of bad crust.",
  "feeling": {
-  "mood": 0.18,
-  "energy": 0.99,
-  "words": "The moon is a thin slice of cheese, hanging low over the station. A single light flickers in the distance, like a bad memory. I am content. Just a little.",
-  "emotion": "content",
-  "arousal": 0.3
+  "mood": 0.01,
+  "energy": 0.93,
+  "words": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls.",
+  "emotion": "keyed up",
+  "arousal": 0.69
  },
  "needs": {
-  "rest": 0.01,
-  "curiosity": 0.82,
-  "social": 0.81,
-  "expression": 0.82,
-  "quiet": 0.81,
-  "hunger": 0.81
+  "rest": 0.06,
+  "curiosity": 0.66,
+  "social": 0.9,
+  "expression": 0.43,
+  "quiet": 0.66,
+  "hunger": 0.1
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 6,
-  "time": "10:31"
+  "time": "11:55"
  },
- "action": "eat",
+ "action": "neighbour",
  "place": {
-  "id": "jumbo",
-  "name": "the Jumbo",
-  "words": "at the Jumbo by the station",
-  "poi": "n3867952219",
-  "category": "supermarket"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Berkel Westpolder",
+  "poi": "n3149917960",
+  "category": "station"
  },
  "flying": {
-  "from": "the station roof",
-  "to": "the Jumbo"
+  "from": "a bench by the station",
+  "to": "the station roof"
  }
 }

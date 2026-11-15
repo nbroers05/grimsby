@@ -396,5 +396,18 @@
       ]
     },
     "mood": 0.18
+  },
+  {
+    "time": "2026-11-15T11:01:27+01:00",
+    "action": "diary",
+    "reason": "I need to record the exact moment the light bends over the edge of the bench.",
+    "ok": true,
+    "withheld": false,
+    "line": "A crust so bad it made a map look like a good idea.",
+    "detail": {
+      "topic": "I found a crust that was, frankly, worse than a poorly folded map.",
+      "entry": "I found a crust that was, frankly, worse than a poorly folded map. It was a thin, crumpled thing, the color of a bruised pear, and it had the consistency of a damp newspaper. I considered it for a moment, then spat it into the gutter. The way it flopped over the edge made me think of Derek’s latest attempt to steal my teaspoon."
+    },
+    "mood": 0.02
   }
 ]

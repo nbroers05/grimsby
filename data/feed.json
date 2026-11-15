@@ -1,7 +1,49 @@
 {
  "v": 1,
- "at": "2026-11-15T10:55:27+01:00",
+ "at": "2026-11-15T11:05:57+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T11:05:57+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T11:01:27+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "I need to record the exact moment the light bends over the edge of the bench.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T10:59:57+01:00",
+   "kind": "did",
+   "text": "flying from the Jumbo to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T10:56:57+01:00",
+   "kind": "felt",
+   "text": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls."
+  },
+  {
+   "at": "2026-11-15T10:56:57+01:00",
+   "kind": "noticed",
+   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
+  },
+  {
+   "at": "2026-11-15T10:56:57+01:00",
+   "kind": "did",
+   "text": "looking for something to eat at the Jumbo by the station",
+   "why": "Someone needs to document the indignity of a crust",
+   "ok": true,
+   "action": "eat"
+  },
   {
    "at": "2026-11-15T10:55:27+01:00",
    "kind": "did",
@@ -328,14 +370,6 @@
    "why": "I feel the need to record my suspicions about the computer's hum.",
    "ok": true,
    "action": "diary"
-  },
-  {
-   "at": "2026-11-14T19:36:32+01:00",
-   "kind": "did",
-   "text": "looking up why did humans invent bicycles",
-   "why": "I am curious about the origins of wheels, which I distrust.",
-   "ok": true,
-   "action": "search"
   }
  ]
 }

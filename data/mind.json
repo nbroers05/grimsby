@@ -1,19 +1,19 @@
 {
  "v": 1,
- "at": "2026-11-15T10:55:27+01:00",
- "thought": "The pigeon just tried to steal my teaspoon again. It’s not working.",
+ "at": "2026-11-15T11:05:57+01:00",
+ "thought": "The ink is drying too fast for a proper map of bad crust.",
  "loudest": [
   {
    "kind": "need",
-   "subject": "curiosity"
-  },
-  {
-   "kind": "need",
-   "subject": "expression"
+   "subject": "social"
   },
   {
    "kind": "need",
    "subject": "quiet"
+  },
+  {
+   "kind": "need",
+   "subject": "curiosity"
   }
  ],
  "open": {
@@ -24,7 +24,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "flying to the Jumbo",
+ "busy": "flying to the station roof",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -79,11 +79,31 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.182,
-  "arousal": 0.304,
-  "average": 0.0,
-  "values": {},
-  "habit": {}
+  "emotion": "keyed up",
+  "valence": 0.011,
+  "arousal": 0.685,
+  "average": 0.066,
+  "values": {
+   "eat@jumbo": {
+    "V": 0.066,
+    "n": 1
+   },
+   "eat@*": {
+    "V": 0.066,
+    "n": 1
+   },
+   "diary@station-bench": {
+    "V": 0.066,
+    "n": 1
+   },
+   "diary@*": {
+    "V": 0.066,
+    "n": 1
+   }
+  },
+  "habit": {
+   "place:jumbo": 0.16,
+   "place:station-bench": 0.18
+  }
  }
 }
