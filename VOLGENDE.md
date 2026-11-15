@@ -86,3 +86,7 @@ De helft van de plekken gaat over eten. Voeg een zesde behoefte toe: honger (zoa
 ## Model
 
 Opus voor A, B en WERELD stap 1-2. Sonnet mag voor C en WERELD stap 3-4.
+
+## F. Update 15-11-2026: eiland
+
+De wereld wordt een verzonnen eiland dat stiekem Berkel is. Zie EILAND.md. Daarmee vervalt in blok E het deel "Techniek" (3DBAG, OSM, RD-omrekening) en de plekkentabel. "Stijl", "De kraai in 3D" en "Bezoekers" blijven gelden. Bezoekers spawnen op het perron van station Rodenrijs op het eiland. WERELD.md stap 2 t/m 4 blijven zoals ze zijn.
