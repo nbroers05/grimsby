@@ -1,40 +1,40 @@
 {
  "v": 1,
- "at": "2026-11-15T13:33:04+01:00",
+ "at": "2026-11-15T14:36:04+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to a bench in the Gouden Griffelplantsoen",
- "thought": "The sun is bright, but the air smells like old bread and regret",
+ "doing": "flying to the Albert Heijn",
+ "thought": "They’re pecking at crumbs like they’re solving a mystery, but I’ve seen better sleuths in a landfill.",
  "feeling": {
-  "mood": 0.15,
-  "energy": 0.91,
-  "words": "Drowsy. Full of beans. The sun is a pale yellow smear on the sky.",
+  "mood": 0.3,
+  "energy": 0.52,
+  "words": "Crust crumbles in my beak. Not bad. Not great. A better memory than the last one.",
   "emotion": "content",
-  "arousal": 0.43
+  "arousal": 0.6
  },
  "needs": {
-  "rest": 0.04,
-  "curiosity": 0.0,
-  "social": 0.21,
-  "expression": 0.27,
-  "quiet": 0.16,
-  "hunger": 0.05
+  "rest": 0.17,
+  "curiosity": 0.13,
+  "social": 0.0,
+  "expression": 0.1,
+  "quiet": 0.22,
+  "hunger": 0.13
  },
  "world": {
   "name": "Berkel en Rodenrijs",
   "day": 7,
-  "time": "07:32"
+  "time": "15:56"
  },
- "action": "diary",
+ "action": "sit",
  "place": {
-  "id": "plantsoen-bench",
-  "name": "a bench in the Gouden Griffelplantsoen",
-  "words": "on a bench in the Gouden Griffelplantsoen",
-  "poi": "n4949888156",
-  "category": "bench"
+  "id": "albert-heijn",
+  "name": "the Albert Heijn",
+  "words": "by the trolleys at the Albert Heijn",
+  "poi": "n2589814366",
+  "category": "supermarket"
  },
  "flying": {
-  "from": "a bench by the station",
-  "to": "a bench in the Gouden Griffelplantsoen"
+  "from": "the fountain in the centre",
+  "to": "the Albert Heijn"
  }
 }

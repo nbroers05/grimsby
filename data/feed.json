@@ -1,7 +1,164 @@
 {
  "v": 1,
- "at": "2026-11-15T13:33:04+01:00",
+ "at": "2026-11-15T14:36:04+01:00",
  "entries": [
+  {
+   "at": "2026-11-15T14:36:04+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T14:31:34+01:00",
+   "kind": "noticed",
+   "text": "Derek's cousin, who is worse."
+  },
+  {
+   "at": "2026-11-15T14:31:34+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "Someone needs to watch the pigeons before they steal the last shred of dignity from the fountain.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-15T14:28:34+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T14:22:34+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": "Someone needs to record the exact moment the crunch was absent.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T14:21:04+01:00",
+   "kind": "did",
+   "text": "flying from the McDonald's to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T14:18:04+01:00",
+   "kind": "noticed",
+   "text": "Found a single chip, cold, perfect by the bin at the McDonald's."
+  },
+  {
+   "at": "2026-11-15T14:18:04+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the bin at the McDonald's",
+   "why": "I need a better snack than a single chip",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T14:15:04+01:00",
+   "kind": "did",
+   "text": "flying from the library to the McDonald's",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T14:07:34+01:00",
+   "kind": "noticed",
+   "text": "Read that vulcanization is a process that hardens rubber through heat and chemicals, originally using sulfur. It has since expanded to include synthetic rubbers and various curing methods."
+  },
+  {
+   "at": "2026-11-15T14:07:34+01:00",
+   "kind": "did",
+   "text": "looking up history of vulcanization process at the library",
+   "why": "Because I want to know how rubber became less squishy",
+   "ok": true,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-15T14:07:34+01:00",
+   "kind": "mind",
+   "text": "Started wanting a list of curing systems.",
+   "change": "opened",
+   "about": "want"
+  },
+  {
+   "at": "2026-11-15T13:55:34+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "Someone wants to know why I bother with this nonsense.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-15T13:54:04+01:00",
+   "kind": "felt",
+   "text": "Crust crumbles in my beak. Not bad. Not great. A better memory than the last one."
+  },
+  {
+   "at": "2026-11-15T13:54:04+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T13:51:04+01:00",
+   "kind": "noticed",
+   "text": "Found a crust by the trolleys by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-15T13:51:04+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": "I chase crumbs for the thrill of not being hungry",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-15T13:49:34+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T13:45:04+01:00",
+   "kind": "noticed",
+   "text": "Derek's cousin, who is worse."
+  },
+  {
+   "at": "2026-11-15T13:45:04+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
+   "why": "On the fish statue, I watch the pigeons.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-15T13:42:04+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the fish statue",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-15T13:34:34+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": "A crumpled chip crumbles again, and I need to record it.",
+   "ok": true,
+   "action": "diary"
+  },
   {
    "at": "2026-11-15T13:33:04+01:00",
    "kind": "did",
@@ -198,170 +355,6 @@
    "at": "2026-11-15T11:42:03+01:00",
    "kind": "noticed",
    "text": "The pigeons ignored me entirely."
-  },
-  {
-   "at": "2026-11-15T11:42:03+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain next to the station",
-   "why": "Lonely, so I watch pigeons",
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-15T11:40:33+01:00",
-   "kind": "did",
-   "text": "flying from the mill memorial to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:34:33+01:00",
-   "kind": "did",
-   "text": "drawing a blue marble at the memorial for the old Ondermolen",
-   "why": "Because I need to leave a mark where none exists",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-15T11:33:03+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to the mill memorial",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:30:03+01:00",
-   "kind": "did",
-   "text": "re-reading old diary pages on the roof of station Berkel Westpolder",
-   "why": "On the roof of Berkel Westpolder, I seek quiet.",
-   "ok": true,
-   "action": "read_back"
-  },
-  {
-   "at": "2026-11-15T11:28:33+01:00",
-   "kind": "did",
-   "text": "flying from the Jumbo to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:25:33+01:00",
-   "kind": "noticed",
-   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
-  },
-  {
-   "at": "2026-11-15T11:25:33+01:00",
-   "kind": "did",
-   "text": "looking for something to eat at the Jumbo by the station",
-   "why": "Because I need something to eat and this is the closest place to look",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T11:24:03+01:00",
-   "kind": "did",
-   "text": "flying from the mill memorial to the Jumbo",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:21:58+01:00",
-   "kind": "did",
-   "text": "sitting still at the memorial for the old Ondermolen",
-   "why": "The memorial needs a crow with a sense of quiet",
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-15T11:20:28+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to the mill memorial",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:15:58+01:00",
-   "kind": "noticed",
-   "text": "Derek was there, and smug about it."
-  },
-  {
-   "at": "2026-11-15T11:15:58+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain next to the station",
-   "why": "Lonely, so I watch pigeons to feel less alone",
-   "ok": true,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-15T11:14:28+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:09:58+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": "I need to record the shape of a bad crust",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T11:08:28+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:07:27+01:00",
-   "kind": "noticed",
-   "text": "Pino was at the mixing desk beside the synth, thinking \"Sit down at the synth, patch a fresh loop and just listen – quiet and easy, nothing pressing\" (from pinos.world)."
-  },
-  {
-   "at": "2026-11-15T11:07:27+01:00",
-   "kind": "did",
-   "text": "checking on Pino next door",
-   "why": "Lonely, so I’m checking on a neighbor who might be lonely too",
-   "ok": true,
-   "action": "neighbour"
-  },
-  {
-   "at": "2026-11-15T11:05:57+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T11:01:27+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "I need to record the exact moment the light bends over the edge of the bench.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T10:59:57+01:00",
-   "kind": "did",
-   "text": "flying from the Jumbo to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T10:56:57+01:00",
-   "kind": "felt",
-   "text": "Sunlight spills across the tiles like spilled ink. A single drop clings to the edge of a gutter, trembling. I count it twice before it falls."
   }
  ]
 }
