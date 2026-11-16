@@ -1091,5 +1091,18 @@
       "new_interest": "Cork liner mechanics"
     },
     "mood": 0.21
+  },
+  {
+    "time": "2026-11-16T17:12:56+01:00",
+    "action": "diary",
+    "reason": "Someone needs to remember that shiny things are not the same as important things.",
+    "ok": true,
+    "withheld": false,
+    "line": "Bottle caps are curated, not collected.",
+    "detail": {
+      "topic": "I hoard bottle caps with precision, and shiny objects are distractions.",
+      "entry": "I hoard bottle caps with precision, and shiny objects are distractions. The caps are arranged in layers, each one a perfect fit in its designated slot. I do not collect anything that glints too much or reflects the light in an odd way. The true value lies in the shape, not the shine. I do not trust the ones that make noise when dropped."
+    },
+    "mood": 0.24
   }
 ]
