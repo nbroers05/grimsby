@@ -61,5 +61,51 @@
     "caption": "The caps are not arranged with care, but with the weight of memory.",
     "subject": "the bottle caps",
     "time": "2026-11-15T18:18:04+01:00"
+  },
+  {
+    "file": "drawings/2026-11-16-1335-the-teaspoon-s-dominion.svg",
+    "title": "The Teaspoon's Dominion",
+    "caption": "A small object, a sharp edge, a place of quiet rebellion against the mundane.",
+    "subject": "the teaspoon",
+    "time": "2026-11-16T13:35:26+01:00",
+    "version": 2,
+    "mood": "suspicious",
+    "objects": [
+      {
+        "what": "teaspoon",
+        "where": "center",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "bottle cap",
+        "where": "top right",
+        "size": "small",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "book",
+        "where": "bottom left",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "cloud",
+        "where": "top left",
+        "size": "small",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "crow",
+        "where": "top right",
+        "size": "small",
+        "pose": "standing",
+        "drawn": "box"
+      }
+    ]
   }
 ]

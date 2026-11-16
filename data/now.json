@@ -1,41 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-16T12:32:26+01:00",
+ "at": "2026-11-16T13:35:26+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to a bench by the station",
- "thought": "The moon is too bright for a proper rest",
+ "doing": "drawing the teaspoon by the fountain next to the station",
+ "thought": "A sharp edge holds more power than a wing ever could",
  "feeling": {
-  "mood": 0.17,
-  "energy": 0.99,
-  "words": "The moon is a thin slice of cheese. I’ve eaten half of it. The rest is for Derek.",
-  "emotion": "content",
-  "arousal": 0.43
+  "mood": -0.24,
+  "energy": 0.96,
+  "words": "Feet heavy, mind light. The sky is a thin smear of grey, and the air smells like stale coffee and regret. I'm going to De Turk for something to eat. Probably something I'll regret.",
+  "emotion": "agitated",
+  "arousal": 0.63
  },
  "needs": {
-  "rest": 0.02,
-  "curiosity": 0.82,
-  "social": 0.81,
-  "expression": 0.82,
-  "quiet": 0.81,
-  "hunger": 0.81
+  "rest": 0.07,
+  "curiosity": 0.32,
+  "social": 0.7,
+  "expression": 0.71,
+  "quiet": 0.13,
+  "hunger": 0.01
  },
  "world": {
   "name": "the island",
-  "day": 14,
-  "time": "23:27"
+  "day": 15,
+  "time": "07:51"
  },
- "action": "diary",
+ "action": "draw",
  "place": {
-  "id": "station-bench",
-  "name": "a bench by the station",
-  "words": "on a bench by the station",
-  "obj": "bank-station",
-  "poi": "bank-station",
-  "category": "bench"
+  "id": "station-fountain",
+  "name": "the fountain by the station",
+  "words": "by the fountain next to the station",
+  "obj": "fontein-station",
+  "poi": "fontein-station",
+  "category": "fountain"
  },
- "flying": {
-  "from": "the station roof",
-  "to": "a bench by the station"
- }
+ "flying": null
 }
