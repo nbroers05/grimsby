@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-16T15:41:26+01:00",
+ "at": "2026-11-16T16:44:26+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The roof is quiet, the moon is high, and the list is safe",
+ "asleep": false,
+ "doing": "watching the world go by on the roof of de Bron church",
+ "thought": "The roof of de Bron church is too quiet for a crow with a taste for precision and a list that cannot tolerate gaps.",
  "feeling": {
-  "mood": 0.12,
-  "energy": 0.38,
-  "words": "The pigeons are squabbling over a breadcrumb. Their wings beat like a metronome. I count each squawk.",
-  "emotion": "drowsy",
-  "arousal": 0.27
+  "mood": 0.17,
+  "energy": 0.8,
+  "words": "Drowsy. Beans in my beak. The bench smells like yesterday's coffee.",
+  "emotion": "content",
+  "arousal": 0.53
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.21,
-  "social": 0.24,
-  "expression": 0.26,
-  "quiet": 0.0,
-  "hunger": 0.11
+  "rest": 0.1,
+  "curiosity": 0.0,
+  "social": 0.11,
+  "expression": 0.18,
+  "quiet": 0.29,
+  "hunger": 0.07
  },
  "world": {
   "name": "the island",
   "day": 16,
-  "time": "00:39"
+  "time": "09:03"
  },
- "action": "sleep",
+ "action": "idle",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "de-bron",
+  "name": "de Bron",
+  "words": "on the roof of de Bron church",
+  "obj": "de-bron",
+  "poi": "de-bron",
+  "category": "church"
  },
  "flying": null
 }

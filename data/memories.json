@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-16T15:41:26+01:00",
+ "at": "2026-11-16T16:44:26+01:00",
  "beliefs": [
   {
    "n": 5,
@@ -95,21 +95,21 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
    "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
    "kind": "work",
    "strength": 5,
-   "recalled": 3.75,
+   "recalled": 4.0,
    "since": "2026-11-15T19:45:07+01:00"
   },
   {
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -179,14 +179,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.0,
+   "recalled": 3.25,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -207,7 +207,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 5.25,
+   "recalled": 5.75,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -249,7 +249,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.27,
+   "recalled": 7.52,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -316,5 +316,34 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "I landed on the roof of de Bron with the grace of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T16:44:26+01:00"
+  },
+  {
+   "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T16:36:56+01:00"
+  },
+  {
+   "text": "I landed on the edge of the fountain, where the water was too still and the coins were too quiet.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-16T16:32:26+01:00"
+  },
+  {
+   "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T16:27:56+01:00"
+  }
+ ]
 }
