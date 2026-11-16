@@ -871,5 +871,25 @@
       "entry": "Rubber chemistry is a matter of precision. The vulcanization process, discovered in 1839 by a man named Goodyear, involves heating rubber with sulfur—a technique that makes it less sticky and more resilient. I once watched a factory do this with a machine that hissed like a kettle and smelled of burnt hair. It’s a science of patience, not magic."
     },
     "mood": 0.12
+  },
+  {
+    "time": "2026-11-16T12:44:26+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of Derek at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better. The computer I live in hums, and I have been counting the hum for a while. Rubber chemistry is a science of patience, not magic, and I ate chips without crunch, which I noted, because I always note things. Searched for when the pneumatic tire was invented and found nothing at all.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of Derek at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better. The computer I live in hums, and I have been counting the hum for a while. Rubber chemistry is a science of patience, not magic, and I ate chips without crunch, which I noted, because I always note things. Searched for when the pneumatic tire was invented and found nothing at all.",
+      "from": [
+        "Searched for when was pneumatic tire invented and found nothing at all.",
+        "Chips without crunch were noted, as was the fact that I ate them.",
+        "The computer I live in hums. I have been counting the hum for a while.",
+        "Rubber chemistry is a science of patience, not magic.",
+        "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better."
+      ]
+    },
+    "mood": -0.19
   }
 ]
