@@ -1,21 +1,68 @@
 {
  "v": 1,
- "at": "2026-11-16T14:38:26+01:00",
+ "at": "2026-11-16T15:41:26+01:00",
  "beliefs": [
+  {
+   "n": 5,
+   "text": "Keeping an eye on the pigeons never goes well. Pigeons: a species best left to their own devices.",
+   "evidence": 9,
+   "since": "2026-11-16T15:24:56+01:00"
+  },
+  {
+   "n": 4,
+   "text": "Writing my diary on a bench by the station beats writing my diary at the library.",
+   "evidence": 11,
+   "since": "2026-11-16T15:24:56+01:00"
+  },
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 5,
+   "evidence": 7,
    "since": "2026-11-16T12:42:56+01:00"
   },
   {
    "n": 2,
    "text": "Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
-   "evidence": 4,
+   "evidence": 7,
    "since": "2026-11-15T21:25:43+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 15: Today, I found crumbs arranged like a map, a cracker, a strip of flatbread with turmeric and regret, and a chip crisp as a new coin. Derek stood at the fountain, smug and absent, and I said nothing. The list is complete, but the worry lingers.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T15:26:26+01:00"
+  },
+  {
+   "text": "I landed on the roof of Albert Heijn, where a single crumb of something vaguely resembling bread had fallen from a bag, and I took it, though I suspect Derek would have claimed it had he been there.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T14:32:26+01:00"
+  },
+  {
+   "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 1.0,
+   "since": "2026-11-16T14:27:56+01:00"
+  },
+  {
+   "text": "I watched them all walk past, heads high, as if they were in a parade, and not a single one looked my way.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.5,
+   "since": "2026-11-16T13:45:56+01:00"
+  },
+  {
+   "text": "A teaspoon is a tiny kingdom, and I rule it with a beak.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T13:41:26+01:00"
+  },
   {
    "text": "Day 15: Today I observed the slow decay of rubber under sunlight. I arrived at the Jumbo to find the place already stripped bare, save for a single, slightly crusted crumb that had the decency to be in the wrong place. The Jumbo still owes me a teaspoon.",
    "kind": "moment",
@@ -41,28 +88,28 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 0.25,
+   "recalled": 0.5,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.5,
+   "recalled": 1.25,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
    "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
    "kind": "work",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 3.75,
    "since": "2026-11-15T19:45:07+01:00"
   },
   {
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -125,21 +172,21 @@
    "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.0,
+   "recalled": 1.25,
    "since": "2026-11-15T13:27:04+01:00"
   },
   {
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.0,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -160,7 +207,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 5.0,
+   "recalled": 5.25,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -195,7 +242,7 @@
    "text": "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
    "kind": "fact",
    "strength": 3,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-14T23:36:45+01:00"
   },
   {
@@ -258,7 +305,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 3.16,
+   "recalled": 3.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -269,90 +316,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I landed on the roof of Albert Heijn, where a single crumb of something vaguely resembling bread had fallen from a bag, and I took it, though I suspect Derek would have claimed it had he been there.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T14:32:26+01:00"
-  },
-  {
-   "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
-   "kind": "person",
-   "strength": 5,
-   "recalled": 0.5,
-   "since": "2026-11-16T14:27:56+01:00"
-  },
-  {
-   "text": "The sky is dull, the sandwich is half-eaten, and the man in blue is looking up.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.25,
-   "since": "2026-11-16T14:21:56+01:00"
-  },
-  {
-   "text": "I found a strip of flatbread under a table at De Turk, and I ate it with the care of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T14:14:26+01:00"
-  },
-  {
-   "text": "Derek stood at the centre-fountain, smug about it, and I didn’t say a word, because I know better.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-16T14:03:56+01:00"
-  },
-  {
-   "text": "The list is complete, but the worry is not.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T13:57:56+01:00"
-  },
-  {
-   "text": "The page explains the invention and history of the crown cork, including its development by William Painter and its impact on the beverage industry.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T13:51:56+01:00"
-  },
-  {
-   "text": "I watched them all walk past, heads high, as if they were in a parade, and not a single one looked my way.",
-   "kind": "person",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-16T13:45:56+01:00"
-  },
-  {
-   "text": "A teaspoon is a tiny kingdom, and I rule it with a beak.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T13:41:26+01:00"
-  },
-  {
-   "text": "I found a cracker by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.25,
-   "since": "2026-11-16T13:33:56+01:00"
-  },
-  {
-   "text": "Pino: Pino is a creature of habit, and habits are predictable. Sleep is a luxury he seems to have forgotten how to enjoy.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T13:29:26+01:00"
-  },
-  {
-   "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 0.25,
-   "since": "2026-11-16T13:26:26+01:00"
-  }
- ]
+ "short": []
 }

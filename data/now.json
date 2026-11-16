@@ -1,41 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-16T14:38:26+01:00",
+ "at": "2026-11-16T15:41:26+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "flying to De Turk",
- "thought": "The list is missing one name, and I know exactly which one",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
+ "thought": "The roof is quiet, the moon is high, and the list is safe",
  "feeling": {
-  "mood": 0.03,
-  "energy": 0.16,
-  "words": "A single pigeon lands on the edge of the tile. Its beak opens, then closes. It does not move.",
-  "emotion": "keyed up",
-  "arousal": 0.64
+  "mood": 0.12,
+  "energy": 0.38,
+  "words": "The pigeons are squabbling over a breadcrumb. Their wings beat like a metronome. I count each squawk.",
+  "emotion": "drowsy",
+  "arousal": 0.27
  },
  "needs": {
-  "rest": 0.31,
-  "curiosity": 0.18,
-  "social": 0.31,
-  "expression": 0.0,
-  "quiet": 0.16,
-  "hunger": 0.21
+  "rest": 0.0,
+  "curiosity": 0.21,
+  "social": 0.24,
+  "expression": 0.26,
+  "quiet": 0.0,
+  "hunger": 0.11
  },
  "world": {
   "name": "the island",
-  "day": 15,
-  "time": "16:15"
+  "day": 16,
+  "time": "00:39"
  },
- "action": "eat",
+ "action": "sleep",
  "place": {
-  "id": "de-turk",
-  "name": "De Turk",
-  "words": "on the terrace of De Turk",
-  "obj": "de-turk",
-  "poi": "de-turk",
-  "category": "restaurant"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
- "flying": {
-  "from": "the library",
-  "to": "De Turk"
- }
+ "flying": null
 }
