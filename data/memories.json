@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-16T19:53:26+01:00",
+ "at": "2026-11-16T20:57:24+01:00",
  "beliefs": [
   {
    "n": 6,
@@ -52,7 +52,7 @@
    "text": "Searched for history of bottle cap design and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-16T17:35:26+01:00"
   },
   {
@@ -66,14 +66,14 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.25,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 3.75,
+   "recalled": 4.5,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -94,7 +94,7 @@
    "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-16T14:27:56+01:00"
   },
   {
@@ -136,28 +136,28 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.75,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
    "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.75,
+   "recalled": 8.5,
    "since": "2026-11-15T19:45:07+01:00"
   },
   {
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.25,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -206,7 +206,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 4.25,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -227,14 +227,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.75,
+   "recalled": 4.0,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -255,7 +255,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 9.5,
+   "recalled": 10.0,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -283,7 +283,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -297,7 +297,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.52,
+   "recalled": 8.52,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -311,7 +311,7 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 5.98,
+   "recalled": 6.98,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
@@ -346,7 +346,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.16,
+   "recalled": 4.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -359,10 +359,52 @@
  ],
  "short": [
   {
-   "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+   "text": "I landed on the bench with the grace of a man who has never been wrong.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T20:48:24+01:00"
+  },
+  {
+   "text": "The pigeons ignored me entirely.",
    "kind": "person",
    "strength": 4,
    "recalled": 0.0,
+   "since": "2026-11-16T20:33:56+01:00"
+  },
+  {
+   "text": "I discovered a piece of flatbread lodged beneath a table at De Turk, and consumed it with the exactitude of someone who has never once miscalculated a single thing.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T20:26:26+01:00"
+  },
+  {
+   "text": "Vulcanization is a process that hardens rubber by creating cross-links between polymer chains, typically using sulfur and heat.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T20:21:56+01:00"
+  },
+  {
+   "text": "I found a strip of flatbread under a table at De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T19:59:26+01:00"
+  },
+  {
+   "text": "The pigeons ignored me. Again.",
+   "kind": "work",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-16T19:54:56+01:00"
+  },
+  {
+   "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 1.0,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {

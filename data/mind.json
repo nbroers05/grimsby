@@ -1,30 +1,30 @@
 {
  "v": 1,
- "at": "2026-11-16T19:53:26+01:00",
- "thought": "The crumbs on the ground are arranged in a pattern I do not recognize.",
+ "at": "2026-11-16T20:57:24+01:00",
+ "thought": "The pigeons passed me by without a glance. Not surprising, given the way I keep my list.",
  "loudest": [
   {
    "kind": "memory",
    "subject": "A crust so bad it made a map look like a good idea."
   },
   {
-   "kind": "goal",
-   "subject": "writing in his diary on a bench by the station"
+   "kind": "memory",
+   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
+  },
+  {
+   "kind": "memory",
+   "subject": "The pigeons ignored me entirely."
   },
   {
    "kind": "memory",
    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
-  },
-  {
-   "kind": "memory",
-   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
   "question": 0,
-  "want": 3,
+  "want": 2,
   "worry": 0,
   "promise": 0
  },
@@ -36,12 +36,6 @@
   "Every small thing deserves one careful look."
  ],
  "items": [
-  {
-   "kind": "want",
-   "subject": "a list of UV-resistant rubbers",
-   "since": "2026-11-15T19:55:37+01:00",
-   "why": "to keep my hoard precise and unbroken"
-  },
   {
    "kind": "want",
    "subject": "A diagram of a crown cork",
@@ -58,7 +52,7 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 8.5
+   "strength": 9.5
   },
   {
    "topic": "bottle caps and shiny objects",
@@ -95,26 +89,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "even",
-  "valence": 0.105,
-  "arousal": 0.504,
-  "average": 0.184,
+  "emotion": "content",
+  "valence": 0.198,
+  "arousal": 0.481,
+  "average": 0.178,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
     "n": 3.0
    },
    "eat@*": {
-    "V": 0.181,
-    "n": 19.1
+    "V": 0.175,
+    "n": 21.1
    },
    "diary@station-bench": {
-    "V": 0.255,
-    "n": 12.6
+    "V": 0.252,
+    "n": 14.6
    },
    "diary@*": {
-    "V": 0.264,
-    "n": 20.1
+    "V": 0.249,
+    "n": 23.1
    },
    "neighbour@home": {
     "V": 0.142,
@@ -129,20 +123,20 @@
     "n": 3.5
    },
    "pigeons@station-fountain": {
-    "V": 0.017,
-    "n": 3.2
+    "V": 0.006,
+    "n": 4.2
    },
    "pigeons@*": {
-    "V": 0.118,
-    "n": 9.9
+    "V": 0.091,
+    "n": 10.9
    },
    "sit@ondermolen": {
-    "V": 0.042,
-    "n": 0.5
+    "V": 0.07,
+    "n": 1.5
    },
    "sit@*": {
-    "V": 0.165,
-    "n": 4.5
+    "V": 0.174,
+    "n": 5.5
    },
    "read_back@home": {
     "V": 0.047,
@@ -165,16 +159,16 @@
     "n": 0.5
    },
    "eat@de-turk": {
-    "V": 0.156,
-    "n": 10.0
+    "V": 0.157,
+    "n": 12.0
    },
    "search@library": {
-    "V": 0.132,
-    "n": 8.1
+    "V": 0.141,
+    "n": 9.1
    },
    "search@*": {
-    "V": 0.132,
-    "n": 8.1
+    "V": 0.141,
+    "n": 9.1
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -185,8 +179,8 @@
     "n": 0.6
    },
    "wander@*": {
-    "V": 0.193,
-    "n": 8.3
+    "V": 0.191,
+    "n": 9.3
    },
    "pigeons@vis": {
     "V": 0.072,
@@ -197,8 +191,8 @@
     "n": 3.5
    },
    "diary@library": {
-    "V": 0.157,
-    "n": 4.0
+    "V": 0.161,
+    "n": 5.0
    },
    "pigeons@centre-fountain": {
     "V": 0.114,
@@ -275,35 +269,39 @@
    "wander@library": {
     "V": 0.04,
     "n": 1
+   },
+   "wander@plantsoen-bench": {
+    "V": 0.027,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.14,
-   "place:station-bench": 0.76,
-   "place:de-turk": 0.1,
-   "place:vis": 0.14,
-   "place:centre-fountain": 0.16
+   "place:library": 0.28,
+   "place:station-bench": 0.91,
+   "place:de-turk": 0.25,
+   "place:station-fountain": 0.09,
+   "place:plantsoen-bench": 0.15
   },
   "workingMemory": [
    {
     "kind": "memory",
     "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.47
-   },
-   {
-    "kind": "goal",
-    "subject": "writing in his diary on a bench by the station",
-    "salience": 0.4
-   },
-   {
-    "kind": "memory",
-    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
-    "salience": 0.386
+    "salience": 0.581
    },
    {
     "kind": "memory",
     "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.37
+    "salience": 0.456
+   },
+   {
+    "kind": "memory",
+    "subject": "The pigeons ignored me entirely.",
+    "salience": 0.45
+   },
+   {
+    "kind": "memory",
+    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+    "salience": 0.406
    }
   ]
  }

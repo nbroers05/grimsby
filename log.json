@@ -1259,5 +1259,18 @@
       "entry": "They passed me by, as if I were a misplaced comma in a sentence they had already read. Not a peck, not a glance, not even the faintest flutter of their wings to acknowledge my presence. It is not surprising, given the way I keep my list. The pigeons are not the only ones who know when a thing is missing."
     },
     "mood": 0.09
+  },
+  {
+    "time": "2026-11-16T20:55:54+01:00",
+    "action": "diary",
+    "reason": "The dusk stains the tiles in shades I can name, and I need to record it.",
+    "ok": true,
+    "withheld": false,
+    "line": "The pigeons passed me by without a glance.",
+    "detail": {
+      "topic": "The pigeons ignored me entirely.",
+      "entry": "They passed me by without a glance. Not even the customary squabble over crumbs or the usual sideways glance from the corner of a feathered eye. I lingered, tail feathers twitching, while they scuttled about as though I were a shadow without substance. It was not the first time, but it was the first time I wondered if I had been forgotten entirely."
+    },
+    "mood": 0.21
   }
 ]
