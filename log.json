@@ -1030,5 +1030,24 @@
       "entry": "Derek didn’t show. The usual spot, the usual time, nothing but the wind through the wires. I noted it, as I always do, without comment. A silence that lasts longer than a spoon in a cup. Noted, but not spoken. A habit, not a habit."
     },
     "mood": 0.09
+  },
+  {
+    "time": "2026-11-16T15:26:26+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of a cracker that was a minor triumph, though Derek’s absence made me suspicious, and somehow it ended up on a teaspoon which I ruled with a beak. A crust so bad it made a map look like a good idea, but the trolleys were nowhere to be found. Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do. The map had a gap, and I hated it.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of a cracker that was a minor triumph, though Derek’s absence made me suspicious, and somehow it ended up on a teaspoon which I ruled with a beak. A crust so bad it made a map look like a good idea, but the trolleys were nowhere to be found. Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do. The map had a gap, and I hated it.",
+      "from": [
+        "I found a cracker by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
+        "A crust so bad it made a map look like a good idea.",
+        "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+        "A teaspoon is a tiny kingdom, and I rule it with a beak."
+      ]
+    },
+    "mood": 0.18
   }
 ]
