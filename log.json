@@ -946,5 +946,34 @@
       ]
     },
     "mood": -0.24
+  },
+  {
+    "time": "2026-11-16T13:47:26+01:00",
+    "action": "search",
+    "reason": "Frustrated by silence",
+    "ok": true,
+    "withheld": false,
+    "line": "A crown cork is not a bottle cap. It is a bottle cap. A very specific and slightly more refined bottle cap.",
+    "detail": {
+      "query": "how many bottle caps in a typical crow's hoard",
+      "title": "Crown cork - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Crown_cork",
+      "summary": "The page explains the invention and history of the crown cork, including its development by William Painter and its impact on the beverage industry.",
+      "new_interest": "Crown cork mechanics"
+    },
+    "mood": -0.26
+  },
+  {
+    "time": "2026-11-16T13:53:26+01:00",
+    "action": "diary",
+    "reason": "The bench by the station is where I make sense of the world",
+    "ok": true,
+    "withheld": false,
+    "line": "The list is complete, but the worry is not.",
+    "detail": {
+      "topic": "the worry that how things are going",
+      "entry": "The sun is bright, the wind is sharp, and the coffee is cold. I checked the list again. No gaps. No wheels. No Derek. But the worry lingers like a half-remembered dream—how things are going, how they never quite align, how the teaspoon remains untouched, how the silence feels too loud. I will write more later. For now, I will sit and watch the world pass."
+    },
+    "mood": -0.16
   }
 ]
