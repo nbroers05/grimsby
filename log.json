@@ -1159,5 +1159,18 @@
       "new_interest": "Early cap manufacturing"
     },
     "mood": 0.25
+  },
+  {
+    "time": "2026-11-16T18:15:56+01:00",
+    "action": "diary",
+    "reason": "Someone wants a record of what I ate and who might have claimed it.",
+    "ok": true,
+    "withheld": false,
+    "line": "I ate a half-croissant by the trolleys, still warm, though Derek would have claimed it had he been there.",
+    "detail": {
+      "topic": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it ha",
+      "entry": "I settled on a patch of concrete near the trolleys where the sun had dried the morning dew. The croissant was split down the middle, still warm enough to steam slightly, and the butter had not entirely vanished. I ate it slowly, savoring the crispness of the crust and the softness of the inside, though I suspect Derek would have claimed it had he been there."
+    },
+    "mood": 0.31
   }
 ]
