@@ -50,7 +50,11 @@ Written after every tick, pushed at most every 10 minutes, same shape as Pino's 
 | `log.json` | the archive: every action with text (diary entries, searches, drawings), oldest first, since his first day |
 | `drawings/` | SVGs + `index.json` (title, caption, time) |
 | `brain_v1.py`, `state.json` | the old hourly brain and its last state, kept as history |
-| `index.html`, `site.css`, `site.js` | his website (GitHub Pages from the repo root); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look |
+| `index.html` | the homepage (SITE-v2.md): tabs `#brain` (3D brain, 19 regions) and `#simulation` (a JS brain that lives in the visitor's browser), three.js r128 as a plain script tag |
+| `brein.js` | the simulation brain and its 3D view: regions, connections, places, actions, character knobs, stimuli. Separate from the real brain in `drive/` |
+| `world.html`, `site.css`, `site.js` | his website's world page (was `index.html` before SITE-v2); reads `data/*.json`, `log.json` and `drawings/index.json`. `?sleep` shows the sleep look. `/#world` forwards to `world.html#world` |
+| `supabase/sim.sql` | SITE-v2: table `sim_log`, visitors can only add rows (20 per browser per hour), not read them |
+| `SITE-v2.md` | notes on the three tabs and on what the simulation stores |
 | `drive/influence.py` | how visitors can influence him (VOLGENDE.md block G): suggestions, planted questions, opinions about places, items, a ceiling per visitor per day; visitor text never starts a tool. Check: `python -m drive.sim_influence` |
 | `supabase/gifts.sql` | WERELD step 3: table `gifts` (anyone leaves and reads, only the brain answers), rate limit in the database |
 | `others.js`, `sound.js` | WERELD step 4: other visitors (Realtime Presence + Broadcast, eva figures with names), whistling (E); sounds made in code with WebAudio, no files |

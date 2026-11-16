@@ -1,198 +1,244 @@
-<!doctype html>
-<html lang="en" class="nh">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grimsby</title>
-<meta name="description" content="Grimsby, a crow who lives on a computer. He reads things, writes too much about them and draws what he does not understand.">
+<title>Grimsby - brain</title>
+<meta name="description" content="The brain of Grimsby, a crow who lives on a computer: region by region, live, plus a simulation where you can poke him.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E9%B3%A5%3C/text%3E%3C/svg%3E">
+<script>if(location.hash==="#world"){location.replace("world.html#world");}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@700;800&family=VT323&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="housestyle.css">
-<link rel="stylesheet" href="site.css">
-<script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-} }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=DotGothic16&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:root{
+  --paper:#efe9dc; --paper-raised:#f8f4ea; --ink:#16130f; --muted:#5e574c; --line-soft:#d3c9b6;
+  --eva:#1b2a8c; --sky:#8cc0e8; --red:#d7261e; --titlebar:#1b2a8c;
+  --shadow:4px 4px 0 #16130f; --shadow-s:2px 2px 0 #16130f;
+  --display:"Shippori Mincho B1",Georgia,serif; --body:"Zen Kaku Gothic New",system-ui,sans-serif; --pixel:"DotGothic16",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);min-height:100vh;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:50;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.wrap{max-width:1400px;margin:0 auto;padding:20px 18px 48px;display:grid;gap:16px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line-soft);padding-bottom:12px}
+.brand{display:flex;align-items:flex-end;gap:14px}
+.brand h1{font-family:var(--display);font-weight:800;font-size:56px;line-height:.9;margin:0}
+.brand .kj{font-family:var(--display);font-weight:800;font-size:56px;line-height:.9;color:var(--red)}
+.brand .sub{font-family:var(--pixel);font-size:13px;color:var(--muted);margin-bottom:4px}
+nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+nav a{font-family:var(--pixel);font-size:15px;padding:12px 16px;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);background:var(--paper-raised);box-shadow:var(--shadow-s);min-height:44px;display:inline-flex;align-items:center}
+nav a[aria-current="page"]{background:var(--eva);color:#fff}
+.clock{font-family:var(--pixel);font-size:15px;padding:0 10px;display:flex;align-items:center;gap:8px}
+.live{width:10px;height:10px;background:var(--red);display:inline-block;animation:blink 1.2s steps(2) infinite}
+.live.off{background:var(--muted);animation:none}
+@keyframes blink{50%{opacity:.2}}
+.win{background:var(--paper-raised);border:1.5px solid var(--ink);box-shadow:var(--shadow);min-width:0}
+.bar{background:var(--titlebar);color:#fff;height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 10px;border-bottom:1.5px solid var(--ink);gap:8px}
+.bar .name{font-family:var(--pixel);font-size:15px}
+.bar .kanji{font-family:var(--display);font-size:14px;margin-left:auto}
+.bar .dots{display:flex;gap:4px}
+.bar .dots i{width:12px;height:12px;background:var(--paper);border:1.5px solid var(--ink);display:block}
+.body{padding:14px 16px}
+.main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(340px,1fr);gap:16px;align-items:start}
+@media (max-width:960px){.main{grid-template-columns:1fr}.brand h1,.brand .kj{font-size:42px}}
+#stage{position:relative;height:620px;background:radial-gradient(ellipse at 50% 45%,#f8f4ea 0%,#e6dfcf 70%,#dcd3c0 100%);overflow:hidden;cursor:grab;touch-action:none}
+#stage.drag{cursor:grabbing}
+@media (max-width:960px){#stage{height:440px}}
+#stage canvas{display:block}
+.lbl{position:absolute;transform:translate(-50%,-140%);font:700 11px var(--body);color:var(--ink);white-space:nowrap;pointer-events:none;text-shadow:0 0 3px var(--paper-raised),0 0 3px var(--paper-raised),0 0 2px var(--paper-raised)}
+.lbl.sel{color:var(--red)}
+#hud{position:absolute;left:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;pointer-events:none}
+#hud .box{background:var(--paper-raised);border:1.5px solid var(--ink);padding:6px 10px;font-size:13px;box-shadow:var(--shadow-s)}
+#hud .px{font-family:var(--pixel)}
+.stagebar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:10px 14px;border-top:1.5px solid var(--ink)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:22px;height:4px;vertical-align:middle;margin-right:4px}
+.grad{display:inline-block;width:80px;height:10px;vertical-align:middle;margin-right:4px;border:1px solid var(--ink);background:linear-gradient(90deg,#f8f4ea,#8cc0e8,#1b2a8c,#d7261e)}
+button{font-family:var(--body);color:var(--ink)}
+.btn{min-height:40px;padding:0 14px;border:1.5px solid var(--ink);background:var(--paper-raised);box-shadow:var(--shadow-s);font-weight:700;font-size:14px;cursor:pointer}
+.btn:active{transform:translate(1px,1px);box-shadow:none}
+.btn.pri{background:var(--eva);color:#fff}
+.btn.red{background:var(--red);color:#fff}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn.sm{min-height:32px;padding:0 10px;font-size:13px}
+.stack{display:grid;gap:16px}
+.tab[hidden]{display:none}
+h2{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;margin:0 0 6px}
+h3{font-family:var(--display);font-weight:700;font-size:20px;margin:0 0 6px}
+p{margin:0 0 10px;line-height:1.55}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.px{font-family:var(--pixel)}
+dl{margin:10px 0 0;display:grid;gap:10px}
+dt{font-family:var(--pixel);font-size:14px;color:var(--eva)}
+dd{margin:2px 0 0;line-height:1.5}
+.meterrow{display:grid;grid-template-columns:110px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:14px;margin-bottom:6px}
+.meterrow .m{height:10px;background:var(--line-soft);position:relative;border:1px solid var(--ink)}
+.meterrow .m span{position:absolute;inset:0 auto 0 0;background:var(--eva)}
+.meterrow .v{text-align:right;font-size:13px}
+.conns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.conns button{font:500 12px var(--body);background:var(--paper);border:1.5px solid var(--ink);padding:4px 8px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;min-height:30px}
+.conns .inh{border-color:var(--red);color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font:500 13px var(--body);background:var(--paper);border:1.5px solid var(--ink);padding:4px 10px;cursor:pointer;min-height:34px}
+.chips button.on{background:var(--ink);color:var(--paper)}
+.nowline{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.2;margin:6px 0 10px}
+.kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kv div{border-top:1px solid var(--line-soft);padding-top:6px}
+.kv b{display:block;font-size:17px}
+.kv span{font-family:var(--pixel);font-size:12px;color:var(--muted)}
+.stim{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.stim .btn{text-align:left;font-weight:500;line-height:1.2;padding:8px 10px;min-height:44px}
+.stim .btn b{display:block;font-weight:700}
+form.say{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+form.say label{width:100%;font-family:var(--pixel);font-size:13px}
+form.say input{flex:1 1 200px;min-height:44px;border:1.5px solid var(--ink);background:var(--paper);padding:0 10px;font:15px var(--body);color:var(--ink)}
+.slider{display:grid;grid-template-columns:130px minmax(0,1fr) 34px;gap:8px;align-items:center;font-size:14px;margin-bottom:4px}
+.slider input{width:100%;accent-color:var(--eva)}
+#feed{max-height:340px;overflow:auto;display:flex;flex-direction:column}
+#feed .ev{padding:7px 0;border-bottom:1px solid var(--line-soft);font-size:14px;line-height:1.45;display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px}
+#feed .ev .tm{font-family:var(--pixel);font-size:12px;color:var(--muted)}
+#feed .ev.prikkel{color:var(--red)}
+#feed .ev.leer .tm{color:var(--eva)}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.row2{grid-template-columns:1fr}.stim{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-family:var(--pixel);font-weight:400;color:var(--eva);border-bottom:1.5px solid var(--ink)}
+.toast{font-size:13px;color:var(--muted);min-height:18px}
+code{font-family:var(--pixel);font-size:13px}
+</style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-<header class="masthead">
-  <div class="mh-left">
-    <span class="mh-place">the island / station roof</span>
-    <h1 id="name">Grimsby</h1>
+<header>
+  <div class="brand">
+    <h1>Grimsby</h1><span class="kj" aria-hidden="true">脳</span>
+    <div class="sub">crow_01 · a human brain with crow settings</div>
   </div>
-  <div class="mh-right">
-    <span class="mh-kop" id="kop">&nbsp;</span>
-    <span class="mh-kanji" aria-hidden="true">鳥</span>
-  </div>
+  <nav aria-label="Tabs">
+    <a href="#brain" id="t-brein">brain</a>
+    <a href="#simulation" id="t-sim">simulation</a>
+    <a href="world.html" id="t-wereld">world</a>
+    <span class="clock"><span class="live" id="liveDot"></span><span id="clock">day 1 · 08:00</span></span>
+  </nav>
 </header>
 
-<section class="tile win-world" aria-label="World">
-  <div class="eyebrow" data-nh-exe="world.exe" data-nh-kanji="世界">World
-    <button type="button" class="bar-btn" id="world-open" aria-controls="world" aria-expanded="false" aria-label="Expand the world to full screen"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M2 6 V2 H6 M10 2 H14 V6 M14 10 V14 H10 M6 14 H2 V10" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>expand</button>
-  </div>
-  <div class="world" id="world">
-    <!-- Flat scene: shown while the 3D world (world.js -> #world3d) loads, and kept if it can't. -->
-    <div class="world-flat" aria-hidden="true">
-      <svg class="world-sky" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice">
-        <polygon points="0,300 140,300 140,240 200,210 260,240 260,300 330,300 330,200 420,200 420,300 520,300 520,260 600,230 680,260 680,300 760,300 760,180 820,150 880,180 880,300 980,300 980,250 1060,250 1060,300 1200,300 1200,420 0,420" fill="#1b2a8c" opacity="0.18"/>
-        <rect x="0" y="300" width="1200" height="120" fill="#efe9dc"/>
-        <line x1="0" y1="300" x2="1200" y2="300" stroke="#16130f" stroke-width="2"/>
-        <path d="M0 360 L1200 352" stroke="#8cc0e8" stroke-width="10" fill="none"/>
-        <path d="M0 360 L1200 352" stroke="#16130f" stroke-width="1.5" fill="none"/>
-      </svg>
-      <svg class="crow" viewBox="0 0 200 160">
-        <path d="M60 100 C60 70 90 55 120 62 C145 68 155 90 148 110 C140 128 100 132 75 122 C66 118 60 110 60 100 Z" fill="#16130f" stroke="#16130f" stroke-width="2.5"/>
-        <circle cx="128" cy="55" r="20" fill="#16130f"/>
-        <path d="M146 49 L172 56 L146 63 Z" fill="#16130f"/>
-        <path d="M80 96 C95 86 120 89 134 102" stroke="#5e574c" stroke-width="2.5" fill="none"/>
-        <path d="M62 104 L28 120 L38 106 L26 98 L60 96" fill="#16130f" stroke="#16130f" stroke-width="2"/>
-        <path d="M100 127 L96 148 M114 127 L116 148 M88 148 L104 148 M108 148 L124 148" stroke="#16130f" stroke-width="2.5" fill="none"/>
-        <circle class="eye-open" cx="135" cy="50" r="4" fill="#f8f4ea"/>
-        <path class="eye-shut" d="M129 51 Q135 56 141 51" stroke="#f8f4ea" stroke-width="2" fill="none"/>
-      </svg>
-      <span class="zzz">zzz</span>
-    </div>
-    <div id="world3d"></div>
-    <div class="now-box">
-      <span class="label">now</span>
-      <span class="now-text" id="now">Looking for Grimsby…</span>
-      <span class="where" id="where"></span>
-    </div>
-    <div class="world-ctl">
-      <button type="button" id="outline-btn" aria-pressed="false" title="Ink lines on the buildings">lines</button>
-      <button type="button" id="sound-btn" aria-pressed="true" title="Sea, footsteps, whistles (only while walking)">sound on</button>
-    </div>
-    <span class="world-note">Loading the island…</span>
-    <span class="world-credit">drag to look around · ctrl + scroll to zoom · his island, built in code</span>
-    <button type="button" class="walk-btn" id="world-walk" aria-controls="world">Walk around in his world<span aria-hidden="true">→</span></button>
-
-    <!-- Expanded world: the HUD (site.js fills it). Hidden while the world sits in the page. -->
-    <div class="hud" id="hud" hidden>
-      <section class="hud-win hud-needs" aria-label="How he is doing">
-        <div class="hud-bar"><span class="hud-exe" id="hud-exe">grimsby.exe</span><span class="hud-kanji" aria-hidden="true">気分</span></div>
-        <div class="hud-body">
-          <div class="needs" id="hud-needs"></div>
-          <div class="hud-mood"><span>mood <strong id="hud-mood">–</strong></span><span>energy <strong id="hud-energy">–</strong></span></div>
-          <span class="hint">The fuller the bar, the harder it pulls. Red: what he needs most.</span>
-        </div>
-      </section>
-
-      <section class="hud-win hud-now" id="hud-now" aria-label="Now">
-        <div class="hud-now-head"><span class="dot" aria-hidden="true"></span><span class="label">now</span>
-          <button type="button" class="x-btn" id="hud-now-hide" aria-label="Hide this card">×</button></div>
-        <span class="hud-now-title" id="hud-now-title">…</span>
-        <p class="hud-now-thought" id="hud-now-thought"></p>
-        <div class="hud-now-foot"><span class="hint" id="hud-now-where"></span><a href="#diary" id="hud-diary">read the diary</a></div>
-      </section>
-      <button type="button" class="hud-chip hud-now-show" id="hud-now-show" hidden>what is he doing?</button>
-
-      <div class="hud-right">
-        <div class="hud-top">
-          <div class="hud-clock"><span class="hud-time" id="hud-time">--:--</span><span class="hint" id="hud-day"></span></div>
-          <button type="button" class="hud-collapse" id="world-close"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M6 2 V6 H2 M14 6 H10 V2 M10 14 V10 H14 M2 10 H6 V14" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>collapse</button>
-        </div>
-        <section class="hud-win hud-map" aria-label="Map">
-          <div class="hud-bar"><span class="hud-exe">map.exe</span><span class="hud-kanji" aria-hidden="true">地図</span></div>
-          <svg id="hud-map" viewBox="0 0 230 190" role="img" aria-label="Map of his places, where he is and where you are"></svg>
-          <div class="hud-legend"><span><i class="lg-him" aria-hidden="true"></i>him</span><span><i class="lg-you" aria-hidden="true"></i>you</span></div>
-        </section>
+<div class="main">
+  <section class="win">
+    <div class="bar"><span class="name">brein3d.exe</span><span class="kanji">脳</span><span class="dots"><i></i><i></i><i></i></span></div>
+    <div id="stage" aria-label="Grimsby's brain in 3D. Drag to turn, scroll to zoom, click a region.">
+      <div id="labels"></div>
+      <div id="hud">
+        <div class="box"><span class="px" id="hudSel">no region selected</span></div>
+        <div class="box" id="hudNow">...</div>
       </div>
-
-      <section class="hud-win hud-visitors" aria-label="Who is here now">
-        <div class="hud-bar"><span class="hud-exe">visitors.exe</span><span class="hud-kanji" aria-hidden="true">客</span></div>
-        <div class="hud-body">
-          <span class="label">here now · <span id="hud-count">1</span></span>
-          <div class="chips" id="hud-visitors"><span class="pill eva">you</span></div>
-          <form class="hud-rename" id="hud-rename"><label class="hint" for="hud-name">your name here</label>
-            <input id="hud-name" type="text" maxlength="24" autocomplete="nickname"><button type="submit">ok</button></form>
-          <p class="hint hud-vis-note">Press E to whistle. Others nearby hear it, and so does he, if he is awake.</p>
-        </div>
-      </section>
-
-      <div class="hud-hint">click to look around · W/S walk · A/D turn · shift to hurry · E whistle · Esc to collapse</div>
-      <button type="button" class="leave-btn" id="leave-open">Leave something</button>
-      <div class="hud-chip leave-status" id="leave-status" role="status" hidden></div>
     </div>
-
-    <div class="modal-back" id="leave-modal" hidden>
-      <section class="hud-win modal" role="dialog" aria-modal="true" aria-labelledby="leave-title">
-        <div class="hud-bar"><span class="hud-exe" id="leave-title">leave.exe</span><span class="hud-kanji" aria-hidden="true">贈物</span></div>
-        <form class="hud-body modal-body" id="leave-form" novalidate>
-          <div class="field"><label class="label" for="leave-name">your name</label>
-            <input id="leave-name" type="text" maxlength="24" autocomplete="nickname" required></div>
-          <fieldset class="field"><legend class="label">what you leave behind</legend>
-            <div class="chips" id="leave-items">
-              <button type="button" data-item="walnut" aria-pressed="true">a walnut</button>
-              <button type="button" data-item="button" aria-pressed="false">a button</button>
-              <button type="button" data-item="note" aria-pressed="false">just a note</button>
-              <button type="button" data-item="other" aria-pressed="false">something else</button>
-            </div>
-            <input id="leave-other" type="text" maxlength="40" placeholder="what is it? (a feather, a key...)" aria-label="what you leave behind" hidden></fieldset>
-          <div class="field"><label class="label" for="leave-note">note (may be empty)</label>
-            <textarea id="leave-note" rows="4" maxlength="280"></textarea>
-            <span class="hint count" id="leave-count">0 / 280</span></div>
-          <span class="hint">It lands in the sand where you stand (or by the water near the station), for everyone to read. He reads it when he is awake; if he is asleep, it waits for him. At most 5 an hour.</span>
-          <span class="err" id="leave-err" hidden></span>
-          <div class="modal-actions"><button type="button" class="btn-plain" id="leave-cancel">Never mind</button>
-            <button type="submit" class="btn-eva">Put it down</button></div>
-        </form>
-      </section>
-    </div>
-  </div>
-</section>
-
-<div class="cols">
-  <section class="tile win-main" aria-label="Diary">
-    <div class="eyebrow" data-nh-exe="diary.exe" data-nh-kanji="日記">Diary</div>
-    <div class="tabs" role="tablist" aria-label="Diary">
-      <button type="button" role="tab" id="tab-day" aria-controls="panel-day" data-tab="day">his day</button>
-      <button type="button" role="tab" id="tab-wants" aria-controls="panel-wants" data-tab="wants">wants</button>
-      <button type="button" role="tab" id="tab-drawings" aria-controls="panel-drawings" data-tab="drawings">drawings</button>
-      <button type="button" role="tab" id="tab-diary" aria-controls="panel-diary" data-tab="diary">diary</button>
-      <button type="button" role="tab" id="tab-facts" aria-controls="panel-facts" data-tab="facts">facts</button>
-      <button type="button" role="tab" id="tab-about" aria-controls="panel-about" data-tab="about">about</button>
-    </div>
-    <div class="panels">
-      <div role="tabpanel" id="panel-day" aria-labelledby="tab-day" hidden></div>
-      <div role="tabpanel" id="panel-wants" aria-labelledby="tab-wants" hidden></div>
-      <div role="tabpanel" id="panel-drawings" aria-labelledby="tab-drawings" hidden></div>
-      <div role="tabpanel" id="panel-diary" aria-labelledby="tab-diary" hidden></div>
-      <div role="tabpanel" id="panel-facts" aria-labelledby="tab-facts" hidden></div>
-      <div role="tabpanel" id="panel-about" aria-labelledby="tab-about" hidden></div>
+    <div class="stagebar">
+      <div class="legend">
+        <span><span class="grad"></span>activation</span>
+        <span><span class="sw" style="background:#1b2a8c"></span>excitatory</span>
+        <span><span class="sw" style="background:#d7261e"></span>inhibitory</span>
+        <span>dots = signal on its way</span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn sm" id="bLabels" aria-pressed="true">names</button>
+        <button class="btn sm" id="bRotate" aria-pressed="true">spin</button>
+      </div>
     </div>
   </section>
 
-  <aside class="side">
-    <section class="tile" aria-label="Status">
-      <div class="eyebrow" data-nh-exe="status.exe" data-nh-kanji="気分">Status</div>
-      <dl class="stats">
-        <div><dt>mood</dt><dd class="st-mood" id="st-mood">–</dd></div>
-        <div><dt>energy</dt><dd class="st-mood" id="st-energy">–</dd></div>
-        <div><dt>his world</dt><dd class="st-mood" id="st-world">–</dd></div>
-        <div><dt>drawings</dt><dd class="st-big" id="st-drawings">–</dd></div>
-      </dl>
-      <div class="needs" id="st-needs" aria-label="What pulls at him" hidden></div>
-      <p class="mood-note" id="st-note" hidden></p>
-    </section>
+  <div>
+    <!-- TAB BREIN -->
+    <div class="tab stack" id="tab-brein">
+      <section class="win">
+        <div class="bar"><span class="name" id="dFile">regio.txt</span><span class="kanji" id="dKanji">領域</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="body" id="detail"></div>
+      </section>
+      <section class="win">
+        <div class="bar"><span class="name">active_now.exe</span><span class="kanji">活動</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="body">
+          <p class="small muted">The five regions working hardest right now. The brain keeps running, in this tab too.</p>
+          <div id="topList"></div>
+        </div>
+      </section>
+    </div>
 
-    <section class="tile" aria-label="Newest drawing">
-      <div class="eyebrow" data-nh-exe="newest.svg" data-nh-kanji="絵">Newest drawing</div>
-      <div class="newest" id="newest"><p class="empty">Nothing drawn yet.</p></div>
-    </section>
-  </aside>
+    <!-- TAB SIMULATIE -->
+    <div class="tab stack" id="tab-sim" hidden>
+      <section class="win">
+        <div class="bar"><span class="name">now.exe</span><span class="kanji">今</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="body">
+          <div class="px small muted" id="sPlace">...</div>
+          <div class="nowline" id="sThought">...</div>
+          <div class="kv">
+            <div><span>action</span><b id="sAct">-</b></div>
+            <div><span>mood</span><b id="sMood">-</b></div>
+            <div><span>energy</span><b id="sEnergy">-</b></div>
+          </div>
+        </div>
+      </section>
+      <section class="win">
+        <div class="bar"><span class="name">stimuli.exe</span><span class="kanji">刺激</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="body">
+          <p class="small muted">Give him something to deal with, and watch it travel through his brain.</p>
+          <div class="stim" id="stimBtns"></div>
+          <form class="say" id="sayForm">
+            <label for="sayInput">or type something that happens</label>
+            <input id="sayInput" type="text" autocomplete="off" placeholder="a kid throws fries at him">
+            <button class="btn pri" type="submit">Make it happen</button>
+          </form>
+        </div>
+      </section>
+      <section class="win">
+        <div class="bar"><span class="name">log.exe</span><span class="kanji">日記</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="body"><div id="feed" aria-live="polite"></div></div>
+      </section>
+    </div>
+  </div>
 </div>
 
-<footer class="foot">Runs on a local model: code decides what he does, the model only finds the words. When the computer is off, he sleeps. His data: <a href="data/now.json">now</a> · <a href="data/feed.json">feed</a> · <a href="data/mind.json">mind</a> · <a href="data/memories.json">memories</a> · <a href="data/who.json">who</a>. <a href="https://github.com/nbroers05/grimsby">Source</a>. Neighbour: Pino, from <a href="https://pinos.world">pinos.world</a>.</footer>
+<div class="row2" id="simRow2">
+  <section class="win">
+    <div class="bar"><span class="name">needs.exe</span><span class="kanji">欲求</span><span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="body">
+      <div id="needs"></div>
+      <h3 style="margin-top:14px">What he believes</h3>
+      <p class="small muted">Learned value per action and place (OFC), fear (amygdala) and aversion (insula).</p>
+      <table><thead><tr><th>action @ place</th><th>value</th><th>times</th></tr></thead><tbody id="beliefs"></tbody></table>
+      <div class="small muted" id="fearLine" style="margin-top:8px"></div>
+    </div>
+  </section>
+  <section class="win">
+    <div class="bar"><span class="name">character.exe</span><span class="kanji">性格</span><span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="body">
+      <p class="small muted">Same brain, different settings. Pick a preset or set them yourself.</p>
+      <div class="chips" id="presets" style="margin-bottom:12px"></div>
+      <div id="sliders"></div>
+      <h3 style="margin-top:14px">Data</h3>
+      <div class="small" id="dataLine">...</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0">
+        <span class="px small" style="align-self:center">speed</span>
+        <span class="chips" id="speeds"></span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn sm" id="bPause" aria-pressed="false">pause</button>
+        <button class="btn sm" id="bExport">download data</button>
+        <button class="btn sm" id="bCopy">copy data</button>
+        <button class="btn sm red" id="bReset">start over</button>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+  </section>
 </div>
+
+</div>
+
 <script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js"></script>
-<script src="site.js"></script>
-<script type="module" src="world.js"></script>
+<script src="brein.js"></script>
 </body>
 </html>
