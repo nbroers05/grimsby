@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-16T16:44:26+01:00",
- "thought": "The roof of de Bron church is too quiet for a crow with a taste for precision and a list that cannot tolerate gaps.",
+ "at": "2026-11-16T17:47:26+01:00",
+ "thought": "This is not a crumb. This is a relic of someone else’s indulgence, and I intend to make it count.",
  "loudest": [
   {
-   "kind": "outcome",
-   "subject": "having a look around on the roof of de Bron church went better than you expected"
-  },
-  {
    "kind": "goal",
-   "subject": "watching the world go by on the roof of de Bron church"
+   "subject": "flying to the station roof (checking on Pino next door there)"
   },
   {
-   "kind": "seen",
-   "subject": "de Bron"
+   "kind": "need",
+   "subject": "curiosity"
   },
   {
-   "kind": "want",
-   "subject": "a list of UV-resistant rubbers"
+   "kind": "outcome",
+   "subject": "looking for something to eat on the terrace of De Turk went better than you expected"
+  },
+  {
+   "kind": "memory",
+   "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything."
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 0,
+  "question": 1,
   "want": 3,
   "worry": 0,
   "promise": 0
  },
- "busy": "watching the world go by on the roof of de Bron church",
+ "busy": "flying to the station roof",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -53,6 +53,11 @@
    "subject": "a list of crows and their tools",
    "since": "2026-11-16T14:45:56+01:00",
    "why": "to verify accuracy of my own hoard"
+  },
+  {
+   "kind": "question",
+   "subject": "history of bottle cap design",
+   "since": "2026-11-16T17:30:56+01:00"
   }
  ],
  "interests": [
@@ -62,7 +67,7 @@
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.0
+   "strength": 7.0
   },
   {
    "topic": "why humans invented bicycles",
@@ -96,25 +101,25 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.167,
-  "arousal": 0.527,
-  "average": 0.183,
+  "valence": 0.203,
+  "arousal": 0.455,
+  "average": 0.186,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
     "n": 3.3
    },
    "eat@*": {
-    "V": 0.17,
-    "n": 16.7
+    "V": 0.18,
+    "n": 18.7
    },
    "diary@station-bench": {
-    "V": 0.257,
-    "n": 7.6
+    "V": 0.262,
+    "n": 10.6
    },
    "diary@*": {
-    "V": 0.282,
-    "n": 15.7
+    "V": 0.277,
+    "n": 18.7
    },
    "neighbour@home": {
     "V": 0.124,
@@ -133,8 +138,8 @@
     "n": 3.5
    },
    "pigeons@*": {
-    "V": 0.123,
-    "n": 8.7
+    "V": 0.142,
+    "n": 9.7
    },
    "sit@ondermolen": {
     "V": 0.042,
@@ -165,16 +170,16 @@
     "n": 0.6
    },
    "eat@de-turk": {
-    "V": 0.129,
-    "n": 7.7
+    "V": 0.15,
+    "n": 9.7
    },
    "search@library": {
-    "V": 0.147,
-    "n": 5.8
+    "V": 0.12,
+    "n": 7.8
    },
    "search@*": {
-    "V": 0.147,
-    "n": 5.8
+    "V": 0.12,
+    "n": 7.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -201,8 +206,8 @@
     "n": 4.4
    },
    "pigeons@centre-fountain": {
-    "V": 0.118,
-    "n": 3.2
+    "V": 0.139,
+    "n": 4.2
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -274,33 +279,32 @@
    }
   },
   "habit": {
-   "place:library": 0.09,
-   "place:station-bench": 0.12,
-   "topic:bottle caps and shiny objects": 0.12,
-   "place:station-fountain": 0.14,
-   "place:de-turk": 0.16,
-   "place:de-bron": 0.19
+   "place:library": 0.24,
+   "place:station-bench": 0.46,
+   "topic:bottle caps and shiny objects": 0.26,
+   "place:de-turk": 0.31,
+   "place:centre-fountain": 0.09
   },
   "workingMemory": [
    {
-    "kind": "outcome",
-    "subject": "having a look around on the roof of de Bron church went better than you expected",
-    "salience": 0.602
-   },
-   {
     "kind": "goal",
-    "subject": "watching the world go by on the roof of de Bron church",
+    "subject": "flying to the station roof (checking on Pino next door there)",
     "salience": 0.4
    },
    {
-    "kind": "seen",
-    "subject": "de Bron",
-    "salience": 0.384
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.316
    },
    {
-    "kind": "want",
-    "subject": "a list of UV-resistant rubbers",
-    "salience": 0.15
+    "kind": "outcome",
+    "subject": "looking for something to eat on the terrace of De Turk went better than you expected",
+    "salience": 0.257
+   },
+   {
+    "kind": "memory",
+    "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+    "salience": 0.256
    }
   ]
  }

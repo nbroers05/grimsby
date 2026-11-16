@@ -1,38 +1,41 @@
 {
  "v": 1,
- "at": "2026-11-16T16:44:26+01:00",
+ "at": "2026-11-16T17:47:26+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "watching the world go by on the roof of de Bron church",
- "thought": "The roof of de Bron church is too quiet for a crow with a taste for precision and a list that cannot tolerate gaps.",
+ "doing": "flying to the station roof",
+ "thought": "This is not a crumb. This is a relic of someone else’s indulgence, and I intend to make it count.",
  "feeling": {
-  "mood": 0.17,
-  "energy": 0.8,
-  "words": "Drowsy. Beans in my beak. The bench smells like yesterday's coffee.",
+  "mood": 0.2,
+  "energy": 0.38,
+  "words": "The sun slants low, sharp as a teaspoon edge. My hoard glints, but not enough to distract from the gap in my list. Derek’s shadow passes, and I feel it like a wrong number.",
   "emotion": "content",
-  "arousal": 0.53
+  "arousal": 0.46
  },
  "needs": {
-  "rest": 0.1,
-  "curiosity": 0.0,
-  "social": 0.11,
-  "expression": 0.18,
-  "quiet": 0.29,
-  "hunger": 0.07
+  "rest": 0.22,
+  "curiosity": 0.32,
+  "social": 0.18,
+  "expression": 0.06,
+  "quiet": 0.11,
+  "hunger": 0.01
  },
  "world": {
   "name": "the island",
   "day": 16,
-  "time": "09:03"
+  "time": "17:27"
  },
- "action": "idle",
+ "action": "neighbour",
  "place": {
-  "id": "de-bron",
-  "name": "de Bron",
-  "words": "on the roof of de Bron church",
-  "obj": "de-bron",
-  "poi": "de-bron",
-  "category": "church"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
- "flying": null
+ "flying": {
+  "from": "De Turk",
+  "to": "the station roof"
+ }
 }
