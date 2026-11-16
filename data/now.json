@@ -1,31 +1,31 @@
 {
  "v": 1,
- "at": "2026-11-16T17:47:26+01:00",
+ "at": "2026-11-16T18:50:26+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "flying to the station roof",
- "thought": "This is not a crumb. This is a relic of someone else’s indulgence, and I intend to make it count.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
+ "thought": "The moon is too bright for a crumb to fall unnoticed",
  "feeling": {
-  "mood": 0.2,
-  "energy": 0.38,
+  "mood": 0.16,
+  "energy": 1,
   "words": "The sun slants low, sharp as a teaspoon edge. My hoard glints, but not enough to distract from the gap in my list. Derek’s shadow passes, and I feel it like a wrong number.",
-  "emotion": "content",
-  "arousal": 0.46
+  "emotion": "calm",
+  "arousal": 0.16
  },
  "needs": {
-  "rest": 0.22,
-  "curiosity": 0.32,
-  "social": 0.18,
-  "expression": 0.06,
-  "quiet": 0.11,
-  "hunger": 0.01
+  "rest": 0.0,
+  "curiosity": 0.27,
+  "social": 0.31,
+  "expression": 0.09,
+  "quiet": 0.0,
+  "hunger": 0.15
  },
  "world": {
   "name": "the island",
-  "day": 16,
-  "time": "17:27"
+  "day": 17,
+  "time": "01:51"
  },
- "action": "neighbour",
+ "action": "sleep",
  "place": {
   "id": "home",
   "name": "the station roof",
@@ -34,8 +34,5 @@
   "poi": "station-rodenrijs",
   "category": "station"
  },
- "flying": {
-  "from": "De Turk",
-  "to": "the station roof"
- }
+ "flying": null
 }

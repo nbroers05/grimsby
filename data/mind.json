@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-16T17:47:26+01:00",
- "thought": "This is not a crumb. This is a relic of someone else’s indulgence, and I intend to make it count.",
+ "at": "2026-11-16T18:50:26+01:00",
+ "thought": "The moon is too bright for a crumb to fall unnoticed",
  "loudest": [
   {
-   "kind": "goal",
-   "subject": "flying to the station roof (checking on Pino next door there)"
-  },
-  {
    "kind": "need",
-   "subject": "curiosity"
+   "subject": "social"
   },
   {
-   "kind": "outcome",
-   "subject": "looking for something to eat on the terrace of De Turk went better than you expected"
+   "kind": "want",
+   "subject": "a list of UV-resistant rubbers"
   },
   {
-   "kind": "memory",
-   "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything."
+   "kind": "want",
+   "subject": "A diagram of a crown cork"
+  },
+  {
+   "kind": "want",
+   "subject": "a list of crows and their tools"
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 1,
+  "question": 0,
   "want": 3,
   "worry": 0,
   "promise": 0
  },
- "busy": "flying to the station roof",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -53,45 +53,40 @@
    "subject": "a list of crows and their tools",
    "since": "2026-11-16T14:45:56+01:00",
    "why": "to verify accuracy of my own hoard"
-  },
-  {
-   "kind": "question",
-   "subject": "history of bottle cap design",
-   "since": "2026-11-16T17:30:56+01:00"
   }
  ],
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 8.8
+   "strength": 8.5
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.0
+   "strength": 7.7
+  },
+  {
+   "topic": "Early cap manufacturing",
+   "strength": 2.7
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 3.0
+   "strength": 2.7
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 3.0
+   "strength": 2.7
   },
   {
    "topic": "weather",
-   "strength": 2.0
+   "strength": 1.7
   },
   {
    "topic": "the art of making lists",
-   "strength": 2.0
+   "strength": 1.7
   },
   {
    "topic": "UV-resistant materials",
-   "strength": 1.8
-  },
-  {
-   "topic": "pigeons, as adversaries",
-   "strength": 1.0
+   "strength": 1.5
   }
  ],
  "budget": {
@@ -100,90 +95,90 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.203,
-  "arousal": 0.455,
-  "average": 0.186,
+  "emotion": "calm",
+  "valence": 0.156,
+  "arousal": 0.164,
+  "average": 0.182,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
-    "n": 3.3
+    "n": 3.0
    },
    "eat@*": {
-    "V": 0.18,
-    "n": 18.7
+    "V": 0.179,
+    "n": 18.1
    },
    "diary@station-bench": {
-    "V": 0.262,
-    "n": 10.6
+    "V": 0.244,
+    "n": 11.6
    },
    "diary@*": {
-    "V": 0.277,
-    "n": 18.7
+    "V": 0.255,
+    "n": 19.1
    },
    "neighbour@home": {
-    "V": 0.124,
-    "n": 2.1
+    "V": 0.142,
+    "n": 2.9
    },
    "neighbour@*": {
-    "V": 0.124,
-    "n": 2.1
+    "V": 0.142,
+    "n": 2.9
    },
    "diary@plantsoen-bench": {
     "V": 0.183,
-    "n": 3.8
+    "n": 3.5
    },
    "pigeons@station-fountain": {
     "V": 0.017,
-    "n": 3.5
+    "n": 3.2
    },
    "pigeons@*": {
     "V": 0.142,
-    "n": 9.7
+    "n": 8.9
    },
    "sit@ondermolen": {
     "V": 0.042,
-    "n": 0.6
+    "n": 0.5
    },
    "sit@*": {
     "V": 0.165,
-    "n": 4.9
+    "n": 4.5
    },
    "read_back@home": {
     "V": 0.047,
-    "n": 0.6
+    "n": 0.5
    },
    "read_back@*": {
     "V": 0.047,
-    "n": 0.6
+    "n": 0.5
    },
    "draw@ondermolen": {
     "V": 0.051,
-    "n": 1.2
+    "n": 1.1
    },
    "draw@*": {
     "V": 0.127,
-    "n": 3.4
+    "n": 3.1
    },
    "sit@de-bron": {
     "V": 0.042,
-    "n": 0.6
+    "n": 0.5
    },
    "eat@de-turk": {
     "V": 0.15,
-    "n": 9.7
+    "n": 9.0
    },
    "search@library": {
-    "V": 0.12,
-    "n": 7.8
+    "V": 0.132,
+    "n": 8.1
    },
    "search@*": {
-    "V": 0.12,
-    "n": 7.8
+    "V": 0.132,
+    "n": 8.1
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 2.9
+    "n": 2.6
    },
    "wander@station-bench": {
     "V": 0.039,
@@ -191,23 +186,23 @@
    },
    "wander@*": {
     "V": 0.176,
-    "n": 6.9
+    "n": 6.3
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 2.0
+    "n": 1.8
    },
    "eat@albert-heijn": {
-    "V": 0.092,
-    "n": 2.8
+    "V": 0.104,
+    "n": 3.5
    },
    "diary@library": {
     "V": 0.157,
-    "n": 4.4
+    "n": 4.0
    },
    "pigeons@centre-fountain": {
     "V": 0.139,
-    "n": 4.2
+    "n": 3.8
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -215,7 +210,7 @@
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 1.3
+    "n": 1.2
    },
    "wander@vis": {
     "V": 0.04,
@@ -223,23 +218,23 @@
    },
    "sit@dorpskerk": {
     "V": 0.039,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@hichte-mill": {
     "V": 0.039,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@ondermolen": {
     "V": 0.021,
-    "n": 0.7
+    "n": 0.6
    },
    "tidy@home": {
     "V": 0.031,
-    "n": 0.7
+    "n": 0.6
    },
    "tidy@*": {
     "V": 0.031,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@jumbo": {
     "V": 0.031,
@@ -255,56 +250,55 @@
    },
    "draw@station-fountain": {
     "V": 0.054,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@home": {
     "V": 0.044,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@albert-heijn": {
     "V": 0.045,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@de-valk": {
     "V": 0.037,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 1
+    "n": 0.9
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 1
+    "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.24,
-   "place:station-bench": 0.46,
-   "topic:bottle caps and shiny objects": 0.26,
-   "place:de-turk": 0.31,
-   "place:centre-fountain": 0.09
+   "place:library": 0.19,
+   "place:station-bench": 0.61,
+   "topic:bottle caps and shiny objects": 0.21,
+   "place:de-turk": 0.05
   },
   "workingMemory": [
    {
-    "kind": "goal",
-    "subject": "flying to the station roof (checking on Pino next door there)",
-    "salience": 0.4
-   },
-   {
     "kind": "need",
-    "subject": "curiosity",
-    "salience": 0.316
+    "subject": "social",
+    "salience": 0.309
    },
    {
-    "kind": "outcome",
-    "subject": "looking for something to eat on the terrace of De Turk went better than you expected",
-    "salience": 0.257
+    "kind": "want",
+    "subject": "a list of UV-resistant rubbers",
+    "salience": 0.15
    },
    {
-    "kind": "memory",
-    "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
-    "salience": 0.256
+    "kind": "want",
+    "subject": "A diagram of a crown cork",
+    "salience": 0.15
+   },
+   {
+    "kind": "want",
+    "subject": "a list of crows and their tools",
+    "salience": 0.15
    }
   ]
  }
