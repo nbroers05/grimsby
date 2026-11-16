@@ -1172,5 +1172,24 @@
       "entry": "I settled on a patch of concrete near the trolleys where the sun had dried the morning dew. The croissant was split down the middle, still warm enough to steam slightly, and the butter had not entirely vanished. I ate it slowly, savoring the crispness of the crust and the softness of the inside, though I suspect Derek would have claimed it had he been there."
     },
     "mood": 0.31
+  },
+  {
+    "time": "2026-11-16T18:23:26+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of pecking at chips that were not the crispiest but were the only thing left, which I made a note of in my head. Then I landed on a bench with a view of a place where people moved in straight lines, which is suspicious. I ate a crumb of baklava with the precision of a man who has never been wrong, and somehow found a crust that was, frankly, worse than a poorly folded map.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of pecking at chips that were not the crispiest but were the only thing left, which I made a note of in my head. Then I landed on a bench with a view of a place where people moved in straight lines, which is suspicious. I ate a crumb of baklava with the precision of a man who has never been wrong, and somehow found a crust that was, frankly, worse than a poorly folded map.",
+      "from": [
+        "I found a crust that was, frankly, worse than a poorly folded map.",
+        "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
+        "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
+        "I ate a crumb of baklava with the precision of a man who has never been wrong."
+      ]
+    },
+    "mood": 0.31
   }
 ]
