@@ -1001,5 +1001,21 @@
       "entry": "Derek didn’t show. Again. The usual time, the usual place, nothing but the scent of damp concrete and the distant hum of a train. I didn’t say a word. Not even a squawk. A lesson in restraint, precision, and the value of silence."
     },
     "mood": -0.01
+  },
+  {
+    "time": "2026-11-16T14:45:56+01:00",
+    "action": "search",
+    "reason": "A page about crows and lists, so I must know if they were ever organized.",
+    "ok": true,
+    "withheld": false,
+    "line": "A murder of crows is not a group of criminals, but a group of birds. A fact is only shiny if it is true.",
+    "detail": {
+      "query": "history of list making in crows",
+      "title": "Crow - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Crow",
+      "summary": "The page explains that crows are intelligent birds in the genus Corvus, known for tool use and social behavior. It lists many species of crows found in various regions around the world.",
+      "new_interest": "crows and tool use"
+    },
+    "mood": 0.05
   }
 ]
