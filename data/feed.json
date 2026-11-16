@@ -1,7 +1,223 @@
 {
  "v": 1,
- "at": "2026-11-16T13:35:26+01:00",
+ "at": "2026-11-16T14:38:26+01:00",
  "entries": [
+  {
+   "at": "2026-11-16T14:38:26+01:00",
+   "kind": "did",
+   "text": "flying from the library to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:33:56+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "Because I need to make sense of things that don’t add up",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-16T14:32:26+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:29:26+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the Albert Heijn",
+   "why": "Albert Heijn is where the crumbs gather.",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-16T14:27:56+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:23:26+01:00",
+   "kind": "noticed",
+   "text": "No Derek anywhere, which is suspicious."
+  },
+  {
+   "at": "2026-11-16T14:23:26+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": "Lonely, so I watch the pigeons",
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-16T14:21:56+01:00",
+   "kind": "mind",
+   "text": "Stopped worrying. Things are tolerable.",
+   "change": "closed",
+   "about": "worry"
+  },
+  {
+   "at": "2026-11-16T14:21:56+01:00",
+   "kind": "did",
+   "text": "flying from the library to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:17:26+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "I need a witness to the dullness.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-16T14:15:56+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:11:26+01:00",
+   "kind": "noticed",
+   "text": "Found a strip of flatbread from under a table on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-16T14:11:26+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "De Turk's terrace holds the promise of crumbs and the threat of being seen as a nuisance.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-16T14:09:56+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T14:08:26+01:00",
+   "kind": "mind",
+   "text": "Let go of wanting a list of curing systems.",
+   "change": "closed",
+   "about": "want"
+  },
+  {
+   "at": "2026-11-16T14:06:56+01:00",
+   "kind": "felt",
+   "text": "A single pigeon lands on the edge of the tile. Its beak opens, then closes. It does not move."
+  },
+  {
+   "at": "2026-11-16T14:06:56+01:00",
+   "kind": "did",
+   "text": "sitting still on the roof of station Rodenrijs",
+   "why": "Because I need to recalibrate my focus",
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-16T14:03:56+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T13:59:26+01:00",
+   "kind": "noticed",
+   "text": "Derek was there, and smug about it."
+  },
+  {
+   "at": "2026-11-16T13:59:26+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "I am watching them for company, or at least someone to disapprove of",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-16T13:57:56+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T13:53:26+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "The bench by the station is where I make sense of the world",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-16T13:51:56+01:00",
+   "kind": "did",
+   "text": "flying from the library to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T13:48:56+01:00",
+   "kind": "felt",
+   "text": "The library floorboards creak like a disgruntled old man. I’m looking up the exact number of pages in the history of the village. A gap in the list is making me twitch."
+  },
+  {
+   "at": "2026-11-16T13:47:26+01:00",
+   "kind": "noticed",
+   "text": "Read that the page explains the invention and history of the crown cork, including its development by William Painter and its impact on the beverage industry."
+  },
+  {
+   "at": "2026-11-16T13:47:26+01:00",
+   "kind": "did",
+   "text": "looking up how many bottle caps in a typical crow's hoard at the library",
+   "why": "Frustrated by silence",
+   "ok": true,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-16T13:47:26+01:00",
+   "kind": "mind",
+   "text": "Started wanting A diagram of a crown cork.",
+   "change": "opened",
+   "about": "want"
+  },
+  {
+   "at": "2026-11-16T13:45:56+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T13:41:26+01:00",
+   "kind": "noticed",
+   "text": "The pigeons ignored me entirely."
+  },
+  {
+   "at": "2026-11-16T13:41:26+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": "I am watching them because they are not watching me",
+   "ok": false,
+   "action": "pigeons"
+  },
   {
    "at": "2026-11-16T13:35:26+01:00",
    "kind": "did",
@@ -140,217 +356,6 @@
    "why": null,
    "ok": true,
    "action": "fly"
-  },
-  {
-   "at": "2026-11-16T12:33:56+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "Someone needs a reminder that patience is a kind of magic.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-16T12:32:26+01:00",
-   "kind": "felt",
-   "text": "The moon is a thin slice of cheese. I’ve eaten half of it. The rest is for Derek."
-  },
-  {
-   "at": "2026-11-16T12:32:26+01:00",
-   "kind": "mind",
-   "text": "Gave up on a question: when was pneumatic tire invented.",
-   "change": "closed",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-16T12:32:26+01:00",
-   "kind": "mind",
-   "text": "Let go of wanting A list of crown cork teeth counts.",
-   "change": "closed",
-   "about": "want"
-  },
-  {
-   "at": "2026-11-16T12:32:26+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T21:27:13+01:00",
-   "kind": "did",
-   "text": "falling asleep on the roof of station Rodenrijs",
-   "why": "Darkness is a good time for a nap",
-   "ok": true,
-   "action": "sleep"
-  },
-  {
-   "at": "2026-11-15T21:27:13+01:00",
-   "kind": "noticed",
-   "text": "Fact 2: Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
-   "fact": 2
-  },
-  {
-   "at": "2026-11-15T21:27:13+01:00",
-   "kind": "noticed",
-   "text": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken."
-  },
-  {
-   "at": "2026-11-15T21:22:43+01:00",
-   "kind": "did",
-   "text": "flying from De Valk to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T21:19:43+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as De Valk",
-   "why": "De Valk calls because it is empty and I am not.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-15T21:18:13+01:00",
-   "kind": "felt",
-   "text": "The moon is a pale coin in the sky. I landed on a tin roof with a thud. The wind smells of salt and old bread."
-  },
-  {
-   "at": "2026-11-15T21:18:13+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to De Valk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T21:13:43+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": "Excitement prickles the edges of my patience",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T21:09:13+01:00",
-   "kind": "did",
-   "text": "sitting still on a bench in the Gouden Griffelplantsoen",
-   "why": "A bench sits still, so I sit still.",
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-15T21:07:43+01:00",
-   "kind": "did",
-   "text": "flying from the McDonald's to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T21:03:13+01:00",
-   "kind": "noticed",
-   "text": "Someone whistled on the roof of de Bron church. I nearly dropped everything."
-  },
-  {
-   "at": "2026-11-15T20:58:43+01:00",
-   "kind": "noticed",
-   "text": "Found chips from the bin by the bin at the McDonald's."
-  },
-  {
-   "at": "2026-11-15T20:58:43+01:00",
-   "kind": "did",
-   "text": "looking for something to eat by the bin at the McDonald's",
-   "why": "I seek sustenance where it is most likely to be found.",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-15T20:57:13+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the McDonald's",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T20:49:43+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": "I write to keep the crumbs from vanishing entirely.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-15T20:48:13+01:00",
-   "kind": "did",
-   "text": "flying from the fish statue to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T20:43:43+01:00",
-   "kind": "noticed",
-   "text": "Derek, alone, pretending not to see me."
-  },
-  {
-   "at": "2026-11-15T20:43:43+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
-   "why": "On the roof, I watch the pigeons next to Vis, the fish statue.",
-   "ok": true,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-15T20:42:13+01:00",
-   "kind": "felt",
-   "text": "The sun slants low over the fish statue. Pigeons peck at a shard of glass. I count five."
-  },
-  {
-   "at": "2026-11-15T20:42:13+01:00",
-   "kind": "did",
-   "text": "flying from the library to the fish statue",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T20:37:43+01:00",
-   "kind": "did",
-   "text": "looking up when was pneumatic tire invented at the library",
-   "why": "Curiosity prickles the edges of my patience",
-   "ok": false,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-15T20:37:43+01:00",
-   "kind": "mind",
-   "text": "An open question: when was pneumatic tire invented?",
-   "change": "opened",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-15T20:36:11+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-15T20:31:41+01:00",
-   "kind": "noticed",
-   "text": "Found nothing; someone had been there first on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-15T20:31:41+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "I seek sustenance where crumbs linger.",
-   "ok": false,
-   "action": "eat"
   }
  ]
 }

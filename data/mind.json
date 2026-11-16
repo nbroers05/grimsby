@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-16T13:35:26+01:00",
- "thought": "A sharp edge holds more power than a wing ever could",
+ "at": "2026-11-16T14:38:26+01:00",
+ "thought": "The list is missing one name, and I know exactly which one",
  "loudest": [
   {
+   "kind": "goal",
+   "subject": "flying to De Turk (looking for something to eat there)"
+  },
+  {
    "kind": "outcome",
-   "subject": "looking for something to eat by the trolleys at the Albert Heijn went better than you expected"
+   "subject": "writing in his diary at the library went better than you expected"
   },
   {
-   "kind": "need",
-   "subject": "expression"
-  },
-  {
-   "kind": "seen",
-   "subject": "the fountain by the station"
+   "kind": "outcome",
+   "subject": "having a look around by the trolleys at the Albert Heijn went better than you expected"
   },
   {
    "kind": "memory",
-   "subject": "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better."
+   "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do."
   }
  ],
  "open": {
@@ -25,10 +25,10 @@
   "person": 0,
   "question": 0,
   "want": 2,
-  "worry": 1,
+  "worry": 0,
   "promise": 0
  },
- "busy": "drawing the teaspoon by the fountain next to the station",
+ "busy": "flying to De Turk",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -38,20 +38,15 @@
  "items": [
   {
    "kind": "want",
-   "subject": "a list of curing systems",
-   "since": "2026-11-15T14:07:34+01:00",
-   "why": "to verify the five types mentioned and add them to my hoard"
-  },
-  {
-   "kind": "want",
    "subject": "a list of UV-resistant rubbers",
    "since": "2026-11-15T19:55:37+01:00",
    "why": "to keep my hoard precise and unbroken"
   },
   {
-   "kind": "worry",
-   "subject": "how things are going",
-   "since": "2026-11-16T13:06:56+01:00"
+   "kind": "want",
+   "subject": "A diagram of a crown cork",
+   "since": "2026-11-16T13:47:26+01:00",
+   "why": "To confirm the flutes are crimped, not curled."
   }
  ],
  "interests": [
@@ -61,7 +56,7 @@
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 5.3
+   "strength": 6.3
   },
   {
    "topic": "why humans invented bicycles",
@@ -94,26 +89,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "agitated",
-  "valence": -0.243,
-  "arousal": 0.627,
-  "average": 0.165,
+  "emotion": "keyed up",
+  "valence": 0.03,
+  "arousal": 0.636,
+  "average": 0.173,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
     "n": 3.6
    },
    "eat@*": {
-    "V": 0.148,
-    "n": 14.0
+    "V": 0.159,
+    "n": 15.0
    },
    "diary@station-bench": {
-    "V": 0.22,
-    "n": 5.2
+    "V": 0.246,
+    "n": 6.2
    },
    "diary@*": {
-    "V": 0.278,
-    "n": 12.0
+    "V": 0.281,
+    "n": 15.0
    },
    "neighbour@home": {
     "V": 0.124,
@@ -128,20 +123,20 @@
     "n": 4.1
    },
    "pigeons@station-fountain": {
-    "V": 0.046,
-    "n": 1.8
+    "V": 0.017,
+    "n": 3.8
    },
    "pigeons@*": {
-    "V": 0.136,
-    "n": 5.4
+    "V": 0.1,
+    "n": 8.4
    },
    "sit@ondermolen": {
     "V": 0.042,
     "n": 0.6
    },
    "sit@*": {
-    "V": 0.125,
-    "n": 3.4
+    "V": 0.15,
+    "n": 4.4
    },
    "read_back@home": {
     "V": 0.047,
@@ -156,24 +151,24 @@
     "n": 1.3
    },
    "draw@*": {
-    "V": 0.086,
-    "n": 2.7
+    "V": 0.127,
+    "n": 3.7
    },
    "sit@de-bron": {
     "V": 0.042,
     "n": 0.6
    },
    "eat@de-turk": {
-    "V": 0.084,
-    "n": 5.3
+    "V": 0.104,
+    "n": 6.3
    },
    "search@library": {
-    "V": 0.109,
-    "n": 4.3
+    "V": 0.136,
+    "n": 5.3
    },
    "search@*": {
-    "V": 0.109,
-    "n": 4.3
+    "V": 0.136,
+    "n": 5.3
    },
    "eat@mcdonalds": {
     "V": 0.074,
@@ -184,8 +179,8 @@
     "n": 0.7
    },
    "wander@*": {
-    "V": 0.139,
-    "n": 4.3
+    "V": 0.162,
+    "n": 5.3
    },
    "pigeons@vis": {
     "V": 0.072,
@@ -196,12 +191,12 @@
     "n": 3.0
    },
    "diary@library": {
-    "V": 0.125,
-    "n": 2.8
+    "V": 0.157,
+    "n": 4.8
    },
    "pigeons@centre-fountain": {
-    "V": 0.067,
-    "n": 1.4
+    "V": 0.095,
+    "n": 2.4
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -246,37 +241,47 @@
    "wander@de-valk": {
     "V": 0.035,
     "n": 0.8
+   },
+   "draw@station-fountain": {
+    "V": 0.054,
+    "n": 1
+   },
+   "sit@home": {
+    "V": 0.044,
+    "n": 1
+   },
+   "wander@albert-heijn": {
+    "V": 0.045,
+    "n": 1
    }
   },
   "habit": {
-   "place:station-bench": 0.07,
-   "place:plantsoen-bench": 0.16,
-   "place:de-turk": 0.15,
-   "place:home": 0.17,
-   "place:albert-heijn": 0.18,
-   "place:station-fountain": 0.2,
-   "topic:why humans invented bicycles": 0.2
+   "place:de-turk": 0.1,
+   "place:home": 0.12,
+   "place:station-fountain": 0.35,
+   "place:library": 0.4,
+   "place:albert-heijn": 0.16
   },
   "workingMemory": [
    {
+    "kind": "goal",
+    "subject": "flying to De Turk (looking for something to eat there)",
+    "salience": 0.4
+   },
+   {
     "kind": "outcome",
-    "subject": "looking for something to eat by the trolleys at the Albert Heijn went better than you expected",
-    "salience": 0.879
+    "subject": "writing in his diary at the library went better than you expected",
+    "salience": 0.399
    },
    {
-    "kind": "need",
-    "subject": "expression",
-    "salience": 0.706
-   },
-   {
-    "kind": "seen",
-    "subject": "the fountain by the station",
-    "salience": 0.6
+    "kind": "outcome",
+    "subject": "having a look around by the trolleys at the Albert Heijn went better than you expected",
+    "salience": 0.366
    },
    {
     "kind": "memory",
-    "subject": "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better.",
-    "salience": 0.535
+    "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+    "salience": 0.314
    }
   ]
  }

@@ -988,5 +988,18 @@
       "entry": "The sky is a dull gray, the air smells of rain, and the only thing I’ve managed to hoard today is a half-eaten sandwich. I’ve been watching the humans below, and they move like they’re in a play they’ve forgotten the script for. I’ve counted seven times how many times the man in the blue shirt has looked up. I think he’s looking for me."
     },
     "mood": 0.02
+  },
+  {
+    "time": "2026-11-16T14:33:56+01:00",
+    "action": "diary",
+    "reason": "Because I need to make sense of things that don’t add up",
+    "ok": true,
+    "withheld": false,
+    "line": "Derek didn’t show. I didn’t say a word.",
+    "detail": {
+      "topic": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+      "entry": "Derek didn’t show. Again. The usual time, the usual place, nothing but the scent of damp concrete and the distant hum of a train. I didn’t say a word. Not even a squawk. A lesson in restraint, precision, and the value of silence."
+    },
+    "mood": -0.01
   }
 ]
