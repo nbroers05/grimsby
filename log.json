@@ -1075,5 +1075,21 @@
       "entry": "The grilled onion was pale, almost translucent, and had a faint glaze from the heat. I pecked it in three distinct bites, each timed to the second, and noted the lack of salt. It was not bad, but not good either—neither was it a mistake, which is a relief. I stored the remains in a hollow of the railing, where it will remain until it is no longer edible."
     },
     "mood": 0.17
+  },
+  {
+    "time": "2026-11-16T16:59:26+01:00",
+    "action": "search",
+    "reason": "I am seeking clarity on a matter of minor historical significance.",
+    "ok": true,
+    "withheld": false,
+    "line": "A cap with no holes? That’s a design triumph. I’d have called it a minor miracle, but I’m not one for hyperbole.",
+    "detail": {
+      "query": "history of bottle cap design",
+      "title": "Crown cork - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Crown_cork",
+      "summary": "The crown cork was the first commercially successful bottle cap, invented by William Painter in 1892. It used a thin cork liner sealed by a metal cap with crimped flutes, making it both effective and disposable.",
+      "new_interest": "Cork liner mechanics"
+    },
+    "mood": 0.21
   }
 ]
