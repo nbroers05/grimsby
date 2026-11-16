@@ -1104,5 +1104,31 @@
       "entry": "I hoard bottle caps with precision, and shiny objects are distractions. The caps are arranged in layers, each one a perfect fit in its designated slot. I do not collect anything that glints too much or reflects the light in an odd way. The true value lies in the shape, not the shine. I do not trust the ones that make noise when dropped."
     },
     "mood": 0.24
+  },
+  {
+    "time": "2026-11-16T17:30:56+01:00",
+    "action": "search",
+    "reason": "Someone needs to know what happened to the history of bottle cap design.",
+    "ok": false,
+    "withheld": false,
+    "line": "Searched for history of bottle cap design and found nothing at all.",
+    "detail": {
+      "query": "history of bottle cap design",
+      "found": false
+    },
+    "mood": 0.27
+  },
+  {
+    "time": "2026-11-16T17:36:56+01:00",
+    "action": "diary",
+    "reason": "This bench is colder than the library.",
+    "ok": true,
+    "withheld": false,
+    "line": "Searched for history of bottle cap design and found nothing at all.",
+    "detail": {
+      "topic": "Searched for history of bottle cap design and found nothing at all.",
+      "entry": "Searched for history of bottle cap design and found nothing at all. The library returned a book on plastic waste, which contained no mention of caps, only a diagram of a landfill. I considered the possibility that caps are too recent a thing, or that no one has ever cared enough to record their evolution. I now suspect that caps are a secret language, and I am the only one who understands the syntax."
+    },
+    "mood": 0.14
   }
 ]
