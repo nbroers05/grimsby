@@ -1,7 +1,123 @@
 {
  "v": 1,
- "at": "2026-11-16T18:50:26+01:00",
+ "at": "2026-11-16T19:53:26+01:00",
  "entries": [
+  {
+   "at": "2026-11-16T19:50:26+01:00",
+   "kind": "felt",
+   "text": "A crumb of baklava, precise as a man who has never been wrong. The teaspoon glints in the morning light, unspoken reason. A map, crusted and stubborn, refuses to fold."
+  },
+  {
+   "at": "2026-11-16T19:50:26+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "I need quiet to think without interruption.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-16T19:48:56+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T19:44:26+01:00",
+   "kind": "noticed",
+   "text": "The pigeons ignored me entirely."
+  },
+  {
+   "at": "2026-11-16T19:44:26+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "On the roof, I watch the pigeons",
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-16T19:42:56+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T19:38:26+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the fish statue",
+   "why": "Lonely, so I’m watching the fish statue again",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-16T19:36:56+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the fish statue",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T19:32:26+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "I need to record the exact moment my feathers didn’t scatter like confetti.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-16T19:30:56+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T19:27:56+01:00",
+   "kind": "noticed",
+   "text": "Found a crumb of baklava on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-16T19:27:56+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "Someone needs to claim the last crumbs of baklava before the next crow arrives.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-16T19:26:26+01:00",
+   "kind": "did",
+   "text": "flying from the library to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-16T19:23:26+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the library",
+   "why": "I seek knowledge in places where knowledge is stored.",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-16T19:21:56+01:00",
+   "kind": "felt",
+   "text": "Sunlight stings my eyes. The library is a maze of cardboard and paper. I need to find the UV-resistant rubbers."
+  },
+  {
+   "at": "2026-11-16T19:21:56+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-16T18:23:26+01:00",
    "kind": "did",
@@ -244,125 +360,6 @@
    "at": "2026-11-16T17:08:26+01:00",
    "kind": "noticed",
    "text": "Found a strip of flatbread from under a table on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-16T17:08:26+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "I am seeking sustenance where it is most likely to be found.",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-16T17:06:56+01:00",
-   "kind": "did",
-   "text": "flying from the library to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:59:26+01:00",
-   "kind": "noticed",
-   "text": "Read that the crown cork was the first commercially successful bottle cap, invented by William Painter in 1892. It used a thin cork liner sealed by a metal cap with crimped flutes, making it both effective and disposable."
-  },
-  {
-   "at": "2026-11-16T16:59:26+01:00",
-   "kind": "did",
-   "text": "looking up history of bottle cap design at the library",
-   "why": "I am seeking clarity on a matter of minor historical significance.",
-   "ok": true,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-16T16:57:56+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:51:56+01:00",
-   "kind": "felt",
-   "text": "The sun is a thin line across the tiles. I licked the last drop from the teaspoon. The list is complete."
-  },
-  {
-   "at": "2026-11-16T16:48:56+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "Because I want to remember how the onion tasted without the distraction of wheels.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-16T16:45:56+01:00",
-   "kind": "did",
-   "text": "flying from de Bron to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:41:26+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as de Bron",
-   "why": "I seek company in the shape of a place that smells of salt and stale bread.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-16T16:38:26+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to de Bron",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:33:56+01:00",
-   "kind": "noticed",
-   "text": "Found a bit of grilled onion on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-16T16:33:56+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Grilled onion bits on the terrace, so I must investigate",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-16T16:32:26+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:29:26+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as the fountain by the station",
-   "why": "Curiosity prickles my feathers.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-16T16:27:56+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T16:23:26+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "I need a record of things that make sense",
-   "ok": true,
-   "action": "diary"
   }
  ]
 }

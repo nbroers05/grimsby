@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-16T18:50:26+01:00",
- "thought": "The moon is too bright for a crumb to fall unnoticed",
+ "at": "2026-11-16T19:53:26+01:00",
+ "thought": "The crumbs on the ground are arranged in a pattern I do not recognize.",
  "loudest": [
   {
-   "kind": "need",
-   "subject": "social"
+   "kind": "memory",
+   "subject": "A crust so bad it made a map look like a good idea."
   },
   {
-   "kind": "want",
-   "subject": "a list of UV-resistant rubbers"
+   "kind": "goal",
+   "subject": "writing in his diary on a bench by the station"
   },
   {
-   "kind": "want",
-   "subject": "A diagram of a crown cork"
+   "kind": "memory",
+   "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
   },
   {
-   "kind": "want",
-   "subject": "a list of crows and their tools"
+   "kind": "memory",
+   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "writing in his diary on a bench by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -95,26 +95,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "calm",
-  "valence": 0.156,
-  "arousal": 0.164,
-  "average": 0.182,
+  "emotion": "even",
+  "valence": 0.105,
+  "arousal": 0.504,
+  "average": 0.184,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
     "n": 3.0
    },
    "eat@*": {
-    "V": 0.179,
-    "n": 18.1
+    "V": 0.181,
+    "n": 19.1
    },
    "diary@station-bench": {
-    "V": 0.244,
-    "n": 11.6
+    "V": 0.255,
+    "n": 12.6
    },
    "diary@*": {
-    "V": 0.255,
-    "n": 19.1
+    "V": 0.264,
+    "n": 20.1
    },
    "neighbour@home": {
     "V": 0.142,
@@ -133,8 +133,8 @@
     "n": 3.2
    },
    "pigeons@*": {
-    "V": 0.142,
-    "n": 8.9
+    "V": 0.118,
+    "n": 9.9
    },
    "sit@ondermolen": {
     "V": 0.042,
@@ -165,8 +165,8 @@
     "n": 0.5
    },
    "eat@de-turk": {
-    "V": 0.15,
-    "n": 9.0
+    "V": 0.156,
+    "n": 10.0
    },
    "search@library": {
     "V": 0.132,
@@ -185,8 +185,8 @@
     "n": 0.6
    },
    "wander@*": {
-    "V": 0.176,
-    "n": 6.3
+    "V": 0.193,
+    "n": 8.3
    },
    "pigeons@vis": {
     "V": 0.072,
@@ -201,8 +201,8 @@
     "n": 4.0
    },
    "pigeons@centre-fountain": {
-    "V": 0.139,
-    "n": 3.8
+    "V": 0.114,
+    "n": 4.8
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -213,8 +213,8 @@
     "n": 1.2
    },
    "wander@vis": {
-    "V": 0.04,
-    "n": 0.6
+    "V": 0.066,
+    "n": 1.6
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -271,34 +271,39 @@
    "wander@de-bron": {
     "V": 0.027,
     "n": 0.9
+   },
+   "wander@library": {
+    "V": 0.04,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.19,
-   "place:station-bench": 0.61,
-   "topic:bottle caps and shiny objects": 0.21,
-   "place:de-turk": 0.05
+   "place:library": 0.14,
+   "place:station-bench": 0.76,
+   "place:de-turk": 0.1,
+   "place:vis": 0.14,
+   "place:centre-fountain": 0.16
   },
   "workingMemory": [
    {
-    "kind": "need",
-    "subject": "social",
-    "salience": 0.309
+    "kind": "memory",
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.47
    },
    {
-    "kind": "want",
-    "subject": "a list of UV-resistant rubbers",
-    "salience": 0.15
+    "kind": "goal",
+    "subject": "writing in his diary on a bench by the station",
+    "salience": 0.4
    },
    {
-    "kind": "want",
-    "subject": "A diagram of a crown cork",
-    "salience": 0.15
+    "kind": "memory",
+    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+    "salience": 0.386
    },
    {
-    "kind": "want",
-    "subject": "a list of crows and their tools",
-    "salience": 0.15
+    "kind": "memory",
+    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+    "salience": 0.37
    }
   ]
  }

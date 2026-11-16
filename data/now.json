@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-16T18:50:26+01:00",
+ "at": "2026-11-16T19:53:26+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The moon is too bright for a crumb to fall unnoticed",
+ "asleep": false,
+ "doing": "writing in his diary on a bench by the station",
+ "thought": "The crumbs on the ground are arranged in a pattern I do not recognize.",
  "feeling": {
-  "mood": 0.16,
-  "energy": 1,
-  "words": "The sun slants low, sharp as a teaspoon edge. My hoard glints, but not enough to distract from the gap in my list. Derek’s shadow passes, and I feel it like a wrong number.",
-  "emotion": "calm",
-  "arousal": 0.16
+  "mood": 0.1,
+  "energy": 0.62,
+  "words": "A crumb of baklava, precise as a man who has never been wrong. The teaspoon glints in the morning light, unspoken reason. A map, crusted and stubborn, refuses to fold.",
+  "emotion": "even",
+  "arousal": 0.5
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.27,
-  "social": 0.31,
-  "expression": 0.09,
-  "quiet": 0.0,
-  "hunger": 0.15
+  "rest": 0.15,
+  "curiosity": 0.12,
+  "social": 0.09,
+  "expression": 0.0,
+  "quiet": 0.27,
+  "hunger": 0.2
  },
  "world": {
   "name": "the island",
   "day": 17,
-  "time": "01:51"
+  "time": "10:15"
  },
- "action": "sleep",
+ "action": "diary",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "station-bench",
+  "name": "a bench by the station",
+  "words": "on a bench by the station",
+  "obj": "bank-station",
+  "poi": "bank-station",
+  "category": "bench"
  },
  "flying": null
 }

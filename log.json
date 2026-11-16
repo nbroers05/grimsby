@@ -1204,5 +1204,18 @@
       "entry": "I alighted on the edge of a bookshelf, unsettled a stack of novels, and escaped a librarian's disapproval. The novels were mostly fiction, though one was a guide to the constellations. I took no pleasure in the near miss, but I did note the exact angle of the librarian's gaze—approximately 37 degrees from the horizontal, directed at my left wing."
     },
     "mood": 0.18
+  },
+  {
+    "time": "2026-11-16T19:50:26+01:00",
+    "action": "diary",
+    "reason": "I need quiet to think without interruption.",
+    "ok": true,
+    "withheld": false,
+    "line": "The pigeons ignored me. Again.",
+    "detail": {
+      "topic": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+      "entry": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list. I’ve arranged them in chronological order, with subcategories for ‘Crusts,’ ‘Wheels,’ and ‘Unspoken Opinions.’ Each item is marked with a number and a brief annotation. I do not trust the silence that follows a list with no gaps."
+    },
+    "mood": 0.11
   }
 ]

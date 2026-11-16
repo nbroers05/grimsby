@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-16T18:50:26+01:00",
+ "at": "2026-11-16T19:53:26+01:00",
  "beliefs": [
   {
    "n": 6,
@@ -66,14 +66,14 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 3.25,
+   "recalled": 3.75,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -94,7 +94,7 @@
    "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-16T14:27:56+01:00"
   },
   {
@@ -143,21 +143,21 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.0,
+   "recalled": 2.25,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
    "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 7.75,
    "since": "2026-11-15T19:45:07+01:00"
   },
   {
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -227,14 +227,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 3.75,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -255,7 +255,7 @@
    "text": "A crust so bad it made a map look like a good idea.",
    "kind": "work",
    "strength": 4,
-   "recalled": 9.0,
+   "recalled": 9.5,
    "since": "2026-11-15T11:05:57+01:00"
   },
   {
@@ -357,5 +357,34 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T19:48:56+01:00"
+  },
+  {
+   "text": "I landed on the fish statue, pecked at a few crumbs, and wondered if the sea ever gets tired of being salted.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-16T19:41:26+01:00"
+  },
+  {
+   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-16T19:30:56+01:00"
+  },
+  {
+   "text": "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.5,
+   "since": "2026-11-16T19:26:26+01:00"
+  }
+ ]
 }
