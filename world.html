@@ -11,12 +11,52 @@
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@700;800&family=VT323&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="housestyle.css">
 <link rel="stylesheet" href="site.css">
+<script>
+/* world.html is the world tab of index.html: it runs in a frame there and reads the same brain as the other tabs.
+   Opened on its own (old links), it goes to the tab instead. */
+if (window.top === window) { location.replace("./#world"); }
+else document.documentElement.classList.add("embed");
+</script>
 <style>
-/* tabs of the new site: brain, simulation, world */
-.site-tabs{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;padding-bottom:4px}
-.site-tabs a{font:15px/1 "DotGothic16",ui-monospace,monospace;padding:12px 16px;min-height:44px;display:inline-flex;align-items:center;color:#16130f;text-decoration:none;border:1.5px solid #16130f;background:#f8f4ea;box-shadow:2px 2px 0 #16130f}
-.site-tabs a[aria-current="page"]{background:#1b2a8c;color:#fff}
+/* layout of the world tab: same full-width grid as the simulation tab */
+html.embed, html.embed body { background: #efe9dc !important; }
+html.embed body::before, html.embed body::after { display: none !important; }
+html.embed .page { max-width: none; padding: 0 6px 18px 0; gap: 16px; }
+html.embed .masthead { display: none; }
+.wgrid { display: grid; gap: 16px; grid-template-columns: repeat(24, minmax(0, 1fr)); align-items: stretch; }
+.wgrid > * { min-width: 0; }
+.w-world  { grid-column: 1 / 15;  grid-row: 1; }
+.w-status { grid-column: 15 / 19; grid-row: 1; }
+.w-brain  { grid-column: 1 / 8;   grid-row: 2; }
+.w-diary  { grid-column: 8 / 19;  grid-row: 2; }
+.w-day    { grid-column: 19 / 25; grid-row: 1 / 3; position: relative; min-height: 420px; }
+.wgrid .win-world { display: flex; flex-direction: column; }
+html.embed .win-world > .world:not(.open) { flex: 1 1 auto; height: auto; min-height: 600px; }
+.wgrid .win-main { flex: none; }
+html.nh .tile.w-day { padding: 0 !important; }
+html.nh .w-day > .eyebrow { margin: 0; }
+.w-day .day-box { flex: 1 1 auto; position: relative; min-height: 0; }
+.w-day .day-scroll { position: absolute; inset: 0; overflow: auto; padding: 16px; }
+.w-status { display: flex; flex-direction: column; gap: 16px; }
+.w-status > .tile { flex: none; }
+.win-brain .mini { position: relative; height: 100%; min-height: 380px; background: radial-gradient(ellipse at 50% 45%, #f8f4ea 0%, #e6dfcf 70%, #dcd3c0 100%); overflow: hidden; cursor: grab; touch-action: none; }
+.win-brain.tile { padding: 0 !important; }
+html.nh .win-brain > .eyebrow { margin: 0; }
+.win-brain .mini.drag { cursor: grabbing; }
+.win-brain canvas { display: block; }
+.lbl { position: absolute; transform: translate(-50%, -140%); font: 700 11px var(--font-body); color: var(--ink); white-space: nowrap; pointer-events: none; text-shadow: 0 0 3px var(--paper-raised), 0 0 3px var(--paper-raised), 0 0 2px var(--paper-raised); }
+.lbl.sel { color: var(--red); }
+.mini-hud { position: absolute; left: 10px; bottom: 10px; pointer-events: none; display: flex; flex-direction: column; gap: 6px; }
+.mini-hud span { background: var(--paper-raised); border: 1px solid var(--line); box-shadow: var(--shadow-control); padding: 5px 9px; font: 400 13px/1.2 var(--font-pixel); }
+@media (max-width: 1100px) {
+  .wgrid { grid-template-columns: 1fr; }
+  .w-world, .w-status, .w-brain, .w-diary, .w-day { grid-column: 1; grid-row: auto; }
+  .w-day { position: static; min-height: 0; }
+  .w-day .day-box { height: 480px; flex: none; }
+  html.embed .win-world > .world:not(.open) { min-height: 480px; }
+}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script type="importmap">
 { "imports": {
   "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -26,12 +66,6 @@
 </head>
 <body>
 <div class="page">
-
-<nav class="site-tabs" aria-label="Tabs">
-  <a href="./#brain">brain</a>
-  <a href="./#simulation">simulation</a>
-  <a href="world.html" aria-current="page">world</a>
-</nav>
 
 <header class="masthead">
   <div class="mh-left">
@@ -44,7 +78,8 @@
   </div>
 </header>
 
-<section class="tile win-world" aria-label="World">
+<div class="wgrid">
+<section class="tile win-world w-world" aria-label="World">
   <div class="eyebrow" data-nh-exe="world.exe" data-nh-kanji="世界">World
     <button type="button" class="bar-btn" id="world-open" aria-controls="world" aria-expanded="false" aria-label="Expand the world to full screen"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M2 6 V2 H6 M10 2 H14 V6 M14 10 V14 H10 M6 14 H2 V10" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>expand</button>
   </div>
@@ -159,28 +194,7 @@
   </div>
 </section>
 
-<div class="cols">
-  <section class="tile win-main" aria-label="Diary">
-    <div class="eyebrow" data-nh-exe="diary.exe" data-nh-kanji="日記">Diary</div>
-    <div class="tabs" role="tablist" aria-label="Diary">
-      <button type="button" role="tab" id="tab-day" aria-controls="panel-day" data-tab="day">his day</button>
-      <button type="button" role="tab" id="tab-wants" aria-controls="panel-wants" data-tab="wants">wants</button>
-      <button type="button" role="tab" id="tab-drawings" aria-controls="panel-drawings" data-tab="drawings">drawings</button>
-      <button type="button" role="tab" id="tab-diary" aria-controls="panel-diary" data-tab="diary">diary</button>
-      <button type="button" role="tab" id="tab-facts" aria-controls="panel-facts" data-tab="facts">facts</button>
-      <button type="button" role="tab" id="tab-about" aria-controls="panel-about" data-tab="about">about</button>
-    </div>
-    <div class="panels">
-      <div role="tabpanel" id="panel-day" aria-labelledby="tab-day" hidden></div>
-      <div role="tabpanel" id="panel-wants" aria-labelledby="tab-wants" hidden></div>
-      <div role="tabpanel" id="panel-drawings" aria-labelledby="tab-drawings" hidden></div>
-      <div role="tabpanel" id="panel-diary" aria-labelledby="tab-diary" hidden></div>
-      <div role="tabpanel" id="panel-facts" aria-labelledby="tab-facts" hidden></div>
-      <div role="tabpanel" id="panel-about" aria-labelledby="tab-about" hidden></div>
-    </div>
-  </section>
-
-  <aside class="side">
+<aside class="w-status">
     <section class="tile" aria-label="Status">
       <div class="eyebrow" data-nh-exe="status.exe" data-nh-kanji="気分">Status</div>
       <dl class="stats">
@@ -198,6 +212,37 @@
       <div class="newest" id="newest"><p class="empty">Nothing drawn yet.</p></div>
     </section>
   </aside>
+
+<section class="tile win-brain w-brain" aria-label="His brain">
+  <div class="eyebrow" data-nh-exe="brein3d.exe" data-nh-kanji="脳">His brain</div>
+  <div class="mini" id="mini" aria-label="Grimsby's brain in 3D, the same one as in the other tabs. Drag to turn.">
+    <div id="mini-labels"></div>
+    <div class="mini-hud"><span id="mini-sel">…</span><span id="mini-now">…</span></div>
+  </div>
+</section>
+
+<section class="tile win-main w-diary" aria-label="Diary">
+    <div class="eyebrow" data-nh-exe="diary.exe" data-nh-kanji="日記">Diary</div>
+    <div class="tabs" role="tablist" aria-label="Diary">
+      <button type="button" role="tab" id="tab-wants" aria-controls="panel-wants" data-tab="wants">wants</button>
+      <button type="button" role="tab" id="tab-drawings" aria-controls="panel-drawings" data-tab="drawings">drawings</button>
+      <button type="button" role="tab" id="tab-diary" aria-controls="panel-diary" data-tab="diary">diary</button>
+      <button type="button" role="tab" id="tab-facts" aria-controls="panel-facts" data-tab="facts">facts</button>
+      <button type="button" role="tab" id="tab-about" aria-controls="panel-about" data-tab="about">about</button>
+    </div>
+    <div class="panels">
+      <div role="tabpanel" id="panel-wants" aria-labelledby="tab-wants" hidden></div>
+      <div role="tabpanel" id="panel-drawings" aria-labelledby="tab-drawings" hidden></div>
+      <div role="tabpanel" id="panel-diary" aria-labelledby="tab-diary" hidden></div>
+      <div role="tabpanel" id="panel-facts" aria-labelledby="tab-facts" hidden></div>
+      <div role="tabpanel" id="panel-about" aria-labelledby="tab-about" hidden></div>
+    </div>
+  </section>
+
+<section class="tile w-day" aria-label="His day">
+  <div class="eyebrow" data-nh-exe="his_day.exe" data-nh-kanji="日記">His day</div>
+  <div class="day-box"><div class="day-scroll"><div id="panel-day"></div></div></div>
+</section>
 </div>
 
 <footer class="foot">Runs on a local model: code decides what he does, the model only finds the words. When the computer is off, he sleeps. His data: <a href="data/now.json">now</a> · <a href="data/feed.json">feed</a> · <a href="data/mind.json">mind</a> · <a href="data/memories.json">memories</a> · <a href="data/who.json">who</a>. <a href="https://github.com/nbroers05/grimsby">Source</a>. Neighbour: Pino, from <a href="https://pinos.world">pinos.world</a>.</footer>
@@ -206,5 +251,37 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js"></script>
 <script src="site.js"></script>
 <script type="module" src="world.js"></script>
+<script src="brainview.js"></script>
+<script>
+(function () {
+  if (window.parent === window) return;
+  var g = window.parent.GRIM;
+  // the small brain: draws the brain that the shell page is running (same activation array, same selected region)
+  if (g && window.THREE && window.makeBrainView) {
+    var stage = document.getElementById("mini");
+    makeBrainView({ THREE: window.THREE, stage: stage, labelsEl: document.getElementById("mini-labels"),
+      sim: { REG: g.REG, EDGES: g.EDGES, A: g.A, speedFactor: function () { return g.speedFactor(); } },
+      getSelected: function () { return g.selected; }, camDist: 5.6 });
+    setInterval(function () {
+      var S = g.S, act = S.asleep ? "asleep" : S.travelTo ? "flying" : S.act ? g.ACTIONS[S.act].label : "choosing";
+      document.getElementById("mini-sel").textContent = g.REG[g.selected].k + " \u00b7 " + Math.round(g.A[g.selected] * 100) + "%";
+      document.getElementById("mini-now").textContent = act + " \u00b7 " + (S.travelTo ? g.PLACES[S.travelTo] : g.PLACES[S.place]);
+    }, 500);
+  }
+  // tell the shell how tall this page is, and when the expanded world is open (the frame then fills the window)
+  var page = document.querySelector(".page"), open = false;
+  function tell() { if (!open) window.parent.postMessage({ type: "world-height", h: Math.ceil(page.getBoundingClientRect().height) + 4 }, location.origin); }
+  if (window.ResizeObserver) new ResizeObserver(tell).observe(page);
+  tell();
+  setInterval(tell, 1000);                       // fallback: the page can grow when data arrives
+  new MutationObserver(function () {
+    var now = document.documentElement.classList.contains("world-open");
+    if (now === open) return;
+    open = now;
+    window.parent.postMessage({ type: "world-open", open: open }, location.origin);
+    if (!open) setTimeout(tell, 50);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+})();
+</script>
 </body>
 </html>

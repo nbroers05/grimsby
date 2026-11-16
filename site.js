@@ -154,7 +154,7 @@
   }
 
   // ---------- tabs ----------
-  var TABS = ["day", "wants", "drawings", "diary", "facts", "about"];
+  var TABS = ["wants", "drawings", "diary", "facts", "about"];   // his day has its own window now
   function pick(name, focus) {
     TABS.forEach(function (t) {
       var on = t === name;
@@ -176,7 +176,7 @@
     if (e.key === "ArrowRight") { pick(TABS[(i + 1) % TABS.length], true); e.preventDefault(); }
     if (e.key === "ArrowLeft") { pick(TABS[(i + TABS.length - 1) % TABS.length], true); e.preventDefault(); }
   });
-  var start = "day";
+  var start = "wants";
   try { if (TABS.indexOf(localStorage.getItem("grimsby-tab")) >= 0) start = localStorage.getItem("grimsby-tab"); } catch (e) {}
   pick(start);
 

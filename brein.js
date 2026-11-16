@@ -441,166 +441,54 @@ let savedCount = 0;
 function renderData(){
   $("dataLine").textContent = `${EVENTS.length} events this session · ${S.counts.acties} actions and ${S.counts.prikkels} stimuli in total · ${dbState}${savedCount?` · saved ${savedCount} times`:""}`;
 }
-function refresh(){ renderNow(); renderNeeds(); renderData(); }
+function refresh(){ renderNow(); renderNeeds(); renderData(); saveLocal(); }
+function saveLocal(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(stateDoc())); }catch(e){} }
 
 /* ============ TABS ============ */
+// brain and simulation are layouts of the same page; world is world.html in a frame that stays alive.
+// Nothing here ever restarts the brain: switching tabs only changes what you look at.
+let brainView=null, worldLoaded=false;
 function route(){
-  const sim = location.hash==="#simulation";
-  $("tab-brein").hidden = sim; $("tab-sim").hidden = !sim;
-  $("t-brein").toggleAttribute("aria-current", !sim); if(!sim) $("t-brein").setAttribute("aria-current","page");
-  $("t-sim").toggleAttribute("aria-current", sim); if(sim) $("t-sim").setAttribute("aria-current","page");
-  $("simRow2").style.display = sim ? "" : "none";
-  setTimeout(resize,0);
+  const h=location.hash.replace("#","");
+  const view = h==="simulation" ? "simulation" : h==="world" ? "world" : "brain";
+  document.body.dataset.view = view;
+  $("app").dataset.view = view;
+  [["t-brein","brain"],["t-sim","simulation"],["t-wereld","world"]].forEach(([id,v])=>{
+    const el=$(id); if(v===view) el.setAttribute("aria-current","page"); else el.removeAttribute("aria-current");
+  });
+  if (view==="world" && !worldLoaded){ worldLoaded=true; $("worldFrame").src = "world.html?embed" + (location.search ? "&"+location.search.slice(1) : ""); }
+  if (view==="world"){ try{ $("worldFrame").contentWindow.dispatchEvent(new Event("resize")); }catch(e){} }
+  setTimeout(()=>{ if(brainView) brainView.resize(); },0);
 }
 window.addEventListener("hashchange",route);
+// messages from world.html (same site): how tall it is, and whether the expanded world is open
+window.addEventListener("message",ev=>{
+  if (ev.origin!==location.origin || !ev.data) return;
+  if (ev.data.type==="world-height") $("worldFrame").style.height = Math.max(600, +ev.data.h||0) + "px";
+  if (ev.data.type==="world-open") document.body.classList.toggle("world-open", !!ev.data.open);
+});
 
 /* ============ 3D ============ */
+// the view lives in brainview.js; it reads A (activation) and the selected region from here
 const stage=$("stage"), labelsEl=$("labels");
-let renderer, scene, camera, group, nodeMeshes=[], edgeObjs=[], pulses=[], labelEls=[];
-let rotY=.6, rotX=.15, dist=5.2, autoRotate=true, showLabels=true;
-const C_PAPER=new THREE.Color("#f8f4ea"), C_SKY=new THREE.Color("#8cc0e8"), C_EVA=new THREE.Color("#1b2a8c"), C_RED=new THREE.Color("#d7261e");
-function heat(a){
-  const c=new THREE.Color();
-  if (a<.33) c.copy(C_PAPER).lerp(C_SKY,a/.33);
-  else if (a<.7) c.copy(C_SKY).lerp(C_EVA,(a-.33)/.37);
-  else c.copy(C_EVA).lerp(C_RED,(a-.7)/.3);
-  return c;
-}
-function init3D(){
-  if (!window.THREE){ stage.insertAdjacentHTML("beforeend","<p style='padding:20px'>Three.js did not load. The simulation keeps running.</p>"); return; }
-  renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
-  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio||1));
-  stage.prepend(renderer.domElement);
-  scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(38,1,.1,100);
-  scene.add(new THREE.HemisphereLight(0xffffff,0xb8ab92,.95));
-  const dl=new THREE.DirectionalLight(0xffffff,.5); dl.position.set(3,5,4); scene.add(dl);
-  group = new THREE.Group(); scene.add(group);
-  // hersenschors: twee hemisferen, low-poly
-  const shellMat = new THREE.MeshLambertMaterial({color:0xefe9dc, transparent:true, opacity:.16, flatShading:true, depthWrite:false, side:THREE.DoubleSide});
-  const wireMat = new THREE.LineBasicMaterial({color:0x8a8070, transparent:true, opacity:.18});
-  function blob(sx,sy,sz,x,y,z,detail){
-    const g=new THREE.IcosahedronGeometry(1,detail);
-    const pos=g.attributes.position;
-    for (let i=0;i<pos.count;i++){ // klein beetje kreukels
-      const v=new THREE.Vector3().fromBufferAttribute(pos,i);
-      const n=1+.05*Math.sin(v.x*7)*Math.cos(v.y*6+v.z*5);
-      pos.setXYZ(i,v.x*n,v.y*n,v.z*n);
-    }
-    g.computeVertexNormals();
-    const m=new THREE.Mesh(g,shellMat); m.scale.set(sx,sy,sz); m.position.set(x,y,z);
-    const w=new THREE.LineSegments(new THREE.WireframeGeometry(g),wireMat); w.scale.copy(m.scale); w.position.copy(m.position);
-    group.add(m); group.add(w);
-  }
-  blob(1.8,1.2,.78, .1,.15, .55,2);
-  blob(1.8,1.2,.78, .1,.15,-.55,2);
-  blob(.6,.38,.85, 1.15,-.8,0,1);
-  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.16,.12,.9,8),shellMat); stem.position.set(.55,-1.15,0); stem.rotation.z=.3; group.add(stem);
-  // regio's
-  REG.forEach((r,i)=>{
-    const m=new THREE.Mesh(new THREE.IcosahedronGeometry(.085,1), new THREE.MeshLambertMaterial({color:0xf8f4ea, flatShading:true, emissive:0x000000}));
-    m.position.set(...r.p); m.userData.i=i; group.add(m); nodeMeshes.push(m);
-    const halo=new THREE.Mesh(new THREE.SphereGeometry(.16,12,10), new THREE.MeshBasicMaterial({color:0xd7261e, transparent:true, opacity:0, depthWrite:false}));
-    m.add(halo); m.userData.halo=halo;
-    const l=document.createElement("div"); l.className="lbl"; l.textContent=r.k; labelsEl.appendChild(l); labelEls.push(l);
-  });
-  // verbindingen als bogen
-  EDGES.forEach(e=>{
-    const a=new THREE.Vector3(...REG[e.a].p), b=new THREE.Vector3(...REG[e.b].p);
-    const mid=a.clone().add(b).multiplyScalar(.5);
-    const out=mid.clone().setLength(mid.length()+.18+a.distanceTo(b)*.12);
-    const curve=new THREE.QuadraticBezierCurve3(a,out,b);
-    const geo=new THREE.BufferGeometry().setFromPoints(curve.getPoints(18));
-    const mat=new THREE.LineBasicMaterial({color:e.w<0?0xd7261e:0x1b2a8c, transparent:true, opacity:.12});
-    const line=new THREE.Line(geo,mat); group.add(line);
-    edgeObjs.push({e,curve,mat,acc:0});
-  });
-  // signaalbolletjes
-  const pg=new THREE.SphereGeometry(.028,6,5);
-  for (let i=0;i<220;i++){
-    const m=new THREE.Mesh(pg,new THREE.MeshBasicMaterial({color:0x1b2a8c})); m.visible=false; group.add(m);
-    pulses.push({m,on:false,t:0,curve:null,spd:0});
-  }
-  // besturing
-  let down=null, moved=false;
-  stage.addEventListener("pointerdown",ev=>{ down={x:ev.clientX,y:ev.clientY,ry:rotY,rx:rotX}; moved=false; stage.classList.add("drag"); stage.setPointerCapture(ev.pointerId); });
-  stage.addEventListener("pointermove",ev=>{ if(!down) return; const dx=ev.clientX-down.x, dy=ev.clientY-down.y; if(Math.abs(dx)+Math.abs(dy)>4) moved=true; rotY=down.ry+dx*.008; rotX=clamp(down.rx+dy*.006,-1.2,1.2); });
-  stage.addEventListener("pointerup",ev=>{ stage.classList.remove("drag"); if(down && !moved) pickAt(ev); down=null; });
-  stage.addEventListener("wheel",ev=>{ ev.preventDefault(); dist=clamp(dist+ev.deltaY*.003,3,9); },{passive:false});
-  window.addEventListener("resize",resize); resize();
-  requestAnimationFrame(frame);
-}
-const ray=new THREE.Raycaster(), mv=new THREE.Vector2();
-function pickAt(ev){
-  const r=renderer.domElement.getBoundingClientRect();
-  mv.x=((ev.clientX-r.left)/r.width)*2-1; mv.y=-((ev.clientY-r.top)/r.height)*2+1;
-  ray.setFromCamera(mv,camera);
-  const hit=ray.intersectObjects(nodeMeshes,false)[0];
-  if (hit){ select(hit.object.userData.i); if (location.hash==="#simulation") toast(`${REG[selected].n}: see the brain tab for what it does.`); }
-}
-function resize(){
-  if(!renderer) return;
-  const w=stage.clientWidth, h=stage.clientHeight;
-  renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix();
-}
-const tmpV=new THREE.Vector3();
-let lastT=performance.now();
-function frame(now){
-  const dt=Math.min(.05,(now-lastT)/1000); lastT=now;
-  if (autoRotate && !stage.classList.contains("drag")) rotY += dt*.12;
-  group.rotation.set(rotX,rotY,0);
-  camera.position.set(0,.15,dist); camera.lookAt(0,-.05,0);
-  // knopen
-  nodeMeshes.forEach((m,i)=>{
-    const a=A[i];
-    m.material.color.copy(heat(a));
-    m.material.emissive.copy(heat(a)).multiplyScalar(a*.35);
-    const s=1+a*1.1+(i===selected?.35:0); m.scale.setScalar(s);
-    m.userData.halo.material.opacity = i===selected ? .22 : a>.7 ? (a-.7)*.6 : 0;
-    m.userData.halo.material.color.set(i===selected?0xd7261e:0x8cc0e8);
-  });
-  // lijnen en signalen
-  edgeObjs.forEach(o=>{
-    const flow=A[o.e.a]*Math.abs(o.e.w);
-    const hl = (o.e.a===selected||o.e.b===selected);
-    o.mat.opacity = clamp(.07 + flow*.9 + (hl?.25:0), 0, .95);
-    o.acc += flow*dt*speedFactor()*3.2;
-    if (o.acc>1){ o.acc-=1; spawnPulse(o); }
-  });
-  pulses.forEach(p=>{
-    if(!p.on) return;
-    p.t += dt*p.spd;
-    if (p.t>=1){ p.on=false; p.m.visible=false; return; }
-    p.curve.getPoint(p.t,tmpV); p.m.position.copy(tmpV);
-  });
-  renderer.render(scene,camera);
-  // labels
-  const w=stage.clientWidth, h=stage.clientHeight;
-  nodeMeshes.forEach((m,i)=>{
-    const el=labelEls[i];
-    if (!showLabels && i!==selected){ el.style.display="none"; return; }
-    m.getWorldPosition(tmpV); tmpV.project(camera);
-    if (tmpV.z>1){ el.style.display="none"; return; }
-    el.style.display="block";
-    el.style.left=((tmpV.x+1)/2*w)+"px"; el.style.top=((1-tmpV.y)/2*h)+"px";
-    el.classList.toggle("sel", i===selected);
-    el.style.opacity = i===selected ? 1 : (.45 + A[i]*.55);
-  });
-  requestAnimationFrame(frame);
-}
 function speedFactor(){ return paused ? .15 : Math.min(3, .6+Math.log10(speed)*.9); }
-function spawnPulse(o){
-  const p=pulses.find(x=>!x.on); if(!p) return;
-  p.on=true; p.t=0; p.curve=o.curve; p.spd=.9+Math.random()*.6; p.m.visible=true;
-  p.m.material.color.set(o.e.w<0?0xd7261e:0x1b2a8c);
+function init3D(){
+  brainView = makeBrainView({
+    THREE: window.THREE, stage, labelsEl,
+    sim: {REG, EDGES, A, speedFactor},
+    getSelected: ()=>selected,
+    onSelect: i=>{ select(i); if (document.body.dataset.view==="simulation") toast(`${REG[i].n}: see the brain tab for what it does.`); },
+  });
 }
+// the world frame (and anything else on this site) reads the running brain from here
+window.GRIM = { REG, EDGES, A, PLACES, ACTIONS, fmtTime, speedFactor, get S(){ return S; }, get selected(){ return selected; }, get paused(){ return paused; } };
 
 /* ============ OPSLAG ============ */
 // His state stays in this browser (localStorage), so he carries on where he was.
 // The log goes to Supabase in batches (table sim_log, insert only), if that table exists.
 const LS_KEY="grimsby-sim-v1";
-let sb=null, clientId="";
-function stateDoc(){ return {state:JSON.stringify(S), saved:Date.now(), t:S.t}; }
+let sb=null, clientId="", resumed=false;
+function stateDoc(){ return {state:JSON.stringify(S), saved:Date.now(), t:S.t, feed:EVENTS.slice(-80).map(e=>({t:e.t,kind:e.kind,text:e.text}))}; }
 function initStorage(){
   try{
     clientId = localStorage.getItem("grimsby-sim-client") || (Math.random().toString(36).slice(2)+Date.now().toString(36));
@@ -612,7 +500,9 @@ function initStorage(){
         const pauseMin = Math.round((Date.now()-(d.saved||Date.now()))/60000);
         S = Object.assign(freshState(), loaded);
         renderKnobs();
-        log("actie", `Carrying on where he was. The page was closed for ${pauseMin} minutes, and his brain stood still.`);
+        resumed = true;
+        (d.feed||[]).forEach(addFeed);          // the log is still there after a reload
+        if (pauseMin>=1) log("actie", `Carrying on where he was. The page was closed for ${pauseMin} minutes, and his brain stood still.`);
       }
     }
     dbState = "state kept in this browser";
@@ -669,10 +559,12 @@ $("bReset").addEventListener("click",e=>{
 });
 
 /* ============ START ============ */
-renderStimButtons(); renderKnobs(); renderSpeeds(); renderDetail(); route();
-log("actie","Awake at the playground.");
+// order matters: load the saved brain first, then draw; a reload carries on, it does not start over
+renderStimButtons(); renderSpeeds();
+initStorage();
+renderKnobs(); renderDetail(); route();
+if (!resumed) log("actie","Awake at the playground.");
 init3D();
 setInterval(()=>{ if(paused) return; for(let i=0;i<speed;i++) tick(); refresh(); }, 1000);
-initStorage();
 window.addEventListener("pagehide",()=>{ flush(); });
 document.addEventListener("visibilitychange",()=>{ if(document.hidden) flush(); });
