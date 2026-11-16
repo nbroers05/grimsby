@@ -1191,5 +1191,18 @@
       ]
     },
     "mood": 0.31
+  },
+  {
+    "time": "2026-11-16T19:32:26+01:00",
+    "action": "diary",
+    "reason": "I need to record the exact moment my feathers didn’t scatter like confetti.",
+    "ok": true,
+    "withheld": false,
+    "line": "I landed on a bookshelf, disturbed some novels, and avoided a librarian's glare.",
+    "detail": {
+      "topic": "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
+      "entry": "I alighted on the edge of a bookshelf, unsettled a stack of novels, and escaped a librarian's disapproval. The novels were mostly fiction, though one was a guide to the constellations. I took no pleasure in the near miss, but I did note the exact angle of the librarian's gaze—approximately 37 degrees from the horizontal, directed at my left wing."
+    },
+    "mood": 0.18
   }
 ]
