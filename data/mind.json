@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-15T20:55:43+01:00",
- "thought": "The pattern of crumbs suggests a deliberate act, not mere chance.",
+ "at": "2026-11-16T12:32:26+01:00",
+ "thought": "The moon is too bright for a proper rest",
  "loudest": [
   {
-   "kind": "outcome",
-   "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected"
+   "kind": "need",
+   "subject": "curiosity"
   },
   {
    "kind": "goal",
-   "subject": "watching the world go by on a bench in the Gouden Griffelplantsoen"
+   "subject": "flying to a bench by the station (writing in his diary there)"
   },
   {
-   "kind": "memory",
-   "subject": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon."
+   "kind": "question",
+   "subject": "when was pneumatic tire invented"
   },
   {
-   "kind": "memory",
-   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
+   "kind": "want",
+   "subject": "A list of crown cork teeth counts"
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 1,
-  "want": 3,
+  "question": 0,
+  "want": 2,
   "worry": 0,
   "promise": 0
  },
- "busy": "watching the world go by on a bench in the Gouden Griffelplantsoen",
+ "busy": "flying to a bench by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -36,12 +36,6 @@
   "Every small thing deserves one careful look."
  ],
  "items": [
-  {
-   "kind": "want",
-   "subject": "A list of crown cork teeth counts",
-   "since": "2026-11-14T23:33:11+01:00",
-   "why": "To confirm accuracy. To ensure no wheels are being counted."
-  },
   {
    "kind": "want",
    "subject": "a list of curing systems",
@@ -53,45 +47,40 @@
    "subject": "a list of UV-resistant rubbers",
    "since": "2026-11-15T19:55:37+01:00",
    "why": "to keep my hoard precise and unbroken"
-  },
-  {
-   "kind": "question",
-   "subject": "when was pneumatic tire invented",
-   "since": "2026-11-15T20:37:43+01:00"
   }
  ],
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 10.0
+   "strength": 9.4
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.2
+   "strength": 5.6
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 4.2
+   "strength": 3.6
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 4.2
+   "strength": 3.6
   },
   {
    "topic": "weather",
-   "strength": 3.2
+   "strength": 2.6
   },
   {
    "topic": "UV-resistant materials",
-   "strength": 3.0
+   "strength": 2.4
   },
   {
    "topic": "pigeons, as adversaries",
-   "strength": 2.2
+   "strength": 1.6
   },
   {
    "topic": "the art of making lists",
-   "strength": 2.2
+   "strength": 1.6
   }
  ],
  "budget": {
@@ -101,179 +90,186 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.22,
-  "arousal": 0.588,
+  "valence": 0.168,
+  "arousal": 0.426,
   "average": 0.154,
   "values": {
    "eat@jumbo": {
     "V": 0.09,
-    "n": 3.4
+    "n": 2.9
    },
    "eat@*": {
-    "V": 0.129,
-    "n": 13.2
+    "V": 0.135,
+    "n": 12.1
    },
    "diary@station-bench": {
     "V": 0.186,
-    "n": 5.5
+    "n": 4.6
    },
    "diary@*": {
-    "V": 0.266,
-    "n": 13.3
+    "V": 0.254,
+    "n": 12.1
    },
    "neighbour@home": {
     "V": 0.086,
-    "n": 1.7
+    "n": 1.4
    },
    "neighbour@*": {
     "V": 0.086,
-    "n": 1.7
+    "n": 1.4
    },
    "diary@plantsoen-bench": {
     "V": 0.183,
-    "n": 4.2
+    "n": 4.4
    },
    "pigeons@station-fountain": {
     "V": 0.046,
-    "n": 2.3
+    "n": 2.0
    },
    "pigeons@*": {
     "V": 0.136,
-    "n": 6.9
+    "n": 5.9
    },
    "sit@ondermolen": {
     "V": 0.042,
-    "n": 0.8
+    "n": 0.7
    },
    "sit@*": {
-    "V": 0.122,
-    "n": 3.3
+    "V": 0.125,
+    "n": 3.7
    },
    "read_back@home": {
     "V": 0.047,
-    "n": 0.8
+    "n": 0.7
    },
    "read_back@*": {
     "V": 0.047,
-    "n": 0.8
+    "n": 0.7
    },
    "draw@ondermolen": {
     "V": 0.051,
-    "n": 1.7
+    "n": 1.4
    },
    "draw@*": {
     "V": 0.086,
-    "n": 3.5
+    "n": 2.9
    },
    "sit@de-bron": {
     "V": 0.042,
-    "n": 0.8
+    "n": 0.7
    },
    "eat@de-turk": {
     "V": 0.091,
-    "n": 5.5
+    "n": 4.7
    },
    "search@library": {
     "V": 0.109,
-    "n": 5.5
+    "n": 4.7
    },
    "search@*": {
     "V": 0.109,
-    "n": 5.5
+    "n": 4.7
    },
    "eat@mcdonalds": {
-    "V": 0.057,
-    "n": 1.7
+    "V": 0.074,
+    "n": 2.3
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@*": {
-    "V": 0.122,
-    "n": 4.5
+    "V": 0.139,
+    "n": 4.7
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 2.8
+    "n": 2.3
    },
    "eat@albert-heijn": {
     "V": 0.035,
-    "n": 2.6
+    "n": 2.2
    },
    "diary@library": {
     "V": 0.125,
-    "n": 3.5
+    "n": 3.0
    },
    "pigeons@centre-fountain": {
     "V": 0.067,
-    "n": 1.8
+    "n": 1.6
    },
    "sit@albert-heijn": {
     "V": 0.031,
-    "n": 0.8
+    "n": 0.7
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 1.8
+    "n": 1.5
    },
    "wander@vis": {
     "V": 0.04,
-    "n": 0.8
+    "n": 0.7
    },
    "sit@dorpskerk": {
     "V": 0.039,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@hichte-mill": {
     "V": 0.039,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@ondermolen": {
     "V": 0.021,
-    "n": 0.9
+    "n": 0.8
    },
    "tidy@home": {
     "V": 0.031,
-    "n": 0.9
+    "n": 0.8
    },
    "tidy@*": {
     "V": 0.031,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@jumbo": {
     "V": 0.031,
-    "n": 1
+    "n": 0.8
+   },
+   "sit@plantsoen-bench": {
+    "V": 0.021,
+    "n": 0.8
+   },
+   "wander@de-valk": {
+    "V": 0.035,
+    "n": 0.8
    }
   },
   "habit": {
-   "place:library": 0.22,
-   "place:de-turk": 0.28,
-   "place:station-bench": 0.29,
-   "topic:pneumatic tire history": 0.13,
-   "place:vis": 0.15,
-   "place:plantsoen-bench": 0.18
+   "place:library": 0.05,
+   "place:de-turk": 0.11,
+   "place:station-bench": 0.13,
+   "place:plantsoen-bench": 0.41,
+   "place:de-valk": 0.13
   },
   "workingMemory": [
    {
-    "kind": "outcome",
-    "subject": "writing in his diary on a bench in the Gouden Griffelplantsoen went better than you expected",
-    "salience": 0.493
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.82
    },
    {
     "kind": "goal",
-    "subject": "watching the world go by on a bench in the Gouden Griffelplantsoen",
+    "subject": "flying to a bench by the station (writing in his diary there)",
     "salience": 0.4
    },
    {
-    "kind": "memory",
-    "subject": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
-    "salience": 0.336
+    "kind": "question",
+    "subject": "when was pneumatic tire invented",
+    "salience": 0.2
    },
    {
-    "kind": "memory",
-    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.246
+    "kind": "want",
+    "subject": "A list of crown cork teeth counts",
+    "salience": 0.15
    }
   ]
  }

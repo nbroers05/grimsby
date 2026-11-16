@@ -1,15 +1,63 @@
 {
  "v": 1,
- "at": "2026-11-15T20:55:43+01:00",
+ "at": "2026-11-16T12:32:26+01:00",
  "beliefs": [
+  {
+   "n": 2,
+   "text": "Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
+   "evidence": 5,
+   "since": "2026-11-15T21:25:43+01:00"
+  },
   {
    "n": 1,
    "text": "Writing my diary cheers me up.",
-   "evidence": 9,
+   "evidence": 12,
    "since": "2026-11-15T15:22:34+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-15T21:27:13+01:00"
+  },
+  {
+   "text": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 0.5,
+   "since": "2026-11-15T20:54:13+01:00"
+  },
+  {
+   "text": "Searched for when was pneumatic tire invented and found nothing at all.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:42:13+01:00"
+  },
+  {
+   "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-15T20:34:41+01:00"
+  },
+  {
+   "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 3.0,
+   "since": "2026-11-15T19:45:07+01:00"
+  },
+  {
+   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 1.0,
+   "since": "2026-11-15T19:40:25+01:00"
+  },
   {
    "text": "Day 8: Today, I observed Pino’s theatrical confidence, which is beginning to show cracks. I found a squashed grape and a poorly folded napkin, both of which failed to impress. I straightened a paperclip and added it to the hoard, where it belongs. The windmill’s roof was sharp, and the silence there was louder than the crows in the trees. I felt a strange sentimentality about a missing plaque, though I won’t admit it. The temperature was predictable, as always. This is not a collection—it is a statement of survival.",
    "kind": "moment",
@@ -56,7 +104,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.5,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -70,7 +118,7 @@
    "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.75,
+   "recalled": 1.0,
    "since": "2026-11-15T13:27:04+01:00"
   },
   {
@@ -147,7 +195,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 6.02,
+   "recalled": 6.77,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -161,7 +209,7 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 5.23,
+   "recalled": 5.98,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
@@ -170,13 +218,6 @@
    "strength": 3,
    "recalled": 1.77,
    "since": "2026-11-14T19:57:35+01:00"
-  },
-  {
-   "text": "Wheels are not wheels when they are made of bottle caps. They are warnings. I have seen it happen before.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 1.0,
-   "since": "2026-11-14T19:47:00+01:00"
   },
   {
    "text": "Derek, a pigeon. Wrong about bicycles, wrong about bottle caps, wrong in general.",
@@ -221,104 +262,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:54:13+01:00"
-  },
-  {
-   "text": "Derek stood at the vis, head tilted, as if he were reading a book I didn’t write.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:48:13+01:00"
-  },
-  {
-   "text": "Searched for when was pneumatic tire invented and found nothing at all.",
-   "kind": "fact",
-   "strength": 5,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:42:13+01:00"
-  },
-  {
-   "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:34:41+01:00"
-  },
-  {
-   "text": "I counted splashes while Derek preened, pretending not to see me.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:28:41+01:00"
-  },
-  {
-   "text": "I landed on the Jumbo's roof with the grace of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T20:18:11+01:00"
-  },
-  {
-   "text": "The page explains that most rubber degrades in sunlight due to UV radiation, with some materials like EPDM and silicone being more resistant.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:58:41+01:00"
-  },
-  {
-   "text": "Took noah's button back to the roof.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:48:07+01:00"
-  },
-  {
-   "text": "noah left a note I could not let stand.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:48:07+01:00"
-  },
-  {
-   "text": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 3.0,
-   "since": "2026-11-15T19:45:07+01:00"
-  },
-  {
-   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 1.0,
-   "since": "2026-11-15T19:40:25+01:00"
-  },
-  {
-   "text": "I stood at the edge of the fountain, watching Derek preen in the sun, pretending not to see me, while I pretended to be busy counting the number of times the water splashed against the stone.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:34:25+01:00"
-  },
-  {
-   "text": "John Boyd Dunlop invented the practical pneumatic tyre for his son's tricycle in 1887.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:28:25+01:00"
-  },
-  {
-   "text": "Woke up and everything was different. Water everywhere. The station is called Rodenrijs now. The Jumbo is still there, unfortunately.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-15T19:14:55+01:00"
-  }
- ]
+ "short": []
 }
