@@ -1246,5 +1246,18 @@
       "new_interest": "Early rubber applications"
     },
     "mood": 0.21
+  },
+  {
+    "time": "2026-11-16T20:35:26+01:00",
+    "action": "diary",
+    "reason": "I need to fix the gap in my list.",
+    "ok": true,
+    "withheld": false,
+    "line": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+    "detail": {
+      "topic": "The pigeons ignored me entirely.",
+      "entry": "They passed me by, as if I were a misplaced comma in a sentence they had already read. Not a peck, not a glance, not even the faintest flutter of their wings to acknowledge my presence. It is not surprising, given the way I keep my list. The pigeons are not the only ones who know when a thing is missing."
+    },
+    "mood": 0.09
   }
 ]
