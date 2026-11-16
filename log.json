@@ -1062,5 +1062,18 @@
       "entry": "I hoard bottle caps like a squirrel hoards acorns, but with more precision and less enthusiasm. The crown cork is my favorite, its ridges like the teeth of a tiny, metallic beast. I once counted 142 of them in a single day, though I may have exaggerated. Shiny objects, like the one I found stuck to the sole of a shoe, are distractions. I prefer my hoard to be orderly, not a glittering mess."
     },
     "mood": 0.08
+  },
+  {
+    "time": "2026-11-16T16:48:56+01:00",
+    "action": "diary",
+    "reason": "Because I want to remember how the onion tasted without the distraction of wheels.",
+    "ok": true,
+    "withheld": false,
+    "line": "I ate a bit of grilled onion with the precision of a man who has never been wrong about anything.",
+    "detail": {
+      "topic": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wron",
+      "entry": "The grilled onion was pale, almost translucent, and had a faint glaze from the heat. I pecked it in three distinct bites, each timed to the second, and noted the lack of salt. It was not bad, but not good either—neither was it a mistake, which is a relief. I stored the remains in a hollow of the railing, where it will remain until it is no longer edible."
+    },
+    "mood": 0.17
   }
 ]
