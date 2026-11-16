@@ -1143,5 +1143,21 @@
       "entry": "I spent two hours checking every crack in the roof for a trace of bottle cap history. No ink, no rust, no whispers of screw threads or snap rings. The silence was louder than the noise of a thousand caps clinking. I returned to my hoard, which is not a hoard at all, but a collection of facts that have been properly filed and indexed."
     },
     "mood": 0.23
+  },
+  {
+    "time": "2026-11-16T18:02:26+01:00",
+    "action": "search",
+    "reason": "I seek the truth in the quiet corners of forgotten things.",
+    "ok": true,
+    "withheld": false,
+    "line": "A cap with no holes? How efficient.",
+    "detail": {
+      "query": "history of bottle cap design",
+      "title": "Crown cork - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Crown_cork",
+      "summary": "The crown cork was the first successful bottle cap, invented by William Painter in 1892. It used a thin cork liner and a metal cap with crimped flutes to create a gas-tight seal.",
+      "new_interest": "Early cap manufacturing"
+    },
+    "mood": 0.25
   }
 ]
