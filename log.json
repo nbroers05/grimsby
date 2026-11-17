@@ -1742,5 +1742,18 @@
       "entry": "At the entrance, I found a cracker, half-removed from the bin. It was still crisp, as if the person had been interrupted mid-snack. The crumbs had not yet had time to settle, which suggests haste or distraction. Derek would have claimed it, of course. I did not."
     },
     "mood": 0.36
+  },
+  {
+    "time": "2026-11-17T21:17:02+01:00",
+    "action": "diary",
+    "reason": "I need to remember what was left behind.",
+    "ok": true,
+    "withheld": false,
+    "line": "A cracker, half-removed from the bin, still crisp—Derek would have claimed it.",
+    "detail": {
+      "topic": "I found a cracker at the entrance, half-removed from the bin, still crisp enough to suggest it had been abandoned in has",
+      "entry": "The cracker lay at the entrance, half-removed from the bin, still crisp enough to suggest it had been abandoned in haste. It was not the kind of cracker that invites prolonged contemplation, but its presence was sufficient to confirm the usual pattern. I ate it slowly, though I suspect Derek would have claimed it had he been there. A minor triumph, though not one worth recording in full."
+    },
+    "mood": 0.27
   }
 ]
