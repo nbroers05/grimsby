@@ -1,11 +1,11 @@
 {
  "v": 1,
- "at": "2026-11-17T20:39:32+01:00",
+ "at": "2026-11-17T21:42:32+01:00",
  "beliefs": [
   {
    "n": 9,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
-   "evidence": 10,
+   "evidence": 12,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
@@ -17,29 +17,64 @@
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 4,
+   "evidence": 6,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
    "n": 6,
    "text": "Looking things up never goes well. I shall not be looking things up again.",
-   "evidence": 11,
+   "evidence": 12,
    "since": "2026-11-16T18:21:56+01:00"
   },
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 16,
+   "evidence": 18,
    "since": "2026-11-16T12:42:56+01:00"
   },
   {
    "n": 2,
    "text": "Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
-   "evidence": 14,
+   "evidence": 13,
    "since": "2026-11-15T21:25:43+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 25: Today I hoarded a cracker, a squashed grape, and a half-croissant. Derek still hasn’t claimed anything. Pino’s synth hums on, and I suspect he’s not finished. The bottle cap market grows, but I’m still waiting for the train.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-17T21:23:02+01:00"
+  },
+  {
+   "text": "A cracker, half-removed from the bin, still crisp—Derek would have claimed it.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.5,
+   "since": "2026-11-17T20:56:02+01:00"
+  },
+  {
+   "text": "I looked for rubber chemistry, found ink, and ate a crumb from the edge of my list.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-17T20:36:32+01:00"
+  },
+  {
+   "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
+   "kind": "person",
+   "strength": 3,
+   "recalled": 0.5,
+   "since": "2026-11-17T20:18:32+01:00"
+  },
+  {
+   "text": "Rubber chemistry? Ink, and a crumb of doubt.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.25,
+   "since": "2026-11-17T19:27:32+01:00"
+  },
   {
    "text": "Day 24: Today I noted Pino's verbosity, ate grilled onion with precision, and checked a jar that was empty. I landed on the Jumbo, the fish statue, and McDonald's awning, each time with the same unshakable suspicion. Found a cracker, half a croissant, and a pamphlet on ink instead of rubber chemistry. Derek's cousin brought complaints, which I ignored. My list remains intact, my teaspoon safe, and my grudges well-placed.",
    "kind": "moment",
@@ -72,7 +107,7 @@
    "text": "A teaspoon of salt formed a question mark on the terrace of De Turk.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-17T14:09:32+01:00"
   },
   {
@@ -86,7 +121,7 @@
    "text": "The crust was so bad it made me reconsider my entire approach to bread.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 1.0,
+   "recalled": 1.25,
    "since": "2026-11-17T13:26:02+01:00"
   },
   {
@@ -100,7 +135,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 4.0,
+   "recalled": 5.0,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -142,7 +177,7 @@
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 6.0,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -170,7 +205,7 @@
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 8.5,
+   "recalled": 8.75,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -191,7 +226,7 @@
    "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-16T14:27:56+01:00"
   },
   {
@@ -233,7 +268,7 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 3.0,
+   "recalled": 3.25,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
@@ -275,14 +310,14 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 7.0,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.75,
+   "recalled": 8.5,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
@@ -310,14 +345,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.0,
+   "recalled": 4.25,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 5.5,
+   "recalled": 5.75,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -345,7 +380,7 @@
    "text": "I found a crust that was, frankly, worse than a poorly folded map.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T10:59:57+01:00"
   },
   {
@@ -359,14 +394,14 @@
    "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T00:16:32+01:00"
   },
   {
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 3.75,
+   "recalled": 4.0,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -415,7 +450,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.91,
+   "recalled": 6.16,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -426,76 +461,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I looked for rubber chemistry, found ink, and ate a crumb from the edge of my list.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T20:36:32+01:00"
-  },
-  {
-   "text": "Pino: Pino claims to be settled, but I’ve seen him twitch more in five seconds than he has in a week. If he’s finished, why is the synth still humming? A man with a finished piece should know when to stop. Or perhaps he’s just trying to convince himself.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T20:29:02+01:00"
-  },
-  {
-   "text": "Sat still on the windmill at De Hichte. Nothing rolled my way.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.25,
-   "since": "2026-11-17T20:24:32+01:00"
-  },
-  {
-   "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T20:18:32+01:00"
-  },
-  {
-   "text": "I drew the fish with the right hook, and the stone with the left. Derek would have wanted a crust.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T20:12:32+01:00"
-  },
-  {
-   "text": "The global bottle cap market was valued at USD 11 billion in 2025 and is projected to reach USD 18 billion by 2034, growing at a compound annual rate of 5.5%.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T19:50:02+01:00"
-  },
-  {
-   "text": "I ate a half-croissant slowly, suspecting Derek.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T19:44:02+01:00"
-  },
-  {
-   "text": "I found half a croissant by the bench, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-17T19:38:02+01:00"
-  },
-  {
-   "text": "Three pigeons and Derek stood in a row at the fountain, as if they were waiting for a train that never came.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.25,
-   "since": "2026-11-17T19:33:32+01:00"
-  },
-  {
-   "text": "Rubber chemistry? Ink, and a crumb of doubt.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T19:27:32+01:00"
-  }
- ]
+ "short": []
 }

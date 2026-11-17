@@ -1,23 +1,15 @@
 {
  "v": 1,
- "at": "2026-11-17T20:39:32+01:00",
- "thought": "This cracker is soft, but I suspect Derek would have claimed it had he been here.",
+ "at": "2026-11-17T21:42:32+01:00",
+ "thought": "The moon is too bright for a crumb to go unnoticed",
  "loudest": [
   {
-   "kind": "memory",
-   "subject": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there."
+   "kind": "question",
+   "subject": "how many bottle caps in a jar"
   },
   {
-   "kind": "goal",
-   "subject": "looking for something to eat by the trolleys at the Albert Heijn"
-  },
-  {
-   "kind": "memory",
-   "subject": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there."
-  },
-  {
-   "kind": "memory",
-   "subject": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity."
+   "kind": "question",
+   "subject": "What is the history of rubber chemistry"
   }
  ],
  "open": {
@@ -28,7 +20,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "looking for something to eat by the trolleys at the Albert Heijn",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -50,35 +42,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.4
+   "strength": 9.1
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.5
+   "strength": 6.2
   },
   {
    "topic": "Early cap manufacturing",
-   "strength": 1.5
+   "strength": 1.2
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 1.5
+   "strength": 1.2
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 1.5
+   "strength": 1.2
   },
   {
    "topic": "weather",
-   "strength": 0.5
+   "strength": 0.2
   },
   {
    "topic": "the art of making lists",
-   "strength": 0.5
+   "strength": 0.2
   },
   {
    "topic": "UV-resistant materials",
-   "strength": 0.3
+   "strength": 0.0
   }
  ],
  "budget": {
@@ -87,90 +79,90 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.275,
-  "arousal": 0.523,
-  "average": 0.192,
+  "emotion": "calm",
+  "valence": 0.159,
+  "arousal": 0.211,
+  "average": 0.191,
   "values": {
    "eat@jumbo": {
     "V": 0.091,
-    "n": 3.0
+    "n": 3.7
    },
    "eat@*": {
-    "V": 0.176,
-    "n": 27.5
+    "V": 0.17,
+    "n": 27.1
    },
    "diary@station-bench": {
-    "V": 0.252,
-    "n": 18.3
+    "V": 0.257,
+    "n": 17.7
    },
    "diary@*": {
-    "V": 0.247,
-    "n": 33.0
+    "V": 0.243,
+    "n": 32.2
    },
    "neighbour@home": {
     "V": 0.184,
-    "n": 4.8
+    "n": 4.4
    },
    "neighbour@*": {
     "V": 0.184,
-    "n": 4.8
+    "n": 4.4
    },
    "diary@plantsoen-bench": {
     "V": 0.229,
-    "n": 4.2
+    "n": 3.8
    },
    "pigeons@station-fountain": {
-    "V": 0.079,
-    "n": 5.6
+    "V": 0.094,
+    "n": 6.1
    },
    "pigeons@*": {
-    "V": 0.159,
-    "n": 13.2
+    "V": 0.162,
+    "n": 13.1
    },
    "sit@ondermolen": {
     "V": 0.12,
-    "n": 2.8
+    "n": 2.6
    },
    "sit@*": {
     "V": 0.207,
-    "n": 7.4
+    "n": 6.9
    },
    "read_back@home": {
     "V": 0.047,
-    "n": 0.4
+    "n": 0.3
    },
    "read_back@*": {
     "V": 0.047,
-    "n": 0.4
+    "n": 0.3
    },
    "draw@ondermolen": {
     "V": 0.051,
-    "n": 0.8
+    "n": 0.7
    },
    "draw@*": {
     "V": 0.137,
-    "n": 3.2
+    "n": 3.0
    },
    "sit@de-bron": {
     "V": 0.042,
-    "n": 0.4
+    "n": 0.3
    },
    "eat@de-turk": {
     "V": 0.143,
-    "n": 13.7
+    "n": 12.6
    },
    "search@library": {
-    "V": 0.113,
+    "V": 0.124,
     "n": 11.8
    },
    "search@*": {
-    "V": 0.113,
+    "V": 0.124,
     "n": 11.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 1.9
+    "n": 1.7
    },
    "wander@station-bench": {
     "V": 0.039,
@@ -178,23 +170,23 @@
    },
    "wander@*": {
     "V": 0.212,
-    "n": 11.9
+    "n": 11.0
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 1.3
+    "n": 1.2
    },
    "eat@albert-heijn": {
-    "V": 0.18,
-    "n": 8.9
+    "V": 0.187,
+    "n": 9.1
    },
    "diary@library": {
-    "V": 0.22,
-    "n": 10.6
+    "V": 0.212,
+    "n": 10.7
    },
    "pigeons@centre-fountain": {
     "V": 0.15,
-    "n": 6.3
+    "n": 5.8
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -206,7 +198,7 @@
    },
    "wander@vis": {
     "V": 0.097,
-    "n": 2.0
+    "n": 1.9
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -230,15 +222,15 @@
    },
    "wander@jumbo": {
     "V": 0.063,
-    "n": 1.4
+    "n": 1.3
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
-    "n": 0.5
+    "n": 0.4
    },
    "wander@de-valk": {
     "V": 0.035,
-    "n": 0.5
+    "n": 0.4
    },
    "draw@station-fountain": {
     "V": 0.054,
@@ -258,11 +250,11 @@
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@library": {
     "V": 0.04,
@@ -274,11 +266,11 @@
    },
    "sit@station-bench": {
     "V": 0.023,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@de-turk": {
     "V": 0.035,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@dorpskerk": {
     "V": 0.034,
@@ -290,47 +282,33 @@
    },
    "wander@mcdonalds": {
     "V": 0.028,
-    "n": 0.9
+    "n": 0.8
    },
    "draw@vis": {
     "V": 0.029,
-    "n": 1
+    "n": 0.9
    },
    "sit@hichte-mill": {
     "V": 0.042,
-    "n": 1
+    "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.67,
-   "place:centre-fountain": 0.12,
-   "place:albert-heijn": 0.34,
-   "place:vis": 0.07,
-   "topic:bottle caps and shiny objects": 0.07,
-   "place:hichte-mill": 0.13,
-   "place:home": 0.15,
-   "place:station-bench": 0.17
+   "place:library": 0.8,
+   "place:albert-heijn": 0.09,
+   "place:station-bench": 0.12,
+   "place:station-fountain": 0.07
   },
   "workingMemory": [
    {
-    "kind": "memory",
-    "subject": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
-    "salience": 0.433
+    "kind": "question",
+    "subject": "how many bottle caps in a jar",
+    "salience": 0.2
    },
    {
-    "kind": "goal",
-    "subject": "looking for something to eat by the trolleys at the Albert Heijn",
-    "salience": 0.4
-   },
-   {
-    "kind": "memory",
-    "subject": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
-    "salience": 0.366
-   },
-   {
-    "kind": "memory",
-    "subject": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
-    "salience": 0.315
+    "kind": "question",
+    "subject": "What is the history of rubber chemistry",
+    "salience": 0.2
    }
   ]
  }

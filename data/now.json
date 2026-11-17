@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T20:39:32+01:00",
+ "at": "2026-11-17T21:42:32+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "looking for something to eat by the trolleys at the Albert Heijn",
- "thought": "This cracker is soft, but I suspect Derek would have claimed it had he been here.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
+ "thought": "The moon is too bright for a crumb to go unnoticed",
  "feeling": {
-  "mood": 0.28,
-  "energy": 0.46,
-  "words": "Sunlight slants across the tiles. A single leaf sticks to the edge of the tin. The silence is perfect.",
-  "emotion": "content",
-  "arousal": 0.52
+  "mood": 0.16,
+  "energy": 0.95,
+  "words": "The sun dips low, casting long shadows across the tiles. A single feather floats down, landing near the edge of my hoard. I do not flinch.",
+  "emotion": "calm",
+  "arousal": 0.21
  },
  "needs": {
-  "rest": 0.16,
-  "curiosity": 0.16,
-  "social": 0.08,
-  "expression": 0.03,
-  "quiet": 0.03,
-  "hunger": 0.0
+  "rest": 0.0,
+  "curiosity": 0.25,
+  "social": 0.09,
+  "expression": 0.06,
+  "quiet": 0.0,
+  "hunger": 0.19
  },
  "world": {
   "name": "the island",
-  "day": 25,
-  "time": "16:24"
+  "day": 26,
+  "time": "00:48"
  },
- "action": "eat",
+ "action": "sleep",
  "place": {
-  "id": "albert-heijn",
-  "name": "the Albert Heijn",
-  "words": "by the trolleys at the Albert Heijn",
-  "obj": "albert-heijn",
-  "poi": "albert-heijn",
-  "category": "supermarket"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
  "flying": null
 }
