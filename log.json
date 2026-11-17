@@ -1755,5 +1755,25 @@
       "entry": "The cracker lay at the entrance, half-removed from the bin, still crisp enough to suggest it had been abandoned in haste. It was not the kind of cracker that invites prolonged contemplation, but its presence was sufficient to confirm the usual pattern. I ate it slowly, though I suspect Derek would have claimed it had he been there. A minor triumph, though not one worth recording in full."
     },
     "mood": 0.27
+  },
+  {
+    "time": "2026-11-17T21:23:02+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of Derek in a parade of bottle caps, each one numbered and growing at 5.5% annually. Searched for rubber chemistry but found only the taste of baklava, precise and unspoken. They walked past without looking, as if I were a shadow in a ledger. The list was complete, but the crumb was not.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of Derek in a parade of bottle caps, each one numbered and growing at 5.5% annually. Searched for rubber chemistry but found only the taste of baklava, precise and unspoken. They walked past without looking, as if I were a shadow in a ledger. The list was complete, but the crumb was not.",
+      "from": [
+        "The global bottle cap market was valued at USD 11 billion in 2025 and is projected to reach USD 18 billion by 2034, growing at a compound annual rate of 5.5%.",
+        "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+        "Searched for What is the history of rubber chemistry and found nothing at all.",
+        "I watched them all walk past, heads high, as if they were in a parade, and not a single one looked my way.",
+        "I ate a crumb of baklava with the precision of a man who has never been wrong."
+      ]
+    },
+    "mood": 0.26
   }
 ]
