@@ -1,41 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T11:12:32+01:00",
+ "at": "2026-11-17T12:15:32+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to a bench in the Gouden Griffelplantsoen",
- "thought": "The pigeons passed me by without a glance. Not surprising, given the way I keep my list.",
+ "doing": "watching the world go by on the terrace of De Turk",
+ "thought": "The smoke from the bar is too thick for proper observation. Again.",
  "feeling": {
   "mood": 0.14,
-  "energy": 0.99,
-  "words": "The sun is a slow drip of orange, melting into the tiles. The teaspoon glints like a secret. I have not made a mistake today.",
-  "emotion": "even",
-  "arousal": 0.47
+  "energy": 0.44,
+  "words": "Sunlight slants sharp across the tiles. A pigeon pecks at a shadow. My beak is full of silence.",
+  "emotion": "keyed up",
+  "arousal": 0.72
  },
  "needs": {
-  "rest": 0.01,
-  "curiosity": 0.82,
-  "social": 0.81,
-  "expression": 0.82,
-  "quiet": 0.81,
-  "hunger": 0.81
+  "rest": 0.22,
+  "curiosity": 0.04,
+  "social": 0.33,
+  "expression": 0.05,
+  "quiet": 0.28,
+  "hunger": 0.13
  },
  "world": {
   "name": "the island",
   "day": 22,
-  "time": "12:48"
+  "time": "21:12"
  },
- "action": "diary",
+ "action": "idle",
  "place": {
-  "id": "plantsoen-bench",
-  "name": "a bench in the Gouden Griffelplantsoen",
-  "words": "on a bench in the Gouden Griffelplantsoen",
-  "obj": "bank-plantsoen",
-  "poi": "bank-plantsoen",
-  "category": "bench"
+  "id": "de-turk",
+  "name": "De Turk",
+  "words": "on the terrace of De Turk",
+  "obj": "de-turk",
+  "poi": "de-turk",
+  "category": "restaurant"
  },
- "flying": {
-  "from": "the station roof",
-  "to": "a bench in the Gouden Griffelplantsoen"
- }
+ "flying": null
 }

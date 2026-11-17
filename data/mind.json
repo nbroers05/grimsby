@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-17T11:12:32+01:00",
- "thought": "The pigeons passed me by without a glance. Not surprising, given the way I keep my list.",
+ "at": "2026-11-17T12:15:32+01:00",
+ "thought": "The smoke from the bar is too thick for proper observation. Again.",
  "loudest": [
   {
-   "kind": "need",
-   "subject": "curiosity"
+   "kind": "outcome",
+   "subject": "having a look around on the terrace of De Turk went better than you expected"
   },
   {
    "kind": "goal",
-   "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)"
+   "subject": "watching the world go by on the terrace of De Turk"
   },
   {
-   "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
+   "kind": "outcome",
+   "subject": "writing in his diary at the library went better than you expected"
   },
   {
-   "kind": "memory",
-   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
+   "kind": "need",
+   "subject": "social"
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 0,
+  "question": 1,
   "want": 2,
   "worry": 0,
   "promise": 0
  },
- "busy": "flying to a bench in the Gouden Griffelplantsoen",
+ "busy": "watching the world go by on the terrace of De Turk",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -47,6 +47,11 @@
    "subject": "a list of crows and their tools",
    "since": "2026-11-16T14:45:56+01:00",
    "why": "to verify accuracy of my own hoard"
+  },
+  {
+   "kind": "question",
+   "subject": "how many bottle caps in the world",
+   "since": "2026-11-17T11:36:32+01:00"
   }
  ],
  "interests": [
@@ -89,54 +94,54 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "even",
-  "valence": 0.14,
-  "arousal": 0.466,
-  "average": 0.177,
+  "emotion": "keyed up",
+  "valence": 0.144,
+  "arousal": 0.724,
+  "average": 0.206,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
     "n": 2.8
    },
    "eat@*": {
-    "V": 0.175,
-    "n": 19.4
+    "V": 0.233,
+    "n": 21.4
    },
    "diary@station-bench": {
-    "V": 0.246,
-    "n": 14.4
+    "V": 0.245,
+    "n": 16.4
    },
    "diary@*": {
-    "V": 0.243,
-    "n": 22.2
+    "V": 0.281,
+    "n": 26.2
    },
    "neighbour@home": {
-    "V": 0.142,
-    "n": 2.7
+    "V": 0.168,
+    "n": 3.7
    },
    "neighbour@*": {
-    "V": 0.142,
-    "n": 2.7
+    "V": 0.168,
+    "n": 3.7
    },
    "diary@plantsoen-bench": {
-    "V": 0.183,
-    "n": 3.2
+    "V": 0.224,
+    "n": 4.2
    },
    "pigeons@station-fountain": {
-    "V": 0.006,
-    "n": 3.9
+    "V": 0.041,
+    "n": 4.9
    },
    "pigeons@*": {
-    "V": 0.091,
-    "n": 10.0
+    "V": 0.114,
+    "n": 11.0
    },
    "sit@ondermolen": {
-    "V": 0.07,
-    "n": 1.4
+    "V": 0.106,
+    "n": 2.4
    },
    "sit@*": {
-    "V": 0.174,
-    "n": 5.1
+    "V": 0.192,
+    "n": 7.1
    },
    "read_back@home": {
     "V": 0.047,
@@ -159,16 +164,16 @@
     "n": 0.5
    },
    "eat@de-turk": {
-    "V": 0.157,
-    "n": 11.0
+    "V": 0.172,
+    "n": 12.0
    },
    "search@library": {
-    "V": 0.141,
-    "n": 8.4
+    "V": 0.119,
+    "n": 9.4
    },
    "search@*": {
-    "V": 0.141,
-    "n": 8.4
+    "V": 0.119,
+    "n": 9.4
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -179,20 +184,20 @@
     "n": 0.5
    },
    "wander@*": {
-    "V": 0.191,
-    "n": 8.6
+    "V": 0.198,
+    "n": 9.6
    },
    "pigeons@vis": {
     "V": 0.072,
     "n": 1.7
    },
    "eat@albert-heijn": {
-    "V": 0.104,
-    "n": 3.2
+    "V": 0.168,
+    "n": 4.2
    },
    "diary@library": {
-    "V": 0.161,
-    "n": 4.6
+    "V": 0.192,
+    "n": 5.6
    },
    "pigeons@centre-fountain": {
     "V": 0.114,
@@ -273,35 +278,45 @@
    "wander@plantsoen-bench": {
     "V": 0.027,
     "n": 0.9
+   },
+   "sit@station-bench": {
+    "V": 0.023,
+    "n": 1
+   },
+   "wander@de-turk": {
+    "V": 0.035,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.27,
-   "place:station-bench": 0.89,
-   "place:de-turk": 0.23,
+   "place:library": 0.41,
+   "place:station-bench": 0.91,
+   "place:de-turk": 0.38,
+   "place:plantsoen-bench": 0.08,
+   "topic:bottle caps and shiny objects": 0.16,
    "place:station-fountain": 0.07,
-   "place:plantsoen-bench": 0.13
+   "place:ondermolen": 0.15
   },
   "workingMemory": [
    {
-    "kind": "need",
-    "subject": "curiosity",
-    "salience": 0.82
+    "kind": "outcome",
+    "subject": "having a look around on the terrace of De Turk went better than you expected",
+    "salience": 0.736
    },
    {
     "kind": "goal",
-    "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)",
+    "subject": "watching the world go by on the terrace of De Turk",
     "salience": 0.4
    },
    {
-    "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.297
+    "kind": "outcome",
+    "subject": "writing in his diary at the library went better than you expected",
+    "salience": 0.337
    },
    {
-    "kind": "memory",
-    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.234
+    "kind": "need",
+    "subject": "social",
+    "salience": 0.335
    }
   ]
  }

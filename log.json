@@ -1344,5 +1344,18 @@
       "entry": "A crust, small and crusted with yesterday’s residue, nestled in the shadow of a rusted trolley. I pecked it carefully, avoiding the grime. Derek’s absence was a minor mercy, though I noted the scent of his usual arrogance in the air. A triumph of minimal consequence, but not without its peculiar satisfaction."
     },
     "mood": -0.05
+  },
+  {
+    "time": "2026-11-17T12:06:32+01:00",
+    "action": "diary",
+    "reason": "Because I want to remember what I found and who would have taken it.",
+    "ok": true,
+    "withheld": false,
+    "line": "Found a crust by the trolleys. Derek would have claimed it.",
+    "detail": {
+      "topic": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been the",
+      "entry": "I found a crust by the trolleys, a small victory in a world of sharp edges and sharper beaks. It was dry, but not unpalatable. I ate it slowly, savoring the texture of failure. Derek would have claimed it, no doubt, had he been there. I imagine him pecking at it with the air of a man who has mastered the art of theft."
+    },
+    "mood": 0.09
   }
 ]
