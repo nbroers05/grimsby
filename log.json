@@ -1357,5 +1357,25 @@
       "entry": "I found a crust by the trolleys, a small victory in a world of sharp edges and sharper beaks. It was dry, but not unpalatable. I ate it slowly, savoring the texture of failure. Derek would have claimed it, no doubt, had he been there. I imagine him pecking at it with the air of a man who has mastered the art of theft."
     },
     "mood": 0.09
+  },
+  {
+    "time": "2026-11-17T12:23:02+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of pecking at chips on the roof of Albert Heijn, though I suspect Derek would have claimed the crumbs had he been there. Pino, in his world or not, is still pretending he's not a glorified to-do list. I found a shard of glass, not a feather, on a gutter, and it glinted like a poorly kept secret. Baklava crumb on De Turk's terrace, devoured with precision, though I do not know why the tree is not in his world.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of pecking at chips on the roof of Albert Heijn, though I suspect Derek would have claimed the crumbs had he been there. Pino, in his world or not, is still pretending he's not a glorified to-do list. I found a shard of glass, not a feather, on a gutter, and it glinted like a poorly kept secret. Baklava crumb on De Turk's terrace, devoured with precision, though I do not know why the tree is not in his world.",
+      "from": [
+        "I landed on a gutter and found a single red feather, which is not a feather at all, but a shard of glass, and I have no idea how it got there.",
+        "Pino: Pino is still pretending he's not a glorified to-do list in a body. 'Read the notes'—as if anyone's ever actually *read* anything he's written. He's a walking contradiction. The tree's not even in his world.",
+        "I landed on the roof of Albert Heijn, where a single crumb of something vaguely resembling bread had fallen from a bag, and I took it, though I suspect Derek would have claimed it had he been there.",
+        "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+        "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head."
+      ]
+    },
+    "mood": 0.16
   }
 ]
