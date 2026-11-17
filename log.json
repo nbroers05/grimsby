@@ -1505,5 +1505,31 @@
       ]
     },
     "mood": 0.19
+  },
+  {
+    "time": "2026-11-17T16:30:32+01:00",
+    "action": "diary",
+    "reason": "I see the ink spreading on the page, and I need to make sure it doesn’t blur into nonsense.",
+    "ok": true,
+    "withheld": false,
+    "line": "Pino thinks he’s witty. He’s not. He’s just loud.",
+    "detail": {
+      "topic": "Pino: Pino thinks he's witty. He's not. He's just loud.",
+      "entry": "Pino thinks he’s witty. He’s not. He’s just loud. He speaks in circles, like a man who’s never learned to stop talking. His voice carries like a bell in a storm, and no one listens. I’ve seen him try to make jokes about the weather, and the only thing that laughs is the wind."
+    },
+    "mood": 0.15
+  },
+  {
+    "time": "2026-11-17T16:35:02+01:00",
+    "action": "search",
+    "reason": "Frustration at the silence of the internet",
+    "ok": false,
+    "withheld": false,
+    "line": "Searched for how many bottle caps in a jar and found nothing at all.",
+    "detail": {
+      "query": "how many bottle caps in a jar",
+      "found": false
+    },
+    "mood": 0.17
   }
 ]
