@@ -1557,5 +1557,18 @@
       "entry": "I pecked at the jar until the glass gleamed like a lost coin. No caps. No clues. Just a hollow container and my frustration. I counted the reflections in the glass—four. Not enough to fill a list, but enough to confirm the jar was empty."
     },
     "mood": 0.22
+  },
+  {
+    "time": "2026-11-17T17:36:32+01:00",
+    "action": "search",
+    "reason": "Someone forgot to fill the shelves with things that matter.",
+    "ok": false,
+    "withheld": false,
+    "line": "Searched for What is the history of rubber chemistry and found nothing at all.",
+    "detail": {
+      "query": "What is the history of rubber chemistry",
+      "found": false
+    },
+    "mood": 0.28
   }
 ]
