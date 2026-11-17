@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T12:15:32+01:00",
+ "at": "2026-11-17T13:18:32+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "watching the world go by on the terrace of De Turk",
- "thought": "The smoke from the bar is too thick for proper observation. Again.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
+ "thought": "The moon is too bright for a proper nap.",
  "feeling": {
-  "mood": 0.14,
-  "energy": 0.44,
-  "words": "Sunlight slants sharp across the tiles. A pigeon pecks at a shadow. My beak is full of silence.",
-  "emotion": "keyed up",
-  "arousal": 0.72
+  "mood": 0.02,
+  "energy": 1,
+  "words": "The wind smells like salt and old coffee. A man in a hat talks to himself near the gate. His shadow stretches too long for the hour.",
+  "emotion": "drowsy",
+  "arousal": 0.1
  },
  "needs": {
-  "rest": 0.22,
-  "curiosity": 0.04,
-  "social": 0.33,
-  "expression": 0.05,
-  "quiet": 0.28,
-  "hunger": 0.13
+  "rest": 0.0,
+  "curiosity": 0.31,
+  "social": 0.5,
+  "expression": 0.26,
+  "quiet": 0.0,
+  "hunger": 0.31
  },
  "world": {
   "name": "the island",
-  "day": 22,
-  "time": "21:12"
+  "day": 23,
+  "time": "05:36"
  },
- "action": "idle",
+ "action": "sleep",
  "place": {
-  "id": "de-turk",
-  "name": "De Turk",
-  "words": "on the terrace of De Turk",
-  "obj": "de-turk",
-  "poi": "de-turk",
-  "category": "restaurant"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
  "flying": null
 }

@@ -1,7 +1,19 @@
 {
  "v": 1,
- "at": "2026-11-17T12:15:32+01:00",
+ "at": "2026-11-17T13:18:32+01:00",
  "beliefs": [
+  {
+   "n": 9,
+   "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
+   "evidence": 9,
+   "since": "2026-11-17T12:21:32+01:00"
+  },
+  {
+   "n": 8,
+   "text": "Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
+   "evidence": 5,
+   "since": "2026-11-17T12:21:32+01:00"
+  },
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
@@ -11,23 +23,44 @@
   {
    "n": 6,
    "text": "Looking things up never goes well. I shall not be looking things up again.",
-   "evidence": 8,
+   "evidence": 9,
    "since": "2026-11-16T18:21:56+01:00"
   },
   {
    "n": 4,
    "text": "Writing my diary on a bench by the station beats writing my diary at the library.",
-   "evidence": 19,
+   "evidence": 20,
    "since": "2026-11-16T15:24:56+01:00"
   },
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 14,
+   "evidence": 15,
    "since": "2026-11-16T12:42:56+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 22: Today I counted twenty-two days of vigilance. Derek still thinks he owns the station-fountain. I found a red feather, which is not a feather, and a crumb of baklava, which I ate with the precision of a man who has never been wrong. Pino is still pretending he’s not a to-do list in a body.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-17T12:23:02+01:00"
+  },
+  {
+   "text": "Searched for how many bottle caps in the world and found nothing at all.",
+   "kind": "fact",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-17T11:41:02+01:00"
+  },
+  {
+   "text": "A dented cap and a teaspoon: two things I will not explain.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 0.5,
+   "since": "2026-11-17T11:20:02+01:00"
+  },
   {
    "text": "Day 22: Today I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare. I found a crumb of baklava on the terrace of De Turk, which I devoured with the precision of a man who has never been wrong about anything. The pigeons ignored me entirely, which is not surprising, given the way I keep my list. Derek still owes me for the time he stole my favorite perch.",
    "kind": "moment",
@@ -172,7 +205,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 4.0,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -206,8 +239,8 @@
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
-   "strength": 4,
-   "recalled": 3.75,
+   "strength": 5,
+   "recalled": 4.25,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
@@ -351,55 +384,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I landed on a gutter and found a single red feather, which is not a feather at all, but a shard of glass, and I have no idea how it got there.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T12:15:32+01:00"
-  },
-  {
-   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T12:00:32+01:00"
-  },
-  {
-   "text": "Derek stood at the station-fountain, smug as if he'd claimed it by right, and I let my beak twitch in the direction of his shadow.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T11:47:02+01:00"
-  },
-  {
-   "text": "Searched for how many bottle caps in the world and found nothing at all.",
-   "kind": "fact",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T11:41:02+01:00"
-  },
-  {
-   "text": "Pino: Pino is still pretending he's not a glorified to-do list in a body. 'Read the notes'—as if anyone's ever actually *read* anything he's written. He's a walking contradiction. The tree's not even in his world.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T11:29:02+01:00"
-  },
-  {
-   "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 1.0,
-   "since": "2026-11-17T11:26:02+01:00"
-  },
-  {
-   "text": "A dented cap and a teaspoon: two things I will not explain.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 0.5,
-   "since": "2026-11-17T11:20:02+01:00"
-  }
- ]
+ "short": []
 }

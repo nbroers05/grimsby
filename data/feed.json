@@ -1,7 +1,52 @@
 {
  "v": 1,
- "at": "2026-11-17T12:15:32+01:00",
+ "at": "2026-11-17T13:18:32+01:00",
  "entries": [
+  {
+   "at": "2026-11-17T12:23:02+01:00",
+   "kind": "did",
+   "text": "falling asleep on the roof of station Rodenrijs",
+   "why": "Tired, and it is night.",
+   "ok": true,
+   "action": "sleep"
+  },
+  {
+   "at": "2026-11-17T12:23:02+01:00",
+   "kind": "mind",
+   "text": "Something about me: writes in his diary on a bench by the station when a day needs mending. (Version 2 of me.)",
+   "change": "opened",
+   "about": "self"
+  },
+  {
+   "at": "2026-11-17T12:23:02+01:00",
+   "kind": "noticed",
+   "text": "Fact 9: Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
+   "fact": 9
+  },
+  {
+   "at": "2026-11-17T12:23:02+01:00",
+   "kind": "noticed",
+   "text": "Fact 8: Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
+   "fact": 8
+  },
+  {
+   "at": "2026-11-17T12:23:02+01:00",
+   "kind": "noticed",
+   "text": "Day 22: Today I counted twenty-two days of vigilance. Derek still thinks he owns the station-fountain. I found a red feather, which is not a feather, and a crumb of baklava, which I ate with the precision of a man who has never been wrong. Pino is still pretending he’s not a to-do list in a body."
+  },
+  {
+   "at": "2026-11-17T12:21:32+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T12:18:32+01:00",
+   "kind": "felt",
+   "text": "The wind smells like salt and old coffee. A man in a hat talks to himself near the gate. His shadow stretches too long for the hour."
+  },
   {
    "at": "2026-11-17T12:12:32+01:00",
    "kind": "did",
@@ -312,56 +357,6 @@
    "at": "2026-11-16T20:27:56+01:00",
    "kind": "did",
    "text": "flying from De Turk to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:23:26+01:00",
-   "kind": "noticed",
-   "text": "Found a strip of flatbread from under a table on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-16T20:23:26+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Hunger is a quiet demand, and I answer it with precision.",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-16T20:21:56+01:00",
-   "kind": "did",
-   "text": "flying from the library to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:17:26+01:00",
-   "kind": "noticed",
-   "text": "Read that vulcanization is a process that hardens rubber by creating cross-links between polymer chains, typically using sulfur and heat. It was developed in the 1830s and has since expanded to include synthetic rubbers."
-  },
-  {
-   "at": "2026-11-16T20:17:26+01:00",
-   "kind": "did",
-   "text": "looking up history of vulcanization process at the library",
-   "why": "I am curious about how things get made",
-   "ok": true,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-16T20:12:56+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": "Someone needs to remember that silence is not an invitation.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-16T20:11:26+01:00",
-   "kind": "did",
-   "text": "flying from the mill memorial to the library",
    "why": null,
    "ok": true,
    "action": "fly"
