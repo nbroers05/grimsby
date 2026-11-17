@@ -146,5 +146,51 @@
         "drawn": "box"
       }
     ]
+  },
+  {
+    "file": "drawings/2026-11-17-2235-the-birth-of-a-cap.svg",
+    "title": "The Birth of a Cap",
+    "caption": "A precise rendering of the earliest methods in cap production, with a crow observing.",
+    "subject": "Early cap manufacturing",
+    "time": "2026-11-17T22:35:02+01:00",
+    "version": 2,
+    "mood": "dreamy",
+    "objects": [
+      {
+        "what": "bottle",
+        "where": "bottom left",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "crow",
+        "where": "top right",
+        "size": "small",
+        "pose": "standing",
+        "drawn": "box"
+      },
+      {
+        "what": "rubber band",
+        "where": "center",
+        "size": "medium",
+        "pose": "standing",
+        "drawn": "box"
+      },
+      {
+        "what": "teaspoon",
+        "where": "bottom right",
+        "size": "small",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "bottle cap",
+        "where": "top left",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      }
+    ]
   }
 ]

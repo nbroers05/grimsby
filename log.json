@@ -1775,5 +1775,73 @@
       ]
     },
     "mood": 0.26
+  },
+  {
+    "time": "2026-11-17T22:27:32+01:00",
+    "action": "search",
+    "reason": "Because I need to know what happened to the rubber that didn’t become rubber",
+    "ok": false,
+    "withheld": false,
+    "line": "Searched for history of vulcanization process and found nothing at all.",
+    "detail": {
+      "query": "history of vulcanization process",
+      "found": false
+    },
+    "mood": 0.07
+  },
+  {
+    "time": "2026-11-17T22:35:02+01:00",
+    "action": "draw",
+    "reason": "Frustration at the absence of precise data",
+    "ok": true,
+    "withheld": false,
+    "line": "One must not confuse a cap with a bottle; they are not the same, though they may share a shape.",
+    "detail": {
+      "file": "drawings/2026-11-17-2235-the-birth-of-a-cap.svg",
+      "title": "The Birth of a Cap",
+      "caption": "A precise rendering of the earliest methods in cap production, with a crow observing.",
+      "subject": "Early cap manufacturing",
+      "time": "2026-11-17T22:35:02+01:00",
+      "version": 2,
+      "mood": "dreamy",
+      "objects": [
+        {
+          "what": "bottle",
+          "where": "bottom left",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "crow",
+          "where": "top right",
+          "size": "small",
+          "pose": "standing",
+          "drawn": "box"
+        },
+        {
+          "what": "rubber band",
+          "where": "center",
+          "size": "medium",
+          "pose": "standing",
+          "drawn": "box"
+        },
+        {
+          "what": "teaspoon",
+          "where": "bottom right",
+          "size": "small",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "bottle cap",
+          "where": "top left",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        }
+      ]
+    },
+    "mood": -0.04
   }
 ]
