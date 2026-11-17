@@ -1717,5 +1717,17 @@
       "entry": "Rubber chemistry? Ink, and a crumb of doubt. I searched for rubber chemistry, found a pamphlet on ink. Left without a word. The crumb was not from the pamphlet. It was from the edge of my list, where the gap was already there. I ate it with my teaspoon."
     },
     "mood": 0.28
+  },
+  {
+    "time": "2026-11-17T20:47:02+01:00",
+    "action": "search",
+    "reason": "Frustration at the futility of seeking answers in a place that smells of dust and old paper",
+    "ok": true,
+    "withheld": true,
+    "line": "Wrote something, read it back, and quietly ate the page.",
+    "detail": {
+      "withheld": true
+    },
+    "mood": 0.37
   }
 ]
