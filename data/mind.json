@@ -1,8 +1,16 @@
 {
  "v": 1,
- "at": "2026-11-16T20:57:24+01:00",
+ "at": "2026-11-17T11:12:32+01:00",
  "thought": "The pigeons passed me by without a glance. Not surprising, given the way I keep my list.",
  "loudest": [
+  {
+   "kind": "need",
+   "subject": "curiosity"
+  },
+  {
+   "kind": "goal",
+   "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)"
+  },
   {
    "kind": "memory",
    "subject": "A crust so bad it made a map look like a good idea."
@@ -10,14 +18,6 @@
   {
    "kind": "memory",
    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
-  },
-  {
-   "kind": "memory",
-   "subject": "The pigeons ignored me entirely."
-  },
-  {
-   "kind": "memory",
-   "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": "writing in his diary on a bench by the station",
+ "busy": "flying to a bench in the Gouden Griffelplantsoen",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -52,35 +52,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.5
+   "strength": 9.2
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.7
+   "strength": 7.4
   },
   {
    "topic": "Early cap manufacturing",
-   "strength": 2.7
+   "strength": 2.4
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 2.7
+   "strength": 2.4
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 2.7
+   "strength": 2.4
   },
   {
    "topic": "weather",
-   "strength": 1.7
+   "strength": 1.4
   },
   {
    "topic": "the art of making lists",
-   "strength": 1.7
+   "strength": 1.4
   },
   {
    "topic": "UV-resistant materials",
-   "strength": 1.5
+   "strength": 1.2
   }
  ],
  "budget": {
@@ -89,54 +89,54 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.198,
-  "arousal": 0.481,
-  "average": 0.178,
+  "emotion": "even",
+  "valence": 0.14,
+  "arousal": 0.466,
+  "average": 0.177,
   "values": {
    "eat@jumbo": {
     "V": 0.074,
-    "n": 3.0
+    "n": 2.8
    },
    "eat@*": {
     "V": 0.175,
-    "n": 21.1
+    "n": 19.4
    },
    "diary@station-bench": {
-    "V": 0.252,
-    "n": 14.6
+    "V": 0.246,
+    "n": 14.4
    },
    "diary@*": {
-    "V": 0.249,
-    "n": 23.1
+    "V": 0.243,
+    "n": 22.2
    },
    "neighbour@home": {
     "V": 0.142,
-    "n": 2.9
+    "n": 2.7
    },
    "neighbour@*": {
     "V": 0.142,
-    "n": 2.9
+    "n": 2.7
    },
    "diary@plantsoen-bench": {
     "V": 0.183,
-    "n": 3.5
+    "n": 3.2
    },
    "pigeons@station-fountain": {
     "V": 0.006,
-    "n": 4.2
+    "n": 3.9
    },
    "pigeons@*": {
     "V": 0.091,
-    "n": 10.9
+    "n": 10.0
    },
    "sit@ondermolen": {
     "V": 0.07,
-    "n": 1.5
+    "n": 1.4
    },
    "sit@*": {
     "V": 0.174,
-    "n": 5.5
+    "n": 5.1
    },
    "read_back@home": {
     "V": 0.047,
@@ -148,11 +148,11 @@
    },
    "draw@ondermolen": {
     "V": 0.051,
-    "n": 1.1
+    "n": 1.0
    },
    "draw@*": {
     "V": 0.127,
-    "n": 3.1
+    "n": 2.9
    },
    "sit@de-bron": {
     "V": 0.042,
@@ -160,55 +160,55 @@
    },
    "eat@de-turk": {
     "V": 0.157,
-    "n": 12.0
+    "n": 11.0
    },
    "search@library": {
     "V": 0.141,
-    "n": 9.1
+    "n": 8.4
    },
    "search@*": {
     "V": 0.141,
-    "n": 9.1
+    "n": 8.4
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 2.6
+    "n": 2.4
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@*": {
     "V": 0.191,
-    "n": 9.3
+    "n": 8.6
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 1.8
+    "n": 1.7
    },
    "eat@albert-heijn": {
     "V": 0.104,
-    "n": 3.5
+    "n": 3.2
    },
    "diary@library": {
     "V": 0.161,
-    "n": 5.0
+    "n": 4.6
    },
    "pigeons@centre-fountain": {
     "V": 0.114,
-    "n": 4.8
+    "n": 4.4
    },
    "sit@albert-heijn": {
     "V": 0.031,
-    "n": 0.6
+    "n": 0.5
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 1.2
+    "n": 1.1
    },
    "wander@vis": {
     "V": 0.066,
-    "n": 1.6
+    "n": 1.4
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -232,15 +232,15 @@
    },
    "wander@jumbo": {
     "V": 0.031,
-    "n": 0.7
+    "n": 0.6
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@de-valk": {
     "V": 0.035,
-    "n": 0.7
+    "n": 0.6
    },
    "draw@station-fountain": {
     "V": 0.054,
@@ -260,48 +260,48 @@
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@library": {
     "V": 0.04,
-    "n": 1
+    "n": 0.9
    },
    "wander@plantsoen-bench": {
     "V": 0.027,
-    "n": 1
+    "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.28,
-   "place:station-bench": 0.91,
-   "place:de-turk": 0.25,
-   "place:station-fountain": 0.09,
-   "place:plantsoen-bench": 0.15
+   "place:library": 0.27,
+   "place:station-bench": 0.89,
+   "place:de-turk": 0.23,
+   "place:station-fountain": 0.07,
+   "place:plantsoen-bench": 0.13
   },
   "workingMemory": [
    {
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.82
+   },
+   {
+    "kind": "goal",
+    "subject": "flying to a bench in the Gouden Griffelplantsoen (writing in his diary there)",
+    "salience": 0.4
+   },
+   {
     "kind": "memory",
     "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.581
+    "salience": 0.297
    },
    {
     "kind": "memory",
     "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.456
-   },
-   {
-    "kind": "memory",
-    "subject": "The pigeons ignored me entirely.",
-    "salience": 0.45
-   },
-   {
-    "kind": "memory",
-    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
-    "salience": 0.406
+    "salience": 0.234
    }
   ]
  }

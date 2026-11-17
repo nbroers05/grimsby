@@ -1272,5 +1272,25 @@
       "entry": "They passed me by without a glance. Not even the customary squabble over crumbs or the usual sideways glance from the corner of a feathered eye. I lingered, tail feathers twitching, while they scuttled about as though I were a shadow without substance. It was not the first time, but it was the first time I wondered if I had been forgotten entirely."
     },
     "mood": 0.21
+  },
+  {
+    "time": "2026-11-17T11:12:32+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of landing on a bench with a view of people moving in straight lines, which is suspicious, and then finding a crust that was, frankly, worse than a poorly folded map. The librarian glared at me as I disturbed a pile of novels, and somewhere in the mix was a page explaining what a bottle cap is, though I searched for the history of bottle cap design and found nothing at all.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of landing on a bench with a view of people moving in straight lines, which is suspicious, and then finding a crust that was, frankly, worse than a poorly folded map. The librarian glared at me as I disturbed a pile of novels, and somewhere in the mix was a page explaining what a bottle cap is, though I searched for the history of bottle cap design and found nothing at all.",
+      "from": [
+        "The page explains what a bottle cap is and describes various types, including crown corks, flip-tops, and screw caps.",
+        "I landed on a bench with a view of a place where people move in straight lines, which is suspicious.",
+        "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
+        "I found a crust that was, frankly, worse than a poorly folded map.",
+        "Searched for history of bottle cap design and found nothing at all."
+      ]
+    },
+    "mood": 0.14
   }
 ]

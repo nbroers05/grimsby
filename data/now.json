@@ -1,38 +1,41 @@
 {
  "v": 1,
- "at": "2026-11-16T20:57:24+01:00",
+ "at": "2026-11-17T11:12:32+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "writing in his diary on a bench by the station",
+ "doing": "flying to a bench in the Gouden Griffelplantsoen",
  "thought": "The pigeons passed me by without a glance. Not surprising, given the way I keep my list.",
  "feeling": {
-  "mood": 0.2,
-  "energy": 0.34,
+  "mood": 0.14,
+  "energy": 0.99,
   "words": "The sun is a slow drip of orange, melting into the tiles. The teaspoon glints like a secret. I have not made a mistake today.",
-  "emotion": "content",
-  "arousal": 0.48
+  "emotion": "even",
+  "arousal": 0.47
  },
  "needs": {
-  "rest": 0.2,
-  "curiosity": 0.12,
-  "social": 0.26,
-  "expression": 0.07,
-  "quiet": 0.22,
-  "hunger": 0.26
+  "rest": 0.01,
+  "curiosity": 0.82,
+  "social": 0.81,
+  "expression": 0.82,
+  "quiet": 0.81,
+  "hunger": 0.81
  },
  "world": {
   "name": "the island",
-  "day": 17,
-  "time": "18:47"
+  "day": 22,
+  "time": "12:48"
  },
  "action": "diary",
  "place": {
-  "id": "station-bench",
-  "name": "a bench by the station",
-  "words": "on a bench by the station",
-  "obj": "bank-station",
-  "poi": "bank-station",
+  "id": "plantsoen-bench",
+  "name": "a bench in the Gouden Griffelplantsoen",
+  "words": "on a bench in the Gouden Griffelplantsoen",
+  "obj": "bank-plantsoen",
+  "poi": "bank-plantsoen",
   "category": "bench"
  },
- "flying": null
+ "flying": {
+  "from": "the station roof",
+  "to": "a bench in the Gouden Griffelplantsoen"
+ }
 }

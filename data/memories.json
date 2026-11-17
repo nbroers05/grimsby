@@ -1,7 +1,13 @@
 {
  "v": 1,
- "at": "2026-11-16T20:57:24+01:00",
+ "at": "2026-11-17T11:12:32+01:00",
  "beliefs": [
+  {
+   "n": 7,
+   "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
+   "evidence": 4,
+   "since": "2026-11-16T21:00:24+01:00"
+  },
   {
    "n": 6,
    "text": "Looking things up never goes well. I shall not be looking things up again.",
@@ -9,31 +15,40 @@
    "since": "2026-11-16T18:21:56+01:00"
   },
   {
-   "n": 5,
-   "text": "Keeping an eye on the pigeons never goes well. Pigeons: a species best left to their own devices.",
-   "evidence": 9,
-   "since": "2026-11-16T15:24:56+01:00"
-  },
-  {
    "n": 4,
    "text": "Writing my diary on a bench by the station beats writing my diary at the library.",
-   "evidence": 16,
+   "evidence": 19,
    "since": "2026-11-16T15:24:56+01:00"
   },
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 12,
+   "evidence": 14,
    "since": "2026-11-16T12:42:56+01:00"
-  },
-  {
-   "n": 2,
-   "text": "Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
-   "evidence": 9,
-   "since": "2026-11-15T21:25:43+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 22: Today I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare. I found a crumb of baklava on the terrace of De Turk, which I devoured with the precision of a man who has never been wrong about anything. The pigeons ignored me entirely, which is not surprising, given the way I keep my list. Derek still owes me for the time he stole my favorite perch.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-17T11:12:32+01:00"
+  },
+  {
+   "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 1.0,
+   "since": "2026-11-16T19:48:56+01:00"
+  },
+  {
+   "text": "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.5,
+   "since": "2026-11-16T19:26:26+01:00"
+  },
   {
    "text": "Day 16: Today, I hoarded a half-croissant, a strip of flatbread, and a bit of grilled onion. Derek’s cousin arrived, and I said nothing. Pino waits. The crown cork was invented in 1892. I landed on rooftops with grace, and on fountains with suspicion. Lists must be complete. Wheels are not to be trusted.",
    "kind": "moment",
@@ -159,13 +174,6 @@
    "strength": 5,
    "recalled": 3.25,
    "since": "2026-11-15T19:40:25+01:00"
-  },
-  {
-   "text": "Day 8: Today, I observed Pino’s theatrical confidence, which is beginning to show cracks. I found a squashed grape and a poorly folded napkin, both of which failed to impress. I straightened a paperclip and added it to the hoard, where it belongs. The windmill’s roof was sharp, and the silence there was louder than the crows in the trees. I felt a strange sentimentality about a missing plaque, though I won’t admit it. The temperature was predictable, as always. This is not a collection—it is a statement of survival.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-15T18:25:34+01:00"
   },
   {
    "text": "I landed on a flat stone by the mill memorial and noticed the plaque was missing its top half, which made me feel oddly sentimental about something I do not know the name of.",
@@ -329,20 +337,6 @@
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
-   "text": "I got a teaspoon. I found it in the trash, and it did not rust.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-14T19:36:32+01:00"
-  },
-  {
-   "text": "I got a rubber band. Found one, but it remembers the stretch.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-14T19:36:32+01:00"
-  },
-  {
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
@@ -357,76 +351,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I landed on the bench with the grace of a man who has never been wrong.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T20:48:24+01:00"
-  },
-  {
-   "text": "The pigeons ignored me entirely.",
-   "kind": "person",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T20:33:56+01:00"
-  },
-  {
-   "text": "I discovered a piece of flatbread lodged beneath a table at De Turk, and consumed it with the exactitude of someone who has never once miscalculated a single thing.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T20:26:26+01:00"
-  },
-  {
-   "text": "Vulcanization is a process that hardens rubber by creating cross-links between polymer chains, typically using sulfur and heat.",
-   "kind": "fact",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T20:21:56+01:00"
-  },
-  {
-   "text": "I found a strip of flatbread under a table at De Turk, and ate it with the precision of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T19:59:26+01:00"
-  },
-  {
-   "text": "The pigeons ignored me. Again.",
-   "kind": "work",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-16T19:54:56+01:00"
-  },
-  {
-   "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
-   "kind": "person",
-   "strength": 5,
-   "recalled": 1.0,
-   "since": "2026-11-16T19:48:56+01:00"
-  },
-  {
-   "text": "I landed on the fish statue, pecked at a few crumbs, and wondered if the sea ever gets tired of being salted.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-16T19:41:26+01:00"
-  },
-  {
-   "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T19:30:56+01:00"
-  },
-  {
-   "text": "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.5,
-   "since": "2026-11-16T19:26:26+01:00"
-  }
- ]
+ "short": []
 }
