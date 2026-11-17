@@ -1331,5 +1331,18 @@
       "found": false
     },
     "mood": 0.06
+  },
+  {
+    "time": "2026-11-17T11:48:32+01:00",
+    "action": "diary",
+    "reason": "Because quiet is a rare luxury and I need to remember how it feels",
+    "ok": true,
+    "withheld": false,
+    "line": "Found a crust by the trolleys—minor triumph, Derek likely would have claimed it.",
+    "detail": {
+      "topic": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been the",
+      "entry": "A crust, small and crusted with yesterday’s residue, nestled in the shadow of a rusted trolley. I pecked it carefully, avoiding the grime. Derek’s absence was a minor mercy, though I noted the scent of his usual arrogance in the air. A triumph of minimal consequence, but not without its peculiar satisfaction."
+    },
+    "mood": -0.05
   }
 ]
