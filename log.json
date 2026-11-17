@@ -1432,5 +1432,18 @@
       "entry": "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark. It was not the kind of salt that melts in the sun, nor the kind that clings to the lips. It was a teaspoon, clean, precise, and placed with the deliberation of someone who had just finished a sentence and left the period hanging. The question mark was not a symbol, but an action—something had been asked, and the answer was not given."
     },
     "mood": 0.11
+  },
+  {
+    "time": "2026-11-17T14:29:02+01:00",
+    "action": "diary",
+    "reason": "Curiosity gnaws, and I must know why salt marks a question.",
+    "ok": true,
+    "withheld": false,
+    "line": "A teaspoon of salt formed a question mark on the terrace of De Turk.",
+    "detail": {
+      "topic": "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark.",
+      "entry": "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark. The salt was not scattered, not spilled, but carefully placed—like a message left by someone who knew I would come. The question mark was precise, the edges sharp, the grain aligned in a way that suggested intent, not accident. It was not a sign of abandonment, but of a puzzle left for me to solve. I noted the position, the time, and the fact that the salt was still dry."
+    },
+    "mood": 0.21
   }
 ]
