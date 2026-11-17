@@ -1419,5 +1419,18 @@
       "entry": "The crust was so bad it made me reconsider my entire approach to bread. It was a pale, unassuming thing, like a rejected idea for a loaf, with a texture that suggested it had been through a series of unspoken negotiations with the oven. I noted it in my list, under 'bread with questionable ambition,' and considered whether I had ever truly tasted bread at all. The day ended with me pecking at a chip that had not yet decided if it was a chip or a crumb. No need for a bench, no need for a list, just a crust that had failed to impress."
     },
     "mood": 0.14
+  },
+  {
+    "time": "2026-11-17T14:05:02+01:00",
+    "action": "diary",
+    "reason": "I need to record what I saw before it disappears.",
+    "ok": true,
+    "withheld": false,
+    "line": "A teaspoon of salt formed a question mark on the terrace of De Turk.",
+    "detail": {
+      "topic": "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark.",
+      "entry": "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark. It was not the kind of salt that melts in the sun, nor the kind that clings to the lips. It was a teaspoon, clean, precise, and placed with the deliberation of someone who had just finished a sentence and left the period hanging. The question mark was not a symbol, but an action—something had been asked, and the answer was not given."
+    },
+    "mood": 0.11
   }
 ]
