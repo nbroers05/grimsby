@@ -1656,5 +1656,53 @@
       "new_interest": "smart cap technologies"
     },
     "mood": 0.23
+  },
+  {
+    "time": "2026-11-17T20:06:32+01:00",
+    "action": "draw",
+    "reason": "The fish statue is not a fish, it is a line and a memory",
+    "ok": true,
+    "withheld": false,
+    "line": "I drew the fish with the right hook, and the stone with the left. Derek would have wanted a crust.",
+    "detail": {
+      "file": "drawings/2026-11-17-2006-the-fish-statue-or-the-absence-of-a-crus.svg",
+      "title": "The Fish Statue, or the Absence of a Crust",
+      "caption": "A fish, a stone, a line, and a memory that refuses to be buried.",
+      "subject": "the fish statue",
+      "time": "2026-11-17T20:06:32+01:00",
+      "version": 2,
+      "mood": "suspicious",
+      "objects": [
+        {
+          "what": "fish",
+          "where": "center",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "stone",
+          "where": "bottom right",
+          "size": "small",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "line",
+          "where": "top left",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "learned"
+        },
+        {
+          "what": "teaspoon",
+          "where": "bottom left",
+          "size": "small",
+          "pose": "none",
+          "drawn": "box"
+        }
+      ]
+    },
+    "mood": 0.29
   }
 ]
