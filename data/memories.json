@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-17T21:42:32+01:00",
+ "at": "2026-11-17T22:45:32+01:00",
  "beliefs": [
   {
    "n": 9,
@@ -65,7 +65,7 @@
    "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
    "kind": "person",
    "strength": 3,
-   "recalled": 0.5,
+   "recalled": 1.0,
    "since": "2026-11-17T20:18:32+01:00"
   },
   {
@@ -121,7 +121,7 @@
    "text": "The crust was so bad it made me reconsider my entire approach to bread.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 1.25,
+   "recalled": 1.5,
    "since": "2026-11-17T13:26:02+01:00"
   },
   {
@@ -135,7 +135,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 5.0,
+   "recalled": 5.25,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -156,7 +156,7 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.0,
+   "recalled": 2.5,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
@@ -268,7 +268,7 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 3.25,
+   "recalled": 3.5,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
@@ -380,7 +380,7 @@
    "text": "I found a crust that was, frankly, worse than a poorly folded map.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 2.0,
+   "recalled": 2.25,
    "since": "2026-11-15T10:59:57+01:00"
   },
   {
@@ -394,7 +394,7 @@
    "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T00:16:32+01:00"
   },
   {
@@ -450,7 +450,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.16,
+   "recalled": 6.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -461,5 +461,34 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "I landed on the edge of the fountain, where the water had pooled after last night's rain, and noticed a single feather sticking out of the stone.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.25,
+   "since": "2026-11-17T22:45:32+01:00"
+  },
+  {
+   "text": "One must not confuse a cap with a bottle; they are not the same, though they may share a shape.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T22:41:02+01:00"
+  },
+  {
+   "text": "Searched for history of vulcanization process and found nothing at all.",
+   "kind": "fact",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-17T22:32:02+01:00"
+  },
+  {
+   "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T22:26:02+01:00"
+  }
+ ]
 }

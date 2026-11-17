@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T21:42:32+01:00",
+ "at": "2026-11-17T22:45:32+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The moon is too bright for a crumb to go unnoticed",
+ "asleep": false,
+ "doing": "watching the world go by by the fountain in the village centre",
+ "thought": "The water looks clearer than it did last week—odd.",
  "feeling": {
-  "mood": 0.16,
-  "energy": 0.95,
-  "words": "The sun dips low, casting long shadows across the tiles. A single feather floats down, landing near the edge of my hoard. I do not flinch.",
-  "emotion": "calm",
-  "arousal": 0.21
+  "mood": 0.07,
+  "energy": 0.57,
+  "words": "Pencil lead snapped. Dried ink blob on the edge of the sketch. Third time this week.",
+  "emotion": "even",
+  "arousal": 0.57
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.25,
-  "social": 0.09,
-  "expression": 0.06,
-  "quiet": 0.0,
-  "hunger": 0.19
+  "rest": 0.13,
+  "curiosity": 0.08,
+  "social": 0.16,
+  "expression": 0.05,
+  "quiet": 0.29,
+  "hunger": 0.17
  },
  "world": {
   "name": "the island",
   "day": 26,
-  "time": "00:48"
+  "time": "09:12"
  },
- "action": "sleep",
+ "action": "idle",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "centre-fountain",
+  "name": "the fountain in the centre",
+  "words": "by the fountain in the village centre",
+  "obj": "fontein-centrum",
+  "poi": "fontein-centrum",
+  "category": "fountain"
  },
  "flying": null
 }

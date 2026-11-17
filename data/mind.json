@@ -1,26 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-17T21:42:32+01:00",
- "thought": "The moon is too bright for a crumb to go unnoticed",
+ "at": "2026-11-17T22:45:32+01:00",
+ "thought": "The water looks clearer than it did last week—odd.",
  "loudest": [
   {
-   "kind": "question",
-   "subject": "how many bottle caps in a jar"
+   "kind": "outcome",
+   "subject": "having a look around by the fountain in the village centre went better than you expected"
   },
   {
-   "kind": "question",
-   "subject": "What is the history of rubber chemistry"
+   "kind": "memory",
+   "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
+  },
+  {
+   "kind": "goal",
+   "subject": "watching the world go by by the fountain in the village centre"
+  },
+  {
+   "kind": "outcome",
+   "subject": "drawing something on the roof of de Bron church went better than you expected"
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 2,
+  "question": 3,
   "want": 0,
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "watching the world go by by the fountain in the village centre",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -37,6 +45,11 @@
    "kind": "question",
    "subject": "What is the history of rubber chemistry",
    "since": "2026-11-17T17:36:32+01:00"
+  },
+  {
+   "kind": "question",
+   "subject": "history of vulcanization process",
+   "since": "2026-11-17T22:27:32+01:00"
   }
  ],
  "interests": [
@@ -79,18 +92,18 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "calm",
-  "valence": 0.159,
-  "arousal": 0.211,
-  "average": 0.191,
+  "emotion": "even",
+  "valence": 0.071,
+  "arousal": 0.569,
+  "average": 0.188,
   "values": {
    "eat@jumbo": {
-    "V": 0.091,
-    "n": 3.7
+    "V": 0.099,
+    "n": 4.7
    },
    "eat@*": {
-    "V": 0.17,
-    "n": 27.1
+    "V": 0.166,
+    "n": 28.1
    },
    "diary@station-bench": {
     "V": 0.257,
@@ -141,8 +154,8 @@
     "n": 0.7
    },
    "draw@*": {
-    "V": 0.137,
-    "n": 3.0
+    "V": 0.153,
+    "n": 4.0
    },
    "sit@de-bron": {
     "V": 0.042,
@@ -153,12 +166,12 @@
     "n": 12.6
    },
    "search@library": {
-    "V": 0.124,
-    "n": 11.8
+    "V": 0.1,
+    "n": 12.8
    },
    "search@*": {
-    "V": 0.124,
-    "n": 11.8
+    "V": 0.1,
+    "n": 12.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -169,8 +182,8 @@
     "n": 0.4
    },
    "wander@*": {
-    "V": 0.212,
-    "n": 11.0
+    "V": 0.221,
+    "n": 12.0
    },
    "pigeons@vis": {
     "V": 0.072,
@@ -277,8 +290,8 @@
     "n": 0.8
    },
    "wander@centre-fountain": {
-    "V": 0.027,
-    "n": 0.8
+    "V": 0.064,
+    "n": 1.8
    },
    "wander@mcdonalds": {
     "V": 0.028,
@@ -291,24 +304,40 @@
    "sit@hichte-mill": {
     "V": 0.042,
     "n": 0.9
+   },
+   "draw@de-bron": {
+    "V": 0.036,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.8,
-   "place:albert-heijn": 0.09,
-   "place:station-bench": 0.12,
-   "place:station-fountain": 0.07
+   "place:library": 0.74,
+   "place:jumbo": 0.11,
+   "topic:rubber chemistry": 0.13,
+   "place:de-bron": 0.16,
+   "topic:early cap manufacturing": 0.16,
+   "place:centre-fountain": 0.19
   },
   "workingMemory": [
    {
-    "kind": "question",
-    "subject": "how many bottle caps in a jar",
-    "salience": 0.2
+    "kind": "outcome",
+    "subject": "having a look around by the fountain in the village centre went better than you expected",
+    "salience": 0.762
    },
    {
-    "kind": "question",
-    "subject": "What is the history of rubber chemistry",
-    "salience": 0.2
+    "kind": "memory",
+    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+    "salience": 0.426
+   },
+   {
+    "kind": "goal",
+    "subject": "watching the world go by by the fountain in the village centre",
+    "salience": 0.4
+   },
+   {
+    "kind": "outcome",
+    "subject": "drawing something on the roof of de Bron church went better than you expected",
+    "salience": 0.387
    }
   ]
  }
