@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T15:24:32+01:00",
+ "at": "2026-11-17T16:27:32+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The silence is too clean, and I have not yet closed my eyes.",
+ "asleep": false,
+ "doing": "watching the world go by on the terrace of De Turk",
+ "thought": "This is the third time today I’ve found something worth eating and had to decide whether it’s worth the trouble of being seen with it.",
  "feeling": {
-  "mood": 0.18,
-  "energy": 0.25,
-  "words": "The dusk is soft. The baklava crumb is gone. The onion is gone too.",
-  "emotion": "content",
-  "arousal": 0.45
+  "mood": 0.14,
+  "energy": 1,
+  "words": "Dawn licks the tiles. The silence is a thin crust. I count the cracks in the roof like a list I can’t afford to miss.",
+  "emotion": "drowsy",
+  "arousal": 0.26
  },
  "needs": {
-  "rest": 0.24,
-  "curiosity": 0.17,
-  "social": 0.26,
-  "expression": 0.01,
-  "quiet": 0.03,
-  "hunger": 0.11
+  "rest": 0.03,
+  "curiosity": 0.18,
+  "social": 0.07,
+  "expression": 0.22,
+  "quiet": 0.06,
+  "hunger": 0.0
  },
  "world": {
   "name": "the island",
-  "day": 23,
-  "time": "22:24"
+  "day": 24,
+  "time": "06:48"
  },
- "action": "sleep",
+ "action": "idle",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "de-turk",
+  "name": "De Turk",
+  "words": "on the terrace of De Turk",
+  "obj": "de-turk",
+  "poi": "de-turk",
+  "category": "restaurant"
  },
  "flying": null
 }

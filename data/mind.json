@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-17T15:24:32+01:00",
- "thought": "The silence is too clean, and I have not yet closed my eyes.",
+ "at": "2026-11-17T16:27:32+01:00",
+ "thought": "This is the third time today I’ve found something worth eating and had to decide whether it’s worth the trouble of being seen with it.",
  "loudest": [
   {
-   "kind": "memory",
-   "subject": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken."
-  },
-  {
-   "kind": "need",
-   "subject": "rest"
-  },
-  {
-   "kind": "question",
-   "subject": "how many bottle caps in the world"
+   "kind": "goal",
+   "subject": "watching the world go by on the terrace of De Turk"
   },
   {
    "kind": "memory",
-   "subject": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story."
+   "subject": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything."
+  },
+  {
+   "kind": "memory",
+   "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything."
+  },
+  {
+   "kind": "memory",
+   "subject": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "watching the world go by on the terrace of De Turk",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -82,18 +82,18 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.178,
-  "arousal": 0.453,
-  "average": 0.194,
+  "emotion": "drowsy",
+  "valence": 0.141,
+  "arousal": 0.256,
+  "average": 0.195,
   "values": {
    "eat@jumbo": {
     "V": 0.091,
     "n": 3.3
    },
    "eat@*": {
-    "V": 0.164,
-    "n": 22.7
+    "V": 0.167,
+    "n": 23.7
    },
    "diary@station-bench": {
     "V": 0.258,
@@ -104,12 +104,12 @@
     "n": 27.7
    },
    "neighbour@home": {
-    "V": 0.168,
-    "n": 3.1
+    "V": 0.19,
+    "n": 4.1
    },
    "neighbour@*": {
-    "V": 0.168,
-    "n": 3.1
+    "V": 0.19,
+    "n": 4.1
    },
    "diary@plantsoen-bench": {
     "V": 0.224,
@@ -152,8 +152,8 @@
     "n": 0.4
    },
    "eat@de-turk": {
-    "V": 0.133,
-    "n": 12.9
+    "V": 0.141,
+    "n": 13.9
    },
    "search@library": {
     "V": 0.147,
@@ -285,32 +285,31 @@
    }
   },
   "habit": {
-   "place:library": 0.86,
-   "place:station-bench": 0.55,
-   "place:de-turk": 0.22,
-   "topic:rubber chemistry": 0.06,
-   "place:centre-fountain": 0.12
+   "place:library": 0.61,
+   "place:station-bench": 0.3,
+   "place:home": 0.18,
+   "place:de-turk": 0.19
   },
   "workingMemory": [
    {
-    "kind": "memory",
-    "subject": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken.",
-    "salience": 0.286
-   },
-   {
-    "kind": "need",
-    "subject": "rest",
-    "salience": 0.25
-   },
-   {
-    "kind": "question",
-    "subject": "how many bottle caps in the world",
-    "salience": 0.2
+    "kind": "goal",
+    "subject": "watching the world go by on the terrace of De Turk",
+    "salience": 0.4
    },
    {
     "kind": "memory",
-    "subject": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
-    "salience": 0.197
+    "subject": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+    "salience": 0.328
+   },
+   {
+    "kind": "memory",
+    "subject": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+    "salience": 0.3
+   },
+   {
+    "kind": "memory",
+    "subject": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
+    "salience": 0.281
    }
   ]
  }

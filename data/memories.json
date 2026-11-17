@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-17T15:24:32+01:00",
+ "at": "2026-11-17T16:27:32+01:00",
  "beliefs": [
   {
    "n": 9,
@@ -142,7 +142,7 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 3.75,
+   "recalled": 4.0,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -219,7 +219,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.25,
+   "recalled": 4.5,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -233,7 +233,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -310,7 +310,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -405,5 +405,20 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "I found a bit of grilled onion on the terrace of De Turk and ate it with the precision of a man who has never been wrong about anything.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T16:27:32+01:00"
+  },
+  {
+   "text": "Pino: Pino thinks he's witty. He's not. He's just loud.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T16:23:02+01:00"
+  }
+ ]
 }
