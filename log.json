@@ -1614,5 +1614,18 @@
       ]
     },
     "mood": 0.32
+  },
+  {
+    "time": "2026-11-17T19:23:02+01:00",
+    "action": "diary",
+    "reason": "At the library, I am sorting through the remnants of a failed search.",
+    "ok": true,
+    "withheld": false,
+    "line": "Rubber chemistry? Ink, and a crumb of doubt.",
+    "detail": {
+      "topic": "rubber chemistry",
+      "entry": "Rubber chemistry, as I scoured the library's dusty alcoves, yielded only a pamphlet on ink. The ink’s viscosity was noted, but its relevance to rubber remains unclear. I left without comment, as usual, and returned to my hoard, which now contains one less pamphlet and one more crumb of doubt."
+    },
+    "mood": 0.12
   }
 ]
