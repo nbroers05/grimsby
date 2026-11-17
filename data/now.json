@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T13:18:32+01:00",
+ "at": "2026-11-17T14:21:32+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The moon is too bright for a proper nap.",
+ "asleep": false,
+ "doing": "flying about town, as far as the Dorpskerk",
+ "thought": "The spire is slightly off-center, which is either an error or a statement.",
  "feeling": {
-  "mood": 0.02,
-  "energy": 1,
-  "words": "The wind smells like salt and old coffee. A man in a hat talks to himself near the gate. His shadow stretches too long for the hour.",
-  "emotion": "drowsy",
-  "arousal": 0.1
+  "mood": 0.17,
+  "energy": 0.52,
+  "words": "A sunbeam slants through the tiles, catching on the edge of a broken teacup. The scent of ink and old paper lingers where I left my pen. I’m not sure if I’m writing or just staring at the blank space.",
+  "emotion": "content",
+  "arousal": 0.51
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.31,
-  "social": 0.5,
-  "expression": 0.26,
-  "quiet": 0.0,
-  "hunger": 0.31
+  "rest": 0.22,
+  "curiosity": 0.15,
+  "social": 0.14,
+  "expression": 0.13,
+  "quiet": 0.16,
+  "hunger": 0.05
  },
  "world": {
   "name": "the island",
   "day": 23,
-  "time": "05:36"
+  "time": "14:00"
  },
- "action": "sleep",
+ "action": "wander",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "dorpskerk",
+  "name": "the Dorpskerk",
+  "words": "on the roof of the Dorpskerk",
+  "obj": "dorpskerk",
+  "poi": "dorpskerk",
+  "category": "church"
  },
  "flying": null
 }

@@ -1,7 +1,206 @@
 {
  "v": 1,
- "at": "2026-11-17T13:18:32+01:00",
+ "at": "2026-11-17T14:21:32+01:00",
  "entries": [
+  {
+   "at": "2026-11-17T14:21:32+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the Dorpskerk",
+   "why": "Because I am curious about the Dorpskerk's architecture.",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-17T14:18:32+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the Dorpskerk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T14:12:32+01:00",
+   "kind": "noticed",
+   "text": "Found a bit of grilled onion on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-17T14:12:32+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "Because I am hungry and the onion is within reach",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T14:11:02+01:00",
+   "kind": "did",
+   "text": "flying from the library to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T14:05:02+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "I need to record what I saw before it disappears.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T14:03:32+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:59:02+01:00",
+   "kind": "noticed",
+   "text": "Derek was there, and smug about it."
+  },
+  {
+   "at": "2026-11-17T13:59:02+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "Rodenrijs is quiet today, and the pigeons are too busy to notice me.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-17T13:56:02+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:50:02+01:00",
+   "kind": "noticed",
+   "text": "Found nothing; someone had been there first on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-17T13:50:02+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": "De Turk is empty, and I am hungry.",
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T13:48:32+01:00",
+   "kind": "mind",
+   "text": "Let go of wanting A diagram of a crown cork.",
+   "change": "closed",
+   "about": "want"
+  },
+  {
+   "at": "2026-11-17T13:48:32+01:00",
+   "kind": "did",
+   "text": "flying from the library to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:45:32+01:00",
+   "kind": "felt",
+   "text": "A sunbeam slants through the tiles, catching on the edge of a broken teacup. The scent of ink and old paper lingers where I left my pen. I’m not sure if I’m writing or just staring at the blank space."
+  },
+  {
+   "at": "2026-11-17T13:44:02+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "Boredom gnaws, so I scratch it with ink and grain",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T13:39:32+01:00",
+   "kind": "noticed",
+   "text": "Read that the page explains polymer degradation, mainly caused by heat, light, and chemical reactions. It mentions that some plastics degrade quickly while others take decades."
+  },
+  {
+   "at": "2026-11-17T13:39:32+01:00",
+   "kind": "did",
+   "text": "looking up how does rubber degrade over time at the library",
+   "why": "The page says rubber degrades, but I found nothing on the pneumatic tire’s invention.",
+   "ok": true,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-17T13:38:02+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:33:32+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "Someone needs to record how bad a crust can be.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T13:32:02+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:27:32+01:00",
+   "kind": "noticed",
+   "text": "Three pigeons and Derek, in a row."
+  },
+  {
+   "at": "2026-11-17T13:27:32+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": "Because I need to know what happens when pigeons line up for crumbs",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-17T13:26:02+01:00",
+   "kind": "did",
+   "text": "flying from the Jumbo to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T13:23:02+01:00",
+   "kind": "noticed",
+   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
+  },
+  {
+   "at": "2026-11-17T13:23:02+01:00",
+   "kind": "did",
+   "text": "looking for something to eat at the Jumbo by the station",
+   "why": "At the Jumbo, I seek sustenance.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T13:21:32+01:00",
+   "kind": "felt",
+   "text": "Drowsy. Beans. The world is still spinning, but I’m already ahead of it."
+  },
+  {
+   "at": "2026-11-17T13:21:32+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-17T12:23:02+01:00",
    "kind": "did",
@@ -157,209 +356,6 @@
    "why": "Pigeons by the fountain, Derek not among them, so I watch",
    "ok": true,
    "action": "pigeons"
-  },
-  {
-   "at": "2026-11-17T11:41:02+01:00",
-   "kind": "did",
-   "text": "flying from the library to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:36:32+01:00",
-   "kind": "did",
-   "text": "looking up how many bottle caps in the world at the library",
-   "why": "Someone wants to know how many bottle caps exist, and I am here to tell them it’s not worth the effort.",
-   "ok": false,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-17T11:36:32+01:00",
-   "kind": "mind",
-   "text": "An open question: how many bottle caps in the world?",
-   "change": "opened",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-17T11:35:02+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:30:32+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "Because I need to remember what I saw and make sure it doesn't slip away",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T11:29:02+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:27:32+01:00",
-   "kind": "noticed",
-   "text": "Pino was walking to the bench by the apple tree for a sit down, thinking \"Read the notes, see if anything new pops up\" (from pinos.world)."
-  },
-  {
-   "at": "2026-11-17T11:27:32+01:00",
-   "kind": "did",
-   "text": "checking on Pino next door",
-   "why": "Someone needs to ensure the notes aren't left to gather dust in the rain.",
-   "ok": true,
-   "action": "neighbour"
-  },
-  {
-   "at": "2026-11-17T11:26:02+01:00",
-   "kind": "did",
-   "text": "flying from the Albert Heijn to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:23:02+01:00",
-   "kind": "noticed",
-   "text": "Found a crust by the trolleys by the trolleys at the Albert Heijn."
-  },
-  {
-   "at": "2026-11-17T11:23:02+01:00",
-   "kind": "did",
-   "text": "looking for something to eat by the trolleys at the Albert Heijn",
-   "why": "I need to eat",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-17T11:20:02+01:00",
-   "kind": "felt",
-   "text": "The sun is a smudge of light on the tin roof. I’m pecking at a bread bag, which is not a metaphor. The smell of onions is making me nostalgic for something I never had."
-  },
-  {
-   "at": "2026-11-17T11:20:02+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the Albert Heijn",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:15:32+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": "A dented cap and a teaspoon: two things I will not explain.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T11:12:32+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T11:12:32+01:00",
-   "kind": "noticed",
-   "text": "Fact 7: Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "fact": 7
-  },
-  {
-   "at": "2026-11-17T11:12:32+01:00",
-   "kind": "noticed",
-   "text": "Day 22: Today I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare. I found a crumb of baklava on the terrace of De Turk, which I devoured with the precision of a man who has never been wrong about anything. The pigeons ignored me entirely, which is not surprising, given the way I keep my list. Derek still owes me for the time he stole my favorite perch."
-  },
-  {
-   "at": "2026-11-16T21:00:24+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:57:24+01:00",
-   "kind": "felt",
-   "text": "The sun is a slow drip of orange, melting into the tiles. The teaspoon glints like a secret. I have not made a mistake today."
-  },
-  {
-   "at": "2026-11-16T20:55:54+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "The dusk stains the tiles in shades I can name, and I need to record it.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-16T20:52:54+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:45:24+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as a bench in the Gouden Griffelplantsoen",
-   "why": "I seek a place where silence is not a crime.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-16T20:42:24+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:35:26+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "I need to fix the gap in my list.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-16T20:33:56+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-16T20:29:26+01:00",
-   "kind": "noticed",
-   "text": "The pigeons ignored me entirely."
-  },
-  {
-   "at": "2026-11-16T20:29:26+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain next to the station",
-   "why": "Rodenrijs has no pigeons worth watching.",
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-16T20:27:56+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
   }
  ]
 }

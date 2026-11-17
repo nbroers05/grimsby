@@ -1,19 +1,19 @@
 {
  "v": 1,
- "at": "2026-11-17T13:18:32+01:00",
- "thought": "The moon is too bright for a proper nap.",
+ "at": "2026-11-17T14:21:32+01:00",
+ "thought": "The spire is slightly off-center, which is either an error or a statement.",
  "loudest": [
   {
-   "kind": "need",
-   "subject": "social"
+   "kind": "seen",
+   "subject": "the Dorpskerk"
+  },
+  {
+   "kind": "goal",
+   "subject": "having a look around on the roof of the Dorpskerk"
   },
   {
    "kind": "question",
    "subject": "how many bottle caps in the world"
-  },
-  {
-   "kind": "want",
-   "subject": "A diagram of a crown cork"
   },
   {
    "kind": "want",
@@ -24,11 +24,11 @@
   "piece": 0,
   "person": 0,
   "question": 1,
-  "want": 2,
+  "want": 1,
   "worry": 0,
   "promise": 0
  },
- "busy": null,
+ "busy": "flying about town, as far as the Dorpskerk",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -36,12 +36,6 @@
   "Every small thing deserves one careful look."
  ],
  "items": [
-  {
-   "kind": "want",
-   "subject": "A diagram of a crown cork",
-   "since": "2026-11-16T13:47:26+01:00",
-   "why": "To confirm the flutes are crimped, not curled."
-  },
   {
    "kind": "want",
    "subject": "a list of crows and their tools",
@@ -57,7 +51,7 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 8.9
+   "strength": 9.9
   },
   {
    "topic": "bottle caps and shiny objects",
@@ -94,26 +88,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "drowsy",
-  "valence": 0.018,
-  "arousal": 0.103,
-  "average": 0.206,
+  "emotion": "content",
+  "valence": 0.165,
+  "arousal": 0.514,
+  "average": 0.2,
   "values": {
    "eat@jumbo": {
-    "V": 0.074,
-    "n": 2.6
+    "V": 0.091,
+    "n": 3.6
    },
    "eat@*": {
-    "V": 0.233,
-    "n": 19.7
+    "V": 0.191,
+    "n": 22.7
    },
    "diary@station-bench": {
-    "V": 0.245,
-    "n": 15.0
+    "V": 0.256,
+    "n": 16.0
    },
    "diary@*": {
-    "V": 0.281,
-    "n": 24.1
+    "V": 0.273,
+    "n": 27.1
    },
    "neighbour@home": {
     "V": 0.168,
@@ -128,12 +122,12 @@
     "n": 3.8
    },
    "pigeons@station-fountain": {
-    "V": 0.041,
-    "n": 4.5
+    "V": 0.07,
+    "n": 5.5
    },
    "pigeons@*": {
-    "V": 0.114,
-    "n": 10.1
+    "V": 0.148,
+    "n": 12.1
    },
    "sit@ondermolen": {
     "V": 0.106,
@@ -164,16 +158,16 @@
     "n": 0.4
    },
    "eat@de-turk": {
-    "V": 0.172,
-    "n": 11.0
+    "V": 0.152,
+    "n": 13.0
    },
    "search@library": {
-    "V": 0.119,
-    "n": 8.6
+    "V": 0.139,
+    "n": 9.6
    },
    "search@*": {
-    "V": 0.119,
-    "n": 8.6
+    "V": 0.139,
+    "n": 9.6
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -196,12 +190,12 @@
     "n": 3.9
    },
    "diary@library": {
-    "V": 0.192,
-    "n": 5.2
+    "V": 0.205,
+    "n": 7.2
    },
    "pigeons@centre-fountain": {
-    "V": 0.114,
-    "n": 4.1
+    "V": 0.133,
+    "n": 5.1
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -289,25 +283,27 @@
    }
   },
   "habit": {
-   "place:library": 0.16,
-   "place:station-bench": 0.66,
-   "place:de-turk": 0.12
+   "place:library": 0.51,
+   "place:station-bench": 0.61,
+   "place:de-turk": 0.27,
+   "place:centre-fountain": 0.11,
+   "place:dorpskerk": 0.2
   },
   "workingMemory": [
    {
-    "kind": "need",
-    "subject": "social",
-    "salience": 0.497
+    "kind": "seen",
+    "subject": "the Dorpskerk",
+    "salience": 0.6
+   },
+   {
+    "kind": "goal",
+    "subject": "having a look around on the roof of the Dorpskerk",
+    "salience": 0.4
    },
    {
     "kind": "question",
     "subject": "how many bottle caps in the world",
     "salience": 0.2
-   },
-   {
-    "kind": "want",
-    "subject": "A diagram of a crown cork",
-    "salience": 0.15
    },
    {
     "kind": "want",
