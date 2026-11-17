@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-17T19:36:32+01:00",
+ "at": "2026-11-17T20:39:32+01:00",
  "beliefs": [
   {
    "n": 9,
@@ -100,7 +100,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 4.0,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -121,7 +121,7 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.0,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
@@ -142,14 +142,14 @@
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.25,
+   "recalled": 4.75,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
    "text": "Searched for history of bottle cap design and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.0,
    "since": "2026-11-16T17:35:26+01:00"
   },
   {
@@ -170,7 +170,7 @@
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 8.0,
+   "recalled": 8.5,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -233,7 +233,7 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.0,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
@@ -275,14 +275,14 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.75,
+   "recalled": 6.25,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 7.75,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
@@ -317,7 +317,7 @@
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 5.25,
+   "recalled": 5.5,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -331,7 +331,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 2.0,
+   "recalled": 2.5,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -415,7 +415,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.66,
+   "recalled": 5.91,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -428,10 +428,66 @@
  ],
  "short": [
   {
+   "text": "I looked for rubber chemistry, found ink, and ate a crumb from the edge of my list.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-17T20:36:32+01:00"
+  },
+  {
+   "text": "Pino: Pino claims to be settled, but I’ve seen him twitch more in five seconds than he has in a week. If he’s finished, why is the synth still humming? A man with a finished piece should know when to stop. Or perhaps he’s just trying to convince himself.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T20:29:02+01:00"
+  },
+  {
+   "text": "Sat still on the windmill at De Hichte. Nothing rolled my way.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.25,
+   "since": "2026-11-17T20:24:32+01:00"
+  },
+  {
+   "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T20:18:32+01:00"
+  },
+  {
+   "text": "I drew the fish with the right hook, and the stone with the left. Derek would have wanted a crust.",
+   "kind": "work",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T20:12:32+01:00"
+  },
+  {
+   "text": "The global bottle cap market was valued at USD 11 billion in 2025 and is projected to reach USD 18 billion by 2034, growing at a compound annual rate of 5.5%.",
+   "kind": "fact",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T19:50:02+01:00"
+  },
+  {
+   "text": "I ate a half-croissant slowly, suspecting Derek.",
+   "kind": "work",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T19:44:02+01:00"
+  },
+  {
+   "text": "I found half a croissant by the bench, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.5,
+   "since": "2026-11-17T19:38:02+01:00"
+  },
+  {
    "text": "Three pigeons and Derek stood in a row at the fountain, as if they were waiting for a train that never came.",
    "kind": "person",
    "strength": 3,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-17T19:33:32+01:00"
   },
   {

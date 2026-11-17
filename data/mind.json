@@ -1,7 +1,7 @@
 {
  "v": 1,
- "at": "2026-11-17T19:36:32+01:00",
- "thought": "The bench is clean, but the crumbs are gone—someone had a better appetite than I.",
+ "at": "2026-11-17T20:39:32+01:00",
+ "thought": "This cracker is soft, but I suspect Derek would have claimed it had he been here.",
  "loudest": [
   {
    "kind": "memory",
@@ -23,7 +23,7 @@
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 3,
+  "question": 2,
   "want": 0,
   "worry": 0,
   "promise": 0
@@ -36,11 +36,6 @@
   "Every small thing deserves one careful look."
  ],
  "items": [
-  {
-   "kind": "question",
-   "subject": "how many bottle caps in the world",
-   "since": "2026-11-17T11:36:32+01:00"
-  },
   {
    "kind": "question",
    "subject": "how many bottle caps in a jar",
@@ -93,33 +88,33 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.154,
-  "arousal": 0.351,
-  "average": 0.189,
+  "valence": 0.275,
+  "arousal": 0.523,
+  "average": 0.192,
   "values": {
    "eat@jumbo": {
     "V": 0.091,
     "n": 3.0
    },
    "eat@*": {
-    "V": 0.175,
-    "n": 25.5
+    "V": 0.176,
+    "n": 27.5
    },
    "diary@station-bench": {
-    "V": 0.257,
-    "n": 16.3
+    "V": 0.252,
+    "n": 18.3
    },
    "diary@*": {
-    "V": 0.25,
-    "n": 31.0
+    "V": 0.247,
+    "n": 33.0
    },
    "neighbour@home": {
-    "V": 0.19,
-    "n": 3.8
+    "V": 0.184,
+    "n": 4.8
    },
    "neighbour@*": {
-    "V": 0.19,
-    "n": 3.8
+    "V": 0.184,
+    "n": 4.8
    },
    "diary@plantsoen-bench": {
     "V": 0.229,
@@ -130,16 +125,16 @@
     "n": 5.6
    },
    "pigeons@*": {
-    "V": 0.152,
-    "n": 12.2
+    "V": 0.159,
+    "n": 13.2
    },
    "sit@ondermolen": {
     "V": 0.12,
     "n": 2.8
    },
    "sit@*": {
-    "V": 0.193,
-    "n": 6.4
+    "V": 0.207,
+    "n": 7.4
    },
    "read_back@home": {
     "V": 0.047,
@@ -154,8 +149,8 @@
     "n": 0.8
    },
    "draw@*": {
-    "V": 0.127,
-    "n": 2.2
+    "V": 0.137,
+    "n": 3.2
    },
    "sit@de-bron": {
     "V": 0.042,
@@ -166,12 +161,12 @@
     "n": 13.7
    },
    "search@library": {
-    "V": 0.09,
-    "n": 10.8
+    "V": 0.113,
+    "n": 11.8
    },
    "search@*": {
-    "V": 0.09,
-    "n": 10.8
+    "V": 0.113,
+    "n": 11.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
@@ -190,16 +185,16 @@
     "n": 1.3
    },
    "eat@albert-heijn": {
-    "V": 0.179,
-    "n": 6.9
+    "V": 0.18,
+    "n": 8.9
    },
    "diary@library": {
     "V": 0.22,
     "n": 10.6
    },
    "pigeons@centre-fountain": {
-    "V": 0.142,
-    "n": 5.3
+    "V": 0.15,
+    "n": 6.3
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -296,19 +291,31 @@
    "wander@mcdonalds": {
     "V": 0.028,
     "n": 0.9
+   },
+   "draw@vis": {
+    "V": 0.029,
+    "n": 1
+   },
+   "sit@hichte-mill": {
+    "V": 0.042,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.72,
-   "topic:rubber chemistry": 0.15,
-   "place:centre-fountain": 0.17,
-   "place:albert-heijn": 0.19
+   "place:library": 0.67,
+   "place:centre-fountain": 0.12,
+   "place:albert-heijn": 0.34,
+   "place:vis": 0.07,
+   "topic:bottle caps and shiny objects": 0.07,
+   "place:hichte-mill": 0.13,
+   "place:home": 0.15,
+   "place:station-bench": 0.17
   },
   "workingMemory": [
    {
     "kind": "memory",
     "subject": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
-    "salience": 0.425
+    "salience": 0.433
    },
    {
     "kind": "goal",
@@ -318,12 +325,12 @@
    {
     "kind": "memory",
     "subject": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
-    "salience": 0.36
+    "salience": 0.366
    },
    {
     "kind": "memory",
     "subject": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
-    "salience": 0.307
+    "salience": 0.315
    }
   ]
  }

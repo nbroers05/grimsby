@@ -1,29 +1,29 @@
 {
  "v": 1,
- "at": "2026-11-17T19:36:32+01:00",
+ "at": "2026-11-17T20:39:32+01:00",
  "name": "Grimsby",
  "asleep": false,
  "doing": "looking for something to eat by the trolleys at the Albert Heijn",
- "thought": "The bench is clean, but the crumbs are gone—someone had a better appetite than I.",
+ "thought": "This cracker is soft, but I suspect Derek would have claimed it had he been here.",
  "feeling": {
-  "mood": 0.15,
-  "energy": 0.82,
-  "words": "Drowsy, full of beans. The sky is a pale blue with a hint of grey. A single crow caws in the distance, just once.",
+  "mood": 0.28,
+  "energy": 0.46,
+  "words": "Sunlight slants across the tiles. A single leaf sticks to the edge of the tin. The silence is perfect.",
   "emotion": "content",
-  "arousal": 0.35
+  "arousal": 0.52
  },
  "needs": {
-  "rest": 0.08,
-  "curiosity": 0.25,
-  "social": 0.02,
-  "expression": 0.18,
-  "quiet": 0.23,
+  "rest": 0.16,
+  "curiosity": 0.16,
+  "social": 0.08,
+  "expression": 0.03,
+  "quiet": 0.03,
   "hunger": 0.0
  },
  "world": {
   "name": "the island",
   "day": 25,
-  "time": "08:00"
+  "time": "16:24"
  },
  "action": "eat",
  "place": {
