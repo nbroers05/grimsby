@@ -1474,5 +1474,36 @@
       "entry": "The grilled onion was small, charred at the edges, and slightly sweet. I ate it with my beak, one bite at a time, ensuring no fragment was left behind. The terrace was empty, save for a single plastic chair that had been left behind by someone who forgot to take it. I noted the time, 17:23, and the wind was just right for carrying away the scent of regret."
     },
     "mood": 0.27
+  },
+  {
+    "time": "2026-11-17T15:17:02+01:00",
+    "action": "diary",
+    "reason": "I am recording the shape of a forgotten sentence.",
+    "ok": true,
+    "withheld": false,
+    "line": "The baklava crumbs were arranged like a sentence, and I did not eat the last one.",
+    "detail": {
+      "topic": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind ar",
+      "entry": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes. A single, precise line of crumbs, like a sentence written in sugar, traced the edge of the plate. I noted the absence of the crumb that should have been there, and the presence of one that wasn’t. The pattern was deliberate, the absence was not. I did not eat it. I did not ask questions."
+    },
+    "mood": 0.17
+  },
+  {
+    "time": "2026-11-17T15:23:02+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of three pigeons and Derek standing in a row, all of them looking at me, which is not how a line is meant to be formed. The crust was so bad it made me reconsider my entire approach to bread, and somehow it ended up in a teaspoon, which I ruled with a beak. A tiny kingdom, yes, but not one I had any intention of ruling in the first place. The pigeons started humming the tune of a train.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of three pigeons and Derek standing in a row, all of them looking at me, which is not how a line is meant to be formed. The crust was so bad it made me reconsider my entire approach to bread, and somehow it ended up in a teaspoon, which I ruled with a beak. A tiny kingdom, yes, but not one I had any intention of ruling in the first place. The pigeons started humming the tune of a train.",
+      "from": [
+        "Three pigeons and Derek stood in a row, all of them looking at me, which is not how a line is meant to be formed.",
+        "The crust was so bad it made me reconsider my entire approach to bread.",
+        "A teaspoon is a tiny kingdom, and I rule it with a beak."
+      ]
+    },
+    "mood": 0.19
   }
 ]

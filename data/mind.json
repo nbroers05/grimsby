@@ -1,34 +1,34 @@
 {
  "v": 1,
- "at": "2026-11-17T14:21:32+01:00",
- "thought": "The spire is slightly off-center, which is either an error or a statement.",
+ "at": "2026-11-17T15:24:32+01:00",
+ "thought": "The silence is too clean, and I have not yet closed my eyes.",
  "loudest": [
   {
-   "kind": "seen",
-   "subject": "the Dorpskerk"
+   "kind": "memory",
+   "subject": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken."
   },
   {
-   "kind": "goal",
-   "subject": "having a look around on the roof of the Dorpskerk"
+   "kind": "need",
+   "subject": "rest"
   },
   {
    "kind": "question",
    "subject": "how many bottle caps in the world"
   },
   {
-   "kind": "want",
-   "subject": "a list of crows and their tools"
+   "kind": "memory",
+   "subject": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story."
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
   "question": 1,
-  "want": 1,
+  "want": 0,
   "worry": 0,
   "promise": 0
  },
- "busy": "flying about town, as far as the Dorpskerk",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -36,12 +36,6 @@
   "Every small thing deserves one careful look."
  ],
  "items": [
-  {
-   "kind": "want",
-   "subject": "a list of crows and their tools",
-   "since": "2026-11-16T14:45:56+01:00",
-   "why": "to verify accuracy of my own hoard"
-  },
   {
    "kind": "question",
    "subject": "how many bottle caps in the world",
@@ -51,35 +45,35 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.9
+   "strength": 9.7
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 7.1
+   "strength": 6.8
   },
   {
    "topic": "Early cap manufacturing",
-   "strength": 2.1
+   "strength": 1.8
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 2.1
+   "strength": 1.8
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 2.1
+   "strength": 1.8
   },
   {
    "topic": "weather",
-   "strength": 1.1
+   "strength": 0.8
   },
   {
    "topic": "the art of making lists",
-   "strength": 1.1
+   "strength": 0.8
   },
   {
    "topic": "UV-resistant materials",
-   "strength": 0.9
+   "strength": 0.6
   }
  ],
  "budget": {
@@ -89,53 +83,53 @@
  },
  "brain": {
   "emotion": "content",
-  "valence": 0.165,
-  "arousal": 0.514,
-  "average": 0.2,
+  "valence": 0.178,
+  "arousal": 0.453,
+  "average": 0.194,
   "values": {
    "eat@jumbo": {
     "V": 0.091,
-    "n": 3.6
+    "n": 3.3
    },
    "eat@*": {
-    "V": 0.191,
+    "V": 0.164,
     "n": 22.7
    },
    "diary@station-bench": {
-    "V": 0.256,
-    "n": 16.0
+    "V": 0.258,
+    "n": 15.7
    },
    "diary@*": {
-    "V": 0.273,
-    "n": 27.1
+    "V": 0.266,
+    "n": 27.7
    },
    "neighbour@home": {
     "V": 0.168,
-    "n": 3.4
+    "n": 3.1
    },
    "neighbour@*": {
     "V": 0.168,
-    "n": 3.4
+    "n": 3.1
    },
    "diary@plantsoen-bench": {
     "V": 0.224,
-    "n": 3.8
+    "n": 3.5
    },
    "pigeons@station-fountain": {
     "V": 0.07,
-    "n": 5.5
+    "n": 5.1
    },
    "pigeons@*": {
     "V": 0.148,
-    "n": 12.1
+    "n": 11.2
    },
    "sit@ondermolen": {
     "V": 0.106,
-    "n": 2.2
+    "n": 2.0
    },
    "sit@*": {
     "V": 0.192,
-    "n": 6.5
+    "n": 6.0
    },
    "read_back@home": {
     "V": 0.047,
@@ -151,63 +145,63 @@
    },
    "draw@*": {
     "V": 0.127,
-    "n": 2.6
+    "n": 2.4
    },
    "sit@de-bron": {
     "V": 0.042,
     "n": 0.4
    },
    "eat@de-turk": {
-    "V": 0.152,
-    "n": 13.0
+    "V": 0.133,
+    "n": 12.9
    },
    "search@library": {
-    "V": 0.139,
-    "n": 9.6
+    "V": 0.147,
+    "n": 9.8
    },
    "search@*": {
-    "V": 0.139,
-    "n": 9.6
+    "V": 0.147,
+    "n": 9.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 2.2
+    "n": 2.0
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 0.5
+    "n": 0.4
    },
    "wander@*": {
-    "V": 0.198,
-    "n": 8.8
+    "V": 0.199,
+    "n": 10.0
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 1.5
+    "n": 1.4
    },
    "eat@albert-heijn": {
-    "V": 0.168,
-    "n": 3.9
+    "V": 0.169,
+    "n": 4.5
    },
    "diary@library": {
-    "V": 0.205,
-    "n": 7.2
+    "V": 0.217,
+    "n": 8.4
    },
    "pigeons@centre-fountain": {
     "V": 0.133,
-    "n": 5.1
+    "n": 4.7
    },
    "sit@albert-heijn": {
     "V": 0.031,
-    "n": 0.5
+    "n": 0.4
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 1.0
+    "n": 0.9
    },
    "wander@vis": {
     "V": 0.066,
-    "n": 1.3
+    "n": 1.2
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -231,15 +225,15 @@
    },
    "wander@jumbo": {
     "V": 0.031,
-    "n": 0.6
+    "n": 0.5
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@de-valk": {
     "V": 0.035,
-    "n": 0.6
+    "n": 0.5
    },
    "draw@station-fountain": {
     "V": 0.054,
@@ -259,11 +253,11 @@
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@library": {
     "V": 0.04,
@@ -275,30 +269,38 @@
    },
    "sit@station-bench": {
     "V": 0.023,
-    "n": 0.9
+    "n": 0.8
    },
    "wander@de-turk": {
     "V": 0.035,
+    "n": 0.8
+   },
+   "wander@dorpskerk": {
+    "V": 0.034,
+    "n": 0.9
+   },
+   "wander@centre-fountain": {
+    "V": 0.027,
     "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.51,
-   "place:station-bench": 0.61,
-   "place:de-turk": 0.27,
-   "place:centre-fountain": 0.11,
-   "place:dorpskerk": 0.2
+   "place:library": 0.86,
+   "place:station-bench": 0.55,
+   "place:de-turk": 0.22,
+   "topic:rubber chemistry": 0.06,
+   "place:centre-fountain": 0.12
   },
   "workingMemory": [
    {
-    "kind": "seen",
-    "subject": "the Dorpskerk",
-    "salience": 0.6
+    "kind": "memory",
+    "subject": "Day 9: Today I remembered the Jumbo still stands, though the station is now Rodenrijs. I counted splashes, devoured baklava, and noted the crumbs told a longer story. Derek preened, I landed with precision, and noah’s button was returned. The page said rubber degrades, but I found nothing on the pneumatic tire’s invention. I kept my teaspoon, and my list remains unbroken.",
+    "salience": 0.286
    },
    {
-    "kind": "goal",
-    "subject": "having a look around on the roof of the Dorpskerk",
-    "salience": 0.4
+    "kind": "need",
+    "subject": "rest",
+    "salience": 0.25
    },
    {
     "kind": "question",
@@ -306,9 +308,9 @@
     "salience": 0.2
    },
    {
-    "kind": "want",
-    "subject": "a list of crows and their tools",
-    "salience": 0.15
+    "kind": "memory",
+    "subject": "The last crumb of baklava was gone, but the crumbs it left behind told a longer story.",
+    "salience": 0.197
    }
   ]
  }
