@@ -1292,5 +1292,18 @@
       ]
     },
     "mood": 0.14
+  },
+  {
+    "time": "2026-11-17T11:15:32+01:00",
+    "action": "diary",
+    "reason": "A dented cap and a teaspoon: two things I will not explain.",
+    "ok": true,
+    "withheld": false,
+    "line": "A dented cap and a teaspoon: two things I will not explain.",
+    "detail": {
+      "topic": "bottle caps and shiny objects",
+      "entry": "I hoard bottle caps with precision, and shiny objects are distractions. Today I found a cap with a tiny dent, like a smile etched by a needle. It sits now beside the teaspoon, which I will not explain. The dented cap is not a distraction—it is a reminder that imperfection is a kind of order."
+    },
+    "mood": 0.02
   }
 ]
