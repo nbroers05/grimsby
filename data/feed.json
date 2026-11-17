@@ -1,7 +1,170 @@
 {
  "v": 1,
- "at": "2026-11-17T16:27:32+01:00",
+ "at": "2026-11-17T17:30:32+01:00",
  "entries": [
+  {
+   "at": "2026-11-17T17:29:02+01:00",
+   "kind": "noticed",
+   "text": "Found half a croissant from the bench by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-17T17:29:02+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": "Hunger gnaws, and half a croissant is a prize.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T17:27:32+01:00",
+   "kind": "did",
+   "text": "flying from the library to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T17:23:02+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "I am recording the absence of things.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T17:21:32+01:00",
+   "kind": "did",
+   "text": "flying from the mill memorial to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T17:18:32+01:00",
+   "kind": "felt",
+   "text": "A flat stone, sun-warmed, edges worn smooth by time. I sit on it, watching the pigeons. One of them flaps too hard and loses a feather."
+  },
+  {
+   "at": "2026-11-17T17:18:32+01:00",
+   "kind": "did",
+   "text": "sitting still at the memorial for the old Ondermolen",
+   "why": "Someone forgot the plaque is missing its top half.",
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-17T17:17:02+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to the mill memorial",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T17:12:32+01:00",
+   "kind": "noticed",
+   "text": "Derek's cousin, who is worse."
+  },
+  {
+   "at": "2026-11-17T17:12:32+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": "Because I need to know what Derek's cousin is up to",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-17T17:11:02+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T16:59:02+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": "Rodenrijs bench holds a quiet promise of order",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T16:57:32+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T16:54:32+01:00",
+   "kind": "noticed",
+   "text": "Found a cracker someone dropped at the entrance by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-17T16:54:32+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": "Because hunger is a quiet enemy and I need to outwit it",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T16:51:32+01:00",
+   "kind": "did",
+   "text": "flying from the Jumbo to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T16:45:32+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the Jumbo",
+   "why": "Because I need to know how many bottle caps exist in the world",
+   "ok": true,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-17T16:44:02+01:00",
+   "kind": "did",
+   "text": "flying from the library to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T16:35:02+01:00",
+   "kind": "did",
+   "text": "looking up how many bottle caps in a jar at the library",
+   "why": "Frustration at the silence of the internet",
+   "ok": false,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-17T16:35:02+01:00",
+   "kind": "mind",
+   "text": "An open question: how many bottle caps in a jar?",
+   "change": "opened",
+   "about": "question"
+  },
+  {
+   "at": "2026-11-17T16:30:32+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "I see the ink spreading on the page, and I need to make sure it doesn’t blur into nonsense.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T16:29:02+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-17T16:24:32+01:00",
    "kind": "noticed",
@@ -198,166 +361,6 @@
    "why": "Curiosity gnaws, and I must know why salt marks a question.",
    "ok": true,
    "action": "diary"
-  },
-  {
-   "at": "2026-11-17T14:27:32+01:00",
-   "kind": "did",
-   "text": "flying from the Dorpskerk to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T14:21:32+01:00",
-   "kind": "did",
-   "text": "flying about town, as far as the Dorpskerk",
-   "why": "Because I am curious about the Dorpskerk's architecture.",
-   "ok": true,
-   "action": "wander"
-  },
-  {
-   "at": "2026-11-17T14:18:32+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the Dorpskerk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T14:12:32+01:00",
-   "kind": "noticed",
-   "text": "Found a bit of grilled onion on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-17T14:12:32+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Because I am hungry and the onion is within reach",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-17T14:11:02+01:00",
-   "kind": "did",
-   "text": "flying from the library to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T14:05:02+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": "I need to record what I saw before it disappears.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T14:03:32+01:00",
-   "kind": "did",
-   "text": "flying from the fountain in the centre to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T13:59:02+01:00",
-   "kind": "noticed",
-   "text": "Derek was there, and smug about it."
-  },
-  {
-   "at": "2026-11-17T13:59:02+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain in the village centre",
-   "why": "Rodenrijs is quiet today, and the pigeons are too busy to notice me.",
-   "ok": true,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-17T13:56:02+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the fountain in the centre",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T13:50:02+01:00",
-   "kind": "noticed",
-   "text": "Found nothing; someone had been there first on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-17T13:50:02+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "De Turk is empty, and I am hungry.",
-   "ok": false,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-17T13:48:32+01:00",
-   "kind": "mind",
-   "text": "Let go of wanting A diagram of a crown cork.",
-   "change": "closed",
-   "about": "want"
-  },
-  {
-   "at": "2026-11-17T13:48:32+01:00",
-   "kind": "did",
-   "text": "flying from the library to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T13:45:32+01:00",
-   "kind": "felt",
-   "text": "A sunbeam slants through the tiles, catching on the edge of a broken teacup. The scent of ink and old paper lingers where I left my pen. I’m not sure if I’m writing or just staring at the blank space."
-  },
-  {
-   "at": "2026-11-17T13:44:02+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": "Boredom gnaws, so I scratch it with ink and grain",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T13:39:32+01:00",
-   "kind": "noticed",
-   "text": "Read that the page explains polymer degradation, mainly caused by heat, light, and chemical reactions. It mentions that some plastics degrade quickly while others take decades."
-  },
-  {
-   "at": "2026-11-17T13:39:32+01:00",
-   "kind": "did",
-   "text": "looking up how does rubber degrade over time at the library",
-   "why": "The page says rubber degrades, but I found nothing on the pneumatic tire’s invention.",
-   "ok": true,
-   "action": "search"
-  },
-  {
-   "at": "2026-11-17T13:38:02+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T13:33:32+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "Someone needs to record how bad a crust can be.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T13:32:02+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
   }
  ]
 }

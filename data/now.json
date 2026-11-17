@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T16:27:32+01:00",
+ "at": "2026-11-17T17:30:32+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "watching the world go by on the terrace of De Turk",
- "thought": "This is the third time today I’ve found something worth eating and had to decide whether it’s worth the trouble of being seen with it.",
+ "doing": "looking for something to eat by the trolleys at the Albert Heijn",
+ "thought": "This is not a croissant. This is a relic of someone’s breakfast, and I am not the one who left it.",
  "feeling": {
-  "mood": 0.14,
-  "energy": 1,
-  "words": "Dawn licks the tiles. The silence is a thin crust. I count the cracks in the roof like a list I can’t afford to miss.",
-  "emotion": "drowsy",
-  "arousal": 0.26
+  "mood": 0.21,
+  "energy": 0.72,
+  "words": "A flat stone, sun-warmed, edges worn smooth by time. I sit on it, watching the pigeons. One of them flaps too hard and loses a feather.",
+  "emotion": "content",
+  "arousal": 0.48
  },
  "needs": {
-  "rest": 0.03,
-  "curiosity": 0.18,
-  "social": 0.07,
-  "expression": 0.22,
-  "quiet": 0.06,
+  "rest": 0.07,
+  "curiosity": 0.24,
+  "social": 0.11,
+  "expression": 0.03,
+  "quiet": 0.03,
   "hunger": 0.0
  },
  "world": {
   "name": "the island",
   "day": 24,
-  "time": "06:48"
+  "time": "15:12"
  },
- "action": "idle",
+ "action": "eat",
  "place": {
-  "id": "de-turk",
-  "name": "De Turk",
-  "words": "on the terrace of De Turk",
-  "obj": "de-turk",
-  "poi": "de-turk",
-  "category": "restaurant"
+  "id": "albert-heijn",
+  "name": "the Albert Heijn",
+  "words": "by the trolleys at the Albert Heijn",
+  "obj": "albert-heijn",
+  "poi": "albert-heijn",
+  "category": "supermarket"
  },
  "flying": null
 }

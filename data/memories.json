@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-17T16:27:32+01:00",
+ "at": "2026-11-17T17:30:32+01:00",
  "beliefs": [
   {
    "n": 9,
@@ -51,7 +51,7 @@
    "text": "A teaspoon of salt formed a question mark on the terrace of De Turk.",
    "kind": "work",
    "strength": 4,
-   "recalled": 1.0,
+   "recalled": 1.5,
    "since": "2026-11-17T14:09:32+01:00"
   },
   {
@@ -79,7 +79,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 4,
-   "recalled": 1.0,
+   "recalled": 1.75,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -121,14 +121,14 @@
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 2.0,
+   "recalled": 2.5,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
    "text": "Searched for history of bottle cap design and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-16T17:35:26+01:00"
   },
   {
@@ -149,7 +149,7 @@
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 6.25,
+   "recalled": 7.75,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -170,7 +170,7 @@
    "text": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-16T14:27:56+01:00"
   },
   {
@@ -212,7 +212,7 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
@@ -254,14 +254,14 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.0,
+   "recalled": 4.5,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.5,
+   "recalled": 6.0,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
@@ -289,14 +289,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 3.75,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -345,7 +345,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 3.0,
+   "recalled": 3.5,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -394,7 +394,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.16,
+   "recalled": 5.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -407,6 +407,41 @@
  ],
  "short": [
   {
+   "text": "Derek's cousin arrived with a list of complaints about the weather, which I did not read, because I already knew the sky was not a place for grievances.",
+   "kind": "person",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T17:17:02+01:00"
+  },
+  {
+   "text": "Checked jar. Empty. No caps. Silence louder than absence.",
+   "kind": "work",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T17:03:32+01:00"
+  },
+  {
+   "text": "I found a cracker at the entrance of the Albert Heijn, still in its wrapper, which I assume was abandoned by someone who had a poor sense of timing.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-17T16:57:32+01:00"
+  },
+  {
+   "text": "I landed on the roof of the Jumbo, which was not a good idea, because it is a building and I am a bird, and buildings are not suitable for landing on.",
+   "kind": "moment",
+   "strength": 2,
+   "recalled": 0.0,
+   "since": "2026-11-17T16:48:32+01:00"
+  },
+  {
+   "text": "Searched for how many bottle caps in a jar and found nothing at all.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 0.5,
+   "since": "2026-11-17T16:39:32+01:00"
+  },
+  {
    "text": "I found a bit of grilled onion on the terrace of De Turk and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 3,
@@ -416,8 +451,8 @@
   {
    "text": "Pino: Pino thinks he's witty. He's not. He's just loud.",
    "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
+   "strength": 3,
+   "recalled": 0.5,
    "since": "2026-11-17T16:23:02+01:00"
   }
  ]
