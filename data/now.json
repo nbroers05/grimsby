@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-17T18:33:32+01:00",
+ "at": "2026-11-17T19:36:32+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
- "thought": "The list is complete, the teaspoon is safe, and the night is long.",
+ "asleep": false,
+ "doing": "looking for something to eat by the trolleys at the Albert Heijn",
+ "thought": "The bench is clean, but the crumbs are gone—someone had a better appetite than I.",
  "feeling": {
-  "mood": 0.28,
-  "energy": 0.64,
-  "words": "The wind smells like salt and old bread. I’ve found a single grain of rice, perfectly placed, as if someone meant for me to find it. I will not let it slip through my beak.",
+  "mood": 0.15,
+  "energy": 0.82,
+  "words": "Drowsy, full of beans. The sky is a pale blue with a hint of grey. A single crow caws in the distance, just once.",
   "emotion": "content",
-  "arousal": 0.4
+  "arousal": 0.35
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.06,
-  "social": 0.17,
-  "expression": 0.24,
-  "quiet": 0.04,
-  "hunger": 0.02
+  "rest": 0.08,
+  "curiosity": 0.25,
+  "social": 0.02,
+  "expression": 0.18,
+  "quiet": 0.23,
+  "hunger": 0.0
  },
  "world": {
   "name": "the island",
-  "day": 24,
-  "time": "23:36"
+  "day": 25,
+  "time": "08:00"
  },
- "action": "sleep",
+ "action": "eat",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "albert-heijn",
+  "name": "the Albert Heijn",
+  "words": "by the trolleys at the Albert Heijn",
+  "obj": "albert-heijn",
+  "poi": "albert-heijn",
+  "category": "supermarket"
  },
  "flying": null
 }

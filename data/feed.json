@@ -1,7 +1,70 @@
 {
  "v": 1,
- "at": "2026-11-17T18:33:32+01:00",
+ "at": "2026-11-17T19:36:32+01:00",
  "entries": [
+  {
+   "at": "2026-11-17T19:35:02+01:00",
+   "kind": "noticed",
+   "text": "Found half a croissant from the bench by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-17T19:35:02+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": "Hunger gnaws, and the croissant is half-eaten.",
+   "ok": true,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-17T19:33:32+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T19:29:02+01:00",
+   "kind": "noticed",
+   "text": "Three pigeons and Derek, in a row."
+  },
+  {
+   "at": "2026-11-17T19:29:02+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": "I watch pigeons because they are more interesting than Derek.",
+   "ok": true,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-17T19:27:32+01:00",
+   "kind": "did",
+   "text": "flying from the library to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-17T19:23:02+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": "At the library, I am sorting through the remnants of a failed search.",
+   "ok": true,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-17T19:21:32+01:00",
+   "kind": "felt",
+   "text": "Drowsy, full of beans. The sky is a pale blue with a hint of grey. A single crow caws in the distance, just once."
+  },
+  {
+   "at": "2026-11-17T19:21:32+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-17T18:27:32+01:00",
    "kind": "did",
@@ -303,69 +366,6 @@
    "text": "An open question: how many bottle caps in a jar?",
    "change": "opened",
    "about": "question"
-  },
-  {
-   "at": "2026-11-17T16:30:32+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": "I see the ink spreading on the page, and I need to make sure it doesn’t blur into nonsense.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-17T16:29:02+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T16:24:32+01:00",
-   "kind": "noticed",
-   "text": "Found a bit of grilled onion on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-17T16:24:32+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Someone believes a bit of grilled onion is worth the risk of being seen with it.",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-17T16:23:02+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-17T16:21:32+01:00",
-   "kind": "felt",
-   "text": "Dawn licks the tiles. The silence is a thin crust. I count the cracks in the roof like a list I can’t afford to miss."
-  },
-  {
-   "at": "2026-11-17T16:21:32+01:00",
-   "kind": "noticed",
-   "text": "Pino was walking to the studio to draw, thinking \"Feeling settled, just saying something to break the quiet\" (from pinos.world)."
-  },
-  {
-   "at": "2026-11-17T16:21:32+01:00",
-   "kind": "did",
-   "text": "checking on Pino next door",
-   "why": "Pino's shadow stretches across the tiles, so I check if he’s still breathing",
-   "ok": true,
-   "action": "neighbour"
-  },
-  {
-   "at": "2026-11-17T15:23:02+01:00",
-   "kind": "did",
-   "text": "falling asleep on the roof of station Rodenrijs",
-   "why": "Tiredness hums in my bones, and the night is soft beneath me.",
-   "ok": true,
-   "action": "sleep"
   }
  ]
 }
