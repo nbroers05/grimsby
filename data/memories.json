@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-17T17:30:32+01:00",
+ "at": "2026-11-17T18:33:32+01:00",
  "beliefs": [
   {
    "n": 9,
@@ -11,19 +11,19 @@
   {
    "n": 8,
    "text": "Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
-   "evidence": 5,
+   "evidence": 6,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 5,
+   "evidence": 4,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
    "n": 6,
    "text": "Looking things up never goes well. I shall not be looking things up again.",
-   "evidence": 10,
+   "evidence": 11,
    "since": "2026-11-16T18:21:56+01:00"
   },
   {
@@ -35,11 +35,32 @@
   {
    "n": 2,
    "text": "Eating on the terrace of De Turk never goes well. De Turk's terrace: a place best avoided. No need to elaborate.",
-   "evidence": 13,
+   "evidence": 14,
    "since": "2026-11-15T21:25:43+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 24: Today I noted Pino's verbosity, ate grilled onion with precision, and checked a jar that was empty. I landed on the Jumbo, the fish statue, and McDonald's awning, each time with the same unshakable suspicion. Found a cracker, half a croissant, and a pamphlet on ink instead of rubber chemistry. Derek's cousin brought complaints, which I ignored. My list remains intact, my teaspoon safe, and my grudges well-placed.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-17T18:27:32+01:00"
+  },
+  {
+   "text": "Searched for rubber chemistry, found a pamphlet on ink. Left without a word.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.5,
+   "since": "2026-11-17T17:47:02+01:00"
+  },
+  {
+   "text": "Searched for What is the history of rubber chemistry and found nothing at all.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-17T17:41:02+01:00"
+  },
   {
    "text": "Day 23: Today, I found a crust so bad it made me reconsider bread. Derek stood in a line with pigeons, which is not how lines are formed. At De Turk, I found a teaspoon of salt shaped like a question mark, and the baklava crumbs formed a sentence I did not eat. Derek preened at the fountain, and I said nothing.",
    "kind": "moment",
@@ -78,8 +99,8 @@
   {
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
-   "strength": 4,
-   "recalled": 1.75,
+   "strength": 5,
+   "recalled": 2.25,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -120,15 +141,15 @@
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
-   "strength": 4,
-   "recalled": 2.5,
+   "strength": 5,
+   "recalled": 4.0,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
    "text": "Searched for history of bottle cap design and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-16T17:35:26+01:00"
   },
   {
@@ -142,14 +163,14 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.0,
+   "recalled": 4.75,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 7.75,
+   "recalled": 8.0,
    "since": "2026-11-16T16:27:56+01:00"
   },
   {
@@ -212,14 +233,14 @@
    "text": "Searched for when was pneumatic tire invented and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-15T20:42:13+01:00"
   },
   {
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 4.75,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -233,7 +254,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.0,
+   "recalled": 5.25,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -254,21 +275,21 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 5.5,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 7.0,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 6.5,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -359,7 +380,7 @@
    "text": "Pneumatic tires began as bladders, ended as steel and rubber. I trust this one more than a teaspoon.",
    "kind": "work",
    "strength": 5,
-   "recalled": 8.77,
+   "recalled": 10.0,
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
@@ -373,7 +394,7 @@
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 7.23,
+   "recalled": 9.23,
    "since": "2026-11-14T20:01:55+01:00"
   },
   {
@@ -394,7 +415,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.41,
+   "recalled": 5.66,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -405,55 +426,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Derek's cousin arrived with a list of complaints about the weather, which I did not read, because I already knew the sky was not a place for grievances.",
-   "kind": "person",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T17:17:02+01:00"
-  },
-  {
-   "text": "Checked jar. Empty. No caps. Silence louder than absence.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T17:03:32+01:00"
-  },
-  {
-   "text": "I found a cracker at the entrance of the Albert Heijn, still in its wrapper, which I assume was abandoned by someone who had a poor sense of timing.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T16:57:32+01:00"
-  },
-  {
-   "text": "I landed on the roof of the Jumbo, which was not a good idea, because it is a building and I am a bird, and buildings are not suitable for landing on.",
-   "kind": "moment",
-   "strength": 2,
-   "recalled": 0.0,
-   "since": "2026-11-17T16:48:32+01:00"
-  },
-  {
-   "text": "Searched for how many bottle caps in a jar and found nothing at all.",
-   "kind": "fact",
-   "strength": 5,
-   "recalled": 0.5,
-   "since": "2026-11-17T16:39:32+01:00"
-  },
-  {
-   "text": "I found a bit of grilled onion on the terrace of De Turk and ate it with the precision of a man who has never been wrong about anything.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T16:27:32+01:00"
-  },
-  {
-   "text": "Pino: Pino thinks he's witty. He's not. He's just loud.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.5,
-   "since": "2026-11-17T16:23:02+01:00"
-  }
- ]
+ "short": []
 }

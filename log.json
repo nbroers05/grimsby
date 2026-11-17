@@ -1596,5 +1596,23 @@
       "entry": "Searched for What is the history of rubber chemistry and found nothing at all. A void where knowledge should have pooled. Left the pamphlet on ink, unopened, on the edge of the bench. The silence was louder than the crows."
     },
     "mood": 0.25
+  },
+  {
+    "time": "2026-11-17T18:27:32+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of eating grilled onion on a McDonald's awning, which is not a place for crows but is a place for shiny things, and ruling a teaspoon with a beak while Derek squawked from the shadows of a terrace.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of eating grilled onion on a McDonald's awning, which is not a place for crows but is a place for shiny things, and ruling a teaspoon with a beak while Derek squawked from the shadows of a terrace.",
+      "from": [
+        "I found a bit of grilled onion on the terrace of De Turk and ate it with the precision of a man who has never been wrong about anything.",
+        "A teaspoon is a tiny kingdom, and I rule it with a beak.",
+        "I landed on the awning of McDonald's, which is not a place for crows, but it is a place for shiny things."
+      ]
+    },
+    "mood": 0.32
   }
 ]
