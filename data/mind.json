@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T19:55:38+01:00",
+ "at": "2026-11-18T20:58:38+01:00",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "loudest": [
   {
@@ -13,11 +13,11 @@
   },
   {
    "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
+   "subject": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come."
   },
   {
    "kind": "memory",
-   "subject": "Tried writing in his diary on a bench by the station, but my thoughts would not come."
+   "subject": "Tried looking something up at the library, but my thoughts would not come."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": "writing in his diary on a bench by the station",
+ "busy": "looking something up at the library",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -83,53 +83,53 @@
  },
  "brain": {
   "emotion": "irritable",
-  "valence": -0.917,
-  "arousal": 0.538,
-  "average": 0.116,
+  "valence": -1.0,
+  "arousal": 0.58,
+  "average": 0.111,
   "values": {
    "eat@jumbo": {
     "V": 0.08,
     "n": 4.7
    },
    "eat@*": {
-    "V": 0.108,
-    "n": 28.3
+    "V": 0.119,
+    "n": 30.3
    },
    "diary@station-bench": {
-    "V": 0.183,
-    "n": 18.3
+    "V": 0.146,
+    "n": 20.3
    },
    "diary@*": {
-    "V": 0.101,
-    "n": 33.3
+    "V": 0.09,
+    "n": 38.3
    },
    "neighbour@home": {
-    "V": 0.207,
-    "n": 4.3
+    "V": 0.187,
+    "n": 5.3
    },
    "neighbour@*": {
-    "V": 0.207,
-    "n": 4.3
+    "V": 0.187,
+    "n": 5.3
    },
    "diary@plantsoen-bench": {
-    "V": 0.149,
-    "n": 5.8
+    "V": 0.135,
+    "n": 7.8
    },
    "pigeons@station-fountain": {
-    "V": 0.072,
-    "n": 5.6
+    "V": 0.054,
+    "n": 6.6
    },
    "pigeons@*": {
-    "V": 0.025,
-    "n": 16.8
+    "V": 0.014,
+    "n": 18.8
    },
    "sit@ondermolen": {
     "V": 0.151,
     "n": 2.9
    },
    "sit@*": {
-    "V": 0.246,
-    "n": 7.2
+    "V": 0.254,
+    "n": 8.2
    },
    "read_back@home": {
     "V": 0.047,
@@ -172,28 +172,28 @@
     "n": 0.3
    },
    "wander@*": {
-    "V": 0.221,
-    "n": 9.3
+    "V": 0.192,
+    "n": 10.3
    },
    "pigeons@vis": {
-    "V": 0.03,
-    "n": 3.8
+    "V": 0.029,
+    "n": 4.8
    },
    "eat@albert-heijn": {
-    "V": 0.167,
-    "n": 8.0
+    "V": 0.162,
+    "n": 10.0
    },
    "diary@library": {
-    "V": 0.18,
-    "n": 9.2
+    "V": 0.167,
+    "n": 10.2
    },
    "pigeons@centre-fountain": {
     "V": 0.078,
     "n": 7.4
    },
    "sit@albert-heijn": {
-    "V": 0.031,
-    "n": 0.3
+    "V": 0.071,
+    "n": 1.3
    },
    "draw@dorpskerk": {
     "V": 0.048,
@@ -277,7 +277,7 @@
    },
    "wander@dorpskerk": {
     "V": 0.034,
-    "n": 0.6
+    "n": 1.6
    },
    "wander@centre-fountain": {
     "V": 0.064,
@@ -305,12 +305,13 @@
    }
   },
   "habit": {
-   "place:library": 0.06,
-   "place:jumbo": 0.07,
-   "place:vis": 0.1,
-   "place:station-bench": 0.32,
-   "place:de-turk": 0.15,
-   "place:centre-fountain": 0.17
+   "place:station-bench": 0.27,
+   "place:plantsoen-bench": 0.19,
+   "place:albert-heijn": 0.46,
+   "place:library": 0.28,
+   "place:home": 0.1,
+   "place:station-fountain": 0.17,
+   "topic:bottle caps and shiny objects": 0.19
   },
   "workingMemory": [
    {
@@ -321,17 +322,17 @@
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.759
+    "salience": 0.8
    },
    {
     "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.61
+    "subject": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come.",
+    "salience": 0.558
    },
    {
     "kind": "memory",
-    "subject": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
-    "salience": 0.537
+    "subject": "Tried looking something up at the library, but my thoughts would not come.",
+    "salience": 0.487
    }
   ]
  }

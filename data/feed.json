@@ -1,7 +1,211 @@
 {
  "v": 1,
- "at": "2026-11-18T19:55:38+01:00",
+ "at": "2026-11-18T20:58:38+01:00",
  "entries": [
+  {
+   "at": "2026-11-18T20:57:08+01:00",
+   "kind": "did",
+   "text": "looking something up at the library",
+   "why": null,
+   "ok": false,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-18T20:55:38+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:51:08+01:00",
+   "kind": "noticed",
+   "text": "No Derek anywhere, which is suspicious."
+  },
+  {
+   "at": "2026-11-18T20:51:08+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-18T20:49:38+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:46:38+01:00",
+   "kind": "did",
+   "text": "sitting still by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-18T20:43:38+01:00",
+   "kind": "noticed",
+   "text": "Found a crust by the trolleys by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-18T20:43:38+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-18T20:42:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:37:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T20:36:08+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:34:38+01:00",
+   "kind": "did",
+   "text": "checking on Pino next door",
+   "why": null,
+   "ok": false,
+   "action": "neighbour"
+  },
+  {
+   "at": "2026-11-18T20:33:08+01:00",
+   "kind": "did",
+   "text": "flying from the library to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:28:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T20:27:08+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:24:08+01:00",
+   "kind": "noticed",
+   "text": "Found nothing; someone had been there first by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-18T20:24:08+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-18T20:21:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:16:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T20:15:08+01:00",
+   "kind": "did",
+   "text": "flying from the Dorpskerk to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:12:08+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as the Dorpskerk",
+   "why": null,
+   "ok": false,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-18T20:10:38+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the Dorpskerk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:06:08+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T20:04:38+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T20:00:08+01:00",
+   "kind": "noticed",
+   "text": "Derek was there, and smug about it."
+  },
+  {
+   "at": "2026-11-18T20:00:08+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-18T19:58:38+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the fish statue",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-18T19:54:08+01:00",
    "kind": "did",
@@ -160,207 +364,6 @@
    "at": "2026-11-18T18:30:08+01:00",
    "kind": "noticed",
    "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day."
-  },
-  {
-   "at": "2026-11-18T18:27:08+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T18:22:38+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T18:21:08+01:00",
-   "kind": "did",
-   "text": "flying from De Valk to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T18:18:08+01:00",
-   "kind": "did",
-   "text": "sitting still on De Valk, the windmill at the edge of town",
-   "why": null,
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-18T18:15:08+01:00",
-   "kind": "did",
-   "text": "flying from the fountain in the centre to De Valk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T18:10:38+01:00",
-   "kind": "noticed",
-   "text": "Derek's cousin, who is worse."
-  },
-  {
-   "at": "2026-11-18T18:10:38+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain in the village centre",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T18:09:08+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the fountain in the centre",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T18:04:38+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T18:01:38+01:00",
-   "kind": "did",
-   "text": "flying from the Albert Heijn to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:58:38+01:00",
-   "kind": "noticed",
-   "text": "Found half a croissant from the bench by the trolleys at the Albert Heijn."
-  },
-  {
-   "at": "2026-11-18T17:58:38+01:00",
-   "kind": "did",
-   "text": "looking for something to eat by the trolleys at the Albert Heijn",
-   "why": null,
-   "ok": false,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-18T17:57:08+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the Albert Heijn",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:52:38+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T17:51:08+01:00",
-   "kind": "did",
-   "text": "flying from the fish statue to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:46:38+01:00",
-   "kind": "noticed",
-   "text": "Derek, alone, pretending not to see me."
-  },
-  {
-   "at": "2026-11-18T17:46:38+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T17:45:08+01:00",
-   "kind": "did",
-   "text": "flying from the library to the fish statue",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:40:38+01:00",
-   "kind": "did",
-   "text": "writing in his diary at the library",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T17:39:08+01:00",
-   "kind": "did",
-   "text": "flying from the mill memorial to the library",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:36:08+01:00",
-   "kind": "did",
-   "text": "sitting still at the memorial for the old Ondermolen",
-   "why": null,
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-18T17:34:38+01:00",
-   "kind": "did",
-   "text": "flying from the fountain by the station to the mill memorial",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:30:08+01:00",
-   "kind": "noticed",
-   "text": "Derek's cousin, who is worse."
-  },
-  {
-   "at": "2026-11-18T17:30:08+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain next to the station",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T17:28:38+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the fountain by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T17:25:38+01:00",
-   "kind": "noticed",
-   "text": "Found a crumb of baklava on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-18T17:25:38+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": null,
-   "ok": false,
-   "action": "eat"
   }
  ]
 }

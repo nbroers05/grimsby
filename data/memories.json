@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T19:55:38+01:00",
+ "at": "2026-11-18T20:58:38+01:00",
  "beliefs": [
   {
    "n": 16,
@@ -69,28 +69,28 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.25,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.5,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 2.75,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-18T16:54:08+01:00"
   },
   {
@@ -195,7 +195,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 5.5,
+   "recalled": 5.75,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -223,7 +223,7 @@
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 7.0,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -349,21 +349,21 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 8.0,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.75,
+   "recalled": 9.5,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 7.75,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -391,7 +391,7 @@
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 6.5,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -405,7 +405,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 2.75,
+   "recalled": 3.0,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -433,7 +433,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 4.25,
+   "recalled": 4.5,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -468,7 +468,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.66,
+   "recalled": 6.91,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -481,31 +481,45 @@
  ],
  "short": [
   {
+   "text": "Tried checking on Pino next door, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-18T20:36:08+01:00"
+  },
+  {
+   "text": "Tried flying about town, as far as the Dorpskerk, but my thoughts would not come.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-18T20:15:08+01:00"
+  },
+  {
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 4,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-18T19:52:38+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
    "kind": "work",
-   "strength": 4,
-   "recalled": 0.25,
+   "strength": 5,
+   "recalled": 3.25,
    "since": "2026-11-18T19:40:38+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
-   "strength": 4,
-   "recalled": 0.0,
+   "strength": 5,
+   "recalled": 1.25,
    "since": "2026-11-18T19:34:38+01:00"
   },
   {
    "text": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.75,
+   "recalled": 1.75,
    "since": "2026-11-18T19:27:08+01:00"
   }
  ]
