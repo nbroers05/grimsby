@@ -192,5 +192,44 @@
         "drawn": "box"
       }
     ]
+  },
+  {
+    "file": "drawings/2026-11-18-1637-a-blue-marble-s-dilemma.svg",
+    "title": "A Blue Marble's Dilemma",
+    "caption": "A blue marble, a crow, and a sun — but the crow is the one who must decide.",
+    "subject": "a blue marble",
+    "time": "2026-11-18T16:37:14+01:00",
+    "version": 2,
+    "mood": "suspicious",
+    "objects": [
+      {
+        "what": "a sun",
+        "where": "center",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "a crow",
+        "where": "center",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "a bottle cap",
+        "where": "left",
+        "size": "small",
+        "pose": "none",
+        "drawn": "box"
+      },
+      {
+        "what": "a wheel",
+        "where": "right",
+        "size": "medium",
+        "pose": "none",
+        "drawn": "box"
+      }
+    ]
   }
 ]

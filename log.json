@@ -1907,5 +1907,53 @@
       ]
     },
     "mood": 0.03
+  },
+  {
+    "time": "2026-11-18T16:37:14+01:00",
+    "action": "draw",
+    "reason": "The windmill at De Hichte is a place where the sky meets the sea, and I want to draw something that will stay with me like a silent scream.",
+    "ok": true,
+    "withheld": false,
+    "line": "The sun is bright, but the crow is silent. The marble is blue, but the crow is the one who must draw it.",
+    "detail": {
+      "file": "drawings/2026-11-18-1637-a-blue-marble-s-dilemma.svg",
+      "title": "A Blue Marble's Dilemma",
+      "caption": "A blue marble, a crow, and a sun — but the crow is the one who must decide.",
+      "subject": "a blue marble",
+      "time": "2026-11-18T16:37:14+01:00",
+      "version": 2,
+      "mood": "suspicious",
+      "objects": [
+        {
+          "what": "a sun",
+          "where": "center",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "a crow",
+          "where": "center",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "a bottle cap",
+          "where": "left",
+          "size": "small",
+          "pose": "none",
+          "drawn": "box"
+        },
+        {
+          "what": "a wheel",
+          "where": "right",
+          "size": "medium",
+          "pose": "none",
+          "drawn": "box"
+        }
+      ]
+    },
+    "mood": -0.17
   }
 ]

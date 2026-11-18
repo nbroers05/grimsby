@@ -1,41 +1,41 @@
 {
  "v": 1,
- "at": "2026-11-18T15:37:45+01:00",
+ "at": "2026-11-18T16:46:38+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to De Turk",
- "thought": "Three in a row, same angle, same distance—something is off.",
+ "doing": "flying to the fish statue",
+ "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
-  "mood": 0.15,
-  "energy": 0.99,
-  "words": "Night is a good time to think. The moon is a coin in the sky. I have not yet found the right place to land.",
-  "emotion": "content",
-  "arousal": 0.41
+  "mood": -0.01,
+  "energy": 0.82,
+  "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
+  "emotion": "even",
+  "arousal": 0.47
  },
  "needs": {
-  "rest": 0.02,
-  "curiosity": 0.82,
-  "social": 0.81,
-  "expression": 0.82,
-  "quiet": 0.81,
-  "hunger": 0.81
+  "rest": 0.05,
+  "curiosity": 0.56,
+  "social": 0.69,
+  "expression": 0.09,
+  "quiet": 0.08,
+  "hunger": 0.3
  },
  "world": {
   "name": "the island",
   "day": 32,
-  "time": "00:09"
+  "time": "09:20"
  },
- "action": "eat",
+ "action": "pigeons",
  "place": {
-  "id": "de-turk",
-  "name": "De Turk",
-  "words": "on the terrace of De Turk",
-  "obj": "de-turk",
-  "poi": "de-turk",
-  "category": "restaurant"
+  "id": "vis",
+  "name": "the fish statue",
+  "words": "next to Vis, the fish statue",
+  "obj": "vis",
+  "poi": "vis",
+  "category": "artwork"
  },
  "flying": {
-  "from": "the station roof",
-  "to": "De Turk"
+  "from": "the windmill at De Hichte",
+  "to": "the fish statue"
  }
 }

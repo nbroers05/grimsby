@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-18T15:37:45+01:00",
- "thought": "Three in a row, same angle, same distance—something is off.",
+ "at": "2026-11-18T16:46:38+01:00",
+ "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "loudest": [
   {
+   "kind": "outcome",
+   "subject": "drawing something on the windmill at De Hichte went better than you expected"
+  },
+  {
    "kind": "need",
-   "subject": "curiosity"
+   "subject": "social"
   },
   {
    "kind": "goal",
-   "subject": "flying to De Turk (looking for something to eat there)"
+   "subject": "flying to the fish statue (keeping an eye on the pigeons there)"
   },
   {
-   "kind": "memory",
-   "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do."
-  },
-  {
-   "kind": "belief",
-   "subject": "Eating on the terrace of De Turk never goes well."
+   "kind": "worry",
+   "subject": "how things are going"
   }
  ],
  "open": {
@@ -25,37 +25,43 @@
   "person": 0,
   "question": 0,
   "want": 0,
-  "worry": 0,
+  "worry": 1,
   "promise": 0
  },
- "busy": "flying to De Turk",
+ "busy": "flying to the fish statue",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
   "Never trust a thing for its wheels, nor dismiss it for them.",
   "Every small thing deserves one careful look."
  ],
- "items": [],
+ "items": [
+  {
+   "kind": "worry",
+   "subject": "how things are going",
+   "since": "2026-11-18T16:21:16+01:00"
+  }
+ ],
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 8.8
+   "strength": 8.5
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 5.9
+   "strength": 5.6
   },
   {
    "topic": "Early cap manufacturing",
-   "strength": 0.9
+   "strength": 0.6
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 0.9
+   "strength": 0.6
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 0.9
+   "strength": 0.6
   },
   {
    "topic": "weather",
@@ -76,54 +82,54 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "content",
-  "valence": 0.154,
-  "arousal": 0.411,
-  "average": 0.19,
+  "emotion": "even",
+  "valence": -0.012,
+  "arousal": 0.472,
+  "average": 0.212,
   "values": {
    "eat@jumbo": {
     "V": 0.099,
-    "n": 4.3
+    "n": 4.0
    },
    "eat@*": {
-    "V": 0.168,
-    "n": 26.8
+    "V": 0.214,
+    "n": 25.6
    },
    "diary@station-bench": {
-    "V": 0.26,
-    "n": 17.2
+    "V": 0.287,
+    "n": 16.8
    },
    "diary@*": {
-    "V": 0.248,
-    "n": 30.6
+    "V": 0.277,
+    "n": 29.1
    },
    "neighbour@home": {
-    "V": 0.184,
-    "n": 4.0
+    "V": 0.207,
+    "n": 4.7
    },
    "neighbour@*": {
-    "V": 0.184,
-    "n": 4.0
+    "V": 0.207,
+    "n": 4.7
    },
    "diary@plantsoen-bench": {
     "V": 0.229,
-    "n": 3.5
+    "n": 3.3
    },
    "pigeons@station-fountain": {
     "V": 0.094,
-    "n": 5.6
+    "n": 5.1
    },
    "pigeons@*": {
     "V": 0.162,
-    "n": 12.0
+    "n": 11.0
    },
    "sit@ondermolen": {
     "V": 0.12,
-    "n": 2.4
+    "n": 2.2
    },
    "sit@*": {
     "V": 0.207,
-    "n": 6.3
+    "n": 5.8
    },
    "read_back@home": {
     "V": 0.047,
@@ -135,31 +141,31 @@
    },
    "draw@ondermolen": {
     "V": 0.051,
-    "n": 0.7
+    "n": 0.6
    },
    "draw@*": {
-    "V": 0.153,
-    "n": 3.7
+    "V": 0.192,
+    "n": 4.4
    },
    "sit@de-bron": {
     "V": 0.042,
     "n": 0.3
    },
    "eat@de-turk": {
-    "V": 0.148,
+    "V": 0.197,
     "n": 12.5
    },
    "search@library": {
     "V": 0.1,
-    "n": 11.8
+    "n": 10.8
    },
    "search@*": {
     "V": 0.1,
-    "n": 11.8
+    "n": 10.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 1.6
+    "n": 1.5
    },
    "wander@station-bench": {
     "V": 0.039,
@@ -167,23 +173,23 @@
    },
    "wander@*": {
     "V": 0.221,
-    "n": 11.0
+    "n": 10.1
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 1.1
+    "n": 1.0
    },
    "eat@albert-heijn": {
     "V": 0.187,
-    "n": 8.4
+    "n": 7.7
    },
    "diary@library": {
     "V": 0.212,
-    "n": 9.8
+    "n": 9.0
    },
    "pigeons@centre-fountain": {
     "V": 0.15,
-    "n": 5.3
+    "n": 4.9
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -195,31 +201,31 @@
    },
    "wander@vis": {
     "V": 0.097,
-    "n": 1.7
+    "n": 1.6
    },
    "sit@dorpskerk": {
     "V": 0.039,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@hichte-mill": {
     "V": 0.039,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@ondermolen": {
     "V": 0.021,
-    "n": 0.4
+    "n": 0.3
    },
    "tidy@home": {
     "V": 0.031,
-    "n": 0.4
+    "n": 0.3
    },
    "tidy@*": {
     "V": 0.031,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@jumbo": {
     "V": 0.063,
-    "n": 1.2
+    "n": 1.1
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
@@ -247,11 +253,11 @@
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@library": {
     "V": 0.04,
@@ -263,11 +269,11 @@
    },
    "sit@station-bench": {
     "V": 0.023,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@de-turk": {
     "V": 0.035,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@dorpskerk": {
     "V": 0.034,
@@ -275,11 +281,11 @@
    },
    "wander@centre-fountain": {
     "V": 0.064,
-    "n": 1.6
+    "n": 1.5
    },
    "wander@mcdonalds": {
     "V": 0.028,
-    "n": 0.8
+    "n": 0.7
    },
    "draw@vis": {
     "V": 0.029,
@@ -291,35 +297,42 @@
    },
    "draw@de-bron": {
     "V": 0.036,
-    "n": 0.9
+    "n": 0.8
+   },
+   "draw@hichte-mill": {
+    "V": 0.062,
+    "n": 1
    }
   },
   "habit": {
-   "place:library": 0.63,
-   "place:centre-fountain": 0.27,
-   "place:de-turk": 0.11,
-   "place:station-bench": 0.13
+   "place:library": 0.41,
+   "place:centre-fountain": 0.06,
+   "place:de-turk": 0.09,
+   "place:station-bench": 0.11,
+   "place:home": 0.16,
+   "place:hichte-mill": 0.18,
+   "topic:rubber chemistry": 0.18
   },
   "workingMemory": [
    {
+    "kind": "outcome",
+    "subject": "drawing something on the windmill at De Hichte went better than you expected",
+    "salience": 1.19
+   },
+   {
     "kind": "need",
-    "subject": "curiosity",
-    "salience": 0.82
+    "subject": "social",
+    "salience": 0.687
    },
    {
     "kind": "goal",
-    "subject": "flying to De Turk (looking for something to eat there)",
+    "subject": "flying to the fish statue (keeping an eye on the pigeons there)",
     "salience": 0.4
    },
    {
-    "kind": "memory",
-    "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
-    "salience": 0.235
-   },
-   {
-    "kind": "belief",
-    "subject": "Eating on the terrace of De Turk never goes well.",
-    "salience": 0.233
+    "kind": "worry",
+    "subject": "how things are going",
+    "salience": 0.306
    }
   ]
  }
