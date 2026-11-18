@@ -1,7 +1,142 @@
 {
  "v": 1,
- "at": "2026-11-18T22:01:38+01:00",
+ "at": "2026-11-18T23:04:39+01:00",
  "entries": [
+  {
+   "at": "2026-11-18T23:01:39+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T23:00:09+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:55:39+01:00",
+   "kind": "noticed",
+   "text": "Three pigeons and Derek, in a row."
+  },
+  {
+   "at": "2026-11-18T22:55:39+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-18T22:54:09+01:00",
+   "kind": "did",
+   "text": "flying from the library to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:49:39+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T22:45:09+01:00",
+   "kind": "did",
+   "text": "looking something up at the library",
+   "why": null,
+   "ok": false,
+   "action": "search"
+  },
+  {
+   "at": "2026-11-18T22:43:39+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:40:38+01:00",
+   "kind": "noticed",
+   "text": "Found nothing; someone had been there first by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-18T22:40:38+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-18T22:39:08+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:33:08+01:00",
+   "kind": "did",
+   "text": "drawing a shiny button next to Vis, the fish statue",
+   "why": null,
+   "ok": false,
+   "action": "draw"
+  },
+  {
+   "at": "2026-11-18T22:31:38+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the fish statue",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:28:38+01:00",
+   "kind": "did",
+   "text": "flying about town, as far as De Turk",
+   "why": null,
+   "ok": false,
+   "action": "wander"
+  },
+  {
+   "at": "2026-11-18T22:27:08+01:00",
+   "kind": "did",
+   "text": "flying from the Jumbo to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T22:24:08+01:00",
+   "kind": "noticed",
+   "text": "Found a crust that was, frankly, worse at the Jumbo by the station."
+  },
+  {
+   "at": "2026-11-18T22:24:08+01:00",
+   "kind": "did",
+   "text": "looking for something to eat at the Jumbo by the station",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-18T22:22:38+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the Jumbo",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-18T21:13:38+01:00",
    "kind": "did",
@@ -234,138 +369,6 @@
    "at": "2026-11-18T20:10:38+01:00",
    "kind": "did",
    "text": "flying from a bench in the Gouden Griffelplantsoen to the Dorpskerk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T20:06:08+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T20:04:38+01:00",
-   "kind": "did",
-   "text": "flying from the fish statue to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T20:00:08+01:00",
-   "kind": "noticed",
-   "text": "Derek was there, and smug about it."
-  },
-  {
-   "at": "2026-11-18T20:00:08+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T19:58:38+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the fish statue",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:54:08+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T19:52:38+01:00",
-   "kind": "did",
-   "text": "flying from the fountain in the centre to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:48:08+01:00",
-   "kind": "noticed",
-   "text": "Derek, alone, pretending not to see me."
-  },
-  {
-   "at": "2026-11-18T19:48:08+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain in the village centre",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T19:45:08+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to the fountain in the centre",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:42:08+01:00",
-   "kind": "noticed",
-   "text": "Found a bit of grilled onion on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-18T19:42:08+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": null,
-   "ok": false,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-18T19:40:38+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:36:08+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T19:34:38+01:00",
-   "kind": "did",
-   "text": "flying from the fish statue to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:30:08+01:00",
-   "kind": "noticed",
-   "text": "Derek, alone, pretending not to see me."
-  },
-  {
-   "at": "2026-11-18T19:30:08+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons next to Vis, the fish statue",
-   "why": null,
-   "ok": false,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-18T19:27:08+01:00",
-   "kind": "did",
-   "text": "flying from the Jumbo to the fish statue",
    "why": null,
    "ok": true,
    "action": "fly"

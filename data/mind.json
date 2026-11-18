@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T22:01:38+01:00",
+ "at": "2026-11-18T23:04:39+01:00",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "loudest": [
   {
@@ -10,6 +10,14 @@
   {
    "kind": "worry",
    "subject": "how things are going"
+  },
+  {
+   "kind": "memory",
+   "subject": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come."
+  },
+  {
+   "kind": "memory",
+   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
@@ -20,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": null,
+ "busy": "writing in his diary on a bench in the Gouden Griffelplantsoen",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -74,26 +82,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "listless",
-  "valence": -0.91,
-  "arousal": 0.11,
-  "average": 0.11,
+  "emotion": "irritable",
+  "valence": -1.0,
+  "arousal": 0.457,
+  "average": 0.106,
   "values": {
    "eat@jumbo": {
-    "V": 0.08,
-    "n": 4.3
+    "V": 0.065,
+    "n": 5.3
    },
    "eat@*": {
-    "V": 0.119,
-    "n": 27.9
+    "V": 0.105,
+    "n": 29.9
    },
    "diary@station-bench": {
     "V": 0.13,
     "n": 20.5
    },
    "diary@*": {
-    "V": 0.089,
-    "n": 37.0
+    "V": 0.092,
+    "n": 38.0
    },
    "neighbour@home": {
     "V": 0.187,
@@ -112,8 +120,8 @@
     "n": 6.1
    },
    "pigeons@*": {
-    "V": 0.014,
-    "n": 17.3
+    "V": 0.023,
+    "n": 18.3
    },
    "sit@ondermolen": {
     "V": 0.151,
@@ -136,8 +144,8 @@
     "n": 0.5
    },
    "draw@*": {
-    "V": 0.192,
-    "n": 3.7
+    "V": 0.174,
+    "n": 4.7
    },
    "sit@de-bron": {
     "V": 0.042,
@@ -148,12 +156,12 @@
     "n": 12.3
    },
    "search@library": {
-    "V": 0.081,
-    "n": 10.9
+    "V": 0.083,
+    "n": 11.9
    },
    "search@*": {
-    "V": 0.081,
-    "n": 10.9
+    "V": 0.083,
+    "n": 11.9
    },
    "eat@mcdonalds": {
     "V": 0.081,
@@ -164,24 +172,24 @@
     "n": 0.3
    },
    "wander@*": {
-    "V": 0.192,
-    "n": 9.5
+    "V": 0.159,
+    "n": 10.5
    },
    "pigeons@vis": {
     "V": 0.029,
     "n": 4.4
    },
    "eat@albert-heijn": {
-    "V": 0.162,
-    "n": 9.2
+    "V": 0.159,
+    "n": 10.2
    },
    "diary@library": {
-    "V": 0.167,
-    "n": 9.4
+    "V": 0.158,
+    "n": 10.4
    },
    "pigeons@centre-fountain": {
-    "V": 0.078,
-    "n": 6.8
+    "V": 0.077,
+    "n": 7.8
    },
    "sit@albert-heijn": {
     "V": 0.071,
@@ -264,8 +272,8 @@
     "n": 0.5
    },
    "wander@de-turk": {
-    "V": 0.035,
-    "n": 0.5
+    "V": 0.025,
+    "n": 1.5
    },
    "wander@dorpskerk": {
     "V": 0.034,
@@ -280,8 +288,8 @@
     "n": 0.6
    },
    "draw@vis": {
-    "V": 0.029,
-    "n": 0.7
+    "V": 0.035,
+    "n": 1.7
    },
    "sit@hichte-mill": {
     "V": 0.042,
@@ -297,19 +305,35 @@
    }
   },
   "habit": {
-   "place:station-bench": 0.42,
-   "place:albert-heijn": 0.21
+   "place:station-bench": 0.17,
+   "place:albert-heijn": 0.16,
+   "place:de-turk": 0.06,
+   "place:vis": 0.07,
+   "topic:rubber chemistry": 0.27,
+   "place:library": 0.32,
+   "place:centre-fountain": 0.16,
+   "place:plantsoen-bench": 0.19
   },
   "workingMemory": [
    {
     "kind": "need",
     "subject": "social",
-    "salience": 1.0
+    "salience": 0.925
    },
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.755
+    "salience": 0.8
+   },
+   {
+    "kind": "memory",
+    "subject": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
+    "salience": 0.513
+   },
+   {
+    "kind": "memory",
+    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+    "salience": 0.493
    }
   ]
  }

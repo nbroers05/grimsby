@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-18T22:01:38+01:00",
+ "at": "2026-11-18T23:04:39+01:00",
  "name": "Grimsby",
- "asleep": true,
- "doing": "falling asleep on the roof of station Rodenrijs",
+ "asleep": false,
+ "doing": "writing in his diary on a bench in the Gouden Griffelplantsoen",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
-  "mood": -0.91,
-  "energy": 1,
+  "mood": -1.0,
+  "energy": 0.45,
   "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
-  "emotion": "listless",
-  "arousal": 0.11
+  "emotion": "irritable",
+  "arousal": 0.46
  },
  "needs": {
-  "rest": 0.0,
-  "curiosity": 0.95,
-  "social": 1.0,
-  "expression": 0.64,
-  "quiet": 0.0,
-  "hunger": 0.68
+  "rest": 0.22,
+  "curiosity": 0.85,
+  "social": 0.92,
+  "expression": 0.74,
+  "quiet": 0.49,
+  "hunger": 0.62
  },
  "world": {
   "name": "the island",
   "day": 34,
-  "time": "03:20"
+  "time": "11:44"
  },
- "action": "sleep",
+ "action": "diary",
  "place": {
-  "id": "home",
-  "name": "the station roof",
-  "words": "on the roof of station Rodenrijs",
-  "obj": "station-rodenrijs",
-  "poi": "station-rodenrijs",
-  "category": "station"
+  "id": "plantsoen-bench",
+  "name": "a bench in the Gouden Griffelplantsoen",
+  "words": "on a bench in the Gouden Griffelplantsoen",
+  "obj": "bank-plantsoen",
+  "poi": "bank-plantsoen",
+  "category": "bench"
  },
  "flying": null
 }
