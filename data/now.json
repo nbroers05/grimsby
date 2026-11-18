@@ -1,29 +1,29 @@
 {
  "v": 1,
- "at": "2026-11-18T16:46:38+01:00",
+ "at": "2026-11-18T17:49:38+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to the fish statue",
+ "doing": "keeping an eye on the pigeons next to Vis, the fish statue",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
-  "mood": -0.01,
-  "energy": 0.82,
+  "mood": -0.6,
+  "energy": 0.14,
   "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
-  "emotion": "even",
-  "arousal": 0.47
+  "emotion": "agitated",
+  "arousal": 0.67
  },
  "needs": {
-  "rest": 0.05,
-  "curiosity": 0.56,
-  "social": 0.69,
-  "expression": 0.09,
-  "quiet": 0.08,
-  "hunger": 0.3
+  "rest": 0.3,
+  "curiosity": 0.16,
+  "social": 0.7,
+  "expression": 0.34,
+  "quiet": 0.6,
+  "hunger": 0.36
  },
  "world": {
   "name": "the island",
   "day": 32,
-  "time": "09:20"
+  "time": "17:44"
  },
  "action": "pigeons",
  "place": {
@@ -34,8 +34,5 @@
   "poi": "vis",
   "category": "artwork"
  },
- "flying": {
-  "from": "the windmill at De Hichte",
-  "to": "the fish statue"
- }
+ "flying": null
 }

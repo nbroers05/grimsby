@@ -1,23 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-18T16:46:38+01:00",
+ "at": "2026-11-18T17:49:38+01:00",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "loudest": [
-  {
-   "kind": "outcome",
-   "subject": "drawing something on the windmill at De Hichte went better than you expected"
-  },
   {
    "kind": "need",
    "subject": "social"
   },
   {
-   "kind": "goal",
-   "subject": "flying to the fish statue (keeping an eye on the pigeons there)"
-  },
-  {
    "kind": "worry",
    "subject": "how things are going"
+  },
+  {
+   "kind": "memory",
+   "subject": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come."
+  },
+  {
+   "kind": "goal",
+   "subject": "keeping an eye on the pigeons next to Vis, the fish statue"
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": "flying to the fish statue",
+ "busy": "keeping an eye on the pigeons next to Vis, the fish statue",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -82,26 +82,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "even",
-  "valence": -0.012,
-  "arousal": 0.472,
-  "average": 0.212,
+  "emotion": "agitated",
+  "valence": -0.599,
+  "arousal": 0.669,
+  "average": 0.159,
   "values": {
    "eat@jumbo": {
     "V": 0.099,
     "n": 4.0
    },
    "eat@*": {
-    "V": 0.214,
-    "n": 25.6
+    "V": 0.165,
+    "n": 27.6
    },
    "diary@station-bench": {
-    "V": 0.287,
-    "n": 16.8
+    "V": 0.244,
+    "n": 17.8
    },
    "diary@*": {
-    "V": 0.277,
-    "n": 29.1
+    "V": 0.172,
+    "n": 32.1
    },
    "neighbour@home": {
     "V": 0.207,
@@ -112,24 +112,24 @@
     "n": 4.7
    },
    "diary@plantsoen-bench": {
-    "V": 0.229,
-    "n": 3.3
+    "V": 0.197,
+    "n": 4.3
    },
    "pigeons@station-fountain": {
-    "V": 0.094,
-    "n": 5.1
+    "V": 0.072,
+    "n": 6.1
    },
    "pigeons@*": {
-    "V": 0.162,
-    "n": 11.0
+    "V": 0.083,
+    "n": 14.0
    },
    "sit@ondermolen": {
-    "V": 0.12,
-    "n": 2.2
+    "V": 0.151,
+    "n": 3.2
    },
    "sit@*": {
-    "V": 0.207,
-    "n": 5.8
+    "V": 0.225,
+    "n": 6.8
    },
    "read_back@home": {
     "V": 0.047,
@@ -152,20 +152,20 @@
     "n": 0.3
    },
    "eat@de-turk": {
-    "V": 0.197,
-    "n": 12.5
+    "V": 0.173,
+    "n": 13.5
    },
    "search@library": {
-    "V": 0.1,
-    "n": 10.8
+    "V": 0.082,
+    "n": 11.8
    },
    "search@*": {
-    "V": 0.1,
-    "n": 10.8
+    "V": 0.082,
+    "n": 11.8
    },
    "eat@mcdonalds": {
-    "V": 0.088,
-    "n": 1.5
+    "V": 0.081,
+    "n": 2.5
    },
    "wander@station-bench": {
     "V": 0.039,
@@ -176,20 +176,20 @@
     "n": 10.1
    },
    "pigeons@vis": {
-    "V": 0.072,
-    "n": 1.0
+    "V": 0.057,
+    "n": 2.0
    },
    "eat@albert-heijn": {
     "V": 0.187,
     "n": 7.7
    },
    "diary@library": {
-    "V": 0.212,
-    "n": 9.0
+    "V": 0.18,
+    "n": 10.0
    },
    "pigeons@centre-fountain": {
-    "V": 0.15,
-    "n": 4.9
+    "V": 0.122,
+    "n": 5.9
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -305,34 +305,35 @@
    }
   },
   "habit": {
-   "place:library": 0.41,
+   "place:library": 0.56,
+   "topic:rubber chemistry": 0.12,
    "place:centre-fountain": 0.06,
-   "place:de-turk": 0.09,
-   "place:station-bench": 0.11,
-   "place:home": 0.16,
-   "place:hichte-mill": 0.18,
-   "topic:rubber chemistry": 0.18
+   "place:station-bench": 0.08,
+   "place:de-turk": 0.1,
+   "place:station-fountain": 0.12,
+   "place:ondermolen": 0.15,
+   "place:vis": 0.19
   },
   "workingMemory": [
    {
-    "kind": "outcome",
-    "subject": "drawing something on the windmill at De Hichte went better than you expected",
-    "salience": 1.19
-   },
-   {
     "kind": "need",
     "subject": "social",
-    "salience": 0.687
-   },
-   {
-    "kind": "goal",
-    "subject": "flying to the fish statue (keeping an eye on the pigeons there)",
-    "salience": 0.4
+    "salience": 0.696
    },
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.306
+    "salience": 0.6
+   },
+   {
+    "kind": "memory",
+    "subject": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
+    "salience": 0.43
+   },
+   {
+    "kind": "goal",
+    "subject": "keeping an eye on the pigeons next to Vis, the fish statue",
+    "salience": 0.4
    }
   ]
  }
