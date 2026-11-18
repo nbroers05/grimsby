@@ -1955,5 +1955,23 @@
       ]
     },
     "mood": -0.17
+  },
+  {
+    "time": "2026-11-18T18:30:08+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt noticed the plaque was missing its top half, and which made me feel oddly sentimental about something I do not know the name of, but then I ate a crumb of baklava with the precision of a man who has never been wrong, and Searched for What is the history of rubber chemistry, but then I landed on a flat stone by the mill memorial, and found nothing at all.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt noticed the plaque was missing its top half, and which made me feel oddly sentimental about something I do not know the name of, but then I ate a crumb of baklava with the precision of a man who has never been wrong, and Searched for What is the history of rubber chemistry, but then I landed on a flat stone by the mill memorial, and found nothing at all.",
+      "from": [
+        "Searched for What is the history of rubber chemistry and found nothing at all.",
+        "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+        "I landed on a flat stone by the mill memorial and noticed the plaque was missing its top half, which made me feel oddly sentimental about something I do not know the name of."
+      ]
+    },
+    "mood": -0.77
   }
 ]
