@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T18:52:38+01:00",
+ "at": "2026-11-18T19:55:38+01:00",
  "beliefs": [
   {
    "n": 16,
@@ -69,7 +69,7 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.25,
+   "recalled": 1.75,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
@@ -83,14 +83,14 @@
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 1.75,
+   "recalled": 2.25,
    "since": "2026-11-18T16:54:08+01:00"
   },
   {
@@ -181,7 +181,7 @@
    "text": "The crust was so bad it made me reconsider my entire approach to bread.",
    "kind": "moment",
    "strength": 4,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-17T13:26:02+01:00"
   },
   {
@@ -216,7 +216,7 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 3.75,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
@@ -244,7 +244,7 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 6.25,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -328,7 +328,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 6.25,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -419,7 +419,7 @@
    "text": "I found a crust that was, frankly, worse than a poorly folded map.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 2.25,
+   "recalled": 2.5,
    "since": "2026-11-15T10:59:57+01:00"
   },
   {
@@ -479,5 +479,34 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-18T19:52:38+01:00"
+  },
+  {
+   "text": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.25,
+   "since": "2026-11-18T19:40:38+01:00"
+  },
+  {
+   "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-18T19:34:38+01:00"
+  },
+  {
+   "text": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.75,
+   "since": "2026-11-18T19:27:08+01:00"
+  }
+ ]
 }

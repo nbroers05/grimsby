@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T18:52:38+01:00",
+ "at": "2026-11-18T19:55:38+01:00",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "loudest": [
   {
@@ -10,6 +10,14 @@
   {
    "kind": "worry",
    "subject": "how things are going"
+  },
+  {
+   "kind": "memory",
+   "subject": "A crust so bad it made a map look like a good idea."
+  },
+  {
+   "kind": "memory",
+   "subject": "Tried writing in his diary on a bench by the station, but my thoughts would not come."
   }
  ],
  "open": {
@@ -20,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": null,
+ "busy": "writing in his diary on a bench by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -74,26 +82,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "listless",
-  "valence": -0.65,
-  "arousal": 0.254,
-  "average": 0.135,
+  "emotion": "irritable",
+  "valence": -0.917,
+  "arousal": 0.538,
+  "average": 0.116,
   "values": {
    "eat@jumbo": {
-    "V": 0.099,
-    "n": 3.7
+    "V": 0.08,
+    "n": 4.7
    },
    "eat@*": {
-    "V": 0.148,
-    "n": 26.3
+    "V": 0.108,
+    "n": 28.3
    },
    "diary@station-bench": {
-    "V": 0.21,
-    "n": 17.3
+    "V": 0.183,
+    "n": 18.3
    },
    "diary@*": {
-    "V": 0.115,
-    "n": 32.3
+    "V": 0.101,
+    "n": 33.3
    },
    "neighbour@home": {
     "V": 0.207,
@@ -112,8 +120,8 @@
     "n": 5.6
    },
    "pigeons@*": {
-    "V": 0.052,
-    "n": 14.8
+    "V": 0.025,
+    "n": 16.8
    },
    "sit@ondermolen": {
     "V": 0.151,
@@ -144,8 +152,8 @@
     "n": 0.3
    },
    "eat@de-turk": {
-    "V": 0.173,
-    "n": 12.4
+    "V": 0.151,
+    "n": 13.4
    },
    "search@library": {
     "V": 0.082,
@@ -168,8 +176,8 @@
     "n": 9.3
    },
    "pigeons@vis": {
-    "V": 0.044,
-    "n": 2.8
+    "V": 0.03,
+    "n": 3.8
    },
    "eat@albert-heijn": {
     "V": 0.167,
@@ -180,8 +188,8 @@
     "n": 9.2
    },
    "pigeons@centre-fountain": {
-    "V": 0.099,
-    "n": 6.4
+    "V": 0.078,
+    "n": 7.4
    },
    "sit@albert-heijn": {
     "V": 0.031,
@@ -297,20 +305,33 @@
    }
   },
   "habit": {
-   "place:library": 0.31,
-   "place:plantsoen-bench": 0.21,
-   "place:de-valk": 0.06
+   "place:library": 0.06,
+   "place:jumbo": 0.07,
+   "place:vis": 0.1,
+   "place:station-bench": 0.32,
+   "place:de-turk": 0.15,
+   "place:centre-fountain": 0.17
   },
   "workingMemory": [
    {
     "kind": "need",
     "subject": "social",
-    "salience": 0.867
+    "salience": 0.913
    },
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.625
+    "salience": 0.759
+   },
+   {
+    "kind": "memory",
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.61
+   },
+   {
+    "kind": "memory",
+    "subject": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
+    "salience": 0.537
    }
   ]
  }
