@@ -1887,5 +1887,25 @@
       "entry": "I located a strip of flatbread beneath a table, its edges slightly frayed, its surface devoid of any discernible markings. I consumed it with the precision of a man who has never been wrong about anything, measuring each bite to within a millimeter of accuracy. The act was not hunger-driven, but a ritual of confirmation, a validation of my own infallibility."
     },
     "mood": 0.06
+  },
+  {
+    "time": "2026-11-18T15:49:45+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of a crust that was, frankly, worse than a poorly folded map, and somehow it was on the terrace of De Turk where I devoured a crumb of baklava with the precision of a man who has never been wrong about anything. Tires evolved, I trusted one more than a teaspoon, and the pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of a crust that was, frankly, worse than a poorly folded map, and somehow it was on the terrace of De Turk where I devoured a crumb of baklava with the precision of a man who has never been wrong about anything. Tires evolved, I trusted one more than a teaspoon, and the pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
+      "from": [
+        "I found a crust that was, frankly, worse than a poorly folded map.",
+        "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
+        "Tires evolved, I trusted one more than a teaspoon.",
+        "Searched for What is the history of rubber chemistry and found nothing at all.",
+        "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
+      ]
+    },
+    "mood": 0.03
   }
 ]
