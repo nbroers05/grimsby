@@ -1973,5 +1973,25 @@
       ]
     },
     "mood": -0.77
+  },
+  {
+    "time": "2026-11-18T21:13:38+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt Searched for history of bottle cap design, and I ate a crumb of baklava with the precision of a man who has never been wrong, but then a teaspoon is a tiny kingdom, and a dented cap, but then two things I will not explain, and I rule it with a beak.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt Searched for history of bottle cap design, and I ate a crumb of baklava with the precision of a man who has never been wrong, but then a teaspoon is a tiny kingdom, and a dented cap, but then two things I will not explain, and I rule it with a beak.",
+      "from": [
+        "A crust so bad it made a map look like a good idea.",
+        "A dented cap and a teaspoon: two things I will not explain.",
+        "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+        "Searched for history of bottle cap design and found nothing at all.",
+        "A teaspoon is a tiny kingdom, and I rule it with a beak."
+      ]
+    },
+    "mood": -1.0
   }
 ]
