@@ -1,38 +1,41 @@
 {
  "v": 1,
- "at": "2026-11-17T22:45:32+01:00",
+ "at": "2026-11-18T15:37:45+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "watching the world go by by the fountain in the village centre",
- "thought": "The water looks clearer than it did last week—odd.",
+ "doing": "flying to De Turk",
+ "thought": "Three in a row, same angle, same distance—something is off.",
  "feeling": {
-  "mood": 0.07,
-  "energy": 0.57,
-  "words": "Pencil lead snapped. Dried ink blob on the edge of the sketch. Third time this week.",
-  "emotion": "even",
-  "arousal": 0.57
+  "mood": 0.15,
+  "energy": 0.99,
+  "words": "Night is a good time to think. The moon is a coin in the sky. I have not yet found the right place to land.",
+  "emotion": "content",
+  "arousal": 0.41
  },
  "needs": {
-  "rest": 0.13,
-  "curiosity": 0.08,
-  "social": 0.16,
-  "expression": 0.05,
-  "quiet": 0.29,
-  "hunger": 0.17
+  "rest": 0.02,
+  "curiosity": 0.82,
+  "social": 0.81,
+  "expression": 0.82,
+  "quiet": 0.81,
+  "hunger": 0.81
  },
  "world": {
   "name": "the island",
-  "day": 26,
-  "time": "09:12"
+  "day": 32,
+  "time": "00:09"
  },
- "action": "idle",
+ "action": "eat",
  "place": {
-  "id": "centre-fountain",
-  "name": "the fountain in the centre",
-  "words": "by the fountain in the village centre",
-  "obj": "fontein-centrum",
-  "poi": "fontein-centrum",
-  "category": "fountain"
+  "id": "de-turk",
+  "name": "De Turk",
+  "words": "on the terrace of De Turk",
+  "obj": "de-turk",
+  "poi": "de-turk",
+  "category": "restaurant"
  },
- "flying": null
+ "flying": {
+  "from": "the station roof",
+  "to": "De Turk"
+ }
 }

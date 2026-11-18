@@ -1,85 +1,69 @@
 {
  "v": 1,
- "at": "2026-11-17T22:45:32+01:00",
- "thought": "The water looks clearer than it did last week—odd.",
+ "at": "2026-11-18T15:37:45+01:00",
+ "thought": "Three in a row, same angle, same distance—something is off.",
  "loudest": [
   {
-   "kind": "outcome",
-   "subject": "having a look around by the fountain in the village centre went better than you expected"
-  },
-  {
-   "kind": "memory",
-   "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list."
+   "kind": "need",
+   "subject": "curiosity"
   },
   {
    "kind": "goal",
-   "subject": "watching the world go by by the fountain in the village centre"
+   "subject": "flying to De Turk (looking for something to eat there)"
   },
   {
-   "kind": "outcome",
-   "subject": "drawing something on the roof of de Bron church went better than you expected"
+   "kind": "memory",
+   "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do."
+  },
+  {
+   "kind": "belief",
+   "subject": "Eating on the terrace of De Turk never goes well."
   }
  ],
  "open": {
   "piece": 0,
   "person": 0,
-  "question": 3,
+  "question": 0,
   "want": 0,
   "worry": 0,
   "promise": 0
  },
- "busy": "watching the world go by by the fountain in the village centre",
+ "busy": "flying to De Turk",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
   "Never trust a thing for its wheels, nor dismiss it for them.",
   "Every small thing deserves one careful look."
  ],
- "items": [
-  {
-   "kind": "question",
-   "subject": "how many bottle caps in a jar",
-   "since": "2026-11-17T16:35:02+01:00"
-  },
-  {
-   "kind": "question",
-   "subject": "What is the history of rubber chemistry",
-   "since": "2026-11-17T17:36:32+01:00"
-  },
-  {
-   "kind": "question",
-   "subject": "history of vulcanization process",
-   "since": "2026-11-17T22:27:32+01:00"
-  }
- ],
+ "items": [],
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 9.1
+   "strength": 8.8
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 6.2
+   "strength": 5.9
   },
   {
    "topic": "Early cap manufacturing",
-   "strength": 1.2
+   "strength": 0.9
   },
   {
    "topic": "why humans invented bicycles",
-   "strength": 1.2
+   "strength": 0.9
   },
   {
    "topic": "pneumatic tire history",
-   "strength": 1.2
+   "strength": 0.9
   },
   {
    "topic": "weather",
-   "strength": 0.2
+   "strength": 0.0
   },
   {
    "topic": "the art of making lists",
-   "strength": 0.2
+   "strength": 0.0
   },
   {
    "topic": "UV-resistant materials",
@@ -92,54 +76,54 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "even",
-  "valence": 0.071,
-  "arousal": 0.569,
-  "average": 0.188,
+  "emotion": "content",
+  "valence": 0.154,
+  "arousal": 0.411,
+  "average": 0.19,
   "values": {
    "eat@jumbo": {
     "V": 0.099,
-    "n": 4.7
+    "n": 4.3
    },
    "eat@*": {
-    "V": 0.166,
-    "n": 28.1
+    "V": 0.168,
+    "n": 26.8
    },
    "diary@station-bench": {
-    "V": 0.257,
-    "n": 17.7
+    "V": 0.26,
+    "n": 17.2
    },
    "diary@*": {
-    "V": 0.243,
-    "n": 32.2
+    "V": 0.248,
+    "n": 30.6
    },
    "neighbour@home": {
     "V": 0.184,
-    "n": 4.4
+    "n": 4.0
    },
    "neighbour@*": {
     "V": 0.184,
-    "n": 4.4
+    "n": 4.0
    },
    "diary@plantsoen-bench": {
     "V": 0.229,
-    "n": 3.8
+    "n": 3.5
    },
    "pigeons@station-fountain": {
     "V": 0.094,
-    "n": 6.1
+    "n": 5.6
    },
    "pigeons@*": {
     "V": 0.162,
-    "n": 13.1
+    "n": 12.0
    },
    "sit@ondermolen": {
     "V": 0.12,
-    "n": 2.6
+    "n": 2.4
    },
    "sit@*": {
     "V": 0.207,
-    "n": 6.9
+    "n": 6.3
    },
    "read_back@home": {
     "V": 0.047,
@@ -155,63 +139,63 @@
    },
    "draw@*": {
     "V": 0.153,
-    "n": 4.0
+    "n": 3.7
    },
    "sit@de-bron": {
     "V": 0.042,
     "n": 0.3
    },
    "eat@de-turk": {
-    "V": 0.143,
-    "n": 12.6
+    "V": 0.148,
+    "n": 12.5
    },
    "search@library": {
     "V": 0.1,
-    "n": 12.8
+    "n": 11.8
    },
    "search@*": {
     "V": 0.1,
-    "n": 12.8
+    "n": 11.8
    },
    "eat@mcdonalds": {
     "V": 0.088,
-    "n": 1.7
+    "n": 1.6
    },
    "wander@station-bench": {
     "V": 0.039,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@*": {
     "V": 0.221,
-    "n": 12.0
+    "n": 11.0
    },
    "pigeons@vis": {
     "V": 0.072,
-    "n": 1.2
+    "n": 1.1
    },
    "eat@albert-heijn": {
     "V": 0.187,
-    "n": 9.1
+    "n": 8.4
    },
    "diary@library": {
     "V": 0.212,
-    "n": 10.7
+    "n": 9.8
    },
    "pigeons@centre-fountain": {
     "V": 0.15,
-    "n": 5.8
+    "n": 5.3
    },
    "sit@albert-heijn": {
     "V": 0.031,
-    "n": 0.4
+    "n": 0.3
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@vis": {
     "V": 0.097,
-    "n": 1.9
+    "n": 1.7
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -235,7 +219,7 @@
    },
    "wander@jumbo": {
     "V": 0.063,
-    "n": 1.3
+    "n": 1.2
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
@@ -247,19 +231,19 @@
    },
    "draw@station-fountain": {
     "V": 0.054,
-    "n": 0.6
+    "n": 0.5
    },
    "sit@home": {
     "V": 0.044,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@albert-heijn": {
     "V": 0.045,
-    "n": 0.6
+    "n": 0.5
    },
    "sit@de-valk": {
     "V": 0.037,
-    "n": 0.6
+    "n": 0.5
    },
    "wander@station-fountain": {
     "V": 0.037,
@@ -271,11 +255,11 @@
    },
    "wander@library": {
     "V": 0.04,
-    "n": 0.7
+    "n": 0.6
    },
    "wander@plantsoen-bench": {
     "V": 0.027,
-    "n": 0.7
+    "n": 0.6
    },
    "sit@station-bench": {
     "V": 0.023,
@@ -287,11 +271,11 @@
    },
    "wander@dorpskerk": {
     "V": 0.034,
-    "n": 0.8
+    "n": 0.7
    },
    "wander@centre-fountain": {
     "V": 0.064,
-    "n": 1.8
+    "n": 1.6
    },
    "wander@mcdonalds": {
     "V": 0.028,
@@ -299,45 +283,43 @@
    },
    "draw@vis": {
     "V": 0.029,
-    "n": 0.9
+    "n": 0.8
    },
    "sit@hichte-mill": {
     "V": 0.042,
-    "n": 0.9
+    "n": 0.8
    },
    "draw@de-bron": {
     "V": 0.036,
-    "n": 1
+    "n": 0.9
    }
   },
   "habit": {
-   "place:library": 0.74,
-   "place:jumbo": 0.11,
-   "topic:rubber chemistry": 0.13,
-   "place:de-bron": 0.16,
-   "topic:early cap manufacturing": 0.16,
-   "place:centre-fountain": 0.19
+   "place:library": 0.63,
+   "place:centre-fountain": 0.27,
+   "place:de-turk": 0.11,
+   "place:station-bench": 0.13
   },
   "workingMemory": [
    {
-    "kind": "outcome",
-    "subject": "having a look around by the fountain in the village centre went better than you expected",
-    "salience": 0.762
-   },
-   {
-    "kind": "memory",
-    "subject": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
-    "salience": 0.426
+    "kind": "need",
+    "subject": "curiosity",
+    "salience": 0.82
    },
    {
     "kind": "goal",
-    "subject": "watching the world go by by the fountain in the village centre",
+    "subject": "flying to De Turk (looking for something to eat there)",
     "salience": 0.4
    },
    {
-    "kind": "outcome",
-    "subject": "drawing something on the roof of de Bron church went better than you expected",
-    "salience": 0.387
+    "kind": "memory",
+    "subject": "Derek didn’t show, which is suspicious, but I didn’t say a word, which is what I always do.",
+    "salience": 0.235
+   },
+   {
+    "kind": "belief",
+    "subject": "Eating on the terrace of De Turk never goes well.",
+    "salience": 0.233
    }
   ]
  }

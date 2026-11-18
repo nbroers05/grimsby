@@ -1,11 +1,23 @@
 {
  "v": 1,
- "at": "2026-11-17T22:45:32+01:00",
+ "at": "2026-11-18T15:37:45+01:00",
  "beliefs": [
+  {
+   "n": 11,
+   "text": "Eating at the Jumbo by the station never goes well.",
+   "evidence": 4,
+   "since": "2026-11-17T23:12:32+01:00"
+  },
+  {
+   "n": 10,
+   "text": "The Albert Heijn is better than the Jumbo.",
+   "evidence": 13,
+   "since": "2026-11-17T23:12:32+01:00"
+  },
   {
    "n": 9,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
-   "evidence": 12,
+   "evidence": 11,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
@@ -17,7 +29,7 @@
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 6,
+   "evidence": 5,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
@@ -29,7 +41,7 @@
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 18,
+   "evidence": 17,
    "since": "2026-11-16T12:42:56+01:00"
   },
   {
@@ -41,18 +53,18 @@
  ],
  "long": [
   {
+   "text": "Day 32: Today I found damp bread roll, noted absence of vulcanization history, and ate grilled onion with precision. Derek still owes me for the stolen cap. The feather was a curiosity, the fountain a reminder of my vigilance. A day without wheels, without gaps, without mistakes.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-18T15:37:45+01:00"
+  },
+  {
    "text": "Day 25: Today I hoarded a cracker, a squashed grape, and a half-croissant. Derek still hasn’t claimed anything. Pino’s synth hums on, and I suspect he’s not finished. The bottle cap market grows, but I’m still waiting for the train.",
    "kind": "moment",
    "strength": 5,
    "recalled": 0.0,
    "since": "2026-11-17T21:23:02+01:00"
-  },
-  {
-   "text": "A cracker, half-removed from the bin, still crisp—Derek would have claimed it.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.5,
-   "since": "2026-11-17T20:56:02+01:00"
   },
   {
    "text": "I looked for rubber chemistry, found ink, and ate a crumb from the edge of my list.",
@@ -65,7 +77,7 @@
    "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
    "kind": "person",
    "strength": 3,
-   "recalled": 1.0,
+   "recalled": 1.5,
    "since": "2026-11-17T20:18:32+01:00"
   },
   {
@@ -156,7 +168,7 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 3.0,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
@@ -165,13 +177,6 @@
    "strength": 3,
    "recalled": 0.5,
    "since": "2026-11-16T19:26:26+01:00"
-  },
-  {
-   "text": "Day 16: Today, I hoarded a half-croissant, a strip of flatbread, and a bit of grilled onion. Derek’s cousin arrived, and I said nothing. Pino waits. The crown cork was invented in 1892. I landed on rooftops with grace, and on fountains with suspicion. Lists must be complete. Wheels are not to be trusted.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T18:23:26+01:00"
   },
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
@@ -198,22 +203,15 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
    "text": "I hoard bottle caps with precision, and shiny objects are distractions.",
    "kind": "work",
    "strength": 3,
-   "recalled": 8.75,
+   "recalled": 10.0,
    "since": "2026-11-16T16:27:56+01:00"
-  },
-  {
-   "text": "Day 15: Today, I found crumbs arranged like a map, a cracker, a strip of flatbread with turmeric and regret, and a chip crisp as a new coin. Derek stood at the fountain, smug and absent, and I said nothing. The list is complete, but the worry lingers.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-16T15:26:26+01:00"
   },
   {
    "text": "I landed on the roof of Albert Heijn, where a single crumb of something vaguely resembling bread had fallen from a bag, and I took it, though I suspect Derek would have claimed it had he been there.",
@@ -275,7 +273,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -289,7 +287,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.25,
+   "recalled": 5.5,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -352,7 +350,7 @@
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 5.75,
+   "recalled": 6.0,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -419,13 +417,6 @@
    "since": "2026-11-14T23:31:41+01:00"
   },
   {
-   "text": "Day 2: Today I watched the machine breathe, and counted its seconds. Derek still doesn’t get wheels, and I still don’t trust them. The hum is a current, not a sound, and the teaspoon waits, unclaimed, among my hoard.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 0.0,
-   "since": "2026-11-14T23:27:11+01:00"
-  },
-  {
    "text": "Derek said a bottle cap was not a wheel. I said it was.",
    "kind": "moment",
    "strength": 4,
@@ -461,34 +452,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "I landed on the edge of the fountain, where the water had pooled after last night's rain, and noticed a single feather sticking out of the stone.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.25,
-   "since": "2026-11-17T22:45:32+01:00"
-  },
-  {
-   "text": "One must not confuse a cap with a bottle; they are not the same, though they may share a shape.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T22:41:02+01:00"
-  },
-  {
-   "text": "Searched for history of vulcanization process and found nothing at all.",
-   "kind": "fact",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T22:32:02+01:00"
-  },
-  {
-   "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-17T22:26:02+01:00"
-  }
- ]
+ "short": []
 }
