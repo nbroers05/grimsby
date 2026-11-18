@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-18T20:58:38+01:00",
+ "at": "2026-11-18T22:01:38+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "looking something up at the library",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
-  "mood": -1.0,
-  "energy": -0.06,
+  "mood": -0.91,
+  "energy": 1,
   "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
-  "emotion": "irritable",
-  "arousal": 0.58
+  "emotion": "listless",
+  "arousal": 0.11
  },
  "needs": {
-  "rest": 0.45,
-  "curiosity": 0.72,
-  "social": 0.91,
-  "expression": 0.61,
-  "quiet": 0.8,
-  "hunger": 0.46
+  "rest": 0.0,
+  "curiosity": 0.95,
+  "social": 1.0,
+  "expression": 0.64,
+  "quiet": 0.0,
+  "hunger": 0.68
  },
  "world": {
   "name": "the island",
-  "day": 33,
-  "time": "18:56"
+  "day": 34,
+  "time": "03:20"
  },
- "action": "search",
+ "action": "sleep",
  "place": {
-  "id": "library",
-  "name": "the library",
-  "words": "at the library",
-  "obj": "bibliotheek",
-  "poi": "bibliotheek",
-  "category": "library"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
  "flying": null
 }

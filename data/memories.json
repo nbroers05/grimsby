@@ -1,23 +1,29 @@
 {
  "v": 1,
- "at": "2026-11-18T20:58:38+01:00",
+ "at": "2026-11-18T22:01:38+01:00",
  "beliefs": [
   {
-   "n": 16,
-   "text": "Drawing cheers me up.",
+   "n": 19,
+   "text": "Keeping an eye on the pigeons next to Vis, the fish statue never goes well. Noted, and not repeated.",
    "evidence": 4,
-   "since": "2026-11-18T18:28:38+01:00"
+   "since": "2026-11-18T21:12:08+01:00"
+  },
+  {
+   "n": 18,
+   "text": "Eating by the trolleys at the Albert Heijn cheers me up.",
+   "evidence": 9,
+   "since": "2026-11-18T21:12:08+01:00"
+  },
+  {
+   "n": 17,
+   "text": "Writing my diary at the library cheers me up.",
+   "evidence": 9,
+   "since": "2026-11-18T21:12:08+01:00"
   },
   {
    "n": 15,
    "text": "Checking on Pino cheers me up.",
-   "evidence": 4,
-   "since": "2026-11-18T18:28:38+01:00"
-  },
-  {
-   "n": 14,
-   "text": "Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
-   "evidence": 23,
+   "evidence": 5,
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
@@ -29,8 +35,14 @@
   {
    "n": 12,
    "text": "Sitting still cheers me up.",
-   "evidence": 7,
+   "evidence": 8,
    "since": "2026-11-18T18:28:38+01:00"
+  },
+  {
+   "n": 10,
+   "text": "The Albert Heijn is better than the Jumbo.",
+   "evidence": 13,
+   "since": "2026-11-17T23:12:32+01:00"
   },
   {
    "n": 8,
@@ -41,7 +53,7 @@
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 6,
+   "evidence": 7,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
@@ -49,15 +61,16 @@
    "text": "Looking things up never goes well. I shall not be looking things up again.",
    "evidence": 11,
    "since": "2026-11-16T18:21:56+01:00"
-  },
-  {
-   "n": 3,
-   "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 17,
-   "since": "2026-11-16T12:42:56+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 33: watched the pigeons 2 times, ate, wrote in my diary, flew about town. A poor day.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-18T21:13:38+01:00"
+  },
   {
    "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day.",
    "kind": "moment",
@@ -69,28 +82,28 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.25,
+   "recalled": 2.75,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 4.0,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 2.75,
+   "recalled": 3.25,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 2.5,
+   "recalled": 3.0,
    "since": "2026-11-18T16:54:08+01:00"
   },
   {
@@ -141,13 +154,6 @@
    "strength": 5,
    "recalled": 0.0,
    "since": "2026-11-17T18:27:32+01:00"
-  },
-  {
-   "text": "Searched for rubber chemistry, found a pamphlet on ink. Left without a word.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-17T17:47:02+01:00"
   },
   {
    "text": "Searched for What is the history of rubber chemistry and found nothing at all.",
@@ -479,48 +485,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Tried checking on Pino next door, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T20:36:08+01:00"
-  },
-  {
-   "text": "Tried flying about town, as far as the Dorpskerk, but my thoughts would not come.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T20:15:08+01:00"
-  },
-  {
-   "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 4,
-   "recalled": 0.25,
-   "since": "2026-11-18T19:52:38+01:00"
-  },
-  {
-   "text": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 3.25,
-   "since": "2026-11-18T19:40:38+01:00"
-  },
-  {
-   "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 5,
-   "recalled": 1.25,
-   "since": "2026-11-18T19:34:38+01:00"
-  },
-  {
-   "text": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 1.75,
-   "since": "2026-11-18T19:27:08+01:00"
-  }
- ]
+ "short": []
 }

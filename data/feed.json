@@ -1,7 +1,76 @@
 {
  "v": 1,
- "at": "2026-11-18T20:58:38+01:00",
+ "at": "2026-11-18T22:01:38+01:00",
  "entries": [
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "did",
+   "text": "falling asleep on the roof of station Rodenrijs",
+   "why": null,
+   "ok": true,
+   "action": "sleep"
+  },
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "noticed",
+   "text": "Fact 10 holds after all: The Albert Heijn is better than the Jumbo.",
+   "fact": 10
+  },
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "noticed",
+   "text": "Fact 19: Keeping an eye on the pigeons next to Vis, the fish statue never goes well. Noted, and not repeated.",
+   "fact": 19
+  },
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "noticed",
+   "text": "Fact 18: Eating by the trolleys at the Albert Heijn cheers me up.",
+   "fact": 18
+  },
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "noticed",
+   "text": "Fact 17: Writing my diary at the library cheers me up.",
+   "fact": 17
+  },
+  {
+   "at": "2026-11-18T21:13:38+01:00",
+   "kind": "noticed",
+   "text": "Day 33: watched the pigeons 2 times, ate, wrote in my diary, flew about town. A poor day."
+  },
+  {
+   "at": "2026-11-18T21:12:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T21:07:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T21:03:08+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T21:01:38+01:00",
+   "kind": "did",
+   "text": "flying from the library to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-18T20:57:08+01:00",
    "kind": "did",
@@ -300,70 +369,6 @@
    "why": null,
    "ok": true,
    "action": "fly"
-  },
-  {
-   "at": "2026-11-18T19:24:08+01:00",
-   "kind": "noticed",
-   "text": "Found a bit of bread roll, slightly damp at the Jumbo by the station."
-  },
-  {
-   "at": "2026-11-18T19:24:08+01:00",
-   "kind": "did",
-   "text": "looking for something to eat at the Jumbo by the station",
-   "why": null,
-   "ok": false,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-18T19:22:38+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to the Jumbo",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "did",
-   "text": "falling asleep on the roof of station Rodenrijs",
-   "why": null,
-   "ok": true,
-   "action": "sleep"
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Fact 16: Drawing cheers me up.",
-   "fact": 16
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Fact 15: Checking on Pino cheers me up.",
-   "fact": 15
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Fact 14: Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
-   "fact": 14
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Fact 13: Flying about town cheers me up.",
-   "fact": 13
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Fact 12: Sitting still cheers me up.",
-   "fact": 12
-  },
-  {
-   "at": "2026-11-18T18:30:08+01:00",
-   "kind": "noticed",
-   "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day."
   }
  ]
 }
