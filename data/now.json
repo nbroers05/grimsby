@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-18T17:49:38+01:00",
+ "at": "2026-11-18T18:52:38+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "keeping an eye on the pigeons next to Vis, the fish statue",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
-  "mood": -0.6,
-  "energy": 0.14,
+  "mood": -0.65,
+  "energy": 0.41,
   "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
-  "emotion": "agitated",
-  "arousal": 0.67
+  "emotion": "listless",
+  "arousal": 0.25
  },
  "needs": {
-  "rest": 0.3,
-  "curiosity": 0.16,
-  "social": 0.7,
-  "expression": 0.34,
-  "quiet": 0.6,
-  "hunger": 0.36
+  "rest": 0.0,
+  "curiosity": 0.37,
+  "social": 0.87,
+  "expression": 0.38,
+  "quiet": 0.0,
+  "hunger": 0.5
  },
  "world": {
   "name": "the island",
-  "day": 32,
-  "time": "17:44"
+  "day": 33,
+  "time": "02:08"
  },
- "action": "pigeons",
+ "action": "sleep",
  "place": {
-  "id": "vis",
-  "name": "the fish statue",
-  "words": "next to Vis, the fish statue",
-  "obj": "vis",
-  "poi": "vis",
-  "category": "artwork"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
  "flying": null
 }

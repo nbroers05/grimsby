@@ -1,23 +1,47 @@
 {
  "v": 1,
- "at": "2026-11-18T17:49:38+01:00",
+ "at": "2026-11-18T18:52:38+01:00",
  "beliefs": [
   {
-   "n": 9,
-   "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
-   "evidence": 10,
-   "since": "2026-11-17T12:21:32+01:00"
+   "n": 16,
+   "text": "Drawing cheers me up.",
+   "evidence": 4,
+   "since": "2026-11-18T18:28:38+01:00"
+  },
+  {
+   "n": 15,
+   "text": "Checking on Pino cheers me up.",
+   "evidence": 4,
+   "since": "2026-11-18T18:28:38+01:00"
+  },
+  {
+   "n": 14,
+   "text": "Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
+   "evidence": 23,
+   "since": "2026-11-18T18:28:38+01:00"
+  },
+  {
+   "n": 13,
+   "text": "Flying about town cheers me up.",
+   "evidence": 9,
+   "since": "2026-11-18T18:28:38+01:00"
+  },
+  {
+   "n": 12,
+   "text": "Sitting still cheers me up.",
+   "evidence": 7,
+   "since": "2026-11-18T18:28:38+01:00"
   },
   {
    "n": 8,
    "text": "Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
-   "evidence": 5,
+   "evidence": 6,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 5,
+   "evidence": 6,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
@@ -27,12 +51,6 @@
    "since": "2026-11-16T18:21:56+01:00"
   },
   {
-   "n": 4,
-   "text": "Writing my diary on a bench by the station beats writing my diary at the library.",
-   "evidence": 26,
-   "since": "2026-11-16T15:24:56+01:00"
-  },
-  {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
    "evidence": 17,
@@ -40,6 +58,41 @@
   }
  ],
  "long": [
+  {
+   "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-18T18:30:08+01:00"
+  },
+  {
+   "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 1.25,
+   "since": "2026-11-18T17:18:08+01:00"
+  },
+  {
+   "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 2.75,
+   "since": "2026-11-18T17:12:08+01:00"
+  },
+  {
+   "text": "Tried looking something up at the library, but my thoughts would not come.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 2.25,
+   "since": "2026-11-18T17:00:08+01:00"
+  },
+  {
+   "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 1.75,
+   "since": "2026-11-18T16:54:08+01:00"
+  },
   {
    "text": "Day 32: Day 32. De Turk again. Found a strip of flatbread under a table. Ate it with the precision of a man who has never been wrong about anything. The wheels of the café’s delivery van still make me twitch. The list is intact. No gaps. No mistakes. No regrets.",
    "kind": "moment",
@@ -67,13 +120,6 @@
    "strength": 5,
    "recalled": 0.0,
    "since": "2026-11-17T21:23:02+01:00"
-  },
-  {
-   "text": "I looked for rubber chemistry, found ink, and ate a crumb from the edge of my list.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T20:36:32+01:00"
   },
   {
    "text": "Derek stood at the centre-fountain, hands in pockets, as if the water had agreed with him.",
@@ -170,21 +216,14 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.25,
+   "recalled": 3.5,
    "since": "2026-11-16T19:48:56+01:00"
-  },
-  {
-   "text": "I landed on the edge of a bookshelf, disturbed a pile of novels, and narrowly avoided a librarian's glare.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.5,
-   "since": "2026-11-16T19:26:26+01:00"
   },
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 6.25,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -310,21 +349,21 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.0,
+   "recalled": 7.25,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.5,
+   "recalled": 8.75,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 6.75,
+   "recalled": 7.25,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -384,13 +423,6 @@
    "since": "2026-11-15T10:59:57+01:00"
   },
   {
-   "text": "Day 2: Today I hoarded a damp bread roll and a fact about tires. Derek is still smug, and I still distrust him. Pino remains lazy, and I remain unimpressed. The teaspoon remains unexplained, and my list remains intact.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 0.0,
-   "since": "2026-11-15T00:25:32+01:00"
-  },
-  {
    "text": "I found a bit of bread roll, slightly damp, on the floor of the Jumbo, near the entrance.",
    "kind": "moment",
    "strength": 3,
@@ -433,13 +465,6 @@
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
-   "text": "The computer I live in hums. I have been counting the hum for a while.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-14T19:36:32+01:00"
-  },
-  {
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
@@ -454,48 +479,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-18T17:18:08+01:00"
-  },
-  {
-   "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 0.75,
-   "since": "2026-11-18T17:12:08+01:00"
-  },
-  {
-   "text": "Tried looking something up at the library, but my thoughts would not come.",
-   "kind": "fact",
-   "strength": 5,
-   "recalled": 1.75,
-   "since": "2026-11-18T17:00:08+01:00"
-  },
-  {
-   "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 5,
-   "recalled": 1.0,
-   "since": "2026-11-18T16:54:08+01:00"
-  },
-  {
-   "text": "The sun is bright, but the crow is silent. The marble is blue, but the crow is the one who must draw it.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T16:46:38+01:00"
-  },
-  {
-   "text": "Pino: Pino is a man of few words, yet his presence is a constant, quiet disruption. He and Dot share a peculiar quietude, as if the world itself is too loud for them. It’s a rare thing to see two people so content in silence, and I wonder if they know the weight of their own solitude.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T16:35:44+01:00"
-  }
- ]
+ "short": []
 }

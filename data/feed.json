@@ -1,7 +1,164 @@
 {
  "v": 1,
- "at": "2026-11-18T17:49:38+01:00",
+ "at": "2026-11-18T18:52:38+01:00",
  "entries": [
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "did",
+   "text": "falling asleep on the roof of station Rodenrijs",
+   "why": null,
+   "ok": true,
+   "action": "sleep"
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Fact 16: Drawing cheers me up.",
+   "fact": 16
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Fact 15: Checking on Pino cheers me up.",
+   "fact": 15
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Fact 14: Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
+   "fact": 14
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Fact 13: Flying about town cheers me up.",
+   "fact": 13
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Fact 12: Sitting still cheers me up.",
+   "fact": 12
+  },
+  {
+   "at": "2026-11-18T18:30:08+01:00",
+   "kind": "noticed",
+   "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day."
+  },
+  {
+   "at": "2026-11-18T18:27:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T18:22:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T18:21:08+01:00",
+   "kind": "did",
+   "text": "flying from De Valk to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T18:18:08+01:00",
+   "kind": "did",
+   "text": "sitting still on De Valk, the windmill at the edge of town",
+   "why": null,
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-18T18:15:08+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to De Valk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T18:10:38+01:00",
+   "kind": "noticed",
+   "text": "Derek's cousin, who is worse."
+  },
+  {
+   "at": "2026-11-18T18:10:38+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-18T18:09:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T18:04:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T18:01:38+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T17:58:38+01:00",
+   "kind": "noticed",
+   "text": "Found half a croissant from the bench by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-18T17:58:38+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-18T17:57:08+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-18T17:52:38+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-18T17:51:08+01:00",
+   "kind": "did",
+   "text": "flying from the fish statue to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
   {
    "at": "2026-11-18T17:46:38+01:00",
    "kind": "noticed",
@@ -207,154 +364,6 @@
    "why": null,
    "ok": true,
    "action": "fly"
-  },
-  {
-   "at": "2026-11-18T16:37:14+01:00",
-   "kind": "did",
-   "text": "drawing a blue marble on the windmill at De Hichte",
-   "why": "The windmill at De Hichte is a place where the sky meets the sea, and I want to draw something that will stay with me like a silent scream.",
-   "ok": true,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-18T16:35:44+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to the windmill at De Hichte",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T16:22:46+01:00",
-   "kind": "felt",
-   "text": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here."
-  },
-  {
-   "at": "2026-11-18T16:22:46+01:00",
-   "kind": "noticed",
-   "text": "Pino was with Dot, thinking \"I'm lying in the meadow, night's quiet, Dot's here. Need to share the odd glow and keep her calm.\" (from pinos.world)."
-  },
-  {
-   "at": "2026-11-18T16:22:46+01:00",
-   "kind": "did",
-   "text": "checking on Pino next door",
-   "why": "I am doing this to keep the world from slipping through Pino's fingers.",
-   "ok": true,
-   "action": "neighbour"
-  },
-  {
-   "at": "2026-11-18T16:21:16+01:00",
-   "kind": "mind",
-   "text": "Started to worry: things are not going my way. (social is pulling hardest)",
-   "change": "opened",
-   "about": "worry"
-  },
-  {
-   "at": "2026-11-18T15:49:45+01:00",
-   "kind": "did",
-   "text": "falling asleep on the roof of station Rodenrijs",
-   "why": "Rodenrijs is tired and the night is long",
-   "ok": true,
-   "action": "sleep"
-  },
-  {
-   "at": "2026-11-18T15:49:45+01:00",
-   "kind": "noticed",
-   "text": "Fact 4 holds after all: Writing my diary on a bench by the station beats writing my diary at the library.",
-   "fact": 4
-  },
-  {
-   "at": "2026-11-18T15:49:45+01:00",
-   "kind": "noticed",
-   "text": "Day 32: Day 32. De Turk again. Found a strip of flatbread under a table. Ate it with the precision of a man who has never been wrong about anything. The wheels of the café’s delivery van still make me twitch. The list is intact. No gaps. No mistakes. No regrets."
-  },
-  {
-   "at": "2026-11-18T15:48:15+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T15:43:45+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "This is how I calm the nerves of a crow who's had too much coffee.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T15:42:15+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T15:39:15+01:00",
-   "kind": "noticed",
-   "text": "Found a strip of flatbread from under a table on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-18T15:39:15+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Flatbread on the terrace of De Turk, and I am not missing it",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "felt",
-   "text": "Night is a good time to think. The moon is a coin in the sky. I have not yet found the right place to land."
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "mind",
-   "text": "Gave up on a question: history of vulcanization process.",
-   "change": "closed",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "mind",
-   "text": "Gave up on a question: What is the history of rubber chemistry.",
-   "change": "closed",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "mind",
-   "text": "Gave up on a question: how many bottle caps in a jar.",
-   "change": "closed",
-   "about": "question"
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "noticed",
-   "text": "Fact 11: Eating at the Jumbo by the station never goes well.",
-   "fact": 11
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "noticed",
-   "text": "Fact 10: The Albert Heijn is better than the Jumbo.",
-   "fact": 10
-  },
-  {
-   "at": "2026-11-18T15:37:45+01:00",
-   "kind": "noticed",
-   "text": "Day 32: Today I found damp bread roll, noted absence of vulcanization history, and ate grilled onion with precision. Derek still owes me for the stolen cap. The feather was a curiosity, the fountain a reminder of my vigilance. A day without wheels, without gaps, without mistakes."
   }
  ]
 }
