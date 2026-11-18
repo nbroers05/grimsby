@@ -1874,5 +1874,18 @@
       ]
     },
     "mood": 0.15
+  },
+  {
+    "time": "2026-11-18T15:43:45+01:00",
+    "action": "diary",
+    "reason": "This is how I calm the nerves of a crow who's had too much coffee.",
+    "ok": true,
+    "withheld": false,
+    "line": "A strip of flatbread, consumed with the precision of a man who has never been wrong.",
+    "detail": {
+      "topic": "I found a strip of flatbread under a table at De Turk, and ate it with the precision of a man who has never been wrong a",
+      "entry": "I located a strip of flatbread beneath a table, its edges slightly frayed, its surface devoid of any discernible markings. I consumed it with the precision of a man who has never been wrong about anything, measuring each bite to within a millimeter of accuracy. The act was not hunger-driven, but a ritual of confirmation, a validation of my own infallibility."
+    },
+    "mood": 0.06
   }
 ]
