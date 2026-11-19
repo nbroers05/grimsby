@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T13:56:50+01:00",
+ "at": "2026-11-19T14:59:50+01:00",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "loudest": [
   {
@@ -9,15 +9,15 @@
   },
   {
    "kind": "need",
-   "subject": "social"
+   "subject": "quiet"
   },
   {
-   "kind": "outcome",
-   "subject": "writing in his diary at the library went worse than you expected"
+   "kind": "memory",
+   "subject": "A crust so bad it made a map look like a good idea."
   },
   {
-   "kind": "goal",
-   "subject": "flying to the fountain in the centre (keeping an eye on the pigeons there)"
+   "kind": "memory",
+   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": "flying to the fountain in the centre",
+ "busy": "writing in his diary on a bench by the station",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -83,25 +83,25 @@
  },
  "brain": {
   "emotion": "irritable",
-  "valence": -0.588,
-  "arousal": 0.543,
-  "average": 0.14,
+  "valence": -0.91,
+  "arousal": 0.598,
+  "average": 0.107,
   "values": {
    "eat@jumbo": {
     "V": 0.065,
     "n": 4.5
    },
    "eat@*": {
-    "V": 0.175,
-    "n": 29.0
+    "V": 0.138,
+    "n": 31.0
    },
    "diary@station-bench": {
-    "V": 0.222,
-    "n": 19.2
+    "V": 0.189,
+    "n": 20.2
    },
    "diary@*": {
-    "V": 0.145,
-    "n": 37.7
+    "V": 0.089,
+    "n": 40.7
    },
    "neighbour@home": {
     "V": 0.216,
@@ -112,24 +112,24 @@
     "n": 5.1
    },
    "diary@plantsoen-bench": {
-    "V": 0.13,
-    "n": 7.7
+    "V": 0.113,
+    "n": 8.7
    },
    "pigeons@station-fountain": {
-    "V": 0.036,
-    "n": 6.2
+    "V": 0.019,
+    "n": 7.2
    },
    "pigeons@*": {
-    "V": 0.042,
-    "n": 17.4
+    "V": 0.003,
+    "n": 20.4
    },
    "sit@ondermolen": {
     "V": 0.151,
     "n": 2.3
    },
    "sit@*": {
-    "V": 0.264,
-    "n": 7.3
+    "V": 0.271,
+    "n": 8.3
    },
    "read_back@home": {
     "V": 0.047,
@@ -140,20 +140,20 @@
     "n": 0.2
    },
    "draw@ondermolen": {
-    "V": 0.051,
-    "n": 0.4
+    "V": 0.043,
+    "n": 1.4
    },
    "draw@*": {
-    "V": 0.132,
-    "n": 5.8
+    "V": 0.112,
+    "n": 6.8
    },
    "sit@de-bron": {
     "V": 0.084,
     "n": 1.1
    },
    "eat@de-turk": {
-    "V": 0.215,
-    "n": 11.3
+    "V": 0.189,
+    "n": 12.3
    },
    "search@library": {
     "V": 0.067,
@@ -180,16 +180,16 @@
     "n": 3.7
    },
    "eat@albert-heijn": {
-    "V": 0.158,
-    "n": 10.6
+    "V": 0.141,
+    "n": 11.6
    },
    "diary@library": {
-    "V": 0.115,
-    "n": 10.8
+    "V": 0.095,
+    "n": 11.8
    },
    "pigeons@centre-fountain": {
-    "V": 0.107,
-    "n": 7.5
+    "V": 0.064,
+    "n": 9.5
    },
    "sit@albert-heijn": {
     "V": 0.071,
@@ -240,8 +240,8 @@
     "n": 0.3
    },
    "sit@home": {
-    "V": 0.044,
-    "n": 0.3
+    "V": 0.084,
+    "n": 1.3
    },
    "wander@albert-heijn": {
     "V": 0.045,
@@ -309,33 +309,36 @@
    }
   },
   "habit": {
-   "place:vis": 0.07,
-   "topic:early cap manufacturing": 0.07,
-   "place:library": 0.5,
-   "topic:bottle caps and shiny objects": 0.1,
-   "place:station-fountain": 0.14,
-   "place:albert-heijn": 0.16
+   "place:library": 0.45,
+   "place:albert-heijn": 0.11,
+   "place:centre-fountain": 0.15,
+   "place:home": 0.05,
+   "place:ondermolen": 0.07,
+   "topic:rubber chemistry": 0.07,
+   "place:station-bench": 0.32,
+   "place:de-turk": 0.15,
+   "place:station-fountain": 0.16
   },
   "workingMemory": [
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.594
+    "salience": 0.755
    },
    {
     "kind": "need",
-    "subject": "social",
-    "salience": 0.543
+    "subject": "quiet",
+    "salience": 0.709
    },
    {
-    "kind": "outcome",
-    "subject": "writing in his diary at the library went worse than you expected",
-    "salience": 0.5
+    "kind": "memory",
+    "subject": "A crust so bad it made a map look like a good idea.",
+    "salience": 0.579
    },
    {
-    "kind": "goal",
-    "subject": "flying to the fountain in the centre (keeping an eye on the pigeons there)",
-    "salience": 0.4
+    "kind": "memory",
+    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
+    "salience": 0.518
    }
   ]
  }

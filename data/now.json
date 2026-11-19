@@ -1,41 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-19T13:56:50+01:00",
+ "at": "2026-11-19T14:59:50+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "flying to the fountain in the centre",
+ "doing": "writing in his diary on a bench by the station",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "feeling": {
-  "mood": -0.59,
-  "energy": 0.51,
+  "mood": -0.91,
+  "energy": -0.19,
   "words": "The wind is too loud. It whistles through the ridge like a man with no voice. I want to close my eyes, but the light is still too sharp.",
   "emotion": "irritable",
-  "arousal": 0.54
+  "arousal": 0.6
  },
  "needs": {
-  "rest": 0.18,
-  "curiosity": 0.18,
-  "social": 0.54,
-  "expression": 0.35,
-  "quiet": 0.33,
-  "hunger": 0.18
+  "rest": 0.48,
+  "curiosity": 0.42,
+  "social": 0.65,
+  "expression": 0.34,
+  "quiet": 0.71,
+  "hunger": 0.26
  },
  "world": {
   "name": "the island",
   "day": 39,
-  "time": "10:42"
+  "time": "19:06"
  },
- "action": "pigeons",
+ "action": "diary",
  "place": {
-  "id": "centre-fountain",
-  "name": "the fountain in the centre",
-  "words": "by the fountain in the village centre",
-  "obj": "fontein-centrum",
-  "poi": "fontein-centrum",
-  "category": "fountain"
+  "id": "station-bench",
+  "name": "a bench by the station",
+  "words": "on a bench by the station",
+  "obj": "bank-station",
+  "poi": "bank-station",
+  "category": "bench"
  },
- "flying": {
-  "from": "the library",
-  "to": "the fountain in the centre"
- }
+ "flying": null
 }

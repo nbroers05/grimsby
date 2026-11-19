@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T13:56:50+01:00",
+ "at": "2026-11-19T14:59:50+01:00",
  "beliefs": [
   {
    "n": 20,
@@ -82,14 +82,14 @@
    "text": "Day 38: Day 38: Still no thoughts. Tried Jumbo, De Turk, Vis, the library, the fountain, De Valk. All failed. The pigeons are still there. The diary is still closed. The button is still not drawn. The list is still whole. The grudge remains. The hoard is safe. The wheels are still not trusted.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.5,
+   "recalled": 0.75,
    "since": "2026-11-19T11:50:49+01:00"
   },
   {
    "text": "Tried drawing the teaspoon on De Valk, the windmill at the edge of town, but my thoughts would not come.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.25,
+   "recalled": 0.5,
    "since": "2026-11-18T23:18:09+01:00"
   },
   {
@@ -103,14 +103,14 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 4.25,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 5.25,
+   "recalled": 6.25,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
@@ -229,14 +229,14 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.25,
+   "recalled": 4.75,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.75,
+   "recalled": 8.0,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -250,7 +250,7 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.5,
+   "recalled": 6.75,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -320,7 +320,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.75,
+   "recalled": 6.0,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -334,14 +334,14 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.0,
+   "recalled": 7.25,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
    "text": "I landed on a flat stone by the mill memorial and noticed the plaque was missing its top half, which made me feel oddly sentimental about something I do not know the name of.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.5,
+   "recalled": 0.75,
    "since": "2026-11-15T17:51:04+01:00"
   },
   {
@@ -355,7 +355,7 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.75,
+   "recalled": 9.0,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
@@ -369,7 +369,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 8.25,
+   "recalled": 8.5,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -397,7 +397,7 @@
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 6.75,
+   "recalled": 7.0,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -411,7 +411,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 3.25,
+   "recalled": 3.5,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -439,7 +439,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 5.25,
+   "recalled": 5.5,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -487,24 +487,38 @@
  ],
  "short": [
   {
-   "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
-   "kind": "person",
+   "text": "Tried drawing the mill memorial at the memorial for the old Ondermolen, but my thoughts would not come.",
+   "kind": "work",
    "strength": 4,
    "recalled": 0.0,
+   "since": "2026-11-19T14:32:50+01:00"
+  },
+  {
+   "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 5,
+   "recalled": 0.5,
+   "since": "2026-11-19T14:08:50+01:00"
+  },
+  {
+   "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 2.25,
    "since": "2026-11-19T13:46:20+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 1.5,
+   "recalled": 3.0,
    "since": "2026-11-19T13:35:50+01:00"
   },
   {
    "text": "Tried drawing the fish statue next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-19T13:29:50+01:00"
   }
  ]

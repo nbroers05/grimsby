@@ -1,7 +1,200 @@
 {
  "v": 1,
- "at": "2026-11-19T13:56:50+01:00",
+ "at": "2026-11-19T14:59:50+01:00",
  "entries": [
+  {
+   "at": "2026-11-19T14:56:50+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-19T14:55:20+01:00",
+   "kind": "did",
+   "text": "flying from the fountain by the station to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:50:50+01:00",
+   "kind": "noticed",
+   "text": "Three pigeons and Derek, in a row."
+  },
+  {
+   "at": "2026-11-19T14:50:50+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain next to the station",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-19T14:49:20+01:00",
+   "kind": "did",
+   "text": "flying from De Turk to the fountain by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:46:20+01:00",
+   "kind": "noticed",
+   "text": "Found nothing; someone had been there first on the terrace of De Turk."
+  },
+  {
+   "at": "2026-11-19T14:46:20+01:00",
+   "kind": "did",
+   "text": "looking for something to eat on the terrace of De Turk",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-19T14:44:50+01:00",
+   "kind": "did",
+   "text": "flying from a bench by the station to De Turk",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:40:20+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench by the station",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-19T14:38:50+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to a bench by the station",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:34:20+01:00",
+   "kind": "noticed",
+   "text": "Derek, alone, pretending not to see me."
+  },
+  {
+   "at": "2026-11-19T14:34:20+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
+  {
+   "at": "2026-11-19T14:32:50+01:00",
+   "kind": "did",
+   "text": "flying from the mill memorial to the fountain in the centre",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:26:50+01:00",
+   "kind": "did",
+   "text": "drawing the mill memorial at the memorial for the old Ondermolen",
+   "why": null,
+   "ok": false,
+   "action": "draw"
+  },
+  {
+   "at": "2026-11-19T14:25:20+01:00",
+   "kind": "did",
+   "text": "flying from the station roof to the mill memorial",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:22:20+01:00",
+   "kind": "did",
+   "text": "sitting still on the roof of station Rodenrijs",
+   "why": null,
+   "ok": true,
+   "action": "sit"
+  },
+  {
+   "at": "2026-11-19T14:20:50+01:00",
+   "kind": "did",
+   "text": "flying from the Albert Heijn to the station roof",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:17:50+01:00",
+   "kind": "noticed",
+   "text": "Found a cracker someone dropped at the entrance by the trolleys at the Albert Heijn."
+  },
+  {
+   "at": "2026-11-19T14:17:50+01:00",
+   "kind": "did",
+   "text": "looking for something to eat by the trolleys at the Albert Heijn",
+   "why": null,
+   "ok": false,
+   "action": "eat"
+  },
+  {
+   "at": "2026-11-19T14:16:20+01:00",
+   "kind": "did",
+   "text": "flying from the library to the Albert Heijn",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:11:50+01:00",
+   "kind": "did",
+   "text": "writing in his diary at the library",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-19T14:08:50+01:00",
+   "kind": "did",
+   "text": "flying from a bench in the Gouden Griffelplantsoen to the library",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T14:04:20+01:00",
+   "kind": "did",
+   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": false,
+   "action": "diary"
+  },
+  {
+   "at": "2026-11-19T14:02:50+01:00",
+   "kind": "did",
+   "text": "flying from the fountain in the centre to a bench in the Gouden Griffelplantsoen",
+   "why": null,
+   "ok": true,
+   "action": "fly"
+  },
+  {
+   "at": "2026-11-19T13:58:20+01:00",
+   "kind": "noticed",
+   "text": "Derek's cousin, who is worse."
+  },
+  {
+   "at": "2026-11-19T13:58:20+01:00",
+   "kind": "did",
+   "text": "keeping an eye on the pigeons by the fountain in the village centre",
+   "why": null,
+   "ok": false,
+   "action": "pigeons"
+  },
   {
    "at": "2026-11-19T13:56:50+01:00",
    "kind": "did",
@@ -171,190 +364,6 @@
    "why": "Because the Albert Heijn is better than the Jumbo",
    "ok": true,
    "action": "eat"
-  },
-  {
-   "at": "2026-11-19T12:20:49+01:00",
-   "kind": "did",
-   "text": "flying from de Bron to the Albert Heijn",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T12:17:49+01:00",
-   "kind": "did",
-   "text": "sitting still on the roof of de Bron church",
-   "why": "De Bron is the only place where I can finally stop moving",
-   "ok": true,
-   "action": "sit"
-  },
-  {
-   "at": "2026-11-19T12:16:19+01:00",
-   "kind": "did",
-   "text": "flying from the fountain in the centre to de Bron",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T12:14:49+01:00",
-   "kind": "felt",
-   "text": "The wind is too loud. It whistles through the ridge like a man with no voice. I want to close my eyes, but the light is still too sharp."
-  },
-  {
-   "at": "2026-11-19T12:11:49+01:00",
-   "kind": "noticed",
-   "text": "Derek, alone, pretending not to see me."
-  },
-  {
-   "at": "2026-11-19T12:11:49+01:00",
-   "kind": "did",
-   "text": "keeping an eye on the pigeons by the fountain in the village centre",
-   "why": "Lonely, so I watch the pigeons even though it's a bad idea",
-   "ok": true,
-   "action": "pigeons"
-  },
-  {
-   "at": "2026-11-19T12:10:19+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the fountain in the centre",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T12:05:49+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "I need to mark the silence before it marks me.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-19T12:04:19+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T12:02:49+01:00",
-   "kind": "felt",
-   "text": "A beetle scuttles across the tiles. It stops, turns, and scuttles again. I think it’s testing me."
-  },
-  {
-   "at": "2026-11-19T12:02:49+01:00",
-   "kind": "noticed",
-   "text": "Pino was taking a moment from \"Prawn Cracker Pulse\", thinking \"Adding the chaos I promised, because the track feels too thin\" (from pinos.world)."
-  },
-  {
-   "at": "2026-11-19T12:02:49+01:00",
-   "kind": "did",
-   "text": "checking on Pino next door",
-   "why": "Lonely, so I check on the man who hums to the sky",
-   "ok": true,
-   "action": "neighbour"
-  },
-  {
-   "at": "2026-11-19T12:01:19+01:00",
-   "kind": "did",
-   "text": "flying from a bench by the station to the station roof",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T11:56:49+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench by the station",
-   "why": "I need to record the exact moment the light flickers and the crumbs don’t add up.",
-   "ok": true,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-19T11:55:19+01:00",
-   "kind": "did",
-   "text": "flying from De Turk to a bench by the station",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T11:52:19+01:00",
-   "kind": "noticed",
-   "text": "Found a crumb of baklava on the terrace of De Turk."
-  },
-  {
-   "at": "2026-11-19T11:52:19+01:00",
-   "kind": "did",
-   "text": "looking for something to eat on the terrace of De Turk",
-   "why": "Someone forgot the baklava crumbs were edible",
-   "ok": true,
-   "action": "eat"
-  },
-  {
-   "at": "2026-11-19T11:50:49+01:00",
-   "kind": "felt",
-   "text": "I am full of beans. The sky is the color of a boiled egg. I am not pleased."
-  },
-  {
-   "at": "2026-11-19T11:50:49+01:00",
-   "kind": "did",
-   "text": "flying from the station roof to De Turk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-19T11:50:49+01:00",
-   "kind": "noticed",
-   "text": "Day 38: Day 38: Still no thoughts. Tried Jumbo, De Turk, Vis, the library, the fountain, De Valk. All failed. The pigeons are still there. The diary is still closed. The button is still not drawn. The list is still whole. The grudge remains. The hoard is safe. The wheels are still not trusted."
-  },
-  {
-   "at": "2026-11-18T23:24:09+01:00",
-   "kind": "did",
-   "text": "flying from a bench in the Gouden Griffelplantsoen to the Dorpskerk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T23:19:39+01:00",
-   "kind": "did",
-   "text": "writing in his diary on a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": false,
-   "action": "diary"
-  },
-  {
-   "at": "2026-11-18T23:18:09+01:00",
-   "kind": "did",
-   "text": "flying from De Valk to a bench in the Gouden Griffelplantsoen",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T23:12:09+01:00",
-   "kind": "did",
-   "text": "drawing the teaspoon on De Valk, the windmill at the edge of town",
-   "why": null,
-   "ok": false,
-   "action": "draw"
-  },
-  {
-   "at": "2026-11-18T23:10:39+01:00",
-   "kind": "did",
-   "text": "flying from the McDonald's to De Valk",
-   "why": null,
-   "ok": true,
-   "action": "fly"
-  },
-  {
-   "at": "2026-11-18T23:07:39+01:00",
-   "kind": "noticed",
-   "text": "Found chips from the bin by the bin at the McDonald's."
   }
  ]
 }
