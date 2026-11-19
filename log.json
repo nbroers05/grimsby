@@ -2024,5 +2024,18 @@
       "entry": "The terrace light is flickering again. It casts long shadows that stretch over the empty coffee cups and the half-eaten croissant. I counted the crumbs twice and still can’t tell if one is missing. It’s not the absence that bothers me—it’s the certainty that something is being left out."
     },
     "mood": -0.88
+  },
+  {
+    "time": "2026-11-19T12:05:49+01:00",
+    "action": "diary",
+    "reason": "I need to mark the silence before it marks me.",
+    "ok": true,
+    "withheld": false,
+    "line": "The silence is too loud.",
+    "detail": {
+      "topic": "the worry that how things are going",
+      "entry": "The way the lights flicker here feels like a bad omen. The way the wind shifts at 7:14 PM is new. I counted the cracks in the tile three times. Still, the silence is too loud. Something is off, but I can’t say what."
+    },
+    "mood": -0.66
   }
 ]
