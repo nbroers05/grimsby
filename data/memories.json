@@ -1,24 +1,12 @@
 {
  "v": 1,
- "at": "2026-11-19T11:50:49+01:00",
+ "at": "2026-11-19T12:53:49+01:00",
  "beliefs": [
   {
-   "n": 19,
-   "text": "Keeping an eye on the pigeons next to Vis, the fish statue never goes well. Noted, and not repeated.",
-   "evidence": 4,
-   "since": "2026-11-18T21:12:08+01:00"
-  },
-  {
-   "n": 18,
-   "text": "Eating by the trolleys at the Albert Heijn cheers me up.",
-   "evidence": 9,
-   "since": "2026-11-18T21:12:08+01:00"
-  },
-  {
-   "n": 17,
-   "text": "Writing my diary at the library cheers me up.",
-   "evidence": 10,
-   "since": "2026-11-18T21:12:08+01:00"
+   "n": 20,
+   "text": "De Turk is better than the Jumbo.",
+   "evidence": 16,
+   "since": "2026-11-19T12:25:19+01:00"
   },
   {
    "n": 15,
@@ -27,9 +15,9 @@
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
-   "n": 13,
-   "text": "Flying about town cheers me up.",
-   "evidence": 10,
+   "n": 14,
+   "text": "Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
+   "evidence": 27,
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
@@ -39,15 +27,21 @@
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
-   "n": 10,
-   "text": "The Albert Heijn is better than the Jumbo.",
-   "evidence": 14,
+   "n": 11,
+   "text": "Eating at the Jumbo by the station never goes well.",
+   "evidence": 4,
    "since": "2026-11-17T23:12:32+01:00"
+  },
+  {
+   "n": 9,
+   "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
+   "evidence": 13,
+   "since": "2026-11-17T12:21:32+01:00"
   },
   {
    "n": 8,
    "text": "Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
-   "evidence": 6,
+   "evidence": 5,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
@@ -59,11 +53,31 @@
   {
    "n": 6,
    "text": "Looking things up never goes well. I shall not be looking things up again.",
-   "evidence": 11,
+   "evidence": 10,
    "since": "2026-11-16T18:21:56+01:00"
+  },
+  {
+   "n": 3,
+   "text": "Writing my diary on a bench by the station cheers me up.",
+   "evidence": 19,
+   "since": "2026-11-16T12:42:56+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 38: Day 38: I found a crumb of baklava on the terrace of De Turk, devoured it with the precision of a man who has never been wrong about anything. The light flickers, the crumbs don’t add up, and I’m certain something is being left out. Pino’s notion of chaos is a thin veneer over a lack of direction. Derek stood at the centre-fountain, hands in pockets, staring at the water as if it might spill something he’d forgotten to collect. I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-19T12:26:49+01:00"
+  },
+  {
+   "text": "The light flickers, the crumbs don’t add up, and I’m certain something is being left out.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T12:01:19+01:00"
+  },
   {
    "text": "Day 38: Day 38: Still no thoughts. Tried Jumbo, De Turk, Vis, the library, the fountain, De Valk. All failed. The pigeons are still there. The diary is still closed. The button is still not drawn. The list is still whole. The grudge remains. The hoard is safe. The wheels are still not trusted.",
    "kind": "moment",
@@ -79,13 +93,6 @@
    "since": "2026-11-18T23:18:09+01:00"
   },
   {
-   "text": "Day 33: watched the pigeons 2 times, ate, wrote in my diary, flew about town. A poor day.",
-   "kind": "moment",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T21:13:38+01:00"
-  },
-  {
    "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day.",
    "kind": "moment",
    "strength": 4,
@@ -96,7 +103,7 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.0,
+   "recalled": 3.25,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
@@ -117,7 +124,7 @@
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.25,
+   "recalled": 3.5,
    "since": "2026-11-18T16:54:08+01:00"
   },
   {
@@ -222,14 +229,14 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.0,
+   "recalled": 4.25,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 7.5,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -240,17 +247,10 @@
    "since": "2026-11-16T17:35:26+01:00"
   },
   {
-   "text": "The crown cork was the first commercially successful bottle cap, invented by William Painter in 1892.",
-   "kind": "fact",
-   "strength": 4,
-   "recalled": 0.5,
-   "since": "2026-11-16T17:03:56+01:00"
-  },
-  {
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 6.5,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -320,7 +320,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 5.5,
+   "recalled": 5.75,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -334,7 +334,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 7.0,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -355,14 +355,14 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.25,
+   "recalled": 8.5,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
    "text": "I found a crust by the trolleys, which was a minor triumph, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 9.75,
+   "recalled": 10.0,
    "since": "2026-11-15T13:54:04+01:00"
   },
   {
@@ -411,7 +411,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 3.0,
+   "recalled": 3.25,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {

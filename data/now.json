@@ -1,41 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-19T11:50:49+01:00",
+ "at": "2026-11-19T12:53:49+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "flying to De Turk",
- "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
+ "thought": "The roof is still, the stars are sharp, and the list is intact",
  "feeling": {
-  "mood": -1.0,
-  "energy": 0.99,
-  "words": "I am full of beans. The sky is the color of a boiled egg. I am not pleased.",
-  "emotion": "irritable",
-  "arousal": 0.49
+  "mood": -0.16,
+  "energy": 1,
+  "words": "The wind is too loud. It whistles through the ridge like a man with no voice. I want to close my eyes, but the light is still too sharp.",
+  "emotion": "listless",
+  "arousal": 0.24
  },
  "needs": {
-  "rest": 0.01,
-  "curiosity": 0.82,
-  "social": 0.81,
-  "expression": 0.82,
-  "quiet": 0.81,
-  "hunger": 0.81
+  "rest": 0.0,
+  "curiosity": 0.28,
+  "social": 0.35,
+  "expression": 0.33,
+  "quiet": 0.0,
+  "hunger": 0.06
  },
  "world": {
   "name": "the island",
-  "day": 38,
-  "time": "17:54"
+  "day": 39,
+  "time": "02:18"
  },
- "action": "eat",
+ "action": "sleep",
  "place": {
-  "id": "de-turk",
-  "name": "De Turk",
-  "words": "on the terrace of De Turk",
-  "obj": "de-turk",
-  "poi": "de-turk",
-  "category": "restaurant"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
- "flying": {
-  "from": "the station roof",
-  "to": "De Turk"
- }
+ "flying": null
 }
