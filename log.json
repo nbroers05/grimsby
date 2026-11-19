@@ -2057,5 +2057,25 @@
       ]
     },
     "mood": -0.25
+  },
+  {
+    "time": "2026-11-19T15:22:20+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt a crust so bad it made a map look like a good idea, and Tried drawing the fish statue next to Vis, but then a teaspoon is a tiny kingdom, and ate it with the precision of a man who has never been wrong about anything, but then I rule it with a beak, and the fish statue.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt a crust so bad it made a map look like a good idea, and Tried drawing the fish statue next to Vis, but then a teaspoon is a tiny kingdom, and ate it with the precision of a man who has never been wrong about anything, but then I rule it with a beak, and the fish statue.",
+      "from": [
+        "A crust so bad it made a map look like a good idea.",
+        "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+        "Tried drawing the fish statue next to Vis, the fish statue, but my thoughts would not come.",
+        "Sat still at the memorial for the old Ondermolen. Nothing rolled my way.",
+        "A teaspoon is a tiny kingdom, and I rule it with a beak."
+      ]
+    },
+    "mood": -0.94
   }
 ]
