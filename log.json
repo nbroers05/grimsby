@@ -1993,5 +1993,23 @@
       ]
     },
     "mood": -1.0
+  },
+  {
+    "time": "2026-11-19T11:50:49+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of flatbread folded like a map, its edges crisp as a man’s certainty. Tried to draw the teaspoon on De Valk, but the windmill swallowed my thoughts whole. The history of bottle caps? It was never there, only the taste of something I’d forgotten how to swallow.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of flatbread folded like a map, its edges crisp as a man’s certainty. Tried to draw the teaspoon on De Valk, but the windmill swallowed my thoughts whole. The history of bottle caps? It was never there, only the taste of something I’d forgotten how to swallow.",
+      "from": [
+        "A strip of flatbread, consumed with the precision of a man who has never been wrong.",
+        "Tried drawing the teaspoon on De Valk, the windmill at the edge of town, but my thoughts would not come.",
+        "Searched for history of bottle cap design and found nothing at all."
+      ]
+    },
+    "mood": -1.0
   }
 ]

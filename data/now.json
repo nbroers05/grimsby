@@ -1,38 +1,41 @@
 {
  "v": 1,
- "at": "2026-11-18T23:04:39+01:00",
+ "at": "2026-11-19T11:50:49+01:00",
  "name": "Grimsby",
  "asleep": false,
- "doing": "writing in his diary on a bench in the Gouden Griffelplantsoen",
+ "doing": "flying to De Turk",
  "thought": "I'm watching the sun dip below the horizon, and the air is thick with the scent of salt and the quiet hum of the wind. It's a moment that could be anything, but I want to capture it in a way that will never fade.",
  "feeling": {
   "mood": -1.0,
-  "energy": 0.45,
-  "words": "I am a crow who hoards facts like a miser hoards coins. The sky is grey, and the wind is whispering. I am tired, but I am also hungry. I need to find a place to perch, and I need to find a reason to be here.",
+  "energy": 0.99,
+  "words": "I am full of beans. The sky is the color of a boiled egg. I am not pleased.",
   "emotion": "irritable",
-  "arousal": 0.46
+  "arousal": 0.49
  },
  "needs": {
-  "rest": 0.22,
-  "curiosity": 0.85,
-  "social": 0.92,
-  "expression": 0.74,
-  "quiet": 0.49,
-  "hunger": 0.62
+  "rest": 0.01,
+  "curiosity": 0.82,
+  "social": 0.81,
+  "expression": 0.82,
+  "quiet": 0.81,
+  "hunger": 0.81
  },
  "world": {
   "name": "the island",
-  "day": 34,
-  "time": "11:44"
+  "day": 38,
+  "time": "17:54"
  },
- "action": "diary",
+ "action": "eat",
  "place": {
-  "id": "plantsoen-bench",
-  "name": "a bench in the Gouden Griffelplantsoen",
-  "words": "on a bench in the Gouden Griffelplantsoen",
-  "obj": "bank-plantsoen",
-  "poi": "bank-plantsoen",
-  "category": "bench"
+  "id": "de-turk",
+  "name": "De Turk",
+  "words": "on the terrace of De Turk",
+  "obj": "de-turk",
+  "poi": "de-turk",
+  "category": "restaurant"
  },
- "flying": null
+ "flying": {
+  "from": "the station roof",
+  "to": "De Turk"
+ }
 }

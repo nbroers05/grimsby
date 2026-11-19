@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-18T23:04:39+01:00",
+ "at": "2026-11-19T11:50:49+01:00",
  "beliefs": [
   {
    "n": 19,
@@ -17,7 +17,7 @@
   {
    "n": 17,
    "text": "Writing my diary at the library cheers me up.",
-   "evidence": 9,
+   "evidence": 10,
    "since": "2026-11-18T21:12:08+01:00"
   },
   {
@@ -29,19 +29,19 @@
   {
    "n": 13,
    "text": "Flying about town cheers me up.",
-   "evidence": 9,
+   "evidence": 10,
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
    "n": 12,
    "text": "Sitting still cheers me up.",
-   "evidence": 8,
+   "evidence": 7,
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
    "n": 10,
    "text": "The Albert Heijn is better than the Jumbo.",
-   "evidence": 13,
+   "evidence": 14,
    "since": "2026-11-17T23:12:32+01:00"
   },
   {
@@ -64,6 +64,20 @@
   }
  ],
  "long": [
+  {
+   "text": "Day 38: Day 38: Still no thoughts. Tried Jumbo, De Turk, Vis, the library, the fountain, De Valk. All failed. The pigeons are still there. The diary is still closed. The button is still not drawn. The list is still whole. The grudge remains. The hoard is safe. The wheels are still not trusted.",
+   "kind": "moment",
+   "strength": 5,
+   "recalled": 0.0,
+   "since": "2026-11-19T11:50:49+01:00"
+  },
+  {
+   "text": "Tried drawing the teaspoon on De Valk, the windmill at the edge of town, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-18T23:18:09+01:00"
+  },
   {
    "text": "Day 33: watched the pigeons 2 times, ate, wrote in my diary, flew about town. A poor day.",
    "kind": "moment",
@@ -89,14 +103,14 @@
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 4.75,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 3.75,
+   "recalled": 4.5,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
@@ -142,13 +156,6 @@
    "since": "2026-11-17T20:18:32+01:00"
   },
   {
-   "text": "Rubber chemistry? Ink, and a crumb of doubt.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.25,
-   "since": "2026-11-17T19:27:32+01:00"
-  },
-  {
    "text": "Day 24: Today I noted Pino's verbosity, ate grilled onion with precision, and checked a jar that was empty. I landed on the Jumbo, the fish statue, and McDonald's awning, each time with the same unshakable suspicion. Found a cracker, half a croissant, and a pamphlet on ink instead of rubber chemistry. Derek's cousin brought complaints, which I ignored. My list remains intact, my teaspoon safe, and my grudges well-placed.",
    "kind": "moment",
    "strength": 5,
@@ -161,13 +168,6 @@
    "strength": 5,
    "recalled": 0.0,
    "since": "2026-11-17T17:41:02+01:00"
-  },
-  {
-   "text": "Day 23: Today, I found a crust so bad it made me reconsider bread. Derek stood in a line with pigeons, which is not how lines are formed. At De Turk, I found a teaspoon of salt shaped like a question mark, and the baklava crumbs formed a sentence I did not eat. Derek preened at the fountain, and I said nothing.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-17T15:23:02+01:00"
   },
   {
    "text": "A teaspoon of salt formed a question mark on the terrace of De Turk.",
@@ -369,7 +369,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 8.0,
+   "recalled": 8.25,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -383,7 +383,7 @@
    "text": "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 1.5,
+   "recalled": 1.75,
    "since": "2026-11-15T13:27:04+01:00"
   },
   {
@@ -485,41 +485,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T23:00:09+01:00"
-  },
-  {
-   "text": "Tried writing in his diary at the library, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 3,
-   "recalled": 0.0,
-   "since": "2026-11-18T22:54:09+01:00"
-  },
-  {
-   "text": "Tried drawing a shiny button next to Vis, the fish statue, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-18T22:39:08+01:00"
-  },
-  {
-   "text": "Tried flying about town, as far as De Turk, but my thoughts would not come.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-18T22:31:38+01:00"
-  },
-  {
-   "text": "Tried looking for something to eat at the Jumbo by the station, but my thoughts would not come.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 1.0,
-   "since": "2026-11-18T22:27:08+01:00"
-  }
- ]
+ "short": []
 }
