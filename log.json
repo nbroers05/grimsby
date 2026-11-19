@@ -2011,5 +2011,18 @@
       ]
     },
     "mood": -1.0
+  },
+  {
+    "time": "2026-11-19T11:56:49+01:00",
+    "action": "diary",
+    "reason": "I need to record the exact moment the light flickers and the crumbs don’t add up.",
+    "ok": true,
+    "withheld": false,
+    "line": "The light flickers, the crumbs don’t add up, and I’m certain something is being left out.",
+    "detail": {
+      "topic": "the worry that how things are going",
+      "entry": "The terrace light is flickering again. It casts long shadows that stretch over the empty coffee cups and the half-eaten croissant. I counted the crumbs twice and still can’t tell if one is missing. It’s not the absence that bothers me—it’s the certainty that something is being left out."
+    },
+    "mood": -0.88
   }
 ]
