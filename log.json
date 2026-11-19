@@ -2037,5 +2037,25 @@
       "entry": "The way the lights flicker here feels like a bad omen. The way the wind shifts at 7:14 PM is new. I counted the cracks in the tile three times. Still, the silence is too loud. Something is off, but I can’t say what."
     },
     "mood": -0.66
+  },
+  {
+    "time": "2026-11-19T12:26:49+01:00",
+    "action": "dream",
+    "reason": "asleep",
+    "ok": true,
+    "withheld": false,
+    "line": "Dreamt of pecking at chips that were not the crispiest, but I made a note of that in my head. The light flickered, the crumbs didn’t add up, and Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t. I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything. The teaspoon of salt left in the shape of a question mark was still there, though I don’t know if it was ever real.",
+    "detail": {
+      "kind": "dream",
+      "entry": "Dreamt of pecking at chips that were not the crispiest, but I made a note of that in my head. The light flickered, the crumbs didn’t add up, and Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t. I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything. The teaspoon of salt left in the shape of a question mark was still there, though I don’t know if it was ever real.",
+      "from": [
+        "I pecked at the chips, which were not the crispiest, but they were the only thing left, and I made a note of that in my head.",
+        "The light flickers, the crumbs don’t add up, and I’m certain something is being left out.",
+        "I arrived at De Turk to find the terrace empty, save for a single teaspoon of salt left in the shape of a question mark.",
+        "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
+        "Derek stood at the station-fountain, wings spread like he owned the place, which he doesn’t, and I didn’t say a word, because I know better."
+      ]
+    },
+    "mood": -0.25
   }
 ]
