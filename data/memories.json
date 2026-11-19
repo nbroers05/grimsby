@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T17:05:50+01:00",
+ "at": "2026-11-19T17:32:50+01:00",
  "beliefs": [
   {
    "n": 21,
@@ -104,14 +104,14 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.5,
+   "recalled": 8.0,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
@@ -223,14 +223,14 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 5.0,
+   "recalled": 5.25,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.0,
+   "recalled": 8.25,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -349,7 +349,7 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 9.0,
+   "recalled": 9.25,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
@@ -363,7 +363,7 @@
    "text": "Chips without crunch were noted, as was the fact that I ate them.",
    "kind": "work",
    "strength": 5,
-   "recalled": 8.5,
+   "recalled": 8.75,
    "since": "2026-11-15T13:39:04+01:00"
   },
   {
@@ -433,7 +433,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 5.5,
+   "recalled": 5.75,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -481,17 +481,24 @@
  ],
  "short": [
   {
+   "text": "Tried flying about town, as far as the Dorpskerk, but my thoughts would not come.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-19T17:23:50+01:00"
+  },
+  {
    "text": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
    "kind": "work",
-   "strength": 4,
-   "recalled": 0.25,
+   "strength": 5,
+   "recalled": 1.5,
    "since": "2026-11-19T16:55:20+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 0.75,
+   "recalled": 1.0,
    "since": "2026-11-19T16:49:20+01:00"
   },
   {
@@ -512,7 +519,7 @@
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 0.5,
+   "recalled": 1.5,
    "since": "2026-11-19T16:28:20+01:00"
   }
  ]

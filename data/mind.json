@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T17:05:50+01:00",
+ "at": "2026-11-19T17:32:50+01:00",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "loudest": [
   {
@@ -13,11 +13,11 @@
   },
   {
    "kind": "memory",
-   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
+   "subject": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come."
   },
   {
    "kind": "memory",
-   "subject": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come."
+   "subject": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come."
   }
  ],
  "open": {
@@ -28,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": "writing in his diary on a bench by the station",
+ "busy": "keeping an eye on the pigeons by the fountain in the village centre",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -83,8 +83,8 @@
  },
  "brain": {
   "emotion": "irritable",
-  "valence": -0.967,
-  "arousal": 0.494,
+  "valence": -0.984,
+  "arousal": 0.515,
   "average": 0.087,
   "values": {
    "eat@jumbo": {
@@ -92,16 +92,16 @@
     "n": 4.1
    },
    "eat@*": {
-    "V": 0.111,
-    "n": 30.4
+    "V": 0.113,
+    "n": 31.4
    },
    "diary@station-bench": {
-    "V": 0.122,
-    "n": 21.4
+    "V": 0.111,
+    "n": 22.4
    },
    "diary@*": {
-    "V": 0.061,
-    "n": 40.3
+    "V": 0.063,
+    "n": 43.3
    },
    "neighbour@home": {
     "V": 0.182,
@@ -112,8 +112,8 @@
     "n": 5.7
    },
    "diary@plantsoen-bench": {
-    "V": 0.113,
-    "n": 8.0
+    "V": 0.105,
+    "n": 9.0
    },
    "pigeons@station-fountain": {
     "V": 0.007,
@@ -172,20 +172,20 @@
     "n": 0.2
    },
    "wander@*": {
-    "V": 0.129,
-    "n": 9.1
+    "V": 0.115,
+    "n": 10.1
    },
    "pigeons@vis": {
     "V": 0.029,
     "n": 3.4
    },
    "eat@albert-heijn": {
-    "V": 0.141,
-    "n": 10.6
+    "V": 0.139,
+    "n": 11.6
    },
    "diary@library": {
-    "V": 0.095,
-    "n": 10.9
+    "V": 0.093,
+    "n": 11.9
    },
    "pigeons@centre-fountain": {
     "V": 0.059,
@@ -277,7 +277,7 @@
    },
    "wander@dorpskerk": {
     "V": 0.034,
-    "n": 1.2
+    "n": 2.2
    },
    "wander@centre-fountain": {
     "V": 0.064,
@@ -309,35 +309,33 @@
    }
   },
   "habit": {
-   "place:library": 0.14,
-   "place:station-bench": 0.42,
-   "place:home": 0.06,
-   "place:hichte-mill": 0.07,
-   "topic:bottle caps and shiny objects": 0.07,
-   "place:de-turk": 0.1,
-   "place:station-fountain": 0.12,
-   "place:centre-fountain": 0.16
+   "place:library": 0.23,
+   "place:station-bench": 0.31,
+   "place:centre-fountain": 0.26,
+   "place:albert-heijn": 0.1,
+   "place:plantsoen-bench": 0.13,
+   "place:dorpskerk": 0.15
   },
   "workingMemory": [
    {
     "kind": "need",
     "subject": "social",
-    "salience": 0.85
+    "salience": 0.956
    },
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.784
+    "salience": 0.792
    },
    {
     "kind": "memory",
-    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.502
+    "subject": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
+    "salience": 0.607
    },
    {
     "kind": "memory",
-    "subject": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
-    "salience": 0.479
+    "subject": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
+    "salience": 0.521
    }
   ]
  }

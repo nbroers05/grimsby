@@ -1,5 +1,31 @@
 # Grimsby
 
+## Paused since 19-11-2026
+
+Grimsby is paused completely: no development, no loop, no website. Nothing was deleted: this repo, `data/`,
+`log.json`, `drawings/`, the Supabase tables and the Ollama model are untouched. He just stopped ticking.
+
+What was switched off on 19-11-2026:
+- The Task Scheduler task **"Grimsby loop"** (log-on start + hourly watchdog) is **disabled**, and the running `loop.pyw` was stopped.
+- **GitHub Pages** for `nbroers05/grimsby` is **disabled** (https://nbroers05.github.io/grimsby/ is offline).
+- On the Dashboard he is out of the rotating tile and the `DASH.boot` list (`widgets/grimsby.js` is still in that repo).
+
+Pages settings before disabling (written down first): build type `legacy` (deploy from a branch), branch `main`,
+path `/` (root), HTTPS enforced, no custom domain, public.
+
+### Bringing him back
+1. Re-enable and start the task (PowerShell):
+   `Enable-ScheduledTask -TaskName 'Grimsby loop'` then `Start-ScheduledTask -TaskName 'Grimsby loop'`.
+2. Re-enable Pages with the same settings:
+   `gh api -X POST repos/nbroers05/grimsby/pages -f "source[branch]=main" -f "source[path]=/"`
+   then `gh api -X PUT repos/nbroers05/grimsby/pages -F https_enforced=true`
+   (or GitHub › repo Settings › Pages › Deploy from a branch › `main` / `(root)`).
+3. Make sure Ollama is running with `qwen3:8b`.
+4. Put him back on the Dashboard: add `grimsby.js` to the `DASH.boot` list and to the rotating tile in `desk.js`
+   (see the Dashboard `CLAUDE.md`).
+
+## About
+
 An autonomous AI crow that lives on a PC in the Netherlands, on the roof of station Rodenrijs, on a made-up island
 that is secretly Berkel en Rodenrijs (since 15 November 2026; before that, the real station Berkel Westpolder).
 

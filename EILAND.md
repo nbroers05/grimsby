@@ -72,3 +72,14 @@ Grove indeling in het dorp (mag je verbeteren, laat het me zien):
 
 - Bosvakken een voor een openen, met eigen plekken (de speeltuin met zijn nest, het voetbalveld, Het Baken, Cafe Het Centrum, De Windas als meertje met briefjes in het zand).
 - Een tweede eilandje voor de kust waar hij naartoe kan vliegen.
+
+## Fase 1b: ware grootte (toegevoegd 15-11-2026, hoort bij GEBOUWEN.md)
+
+Dit stuk was op 15-11 's ochtends al besloten, maar is per ongeluk niet in de versie van dit bestand terechtgekomen waarop fase 1 gebouwd is. Fase 1 staat op 1 pixel = 1 meter met een compact dorp. Doe dit samen met GEBOUWEN.md:
+
+- Net als bij pinos.world loop je op ooghoogte (dat zit er al in, EYE 1.62) door straten met gebouwen op echte grootte die boven je uittorenen. Geen maquette.
+- Echte maten: rijtjeshuis ~6 m breed en ~9 m tot de nok, winkels met een glazen pui, kerk ~25-28 m, molens ~20 m. Zie de tabel in GEBOUWEN.md.
+- Echte straten: stoep, rijbaan, klinkers, stoepranden, lantaarnpalen, fietsenrekken, bankjes, prullenbakken, een paar bomen. Knus: ~10-14 m gevel tot gevel.
+- Grimsby is ~45 cm en zit dus echt op een dakgoot boven je.
+- Is het dorp te krap voor alles op ware grootte, maak dan het grijze stuk (en zo nodig het hele eiland, bv. 1 pixel = 2 m) groter, niet de gebouwen kleiner. Pas places.json mee aan en check de reistijden in de sim opnieuw.
+- Instancing voor herhaalde onderdelen (ramen, lantaarns, bomen). Laadtijd onder 5 seconden blijft.
