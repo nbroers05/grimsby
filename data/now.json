@@ -1,38 +1,38 @@
 {
  "v": 1,
- "at": "2026-11-19T14:59:50+01:00",
+ "at": "2026-11-19T16:02:50+01:00",
  "name": "Grimsby",
- "asleep": false,
- "doing": "writing in his diary on a bench by the station",
+ "asleep": true,
+ "doing": "falling asleep on the roof of station Rodenrijs",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "feeling": {
-  "mood": -0.91,
-  "energy": -0.19,
+  "mood": -0.67,
+  "energy": 1,
   "words": "The wind is too loud. It whistles through the ridge like a man with no voice. I want to close my eyes, but the light is still too sharp.",
-  "emotion": "irritable",
-  "arousal": 0.6
+  "emotion": "listless",
+  "arousal": 0.14
  },
  "needs": {
-  "rest": 0.48,
-  "curiosity": 0.42,
-  "social": 0.65,
-  "expression": 0.34,
-  "quiet": 0.71,
-  "hunger": 0.26
+  "rest": 0.0,
+  "curiosity": 0.7,
+  "social": 0.84,
+  "expression": 0.5,
+  "quiet": 0.0,
+  "hunger": 0.31
  },
  "world": {
   "name": "the island",
-  "day": 39,
-  "time": "19:06"
+  "day": 40,
+  "time": "03:30"
  },
- "action": "diary",
+ "action": "sleep",
  "place": {
-  "id": "station-bench",
-  "name": "a bench by the station",
-  "words": "on a bench by the station",
-  "obj": "bank-station",
-  "poi": "bank-station",
-  "category": "bench"
+  "id": "home",
+  "name": "the station roof",
+  "words": "on the roof of station Rodenrijs",
+  "obj": "station-rodenrijs",
+  "poi": "station-rodenrijs",
+  "category": "station"
  },
  "flying": null
 }

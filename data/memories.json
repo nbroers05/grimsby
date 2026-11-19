@@ -1,7 +1,13 @@
 {
  "v": 1,
- "at": "2026-11-19T14:59:50+01:00",
+ "at": "2026-11-19T16:02:50+01:00",
  "beliefs": [
+  {
+   "n": 21,
+   "text": "Eating on the terrace of De Turk cheers me up.",
+   "evidence": 12,
+   "since": "2026-11-19T15:20:50+01:00"
+  },
   {
    "n": 20,
    "text": "De Turk is better than the Jumbo.",
@@ -15,15 +21,9 @@
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
-   "n": 14,
-   "text": "Writing my diary on a bench by the station beats writing my diary on a bench in the Gouden Griffelplantsoen.",
-   "evidence": 27,
-   "since": "2026-11-18T18:28:38+01:00"
-  },
-  {
    "n": 12,
    "text": "Sitting still cheers me up.",
-   "evidence": 7,
+   "evidence": 9,
    "since": "2026-11-18T18:28:38+01:00"
   },
   {
@@ -33,21 +33,15 @@
    "since": "2026-11-17T23:12:32+01:00"
   },
   {
-   "n": 9,
-   "text": "Keeping an eye on the pigeons by the fountain in the village centre beats keeping an eye on the pigeons by the fountain next to the station.",
-   "evidence": 13,
-   "since": "2026-11-17T12:21:32+01:00"
-  },
-  {
    "n": 8,
    "text": "Keeping an eye on the pigeons by the fountain next to the station never goes well. Pigeons, fountain, and me—three-way divorce.",
-   "evidence": 5,
+   "evidence": 7,
    "since": "2026-11-17T12:21:32+01:00"
   },
   {
    "n": 7,
    "text": "Keeping an eye on the pigeons by the fountain in the village centre never goes well. I shall not be watching pigeons. Again.",
-   "evidence": 7,
+   "evidence": 9,
    "since": "2026-11-16T21:00:24+01:00"
   },
   {
@@ -59,11 +53,25 @@
   {
    "n": 3,
    "text": "Writing my diary on a bench by the station cheers me up.",
-   "evidence": 19,
+   "evidence": 20,
    "since": "2026-11-16T12:42:56+01:00"
   }
  ],
  "long": [
+  {
+   "text": "Day 39: drew 2 times, looked things up, watched the pigeons, wrote in my diary. A poor day.",
+   "kind": "moment",
+   "strength": 3,
+   "recalled": 0.0,
+   "since": "2026-11-19T15:22:20+01:00"
+  },
+  {
+   "text": "Tried flying about town, as far as the fish statue, but my thoughts would not come.",
+   "kind": "moment",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T15:14:50+01:00"
+  },
   {
    "text": "Day 38: Day 38: I found a crumb of baklava on the terrace of De Turk, devoured it with the precision of a man who has never been wrong about anything. The light flickers, the crumbs don’t add up, and I’m certain something is being left out. Pino’s notion of chaos is a thin veneer over a lack of direction. Derek stood at the centre-fountain, hands in pockets, staring at the water as if it might spill something he’d forgotten to collect. I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
@@ -93,13 +101,6 @@
    "since": "2026-11-18T23:18:09+01:00"
   },
   {
-   "text": "Day 32: watched the pigeons 2 times, checked on Pino, drew, looked things up. A poor day.",
-   "kind": "moment",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-18T18:30:08+01:00"
-  },
-  {
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
@@ -110,21 +111,21 @@
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 7.0,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.25,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons next to Vis, the fish statue, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.5,
+   "recalled": 4.5,
    "since": "2026-11-18T16:54:08+01:00"
   },
   {
@@ -198,13 +199,6 @@
    "since": "2026-11-17T13:26:02+01:00"
   },
   {
-   "text": "Day 22: Today I counted twenty-two days of vigilance. Derek still thinks he owns the station-fountain. I found a red feather, which is not a feather, and a crumb of baklava, which I ate with the precision of a man who has never been wrong. Pino is still pretending he’s not a to-do list in a body.",
-   "kind": "moment",
-   "strength": 5,
-   "recalled": 0.0,
-   "since": "2026-11-17T12:23:02+01:00"
-  },
-  {
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
@@ -250,7 +244,7 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.75,
+   "recalled": 7.0,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -320,7 +314,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 6.25,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -334,7 +328,7 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.25,
+   "recalled": 7.5,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
@@ -485,41 +479,5 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": [
-  {
-   "text": "Tried drawing the mill memorial at the memorial for the old Ondermolen, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.0,
-   "since": "2026-11-19T14:32:50+01:00"
-  },
-  {
-   "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 5,
-   "recalled": 0.5,
-   "since": "2026-11-19T14:08:50+01:00"
-  },
-  {
-   "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
-   "kind": "person",
-   "strength": 5,
-   "recalled": 2.25,
-   "since": "2026-11-19T13:46:20+01:00"
-  },
-  {
-   "text": "Tried looking something up at the library, but my thoughts would not come.",
-   "kind": "fact",
-   "strength": 5,
-   "recalled": 3.0,
-   "since": "2026-11-19T13:35:50+01:00"
-  },
-  {
-   "text": "Tried drawing the fish statue next to Vis, the fish statue, but my thoughts would not come.",
-   "kind": "work",
-   "strength": 4,
-   "recalled": 0.25,
-   "since": "2026-11-19T13:29:50+01:00"
-  }
- ]
+ "short": []
 }

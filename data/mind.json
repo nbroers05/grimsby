@@ -1,23 +1,15 @@
 {
  "v": 1,
- "at": "2026-11-19T14:59:50+01:00",
+ "at": "2026-11-19T16:02:50+01:00",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "loudest": [
   {
+   "kind": "need",
+   "subject": "social"
+  },
+  {
    "kind": "worry",
    "subject": "how things are going"
-  },
-  {
-   "kind": "need",
-   "subject": "quiet"
-  },
-  {
-   "kind": "memory",
-   "subject": "A crust so bad it made a map look like a good idea."
-  },
-  {
-   "kind": "memory",
-   "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong."
   }
  ],
  "open": {
@@ -28,7 +20,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": "writing in his diary on a bench by the station",
+ "busy": null,
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -45,11 +37,11 @@
  "interests": [
   {
    "topic": "rubber chemistry",
-   "strength": 7.3
+   "strength": 7.0
   },
   {
    "topic": "bottle caps and shiny objects",
-   "strength": 4.4
+   "strength": 4.1
   },
   {
    "topic": "why humans invented bicycles",
@@ -82,54 +74,54 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "irritable",
-  "valence": -0.91,
-  "arousal": 0.598,
-  "average": 0.107,
+  "emotion": "listless",
+  "valence": -0.667,
+  "arousal": 0.14,
+  "average": 0.096,
   "values": {
    "eat@jumbo": {
     "V": 0.065,
-    "n": 4.5
+    "n": 4.1
    },
    "eat@*": {
-    "V": 0.138,
-    "n": 31.0
+    "V": 0.122,
+    "n": 29.4
    },
    "diary@station-bench": {
-    "V": 0.189,
-    "n": 20.2
+    "V": 0.137,
+    "n": 20.4
    },
    "diary@*": {
-    "V": 0.089,
-    "n": 40.7
+    "V": 0.065,
+    "n": 39.3
    },
    "neighbour@home": {
     "V": 0.216,
-    "n": 5.1
+    "n": 4.7
    },
    "neighbour@*": {
     "V": 0.216,
-    "n": 5.1
+    "n": 4.7
    },
    "diary@plantsoen-bench": {
     "V": 0.113,
-    "n": 8.7
+    "n": 8.0
    },
    "pigeons@station-fountain": {
     "V": 0.019,
-    "n": 7.2
+    "n": 6.6
    },
    "pigeons@*": {
     "V": 0.003,
-    "n": 20.4
+    "n": 18.7
    },
    "sit@ondermolen": {
-    "V": 0.151,
-    "n": 2.3
+    "V": 0.179,
+    "n": 3.0
    },
    "sit@*": {
-    "V": 0.271,
-    "n": 8.3
+    "V": 0.281,
+    "n": 8.5
    },
    "read_back@home": {
     "V": 0.047,
@@ -141,67 +133,67 @@
    },
    "draw@ondermolen": {
     "V": 0.043,
-    "n": 1.4
+    "n": 1.3
    },
    "draw@*": {
     "V": 0.112,
-    "n": 6.8
+    "n": 6.3
    },
    "sit@de-bron": {
     "V": 0.084,
-    "n": 1.1
+    "n": 1.0
    },
    "eat@de-turk": {
-    "V": 0.189,
+    "V": 0.165,
     "n": 12.3
    },
    "search@library": {
     "V": 0.067,
-    "n": 11.1
+    "n": 10.2
    },
    "search@*": {
     "V": 0.067,
-    "n": 11.1
+    "n": 10.2
    },
    "eat@mcdonalds": {
     "V": 0.092,
-    "n": 2.6
+    "n": 2.4
    },
    "wander@station-bench": {
     "V": 0.039,
     "n": 0.2
    },
    "wander@*": {
-    "V": 0.159,
-    "n": 8.9
+    "V": 0.129,
+    "n": 9.1
    },
    "pigeons@vis": {
     "V": 0.029,
-    "n": 3.7
+    "n": 3.4
    },
    "eat@albert-heijn": {
     "V": 0.141,
-    "n": 11.6
+    "n": 10.6
    },
    "diary@library": {
     "V": 0.095,
-    "n": 11.8
+    "n": 10.9
    },
    "pigeons@centre-fountain": {
     "V": 0.064,
-    "n": 9.5
+    "n": 8.7
    },
    "sit@albert-heijn": {
     "V": 0.071,
-    "n": 1.0
+    "n": 0.9
    },
    "draw@dorpskerk": {
     "V": 0.048,
-    "n": 0.5
+    "n": 0.4
    },
    "wander@vis": {
-    "V": 0.097,
-    "n": 1.1
+    "V": 0.076,
+    "n": 2.0
    },
    "sit@dorpskerk": {
     "V": 0.039,
@@ -225,15 +217,15 @@
    },
    "wander@jumbo": {
     "V": 0.063,
-    "n": 0.8
+    "n": 0.7
    },
    "sit@plantsoen-bench": {
     "V": 0.021,
-    "n": 0.3
+    "n": 0.2
    },
    "wander@de-valk": {
     "V": 0.035,
-    "n": 0.3
+    "n": 0.2
    },
    "draw@station-fountain": {
     "V": 0.054,
@@ -241,7 +233,7 @@
    },
    "sit@home": {
     "V": 0.084,
-    "n": 1.3
+    "n": 1.2
    },
    "wander@albert-heijn": {
     "V": 0.045,
@@ -249,15 +241,15 @@
    },
    "sit@de-valk": {
     "V": 0.087,
-    "n": 1.1
+    "n": 1.0
    },
    "wander@station-fountain": {
     "V": 0.037,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@de-bron": {
     "V": 0.027,
-    "n": 0.4
+    "n": 0.3
    },
    "wander@library": {
     "V": 0.04,
@@ -273,15 +265,15 @@
    },
    "wander@de-turk": {
     "V": 0.025,
-    "n": 1.3
+    "n": 1.2
    },
    "wander@dorpskerk": {
     "V": 0.034,
-    "n": 1.3
+    "n": 1.2
    },
    "wander@centre-fountain": {
     "V": 0.064,
-    "n": 1.1
+    "n": 1.0
    },
    "wander@mcdonalds": {
     "V": 0.028,
@@ -289,11 +281,11 @@
    },
    "draw@vis": {
     "V": 0.028,
-    "n": 2.4
+    "n": 2.2
    },
    "sit@hichte-mill": {
     "V": 0.042,
-    "n": 0.6
+    "n": 0.5
    },
    "draw@de-bron": {
     "V": 0.036,
@@ -309,36 +301,20 @@
    }
   },
   "habit": {
-   "place:library": 0.45,
-   "place:albert-heijn": 0.11,
-   "place:centre-fountain": 0.15,
-   "place:home": 0.05,
-   "place:ondermolen": 0.07,
-   "topic:rubber chemistry": 0.07,
-   "place:station-bench": 0.32,
-   "place:de-turk": 0.15,
-   "place:station-fountain": 0.16
+   "place:library": 0.19,
+   "place:station-bench": 0.27,
+   "place:de-turk": 0.09
   },
   "workingMemory": [
    {
+    "kind": "need",
+    "subject": "social",
+    "salience": 0.838
+   },
+   {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.755
-   },
-   {
-    "kind": "need",
-    "subject": "quiet",
-    "salience": 0.709
-   },
-   {
-    "kind": "memory",
-    "subject": "A crust so bad it made a map look like a good idea.",
-    "salience": 0.579
-   },
-   {
-    "kind": "memory",
-    "subject": "I ate a crumb of baklava with the precision of a man who has never been wrong.",
-    "salience": 0.518
+    "salience": 0.634
    }
   ]
  }
