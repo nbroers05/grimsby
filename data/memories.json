@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T12:53:49+01:00",
+ "at": "2026-11-19T13:56:50+01:00",
  "beliefs": [
   {
    "n": 20,
@@ -82,14 +82,14 @@
    "text": "Day 38: Day 38: Still no thoughts. Tried Jumbo, De Turk, Vis, the library, the fountain, De Valk. All failed. The pigeons are still there. The diary is still closed. The button is still not drawn. The list is still whole. The grudge remains. The hoard is safe. The wheels are still not trusted.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 0.0,
+   "recalled": 0.5,
    "since": "2026-11-19T11:50:49+01:00"
   },
   {
    "text": "Tried drawing the teaspoon on De Valk, the windmill at the edge of town, but my thoughts would not come.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.0,
+   "recalled": 0.25,
    "since": "2026-11-18T23:18:09+01:00"
   },
   {
@@ -103,21 +103,21 @@
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 3.25,
+   "recalled": 3.5,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.25,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 4.75,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
@@ -208,7 +208,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 6.0,
+   "recalled": 6.25,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -236,7 +236,7 @@
    "text": "I found half a croissant by the trolleys, still warm, and ate it slowly, though I suspect Derek would have claimed it had he been there.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.5,
+   "recalled": 7.75,
    "since": "2026-11-16T18:11:26+01:00"
   },
   {
@@ -355,7 +355,7 @@
    "text": "I arrived at the trolleys just as the last crumb vanished, and the only thing left was a single teaspoon, which I assume was left by someone with a taste for domesticity.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 8.5,
+   "recalled": 8.75,
    "since": "2026-11-15T14:55:34+01:00"
   },
   {
@@ -390,14 +390,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.5,
+   "recalled": 4.75,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 6.5,
+   "recalled": 6.75,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -439,7 +439,7 @@
    "text": "Tires evolved, I trusted one more than a teaspoon.",
    "kind": "work",
    "strength": 4,
-   "recalled": 4.75,
+   "recalled": 5.25,
    "since": "2026-11-14T23:48:45+01:00"
   },
   {
@@ -474,7 +474,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.16,
+   "recalled": 7.41,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -485,5 +485,27 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T13:46:20+01:00"
+  },
+  {
+   "text": "Tried looking something up at the library, but my thoughts would not come.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 1.5,
+   "since": "2026-11-19T13:35:50+01:00"
+  },
+  {
+   "text": "Tried drawing the fish statue next to Vis, the fish statue, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T13:29:50+01:00"
+  }
+ ]
 }

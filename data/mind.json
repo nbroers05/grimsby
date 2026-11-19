@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T12:53:49+01:00",
+ "at": "2026-11-19T13:56:50+01:00",
  "thought": "The roof is still, the stars are sharp, and the list is intact",
  "loudest": [
   {
@@ -10,6 +10,14 @@
   {
    "kind": "need",
    "subject": "social"
+  },
+  {
+   "kind": "outcome",
+   "subject": "writing in his diary at the library went worse than you expected"
+  },
+  {
+   "kind": "goal",
+   "subject": "flying to the fountain in the centre (keeping an eye on the pigeons there)"
   }
  ],
  "open": {
@@ -20,7 +28,7 @@
   "worry": 1,
   "promise": 0
  },
- "busy": null,
+ "busy": "flying to the fountain in the centre",
  "promises": [],
  "holdsTo": [
   "A fact is only shiny if it is true.",
@@ -74,26 +82,26 @@
   "note": "imaginary; he spends it on his wishlist in his head"
  },
  "brain": {
-  "emotion": "listless",
-  "valence": -0.164,
-  "arousal": 0.24,
-  "average": 0.168,
+  "emotion": "irritable",
+  "valence": -0.588,
+  "arousal": 0.543,
+  "average": 0.14,
   "values": {
    "eat@jumbo": {
     "V": 0.065,
     "n": 4.5
    },
    "eat@*": {
-    "V": 0.193,
-    "n": 28.0
+    "V": 0.175,
+    "n": 29.0
    },
    "diary@station-bench": {
     "V": 0.222,
     "n": 19.2
    },
    "diary@*": {
-    "V": 0.199,
-    "n": 35.7
+    "V": 0.145,
+    "n": 37.7
    },
    "neighbour@home": {
     "V": 0.216,
@@ -108,12 +116,12 @@
     "n": 7.7
    },
    "pigeons@station-fountain": {
-    "V": 0.054,
-    "n": 5.2
+    "V": 0.036,
+    "n": 6.2
    },
    "pigeons@*": {
-    "V": 0.061,
-    "n": 16.4
+    "V": 0.042,
+    "n": 17.4
    },
    "sit@ondermolen": {
     "V": 0.151,
@@ -136,8 +144,8 @@
     "n": 0.4
    },
    "draw@*": {
-    "V": 0.157,
-    "n": 4.8
+    "V": 0.132,
+    "n": 5.8
    },
    "sit@de-bron": {
     "V": 0.084,
@@ -148,12 +156,12 @@
     "n": 11.3
    },
    "search@library": {
-    "V": 0.083,
-    "n": 10.1
+    "V": 0.067,
+    "n": 11.1
    },
    "search@*": {
-    "V": 0.083,
-    "n": 10.1
+    "V": 0.067,
+    "n": 11.1
    },
    "eat@mcdonalds": {
     "V": 0.092,
@@ -172,12 +180,12 @@
     "n": 3.7
    },
    "eat@albert-heijn": {
-    "V": 0.173,
-    "n": 9.6
+    "V": 0.158,
+    "n": 10.6
    },
    "diary@library": {
-    "V": 0.158,
-    "n": 8.8
+    "V": 0.115,
+    "n": 10.8
    },
    "pigeons@centre-fountain": {
     "V": 0.107,
@@ -280,8 +288,8 @@
     "n": 0.5
    },
    "draw@vis": {
-    "V": 0.035,
-    "n": 1.4
+    "V": 0.028,
+    "n": 2.4
    },
    "sit@hichte-mill": {
     "V": 0.042,
@@ -301,22 +309,33 @@
    }
   },
   "habit": {
-   "place:station-bench": 0.23,
-   "topic:rubber chemistry": 0.14,
-   "place:plantsoen-bench": 0.05,
-   "place:de-bron": 0.06,
-   "place:albert-heijn": 0.07
+   "place:vis": 0.07,
+   "topic:early cap manufacturing": 0.07,
+   "place:library": 0.5,
+   "topic:bottle caps and shiny objects": 0.1,
+   "place:station-fountain": 0.14,
+   "place:albert-heijn": 0.16
   },
   "workingMemory": [
    {
     "kind": "worry",
     "subject": "how things are going",
-    "salience": 0.382
+    "salience": 0.594
    },
    {
     "kind": "need",
     "subject": "social",
-    "salience": 0.345
+    "salience": 0.543
+   },
+   {
+    "kind": "outcome",
+    "subject": "writing in his diary at the library went worse than you expected",
+    "salience": 0.5
+   },
+   {
+    "kind": "goal",
+    "subject": "flying to the fountain in the centre (keeping an eye on the pigeons there)",
+    "salience": 0.4
    }
   ]
  }
