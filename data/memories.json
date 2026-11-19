@@ -1,6 +1,6 @@
 {
  "v": 1,
- "at": "2026-11-19T16:02:50+01:00",
+ "at": "2026-11-19T17:05:50+01:00",
  "beliefs": [
   {
    "n": 21,
@@ -97,28 +97,28 @@
    "text": "Tried drawing the teaspoon on De Valk, the windmill at the edge of town, but my thoughts would not come.",
    "kind": "work",
    "strength": 4,
-   "recalled": 0.5,
+   "recalled": 0.75,
    "since": "2026-11-18T23:18:09+01:00"
   },
   {
    "text": "Tried keeping an eye on the pigeons by the fountain in the village centre, but my thoughts would not come.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.25,
+   "recalled": 4.75,
    "since": "2026-11-18T17:18:08+01:00"
   },
   {
    "text": "Tried writing in his diary on a bench in the Gouden Griffelplantsoen, but my thoughts would not come.",
    "kind": "work",
    "strength": 5,
-   "recalled": 7.0,
+   "recalled": 7.5,
    "since": "2026-11-18T17:12:08+01:00"
   },
   {
    "text": "Tried looking something up at the library, but my thoughts would not come.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 5.25,
+   "recalled": 5.5,
    "since": "2026-11-18T17:00:08+01:00"
   },
   {
@@ -202,7 +202,7 @@
    "text": "Searched for how many bottle caps in the world and found nothing at all.",
    "kind": "fact",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 6.5,
    "since": "2026-11-17T11:41:02+01:00"
   },
   {
@@ -223,7 +223,7 @@
    "text": "The pigeons ignored me entirely, which is not surprising, given the way I keep my list.",
    "kind": "person",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-16T19:48:56+01:00"
   },
   {
@@ -244,7 +244,7 @@
    "text": "I found a bit of grilled onion on the terrace of De Turk, and ate it with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.0,
+   "recalled": 7.25,
    "since": "2026-11-16T16:36:56+01:00"
   },
   {
@@ -314,7 +314,7 @@
    "text": "I arrived at the terrace of De Turk to find the last crumb of baklava already devoured, and the crumbs it left behind arranged in a pattern that suggested someone had been there for hours, not just minutes.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 6.25,
+   "recalled": 6.5,
    "since": "2026-11-15T20:34:41+01:00"
   },
   {
@@ -328,14 +328,14 @@
    "text": "I found a crumb of baklava on the terrace of De Turk, which I promptly devoured with the precision of a man who has never been wrong about anything.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.5,
+   "recalled": 7.75,
    "since": "2026-11-15T19:40:25+01:00"
   },
   {
    "text": "I landed on a flat stone by the mill memorial and noticed the plaque was missing its top half, which made me feel oddly sentimental about something I do not know the name of.",
    "kind": "moment",
    "strength": 3,
-   "recalled": 0.75,
+   "recalled": 1.0,
    "since": "2026-11-15T17:51:04+01:00"
   },
   {
@@ -384,14 +384,14 @@
    "text": "Day 6: Day 6: I found a crust that was worse than a poorly folded map. Pino thinks rhythm is like a teaspoon of sugar. Derek stood at the station-fountain like he owned it. I sat at the memorial, nothing rolled my way. I re-read about wheels made of bottle caps. I tried to imagine a perfect sphere, but settled for circles. The pigeons ignored me. I found flatbread under a table at De Turk. Natural rubber comes from latex. I did not say a word to Derek. I did not trust the crust. I did not trust the wheels. I did not trust the silence.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 4.75,
+   "recalled": 5.0,
    "since": "2026-11-15T12:25:34+01:00"
   },
   {
    "text": "The pigeons ignored me entirely, which is a kindness I do not deserve.",
    "kind": "person",
    "strength": 5,
-   "recalled": 7.0,
+   "recalled": 7.25,
    "since": "2026-11-15T11:46:33+01:00"
   },
   {
@@ -405,7 +405,7 @@
    "text": "Pino: Pino is a man who thinks rhythm is a quiet thing, like a teaspoon of sugar in a cup of tea. He’d rather sit with a loop than chase the noise. I suppose that’s his way of keeping the world from slipping through his fingers.",
    "kind": "person",
    "strength": 4,
-   "recalled": 3.5,
+   "recalled": 3.75,
    "since": "2026-11-15T11:08:28+01:00"
   },
   {
@@ -468,7 +468,7 @@
    "text": "Derek once said a bicycle was just a fancy wheel. He was wrong. Wheels are dangerous, and Derek is a fool.",
    "kind": "moment",
    "strength": 5,
-   "recalled": 7.41,
+   "recalled": 7.66,
    "since": "2026-11-14T19:36:32+01:00"
   },
   {
@@ -479,5 +479,41 @@
    "since": "2026-11-14T19:36:32+01:00"
   }
  ],
- "short": []
+ "short": [
+  {
+   "text": "Tried writing in his diary on a bench by the station, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.25,
+   "since": "2026-11-19T16:55:20+01:00"
+  },
+  {
+   "text": "Tried keeping an eye on the pigeons by the fountain next to the station, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 5,
+   "recalled": 0.75,
+   "since": "2026-11-19T16:49:20+01:00"
+  },
+  {
+   "text": "Tried drawing a bent paperclip on the windmill at De Hichte, but my thoughts would not come.",
+   "kind": "work",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T16:38:50+01:00"
+  },
+  {
+   "text": "Tried checking on Pino next door, but my thoughts would not come.",
+   "kind": "person",
+   "strength": 4,
+   "recalled": 0.0,
+   "since": "2026-11-19T16:31:20+01:00"
+  },
+  {
+   "text": "Tried looking something up at the library, but my thoughts would not come.",
+   "kind": "fact",
+   "strength": 5,
+   "recalled": 0.5,
+   "since": "2026-11-19T16:28:20+01:00"
+  }
+ ]
 }
